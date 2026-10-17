@@ -69,7 +69,7 @@ if global.gameframe_enabled
 if (global.debug)
 {
     var devWindow = []
-    array_push(devWindow, string("OH MILTU - v{0}", wsbMOmInfo.version))
+    array_push(devWindow, "Oh Mil.. Two?")
 	array_push(devWindow, "")
     array_push(devWindow, string("ROOM+-#{0}", room_get_name(room)))
     array_push(devWindow, string("FPS (Game)+-#{0}", floor(fps)))
