@@ -4,7 +4,7 @@ draw_rectangle(32,32,960-32,540-32,false)
 draw_set_colour(c_black)
 draw_set_halign(0)
 draw_set_valign(0)
-draw_set_font(font_caption)
+draw_set_font(-1)
 for (var i = 0; i < array_length(strings); i++)
 {
 	draw_set_colour(done[i] ? c_green : c_red)

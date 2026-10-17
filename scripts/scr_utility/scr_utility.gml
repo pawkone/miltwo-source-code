@@ -6,7 +6,6 @@ randomise()
 
 global.username = string("player{0}",irandom_range(1000,9999))
 wsbMOmInfo.options = [
-"Modded;GameframeEnabled;0",
 "Modded;machdoublejump;0",
 "Modded;phototaunt;0",
 "Modded;spammabletaunt;0",
@@ -27,12 +26,6 @@ for (var i = 0; i < array_length(wsbMOmInfo.options); i++)
 }
 
 window_enable_borderless_fullscreen(true)
-
-global.gameframe_enabled = !premode && xdata_read("Modded", "GameframeEnabled", true);
-global.fake_gameframe_enabled = global.gameframe_enabled
-window_set_showborder(!global.gameframe_enabled)
-if global.gameframe_enabled
-	gameframe_init_native()
 
 global.MasterVolume = xdata_read("General", "Master", 1);
 global.MusicVolume = xdata_read("General", "Music", 1);

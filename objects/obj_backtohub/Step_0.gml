@@ -1,13 +1,14 @@
-alpha = approach(alpha, 0, 0.035)
+alpha = approach(alpha, 0, 0.01)
 if start < 1 start += 1/60
+var _bth = id
 with (obj_player)
 {
 	state = -4
 	with obj_camera
 	{
-		state = -4
-		camera.x = other.backtohubX
-		camera.y = other.backtohubY - 50
+		_bth.spd += 1/750
+		camera.zoom = lerp(camera.zoom, 1 + (other.backtohubY-other.y)/1250, _bth.spd*0.5)
+		camera.y = lerp(camera.y, other.backtohubY - 50 - (other.backtohubY-other.y)/5, _bth.spd)
 	}
 	if (other.start == 1)
     {

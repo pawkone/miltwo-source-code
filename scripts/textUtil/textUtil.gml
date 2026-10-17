@@ -329,12 +329,6 @@ function parse_textEX(arg0, arg1)
                         case "clear":
                             _effect = -4;
                             break;
-                        
-                        case "Bacontu":
-                            _str.specialType = "Bacontu";
-                            _lX += sprite_get_width(spr_ico);
-                            array_push(_stringArr, _str);
-                            break;
                     }
                 }
                 
@@ -428,10 +422,6 @@ function draw_textEX(arg0, arg1, arg2, arg3 = string_width(arg2))
             {
                 case -4:
                     draw_text(_XX, _YY, _lDat.letter);
-                    break;
-                
-                case "Bacontu":
-                    draw_sprite(spr_ico, 0, _XX - 2, _YY - 7);
                     break;
                 
                 case "controlKey":

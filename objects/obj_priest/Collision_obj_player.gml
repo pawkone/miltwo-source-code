@@ -3,6 +3,8 @@ var _transfoPass = [states.snowball, states.snowball_jump, states.snowball_wall,
 if (!array_contains(_transfoPass, other.state))
     exit;
 
+other.flash = true
+
 if (pky_run)
 {
     other.state = states.mach2;

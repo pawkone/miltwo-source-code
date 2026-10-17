@@ -651,17 +651,6 @@ add_option_press(MODDED, "option_back", function()
     goto_menu(optionstype.mainpage);
 	modded_save_options()
 });
-if !premode
-{
-	add_option_ext(MODDED, optionstype.element_toggle, "option_modded_togglegameframe", function()
-	{
-		var m = menus[currentmenu];
-		var opt = m.options;
-		var q = opt[selected];
-		global.fake_gameframe_enabled = q.val;
-		q.val = global.fake_gameframe_enabled;
-	}, global.fake_gameframe_enabled, 1);
-}
 add_option_press(MODDED, "option_modded_menucustom", function()
 {
 	 goto_menu(optionstype.modded_custom);

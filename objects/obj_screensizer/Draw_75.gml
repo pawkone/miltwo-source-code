@@ -59,12 +59,6 @@ if _pause
 		event_user(0)
 }
 shader_reset()
-if global.gameframe_enabled
-{
-    draw_set_alpha(1)
-    draw_set_colour(c_white)
-	gameframe_draw()
-}
 
 if (global.debug)
 {
@@ -78,16 +72,14 @@ if (global.debug)
     if (instance_exists(obj_player))
     {
 		var _state = real(obj_player.state), _name = ""
-		try {
-			_name = state_names[_state]
-		} catch(e) {}
+		try {_name = state_names[_state]} catch(e) {}
 	    array_push(devWindow, string("Player X+-#{0}", obj_player.x))
 	    array_push(devWindow, string("Player Y+-#{0}", obj_player.y))
 	    array_push(devWindow, string("Player State+-#{0} ({1})", _name, _state))
 	    array_push(devWindow, string("Player Sprite+-#{0}", sprite_get_name(obj_player.sprite_index)))
     }
     
-    draw_set_font(font_caption)
+    draw_set_font(-1)
     draw_set_halign(fa_left)
     draw_set_alpha(0.25)
     draw_set_colour(c_black)
@@ -95,10 +87,7 @@ if (global.debug)
     for (var i = 0; i < array_length(devWindow); i++)
     {
 		devWindow[i] = string_split(devWindow[i], "+-#")
-		var _widthnew = (array_length(devWindow[i]) > 1 ?
-		(string_width(devWindow[i][1])+128) :
-		string_width(devWindow[i][0]))
-		
+		var _widthnew = (array_length(devWindow[i]) > 1 ? (string_width(devWindow[i][1])+128) : string_width(devWindow[i][0]))
         if _widthnew > _width
             _width = _widthnew
     }

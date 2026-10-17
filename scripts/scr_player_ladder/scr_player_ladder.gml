@@ -25,6 +25,7 @@ function scr_player_ladder()
     {
         var _ladderInst = instance_place(x, y, obj_ladder)
         x = lerp(x, _ladderInst.x + (_ladderInst.sprite_width / 2), 0.25)
+		y = lerp(y, clamp(y, _ladderInst.bbox_top + (vsp < 0 ? -128 : 0), _ladderInst.bbox_bottom), 0.25)
 	}
     else
     {
