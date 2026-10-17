@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_yay",
+  "audioGroupId":{
+    "name":"audioGroupMusic",
+    "path":"audiogroups/audioGroupMusic",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":0,
+  "conversionMode":0,
+  "duration":20.662857,
+  "exportDir":"audioStreamed",
+  "name":"mu_yay",
+  "parent":{
+    "name":"joke hahahahhaahaah",
+    "path":"folders/Sounds/joke hahahahhaahaah.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":11025,
+  "soundFile":"mu_yay.mp3",
+  "volume":0.5,
+}

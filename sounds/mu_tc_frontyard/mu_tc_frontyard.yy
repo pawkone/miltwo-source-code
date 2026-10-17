@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_tc_frontyard",
+  "audioGroupId":{
+    "name":"audioGroupMusic",
+    "path":"audiogroups/audioGroupMusic",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":3,
+  "conversionMode":0,
+  "duration":9.090612,
+  "exportDir":"audioStreamed",
+  "name":"mu_tc_frontyard",
+  "parent":{
+    "name":"Titlecards",
+    "path":"folders/Sounds/Music/Titlecards.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_tc_frontyard.mp3",
+  "volume":1.0,
+}

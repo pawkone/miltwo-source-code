@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_pepperniescape",
+  "audioGroupId":{
+    "name":"audioGroupMusic",
+    "path":"audiogroups/audioGroupMusic",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":3,
+  "conversionMode":0,
+  "duration":39.636463,
+  "exportDir":"",
+  "name":"mu_pepperniescape",
+  "parent":{
+    "name":"Characters",
+    "path":"folders/Sounds/Music/Escape/Characters.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_pepperniescape.ogg",
+  "volume":1.0,
+}

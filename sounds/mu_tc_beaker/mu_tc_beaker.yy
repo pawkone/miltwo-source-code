@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_tc_beaker",
+  "audioGroupId":{
+    "name":"audioGroupMusic",
+    "path":"audiogroups/audioGroupMusic",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":8.0,
+  "exportDir":"",
+  "name":"mu_tc_beaker",
+  "parent":{
+    "name":"Titlecards",
+    "path":"folders/Sounds/Music/Titlecards.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_tc_beaker.wav",
+  "volume":1.0,
+}

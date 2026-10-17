@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_player_bd_grab",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":1,
+  "conversionMode":0,
+  "duration":1.0853515,
+  "exportDir":"",
+  "name":"sfx_player_bd_grab",
+  "parent":{
+    "name":"baconDream",
+    "path":"folders/Sounds/SFX/Charactes/baconDream.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_player_bd_grab.wav",
+  "volume":0.53,
+}

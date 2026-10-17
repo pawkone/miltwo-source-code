@@ -1,0 +1,98 @@
+global.songCurInf = {};
+musicDetails = ds_map_create();
+music = 
+{
+    regular: "",
+    secret: "",
+    ambience: ""
+};
+isSecretStart = false
+musicInst = -4;
+secretInst = -4;
+ambienceInst = -4;
+isSecret = false;
+lock = false;
+panicStart = false;
+playingSecret = false;
+func = -4;
+monolith = FMODcreate_event("event:/Music/General/monolith");
+escapeInst = FMODcreate_event("event:/Music/General/escape");
+pillar = 0;
+voices = 1;
+savedMusicPosition = 0;
+musicPos = 0;
+currentMusic = "";
+pauseMusic = false;
+
+stop_music = function(externaltoo = true)
+{
+	with obj_music
+	{
+	    if (musicInst != -4)
+		{
+	        fmod_studio_event_instance_stop(musicInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
+	        fmod_studio_event_instance_release(musicInst);
+	    }
+	    if (secretInst != -4)
+	    {
+	        fmod_studio_event_instance_stop(secretInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
+	        fmod_studio_event_instance_release(secretInst);
+	    }
+	    if (ambienceInst != -4)
+	    {
+	        fmod_studio_event_instance_stop(ambienceInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
+	        fmod_studio_event_instance_release(ambienceInst);
+	    }
+		if externaltoo
+			scr_music(-4, true)
+	
+	    musicInst = -4;
+	    secretInst = -4;
+	    ambienceInst = -4;
+	    music = 
+	    {
+	        regular: "",
+	        secret: "",
+	        ambience: ""
+	    };
+	    savedMusicPosition = 0;
+	    isSecret = false;
+	}
+};
+
+add_music = function(arg0, arg1, arg2, arg3 = function()
+{
+}) constructor
+{
+    music = arg0;
+    secret = arg1;
+    ambience = arg2;
+    func = arg3;
+};
+ds_map_add(musicDetails, yard_1, new add_music("event:/Music/W1/Monolith Mangrove/mangrove", "event:/Music/W1/Monolith Mangrove/mangrovesecret", "event:/Ambience/mangrove", function()
+{
+    var _s = 0;
+    
+    if (room == yard_9 || room == yard_10 || room == yard_11)
+        _s = 1;
+    
+    fmod_studio_event_instance_set_parameter_by_name(musicInst, "state", _s);
+}));
+ds_map_add(musicDetails, hotel_start, new add_music("event:/Music/W1/hub", -4, -4));
+ds_map_add(musicDetails, hotel_1, new add_music("event:/Music/W1/hub", -4, -4));
+ds_map_add(musicDetails, tutorial_1, new add_music("event:/Music/W1/tutorial", -4, "event:/Ambience/tutorial"));
+ds_map_add(musicDetails, shell_1, new add_music("event:/Music/W1/Shell City/city", "event:/Music/W1/Shell City/citysecret", -4));
+ds_map_add(musicDetails, beach_1, new add_music("event:/Music/W1/Berry Beach/shores", "event:/Music/W1/Berry Beach/shoressecret", -4));
+ds_map_add(musicDetails, castle_1, new add_music("event:/Music/W2/Castle Pumpkinstein/castle", -4, -4));
+ds_map_add(musicDetails, Levelselect, new add_music("event:/Music/Ost/mainmenu", -4, -4));
+ds_map_add(musicDetails, Mainmenu, new add_music(-4, -4, "event:/Ambience/mainmenu"));
+
+captions = {}
+captions.str = [ "RUNNIN' around on a piece of ground on your home town!","Runnin' Around on a piece of ground on your home town!","Runnin' aROUND on a piece of ground on your home town!","Runnin' around ON a piece of ground on your home town!","Runnin' around on A piece of ground on your home town!","Runnin' around on a PIECE of ground on your home town!","Runnin' around on a piece OF ground on your home town!","Runnin' around on a piece of GROUND on your home town!","Runnin' around on a piece of ground ON your home town!","Runnin' around on a piece of ground on YOUR home town!","Runnin' around on a piece of ground on your HOME town!!","Runnin' around on a piece of ground on your HOME TOWN!!!","Runnin' around on a piece of ground on your HOME TOWN!!!...","YOU'VE been livin' a life that you already knew the waaa-aayyyy!","You've BEEN livin' a life that you already knew the waaa-aayyyy!","You've been LIVIN' a life that you already knew the waaa-aayyyy!","You've been livin' A life that you already knew the waaa-aayyyy!","You've been livin' a LIFE that you already knew the waaa-aayyyy!","You've been livin' a life THAT you already knew the waaa-aayyyy!","You've been livin' a life that YOU already knew the waaa-aayyyy!","You've been livin' a life that you ALready knew the waaa-aayyyy!","You've been livin' a life that you alREADY knew the waaa-aayyyy!","You've been livin' a life that you already KNEW the waaa-aayyyy!","You've been livin' a life that you already knew THE waaa-aayyyy!","You've been livin' a life that you already knew the WAAA-aayyyy!!","You've been livin' a life that you already knew the WAAA-AAYYYY!!!","STICKIN' around to see the end of a show that you already knooww-oohh!","Stickin' Around to see the end of a show that you already knooww-oohh!","Stickin' aROUND to see the end of a show that you already knooww-oohh!","Stickin' around TO see the end of a show that you already knooww-oohh!","Stickin' around to SEE the end of a show that you already knooww-oohh!","Stickin' around to see THE end of a show that you already knooww-oohh!","Stickin' around to see the END of a show that you already knooww-oohh!","Stickin' around to see the end OF a show that you already knooww-oohh!","Stickin' around to see the end of A show that you already knooww-oohh!","Stickin' around to see the end of a SHOW that you already knooww-oohh!","Stickin' around to see the end of a show THAT you already knooww-oohh!","Stickin' around to see the end of a show that YOU already knooww-oohh!","Stickin' around to see the end of a show that you ALready knooww-oohh!","Stickin' around to see the end of a show that you alREADY knooww-oohh!","Stickin' around to see the end of a show that you already KNOOWW-oohh!!","Stickin' around to see the end of a show that you already KNOOWW-OOHH!!!","I'VE been waitin' my whole life for someone or something like you..","I've BEEN waitin' my whole life for someone or something like you..","I've been WAITIN' my whole life for someone or something like you..","I've been waitin' MY whole life for someone or something like you..","I've been waitin' my WHOLE life for someone or something like you..","I've been waitin' my whole LIFE for someone or something like you..","I've been waitin' my whole life FOR someone or something like you..","I've been waitin' my whole life for SOMEone or something like you..","I've been waitin' my whole life for SOMEONE or something like you..","I've been waitin' my whole life for someone OR something like you..","I've been waitin' my whole life for someone or SOMEthing like you..","I've been waitin' my whole life for someone or SOMETHING like you..","I've been waitin' my whole life for someone or something LIKE you..","I've been waitin' my whole life for someone or something like YOU..!","R-","Ra-","Rai-","Rais-","Raise...","Raise... The","Raise... The ROOF!",":)","","R-","Ra-","Rai-","Rais-","Raise...","Raise... The","Raise... The ROOF!",";)","","Ta..","Ta.. Ta..","Ta.. Ta.. TA!","RAISE-","RAISE THE-","DA-","DA THE-","DA-","DA THE-","DA THE THE-","DA THE THE THE-","RAISE-","RAISE THE-","RAISE THE ROOF!-","RAISE THE ROOF! THE-","RAISE THE ROOF! THE ROOF!-","AND-","AND RAISE-","AND RAISE (AH)-","THE-","THE DA-","THE-","THE uhh-","DA-","DA DA-","DA DA DA-","DA DA DA DA-","DA DA DA DA DA-","DA DA DA DA DA DA-","DA DA DA DA DA DA DA-","DA DA DA DA DA DA DA DA-","RAISING-","RAISING THE-","RAISING THE ROOF-","RAISING THE ROOF, SO-","RAISING THE ROOF, SO HEY!","THE","THE ROOF..","IM-","IM HAVING-","IM HAVING IT-","IM HAVING IT, RAISEE!!!","RRRR","RRRRAAII","RRRRAAIISSEEEEEE!!","RRRRAAIISSEEEEEE THE-","RRRRAAIISSEEEEEE THE RUF.","RRAAII","RRAAIISSEEE","RRAAIISSEEEAWSDAWdawd","RRAAIISSEEEAWSDAWdawd1231y2euuh32d","AHH","AHH RAISEeeeEEEE","CAN-","CAN RAISEESEeeeee!1!1","CAN RAISAIESADWUDAWUDAWNFWf","):","","(raaiasieie)","","(raaiasieie)","(raiisie)","(raiisie da)","(raiisie da ruf)","(raiise)","(raiise da)","(raiise da ruuufffff)","(raiisiee)","(raiisiee da)","(raiisiee da ruwf)","RAISE","RAISE. THE","RAISE. THE. ROOF","" ]
+captions.timing = [ 346.41,346.73,346.96,347.41,347.56,347.71,347.87,348.15,348.61,348.80,348.93,349.24,349.85,351.17,351.32,351.46,351.74,351.89,352.31,352.40,352.55,352.77,353.15,353.65,353.79,354.50,356.31,356.63,356.76,357.13,357.26,357.44,357.59,357.74,357.83,357.98,358.54,358.71,358.84,358.98,359.26,359.88,360.94,361.10,361.25,361.66,361.84,362.05,362.33,362.50,362.69,362.80,363.05,363.26,363.43,363.71,364.97,365.09,365.22,365.36,365.49,365.69,365.92,366.17,366.44,384.74,384.87,384.98,385.13,385.34,385.49,385.61,385.75,386.02,409.42,409.69,410.17,410.47,410.68,410.85,411.02,411.16,411.30,411.45,411.57,411.66,411.89,412.07,412.35,412.53,413.06,413.26,413.47,413.61,413.74,413.90,414.03,414.36,414.46,414.61,414.72,414.87,415.03,415.16,415.30,415.49,415.67,415.86,416.17,416.36,416.65,416.86,417.20,417.31,417.52,417.73,419.27,419.37,419.47,419.85,420.03,421.03,421.20,421.45,421.73,421.95,422.15,423.31,423.59,424.21,424.71,425.28,427.29,427.81,428.53,429.37,429.45,429.69,431.37,431.78,432.05,432.53,432.85,433.05,434.33,434.65,434.84,435.12 ]
+captions.toggle = 1
+captions.vsp = 0
+captions.y2 = 0
+captions.yy = 0
+captions.old = -1
+captions.curtime = 0

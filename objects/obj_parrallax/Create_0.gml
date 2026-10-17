@@ -1,0 +1,1 @@
+escapeactiveold = global.escapeActive

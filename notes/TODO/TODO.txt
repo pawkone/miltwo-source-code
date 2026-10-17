@@ -1,0 +1,9 @@
+0 = Not done
+X = Done
+
+X - Finish rockbottom
+0 - Finish floor 2 levels
+	0 - Level BF
+	0 - Level CC
+	0 - Level RO
+0 - Finish fruitcup

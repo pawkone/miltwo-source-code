@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/effect-recursive_blur",
+  "version": "1.0.0",
+  "description": "Recursive Blur Effect",
+  "files": [
+    "io.gamemaker.gm_effect_recursive_blur-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_effect_recursive_blur"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/effect-recursive_blur",
+    "displayName": "Effect - Recursive Blur",
+    "shortDescription": "Recursive Blur Effect",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

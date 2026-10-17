@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-panorama",
+  "version": "1.0.0",
+  "description": "Panorama Filter",
+  "files": [
+    "io.gamemaker.gm_filter_panorama-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_panorama"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-panorama",
+    "displayName": "Filter - Panorama",
+    "shortDescription": "Panorama Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/gm-particle-presets",
+  "version": "1.0.0",
+  "description": "GameMaker Particle Presets",
+  "files": [
+    "io.gamemaker.gmparticlepresets-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gmparticlepresets"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/gm-particle-presets",
+    "displayName": "GameMaker Particle Presets",
+    "shortDescription": "GameMaker Particle Presets",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

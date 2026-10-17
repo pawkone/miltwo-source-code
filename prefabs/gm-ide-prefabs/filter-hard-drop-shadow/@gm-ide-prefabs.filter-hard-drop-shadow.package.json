@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-hard-drop-shadow",
+  "version": "1.0.0",
+  "description": "Hard Drop Shadow Filter",
+  "files": [
+    "io.gamemaker.gm_filter_hard_drop_shadow-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_hard_drop_shadow"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-hard-drop-shadow",
+    "displayName": "Filter - Hard Drop Shadow",
+    "shortDescription": "Hard Drop Shadow Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

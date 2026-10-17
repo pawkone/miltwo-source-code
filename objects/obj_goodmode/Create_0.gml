@@ -1,0 +1,1 @@
+if !instance_exists(obj_transition_hotel2) instance_destroy()

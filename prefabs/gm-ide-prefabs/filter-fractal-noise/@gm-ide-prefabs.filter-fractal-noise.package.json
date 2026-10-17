@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-fractal-noise",
+  "version": "1.0.0",
+  "description": "Fractal Noise Filter",
+  "files": [
+    "io.gamemaker.gm_filter_fractal_noise-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_fractal_noise"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-fractal-noise",
+    "displayName": "Filter - Fractal Noise",
+    "shortDescription": "Fractal Noise Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

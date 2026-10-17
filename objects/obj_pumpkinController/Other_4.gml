@@ -1,0 +1,1 @@
+dark = string_starts_with(room_get_name(room), "castle")

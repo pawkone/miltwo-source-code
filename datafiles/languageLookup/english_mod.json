@@ -1,0 +1,46 @@
+{
+	"roomname_hotel_start": "whats shakin bacon",
+	"roomname_hotel_1": "guilty pleasure",
+	"roomname_hotel_og_start": "whats shakin bacon",
+	"roomname_hotel_og_1": "guilty pleasure",
+
+	"np_weclome": "[wave]Hello there, {0}!",
+	"online_prophunt_caught":" has been caught by ",
+	"online_prophunt_waitphase_hunters": "Waitin' for props to hide...\nNo lookin..!",
+	"online_prophunt_waitphase_props": "Hunter preparing, get hidin'!",
+	"online_prophunt_win_hunters": "All props found. Hunters win!",
+	"online_prophunt_win_props": "Hunters couldn't find all props. Props win!",
+	"online_prophunt_ended": "Host ended prophunt round.",
+	"online_racemode_ended": "Host ended the race.",
+	"online_prophunt_under2player": "Prophunt needs at least 2 players.",
+	"online_racemode_under2player": "Races needs at least 2 players.",
+	"online_caught": " you know you aint slick: ",
+
+	"option_modded": "MODDED",
+	"option_modded_title_menucustom": "MENU : CUSTOM",
+	"option_modded_desc_menucustom": "change entirely new content for the mod here!",
+	"option_modded_title_menuoldies": "MENU : WASTED OLDIES",
+	"option_modded_desc_menuoldies": "toggle on features from older builds of wsb!\nmostly from wasted build",
+	"option_modded_title_menuonline": "MENU : ONLINE",
+	"option_modded_desc_menuonline": "ready to play online multiplayer with gamemodes and more?",
+
+	"option_modded_title_togglegameframe": "GAMEFRAME",
+	"option_modded_desc_togglegameframe": "game restart needed to fully apply this option\nallows gameframe to be enabled and disabled",
+	"option_modded_title_machdoublejump": "MACH DOUBLE JUMP",
+	"option_modded_desc_machdoublejump": "adds back the wasted build mach double jump\naka buzzsaw. walljump for milton instead",
+	"option_modded_title_phototaunt": "PHOTOGRAPH TAUNT",
+	"option_modded_desc_phototaunt": "the older photo taunt effect replaces the\ngeneric current one taunt effect",
+	"option_modded_title_spammabletaunt": "SPAMMABLE TAUNT",
+	"option_modded_desc_spammabletaunt": "lets you spam your taunts letting you do it with no cooldown",
+	"option_modded_title_oldsecreteye": "PARER DUDLE",
+	"option_modded_desc_oldsecreteye": "the older dudle aka the secret eye from wasted build\nthe dudle turns from a heart to crumpled paper",
+	"option_modded_title_bettermilton": "IMPROVED MILTON",
+	"option_modded_desc_bettermilton": "adds general improvements and buffs to milton to make him control better!",
+	"option_modded_title_betterwaybackyard": "IMPROVED WAY BACKYARD",
+	"option_modded_desc_betterwaybackyard": "adds better visuals to way backyard with better rain and a better tint",
+	"option_modded_title_sloperotation": "SLOPE ROTATION",
+	"option_modded_desc_sloperotation": "not working rn   self explanatory!\nps: please dont over think it"
+
+
+
+}

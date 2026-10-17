@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-mask",
+  "version": "1.0.0",
+  "description": "Mask Filter",
+  "files": [
+    "io.gamemaker.gm_filter_mask-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_mask"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-mask",
+    "displayName": "Filter - Mask",
+    "shortDescription": "Mask Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

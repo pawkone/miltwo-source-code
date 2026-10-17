@@ -1,0 +1,1 @@
+global.username = string_lower(get_string("New Username",global.username))

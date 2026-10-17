@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-twirl-distort",
+  "version": "1.0.0",
+  "description": "Twirl Distort Filter",
+  "files": [
+    "io.gamemaker.gm_filter_twirl_distort-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_twirl_distort"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-twirl-distort",
+    "displayName": "Filter - Twirl Distort",
+    "shortDescription": "Twirl Distort Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

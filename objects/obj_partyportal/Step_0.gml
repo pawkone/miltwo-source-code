@@ -1,0 +1,42 @@
+image_alpha = global.escapeActive ? 1 : 0.5;
+
+if (place_meeting(x, y, obj_player) && cutscene == false && global.escapeActive && canEnter)
+{
+    global.collect += 3000;
+	if global.escapeLap >= 2
+		ds_list_add(global.saveroom, id);
+    cutscene = true;
+    
+    with (obj_player)
+    {
+        targetRoom = other.targetRoom;
+        door = other.targetDoor;
+        state = -4;
+        sprite_index = spr_player_spinout;
+        image_speed = 0.35;
+    }
+    
+    sprite_index = spr_partydooropen;
+    image_index = 0;
+}
+
+if (cutscene == true)
+{
+    with (obj_player)
+    {
+        vsp = 0;
+        hsp = 0;
+        x = approach(x, other.x, 3);
+        y = approach(y, other.y, 3);
+        xscaleMulti = approach(xscaleMulti, 0, 0.05);
+        yscaleMulti = approach(yscaleMulti, 0, 0.05);
+        movespeed = 0;
+    }
+    
+    if (animation_end() && sprite_index == spr_partydooropen)
+    {
+        image_index = image_number - 1;
+        scr_fadeout()
+        ds_list_clear(global.escaperoom);
+    }
+}

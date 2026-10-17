@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_player_bd_mach2",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":1,
+  "conversionMode":0,
+  "duration":1.8045125,
+  "exportDir":"",
+  "name":"sfx_player_bd_mach2",
+  "parent":{
+    "name":"baconDream",
+    "path":"folders/Sounds/SFX/Charactes/baconDream.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_player_bd_mach2.wav",
+  "volume":1.0,
+}

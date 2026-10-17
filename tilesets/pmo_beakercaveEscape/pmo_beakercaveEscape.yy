@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"pmo_beakercaveEscape",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"pmo_beakercaveEscape",
+  "out_columns":44,
+  "out_tilehborder":0,
+  "out_tilevborder":0,
+  "parent":{
+    "name":"Beaker Backyard",
+    "path":"folders/Tile Sets/Levels/Floor Extra/Beaker Backyard.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"_decompiled_pmo_beakercaveEscape",
+    "path":"sprites/_decompiled_pmo_beakercaveEscape/_decompiled_pmo_beakercaveEscape.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"texturegroup_game",
+    "path":"texturegroups/texturegroup_game",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.00015,
+  "tileHeight":32,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":32,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":1980,
+}

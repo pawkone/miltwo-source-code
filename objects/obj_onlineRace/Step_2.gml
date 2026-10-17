@@ -1,0 +1,1 @@
+obj_shell.whitelist = ["toggle_collisions", "toggle_debug"]

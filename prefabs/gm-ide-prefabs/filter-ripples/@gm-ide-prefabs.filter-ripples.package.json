@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-ripples",
+  "version": "1.0.0",
+  "description": "Ripples Filter",
+  "files": [
+    "io.gamemaker.gm_filter_ripples-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_ripples"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-ripples",
+    "displayName": "Filter - Ripples",
+    "shortDescription": "Ripples Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

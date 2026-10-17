@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_player_bc_machend",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":1,
+  "conversionMode":0,
+  "duration":1.475601,
+  "exportDir":"",
+  "name":"sfx_player_bc_machend",
+  "parent":{
+    "name":"baconCrashout",
+    "path":"folders/Sounds/SFX/Charactes/baconCrashout.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_player_bc_machend.wav",
+  "volume":1.0,
+}

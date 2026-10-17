@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-outline",
+  "version": "1.0.0",
+  "description": "Outline Filter",
+  "files": [
+    "io.gamemaker.gm_filter_outline-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_outline"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-outline",
+    "displayName": "Filter - Outline",
+    "shortDescription": "Outline Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

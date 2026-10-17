@@ -1,0 +1,2 @@
+ds_map_destroy(plrs)
+ds_map_destroy(plrsconnected)

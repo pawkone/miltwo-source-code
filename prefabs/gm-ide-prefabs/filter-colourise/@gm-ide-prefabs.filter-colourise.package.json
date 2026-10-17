@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-colourise",
+  "version": "1.0.0",
+  "description": "Colourise Filter",
+  "files": [
+    "io.gamemaker.gm_filter_colourise-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_colourise"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-colourise",
+    "displayName": "Filter - Colourise",
+    "shortDescription": "Colourise Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

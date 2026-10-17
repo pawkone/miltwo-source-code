@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-twist-blur",
+  "version": "1.0.0",
+  "description": "Twist Blur Filter",
+  "files": [
+    "io.gamemaker.gm_filter_twist_blur-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_twist_blur"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-twist-blur",
+    "displayName": "Filter - Twist Blur",
+    "shortDescription": "Twist Blur Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

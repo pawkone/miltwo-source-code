@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_bacad",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":0,
+  "conversionMode":0,
+  "duration":49.94612,
+  "exportDir":"",
+  "name":"sfx_bacad",
+  "parent":{
+    "name":"joke hahahahhaahaah",
+    "path":"folders/Sounds/joke hahahahhaahaah.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_bacad.mp3",
+  "volume":1.0,
+}

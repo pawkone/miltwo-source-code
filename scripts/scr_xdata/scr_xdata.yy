@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_xdata",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_xdata",
+  "parent":{
+    "name":"xdata",
+    "path":"folders/Extensions/xdata.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

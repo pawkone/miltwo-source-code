@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_monolithdestroy1",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.57469386,
+  "exportDir":"",
+  "name":"sfx_monolithdestroy1",
+  "parent":{
+    "name":"destroyable",
+    "path":"folders/Sounds/SFX/Era elements/beaker/destroyable.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_monolithdestroy1.wav",
+  "volume":1.0,
+}

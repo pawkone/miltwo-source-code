@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_player_br_mach2",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":1,
+  "conversionMode":0,
+  "duration":3.8095238,
+  "exportDir":"",
+  "name":"sfx_player_br_mach2",
+  "parent":{
+    "name":"baconRedem",
+    "path":"folders/Sounds/SFX/Charactes/baconRedem.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_player_br_mach2.wav",
+  "volume":1.0,
+}

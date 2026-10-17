@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/effect-glow",
+  "version": "1.0.0",
+  "description": "Glow Effect",
+  "files": [
+    "io.gamemaker.gm_effect_glow-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_effect_glow"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/effect-glow",
+    "displayName": "Effect - Glow",
+    "shortDescription": "Glow Effect",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

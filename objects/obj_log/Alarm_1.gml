@@ -1,0 +1,2 @@
+actived = false
+falling = false

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_player_pom_mach4",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":1,
+  "conversionMode":0,
+  "duration":0.6486168,
+  "exportDir":"",
+  "name":"sfx_player_pom_mach4",
+  "parent":{
+    "name":"baconPrecrashout",
+    "path":"folders/Sounds/SFX/Charactes/baconPrecrashout.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_player_pom_mach4.wav",
+  "volume":1.0,
+}

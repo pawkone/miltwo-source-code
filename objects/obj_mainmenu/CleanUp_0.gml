@@ -1,0 +1,4 @@
+fmod_studio_event_instance_stop(snd1, FMOD_STUDIO_STOP_MODE.IMMEDIATE)
+fmod_studio_event_instance_release(snd1)
+fmod_studio_event_instance_stop(snd2, FMOD_STUDIO_STOP_MODE.IMMEDIATE)
+fmod_studio_event_instance_release(snd2)

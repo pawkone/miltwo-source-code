@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-stripes",
+  "version": "1.0.0",
+  "description": "Stripes Filter",
+  "files": [
+    "io.gamemaker.gm_filter_stripes-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_stripes"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-stripes",
+    "displayName": "Filter - Stripes",
+    "shortDescription": "Stripes Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

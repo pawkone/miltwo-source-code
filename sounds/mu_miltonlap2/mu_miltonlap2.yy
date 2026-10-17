@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_miltonlap2",
+  "audioGroupId":{
+    "name":"audioGroupMusic",
+    "path":"audiogroups/audioGroupMusic",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":3,
+  "conversionMode":0,
+  "duration":197.12,
+  "exportDir":"audioStreamed",
+  "name":"mu_miltonlap2",
+  "parent":{
+    "name":"Characters",
+    "path":"folders/Sounds/Music/Escape/Characters.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_miltonlap2.mp3",
+  "volume":0.775,
+}

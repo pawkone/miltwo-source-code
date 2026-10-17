@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_valentia_jump",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":1,
+  "conversionMode":0,
+  "duration":0.49632654,
+  "exportDir":"",
+  "name":"sfx_valentia_jump",
+  "parent":{
+    "name":"valentia",
+    "path":"folders/Sounds/SFX/valentia.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_valentia_jump.mp3",
+  "volume":1.0,
+}

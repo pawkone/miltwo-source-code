@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-zoom-blur",
+  "version": "1.0.0",
+  "description": "Zoom Blur Filter",
+  "files": [
+    "io.gamemaker.gm_filter_zoom_blur-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_zoom_blur"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-zoom-blur",
+    "displayName": "Filter - Zoom Blur",
+    "shortDescription": "Zoom Blur Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}

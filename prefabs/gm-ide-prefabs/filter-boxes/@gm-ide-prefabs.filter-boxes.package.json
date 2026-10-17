@@ -1,0 +1,28 @@
+{
+  "name": "@gm-ide-prefabs/filter-boxes",
+  "version": "1.0.0",
+  "description": "Boxes Filter",
+  "files": [
+    "io.gamemaker.gm_filter_boxes-1.0.0.yymps"
+  ],
+  "keywords": [
+    "GameMaker",
+    "Prefab",
+    "io.gamemaker.gm_filter_boxes"
+  ],
+  "author": "GameMaker",
+  "license": "",
+  "gm": {
+    "destination": "gm-ide-prefabs/filter-boxes",
+    "displayName": "Filter - Boxes",
+    "shortDescription": "Boxes Filter",
+    "visible": true,
+    "ide_versions": {
+      "LTS": ">=2022.0.2"
+    },
+    "supportedArchitecture": "any",
+    "removeDependenciesOnUninstall": "always",
+    "notifyOfUpdates": false,
+    "requiresRestart": false
+  }
+}
