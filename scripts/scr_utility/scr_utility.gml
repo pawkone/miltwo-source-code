@@ -265,25 +265,18 @@ function scr_transfotip(arg0)
 
 function timeString(arg0)
 {
-    var _ms = string_format(arg0, 0, 2);
-    _ms = string_delete(_ms, 0, 2);
-    var _realSecond = floor(arg0);
-    var _s = _realSecond;
-    _s = wrap(_s, 0, 59);
-    
-    if (_s < 10)
-        _s = string_concat("0", _s);
-    
-    var _m = floor(_realSecond / 60);
-    _m = wrap(_m, 0, 59);
-    
-    if (_m < 10)
-        _m = string_concat("0", _m);
-    
-    var _h = floor(_realSecond / 3600);
-    
-    if (_h < 10)
-        _h = string_concat("0", _h);
-    
-    return string("{0}:{1}:{2}.{3}", _h, _m, _s, _ms);
+    var _ms = array_last(string_split(string_format(arg0, 0, 2), "."))
+	
+	arg0 = floor(arg0)
+	
+    var _s = arg0 mod 60
+    _s = (_s < 10 ? "0" : "") + string(_s)
+	
+    var _m = floor(arg0 / 60) mod 60
+    _m = (_m < 10 ? "0" : "") + string(_m)
+	
+    var _h = floor(arg0 / 3600)
+    _h = (_h < 10 ? "0" : "") + string(_h)
+	
+    return $"{_h}:{_m}:{_s}.{_ms}"
 }

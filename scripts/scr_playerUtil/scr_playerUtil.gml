@@ -252,22 +252,19 @@ function doGrab()
 
 function slope_momentum(arg0 = 0.1, arg1 = 0)
 {
-    if (scr_slope(x, y + 1))
+    var _obj = instance_place(x, y + 1, obj_slope);
+    if (instance_exists(_obj))
     {
-        var _obj = scr_slope_get();
-        
-        if (instance_exists(_obj))
-        {
-            if (sign(_obj.image_xscale) != xscale)
-            {
-                if (movespeed < 20)
-                    movespeed += arg0;
-            }
-            else
-            {
-                movespeed -= arg1;
-            }
-        }
+		if (scr_slope(x, y + 1))
+		{
+	        if (sign(_obj.image_xscale) != xscale)
+	        {
+	            if (movespeed < 20)
+	                movespeed += arg0;
+	        }
+	        else
+	            movespeed -= arg1;
+		}
     }
 }
 

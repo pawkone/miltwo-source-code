@@ -111,10 +111,6 @@ if (hitstun.is == false)
             }
         }
     }
-	
-	scr_collide_destructibles()
-    scr_collision();
-    scr_collide_destructibles();
     
     if (grounded)
         coyote_time = 10;
@@ -148,11 +144,6 @@ if (hitstun.is == false)
             plrsnds_play(sfx.slam, x, y);
         }
     }
-	
-    if (state == states.crouch || state == states.tumble || state == states.superjumpprep)
-        mask_index = spr_crouchmask;
-    else
-        mask_index = spr_player_mask;
 
 	if state >= 0
 	{
@@ -160,6 +151,16 @@ if (hitstun.is == false)
 		if script_exists(_asset)
 			script_execute(_asset)
 	}
+	
+	mask_index = spr_player_mask;
+    if scr_solid(x,y) || (state == states.crouch || state == states.tumble || state == states.superjumpprep)
+        mask_index = spr_crouchmask;
+    else
+        mask_index = spr_player_mask;
+		
+	scr_collide_destructibles()
+    scr_collision();
+    scr_collide_destructibles();
 }
 else
 {

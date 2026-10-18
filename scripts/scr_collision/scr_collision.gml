@@ -93,8 +93,7 @@ function scr_solid(arg0, arg1)
 {
     var _collided = false;
     var _id = id;
-    var _collisionArray = [obj_solid, obj_slope, obj_platform, obj_platform, obj_destructibles];
-    
+    var _collisionArray = [obj_solid, obj_slope, obj_platform, obj_destructibles];
     for (var i = 0; i < array_length(_collisionArray); i++)
     {
         var _obj = _collisionArray[i];
@@ -168,14 +167,4 @@ function scr_slope_collideCheck(arg0, arg1, arg2)
     }
     
     return (arg2 + _height) > _slopeFinal;
-}
-
-function scr_slope_get(arg0 = 0, arg1 = 1)
-{
-    return instance_place(x + arg0, y + arg1, obj_slope);
-}
-
-function place_meeting_solid(arg0 = 0, arg1 = 1)
-{
-    return place_meeting(x + arg0, y + arg1, obj_solid);
 }

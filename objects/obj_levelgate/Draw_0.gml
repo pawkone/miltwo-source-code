@@ -7,7 +7,7 @@ if !premode
 	{
 		var cx = camera_get_view_x(view_camera[0]), cy = camera_get_view_y(view_camera[0])
 		if !surface_exists(surf)
-			surf = surface_create(bbox_right-bbox_left, bbox_bottom-bbox_top)
+			surf = surface_create(bbox_right-bbox_left+1, bbox_bottom-bbox_top+1)
 	    surface_set_target(surf)
 		draw_clear(c_white)
 	    for (var i = 0; i < array_length(gateinfo); i++)
@@ -18,12 +18,7 @@ if !premode
 				q[2] += q[4]
 	            q[3] += q[5]
 	        }
-	        else
-	        {
-	            q[2] = (960 - (cx * 0.05)) + (960 / 5)
-	            q[3] = (540 - (cy * 0.05) - (540 / 2)) + 8
-	        }
-	        draw_sprite_tiled(q[0], q[1], q[2], q[3])
+	        draw_sprite_tiled(q[0], q[1], q[2]+q[6]*((960 - (cx * 0.05)) + (960 / 5)), q[3]+q[6]*((540 - (cy * 0.05) - (540 / 2)) + 8))
 	    }
 	    surface_reset_target()
 	    draw_surface_ext(surf, bbox_left, bbox_top,1,1,0,c_white,bgalpha)

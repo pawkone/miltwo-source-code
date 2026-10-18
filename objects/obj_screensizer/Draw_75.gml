@@ -33,21 +33,19 @@ if instance_exists(obj_pause) && global.pausenew
 }
 
 shader_set_uniform_f(shader_get_uniform(shd_gamerender, "hsv_mult"), hueonlrp)
-shader_set_uniform_f(shader_get_uniform(shd_gamerender, "lap3_mult"), 0 /*lap3_mult*/)
+shader_set_uniform_f(shader_get_uniform(shd_gamerender, "lap3_mult"), lap3_mult)
 if hueonlrp > 0
 {
 	shader_set_uniform_f(shader_get_uniform(shd_gamerender, "hsv_hue"), (huelrp+1 mod 2)-1)
 	shader_set_uniform_f(shader_get_uniform(shd_gamerender, "hsv_sat"), huevsp*-17)
 	shader_set_uniform_f(shader_get_uniform(shd_gamerender, "hsv_val"), hueval)
 }
-/*
 if lap3_mult > 0
 {
 	shader_set_uniform_i(shader_get_uniform(shd_gamerender, "lap3_timer"), current_time mod 8000)
 	shader_set_uniform_f(shader_get_uniform(shd_gamerender, "lap3_offsetx"), camera_get_view_x(view_camera[0]))
 	shader_set_uniform_f(shader_get_uniform(shd_gamerender, "lap3_offsety"), camera_get_view_y(view_camera[0]))
 }
-*/
 if _drawgame
 {
 	if surface_exists(gameSurface)

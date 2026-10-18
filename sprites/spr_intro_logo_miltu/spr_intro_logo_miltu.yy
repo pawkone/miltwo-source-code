@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":309,
   "bbox_left":43,
-  "bbox_right":453,
+  "bbox_right":455,
   "bbox_top":3,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"ff4ee65e-6462-44a2-b613-4e4db4a78b3f","name":"ff4ee65e-6462-44a2-b613-4e4db4a78b3f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8c39f1b6-28f6-49d6-aa24-4fb79ed2e77a","name":"8c39f1b6-28f6-49d6-aa24-4fb79ed2e77a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":317,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"52d6de5f-9ed0-41d9-a4b7-166392567fe3","blendMode":0,"displayName":"default","isLocked":false,"name":"52d6de5f-9ed0-41d9-a4b7-166392567fe3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"3c2428f8-c871-4fa2-bdf3-8ca71074eb44","blendMode":0,"displayName":"default","isLocked":false,"name":"3c2428f8-c871-4fa2-bdf3-8ca71074eb44","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_intro_logo_miltu",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ff4ee65e-6462-44a2-b613-4e4db4a78b3f","path":"sprites/spr_intro_logo_miltu/spr_intro_logo_miltu.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0af0cf4f-adeb-4ca0-9d4e-3b2e74967c2d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8c39f1b6-28f6-49d6-aa24-4fb79ed2e77a","path":"sprites/spr_intro_logo_miltu/spr_intro_logo_miltu.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"740786cb-d7b6-4649-8fa0-6ecb981c2f79","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

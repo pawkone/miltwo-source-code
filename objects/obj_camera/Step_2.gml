@@ -60,8 +60,6 @@ else
 	cameraShake = cameraShakeMax*(cameraShakeTimer/cameraShakeTimerMax)*1.5
 }
 
-camera.zoom += (-mouse_wheel_down() + mouse_wheel_up()) / 6
-
 camera.width = 960 * (1 + (1 - camera.zoom));
 camera.height = 540 * (1 + (1 - camera.zoom));
 
