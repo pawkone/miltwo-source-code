@@ -1,3 +1,9 @@
+if mousemoved
+{
+	if pky_right || -pky_left || pky_up || pky_down || pky_jump || pky_grab
+		mousemoved = false
+}
+
 hand_y = approach(hand_y, 540, 16)
 if tv_static < 0
 {

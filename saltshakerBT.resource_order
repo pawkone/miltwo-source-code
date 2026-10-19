@@ -954,6 +954,7 @@
     {"name":"spr_mainmenu_tv","order":5,"path":"sprites/spr_mainmenu_tv/spr_mainmenu_tv.yy",},
     {"name":"spr_mainmenu_tvBackground","order":6,"path":"sprites/spr_mainmenu_tvBackground/spr_mainmenu_tvBackground.yy",},
     {"name":"spr_mainmenu_tvStatic","order":7,"path":"sprites/spr_mainmenu_tvStatic/spr_mainmenu_tvStatic.yy",},
+    {"name":"spr_menunew_tvhint","order":30,"path":"sprites/spr_menunew_tvhint/spr_menunew_tvhint.yy",},
     {"name":"spr_menunew","order":9,"path":"sprites/spr_menunew/spr_menunew.yy",},
     {"name":"spr_metalblock_debri","order":11,"path":"sprites/spr_metalblock_debri/spr_metalblock_debri.yy",},
     {"name":"spr_metalblock","order":10,"path":"sprites/spr_metalblock/spr_metalblock.yy",},
