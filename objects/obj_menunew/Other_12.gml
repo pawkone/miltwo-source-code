@@ -39,7 +39,7 @@ else
 				{
 					video_open(tv_file)
 					if video_get_status() == video_status_closed
-						scr_transfotip("Not supported video format")
+						tv_nsbuffer = 90
 					tv_file = ""
 					tv_index = -1
 				}
@@ -47,7 +47,7 @@ else
 				{
 					video_open($"gameData/videos/tv{tv_index}.mp4")
 					if video_get_status() == video_status_closed
-						scr_transfotip("Not supported video format")
+						tv_nsbuffer = 90
 					tv_index = tv_indexnext
 				}
 				video_set_volume(global.SfxVolume * global.SfxVolume * 2)
