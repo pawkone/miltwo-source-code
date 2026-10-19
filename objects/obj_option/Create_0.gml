@@ -32,6 +32,8 @@ enum optionstype
 	modded,
 	modded_old,
 	modded_custom,
+	credits,
+	anchor_credits,
 }
 
 var addBackground = function(arg0 = [], arg1, arg2 = 0)
@@ -174,6 +176,10 @@ add_option_press(category, "option_controls", function()
 add_option_press(category, "option_modded", function()
 {
     goto_menu(optionstype.modded);
+}, new addPause_icon(8));
+add_option_press(category, "option_credits", function()
+{
+    goto_menu(optionstype.credits);
 }, new addPause_icon(8));
 array_push(menus, category);
 var AUDIO = create_menu(optionstype.audio, optionstype.anchor_left, 48, function()
@@ -756,3 +762,9 @@ add_option_ext(MODDED_CUSTOM, optionstype.element_toggle, "option_modded_slopero
 	q.val = global.modded_sloperotation;
 }, global.modded_sloperotation, 1);
 array_push(menus, MODDED_CUSTOM);
+
+var CREDITS = create_menu(optionstype.credits, optionstype.anchor_credits, 48, function()
+{
+    goto_menu(optionstype.mainpage);
+});
+array_push(menus, CREDITS);

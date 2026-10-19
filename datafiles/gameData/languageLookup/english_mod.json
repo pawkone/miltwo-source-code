@@ -16,6 +16,8 @@
 	"online_racemode_under2player": "Races needs at least 2 players.",
 	"online_caught": " you know you aint slick: ",
 
+	"option_credits": "MILTWO CREDITS",
+
 	"option_modded": "MODDED",
 	"option_modded_title_menucustom": "MENU : CUSTOM",
 	"option_modded_desc_menucustom": "change entirely new content for the mod here!",
@@ -39,7 +41,7 @@
 	"option_modded_title_betterwaybackyard": "IMPROVED WAY BACKYARD",
 	"option_modded_desc_betterwaybackyard": "adds better visuals to way backyard with better rain and a better tint",
 	"option_modded_title_sloperotation": "SLOPE ROTATION",
-	"option_modded_desc_sloperotation": "not working rn   self explanatory!\nps: please dont over think it"
+	"option_modded_desc_sloperotation": "self explanatory!\nps: please dont over think it"
 
 
 
