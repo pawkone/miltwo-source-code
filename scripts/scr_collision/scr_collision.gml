@@ -16,9 +16,6 @@ function scr_collision()
     var __hspPlat = 0;
     var __vspPlat = 0;
     
-    if (vsp < 20)
-        vsp += (!place_meeting(x, y, obj_water) ? grav : (grav / 2));
-    
     var finalHsp = hsp;
     var finalVsp = vsp;
     
@@ -77,6 +74,9 @@ function scr_collision()
     }
     
     grounded |= scr_solid(x, y + 1);
+	
+    if (vsp < 20)
+        vsp += (!place_meeting(x, y, obj_water) ? grav : (grav / 2));
 }
 
 function scr_slope(arg0, arg1)

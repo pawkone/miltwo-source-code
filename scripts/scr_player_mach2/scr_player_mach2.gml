@@ -3,17 +3,33 @@ function scr_player_mach2()
     hsp = movespeed * xscale;
     var move = pky_right + pky_left;
     var _accel = 0.1;
-    if character == chars.pepperni && grounded
+    if character == chars.pepperni && sprite_index == sprites.mach1
 	{
-		movespeed++
-		if movespeed >= 9
+		image_speed = 0.4
+		vsp = 0
+		hsp = xscale*(image_index*1.5-8)
+		if animation_end()
 		{
 			flash = true
-			sprite_index = sprites.mach3hit
+			squashX = 1.4
+			squashY = 0.6
+			sprite_index = sprites.mach3
 			image_speed = 0.35
 			movespeed = 12
 			state = states.mach3
 		}
+		exit
+	}
+    if character == chars.pepperni && sprite_index == sprites.mach2
+	{
+		flash = true
+		squashX = 1.4
+		squashY = 0.6
+		sprite_index = sprites.mach3
+		image_speed = 0.35
+		movespeed = 12
+		state = states.mach3
+		exit
 	}
     if (character == chars.milton)
         _accel = 0.065;

@@ -6,3 +6,4 @@ depth = -9999
 image_yscale = 0.75+random(75)/100
 image_xscale = 2-image_yscale
 image_speed = 0
+image_blend = make_colour_hsv(0,122,255)

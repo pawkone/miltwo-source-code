@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":1,
   "conversionMode":0,
-  "duration":1.1908844,
+  "duration":1.6176645,
   "exportDir":"",
   "name":"sfx_player_pom_mach1",
   "parent":{

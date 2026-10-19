@@ -767,4 +767,8 @@ var CREDITS = create_menu(optionstype.credits, optionstype.anchor_credits, 48, f
 {
     goto_menu(optionstype.mainpage);
 });
+add_option_press(CREDITS, "option_back", function()
+{
+    goto_menu(optionstype.mainpage);
+});
 array_push(menus, CREDITS);

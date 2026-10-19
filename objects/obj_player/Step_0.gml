@@ -1,3 +1,13 @@
+grav = character == chars.pepperni ? 0.7 : 0.5
+
+if keyboard_check_pressed(vk_f4)
+{
+	if instance_exists(obj_notepad)
+		instance_destroy(obj_notepad)
+	else
+		instance_create(0,0,obj_notepad)
+}
+
 var yaya = ((
 	place_meeting(x,y,obj_dresser) ||
 	place_meeting(x,y,obj_door) ||

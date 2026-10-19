@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_playerP_step",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.85424036,
+  "exportDir":"",
+  "name":"sfx_playerP_step",
+  "parent":{
+    "name":"pepperni",
+    "path":"folders/Sounds/SFX/Charactes/pepperni.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_playerP_step.ogg",
+  "volume":1.0,
+}

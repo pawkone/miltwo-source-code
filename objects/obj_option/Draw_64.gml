@@ -297,6 +297,19 @@ switch (m.anchor)
         }
         
         break;
+		
+	case optionstype.anchor_credits:
+		
+		var _credits = 
+		[
+			["pawkone", "creator - coder - artist - ideas - etc", spr_milton_rollstart],
+			["targetbuldoser", "artist - composer - ideas", spr_milton_mach1, spr_milton_mach2, spr_milton_mach3turn, spr_milton_wallslide, spr_player0_groundpoundstart, spr_player0_groundpound, spr_player0_groundpoundbump, spr_soda, spr_tv_soda],
+			["toasty", "fromer artist - ideas", spr_player_chat],
+			["painternoise", "fromer artist", spr_tv_happyT, spr_milton_mach3turnfall],
+			["poly", "volunteered artist", spr_butterAir, spr_butterGround, spr_pepperni_mach1, spr_pepperni_mach3, spr_pepperni_taunt, spr_milton_jump, spr_milton_fall],
+			["cacas.com", "volunteered artist", spr_pepperni_idleanim1],
+		]
+		break;
 }
 
 draw_set_colour(c_white);

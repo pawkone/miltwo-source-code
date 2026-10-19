@@ -12,7 +12,7 @@ function plrsnds_play(event, xx, yy)
 	{
 		if is_array(event)
 			event = event[irandom(array_length(event)-1)]
-		var _pitch = random_range(0.98,1.02)
+		var _pitch = random_range(0.92,1.08)
 		var _sfx = scr_soundeffect(event, _pitch, false)
 		scr_soundeffect_online(event, _pitch, false)
 		audio_sound_gain(_sfx, global.SfxVolume * audio_sound_get_gain(event), 0)
