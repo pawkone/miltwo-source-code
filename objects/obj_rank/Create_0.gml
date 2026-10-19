@@ -74,7 +74,7 @@ if (!tutorial)
 }
 
 rankspr = spr_rankD;
-ranktextSpr = lang_get_asset("spr_rankD_text");
+ranktextSpr = spr_rankD_text;
 var _col = 7884848;
 var _col2 = 4729105;
 gotoBackground = 0;
@@ -84,7 +84,7 @@ switch (_rankIndex)
     case 0:
         gotoBackground = 1;
         rankspr = spr_rankD;
-        ranktextSpr = lang_get_asset("spr_rankD_text");
+        ranktextSpr = spr_rankD_text;
         _col = 7884848;
         _col2 = 4729105;
         break;
@@ -92,7 +92,7 @@ switch (_rankIndex)
     case 1:
         gotoBackground = 2;
         rankspr = spr_rankC;
-        ranktextSpr = lang_get_asset("spr_rankC_text");
+        ranktextSpr = spr_rankC_text;
         _col = 4771936;
         _col2 = 28672;
         break;
@@ -100,7 +100,7 @@ switch (_rankIndex)
     case 2:
         gotoBackground = 3;
         rankspr = spr_rankB;
-        ranktextSpr = lang_get_asset("spr_rankB_text");
+        ranktextSpr = spr_rankB_text;
         _col = 16295984;
         _col2 = 11030568;
         break;
@@ -108,7 +108,7 @@ switch (_rankIndex)
     case 3:
         gotoBackground = 4;
         rankspr = spr_rankA;
-        ranktextSpr = lang_get_asset("spr_rankA_text");
+        ranktextSpr = spr_rankA_text;
         _col = 248;
         _col2 = 80;
         break;
@@ -116,7 +116,7 @@ switch (_rankIndex)
     case 4:
         gotoBackground = 5;
         rankspr = spr_rankS;
-        ranktextSpr = lang_get_asset("spr_rankS_text");
+        ranktextSpr = spr_rankS_text;
         _col = 37088;
         _col2 = 10392;
         break;

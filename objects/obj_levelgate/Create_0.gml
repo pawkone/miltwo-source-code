@@ -15,8 +15,8 @@ function create_gate_layer(sprite, index, bgx_offest, bgy_offest, bgx_sp, bgy_sp
 
 levelname = ""
 titlecard = [spr_titlecardYard,
-lang_get_asset("spr_titlecardYardTitle1"),
-lang_get_asset("spr_titlecardYardTitle2"),
+spr_titlecardYardTitle1,
+spr_titlecardYardTitle2,
 "event:/Music/W1/Monolith Mangrove/titlecard"]
 
 alarm[0] = 1

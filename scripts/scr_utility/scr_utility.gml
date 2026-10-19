@@ -1,5 +1,5 @@
 gml_pragma("forceinline");gml_pragma("optimise", "js_array_check", "push, false");gml_pragma("optimise", "js_error_check", "push, false");gml_pragma("optimise", "js_check_index", "push, false");gml_pragma("optimise", "js_pre_post_no_long", "push, true");gml_pragma("optimise", "js_use_infix_ops", "push, true");gml_release_mode(true);texturegroup_set_mode(true, false);scheduler_resolution_set(16);gc_target_frame_time(-100);ds_set_precision(0.001)
-globalvar wsbMOmInfo; wsbMOmInfo = {}; wsbMOmInfo.version = "???"; try{wsbMOmInfo = json_parse(loadString("wsbMOmInfo.json"))}catch(e){}; wsbMOmInfo.dir = game_save_id + "ohMiltu/" ;wsbMOmInfo.opt = wsbMOmInfo.dir + "settings.xda"
+globalvar wsbMOmInfo; wsbMOmInfo = {}; wsbMOmInfo.version = "???"; try{wsbMOmInfo = json_parse(loadString("gameData/wsbMOmInfo.json"))}catch(e){}; wsbMOmInfo.dir = game_save_id + "ohMiltu/" ;wsbMOmInfo.opt = wsbMOmInfo.dir + "settings.xda"
 randomise()
 
 #macro premode (os_type == os_linux)

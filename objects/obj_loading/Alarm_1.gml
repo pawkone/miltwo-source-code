@@ -2,12 +2,11 @@ randomize()
 
 alarm[0] = 1
 
-langstuff = lang_init();
-langstuff_names = variable_struct_get_names(langstuff);
+lang_init();
 
 textures = texturegroup_get_textures("texturegroup_game")
 
-texturesMax = array_length(textures) + array_length(langstuff_names);
+texturesMax = array_length(textures);
 
 // -- LOAD AUDIO --
 audio_group_load(audioGroupMusic)

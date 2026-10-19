@@ -46,7 +46,7 @@ function scr_player_mach3()
     if (move == xscale && grounded)
         movespeed = approach(movespeed, 20, _accel);
     
-    if (animation_end() && sprite_index == spr_player_buzzsawCancel)
+    if (animation_end() && sprite_index == sprites.buzzsawCancel)
         image_index = image_number - 2;
     
     if (animation_end() && (sprite_index == spr_player1_grabspinnyland || sprite_index == sprites.mach3jump || sprite_index == sprites.mach3hit || sprite_index == sprites.rollgetup))
@@ -55,7 +55,7 @@ function scr_player_mach3()
         sprite_index = sprites.mach3;
     }
     
-    if (movespeed >= 16 && sprite_index != sprites.crazyrun && sprite_index != spr_player_buzzsawCancel)
+    if (movespeed >= 16 && sprite_index != sprites.crazyrun && sprite_index != sprites.buzzsawCancel)
     {
         sprite_index = character != chars.pepperni ? sprites.crazyrun : sprites.mach3;
 		if character != chars.pepperni 
@@ -97,7 +97,7 @@ function scr_player_mach3()
 		image_index = image_number - 1;
     }
 	
-    if (grounded && (sprite_index == spr_player3_longjump || sprite_index == sprites.superjumpcancel || sprite_index == spr_player_buzzsawCancel))
+    if (grounded && (sprite_index == spr_player3_longjump || sprite_index == sprites.superjumpcancel || sprite_index == sprites.buzzsawCancel))
     {
         flash = true;
         image_index = 0;
@@ -213,7 +213,7 @@ function scr_player_mach3()
         vsp = -11;
         state = states.buzzsaw;
         image_index = 0;
-        sprite_index = spr_player_buzzsawBump;
+        sprite_index = sprites.buzzsawBump;
     }
 	else if (character == chars.bacon_crash)
 	{

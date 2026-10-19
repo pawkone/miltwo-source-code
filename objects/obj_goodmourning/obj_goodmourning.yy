@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_goodmourning",
+    "path":"sprites/spr_goodmourning/spr_goodmourning.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

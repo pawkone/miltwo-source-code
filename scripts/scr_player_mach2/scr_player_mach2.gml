@@ -218,7 +218,7 @@ function scr_player_mach2()
         vsp = -11;
         state = states.buzzsaw;
         image_index = 0;
-        sprite_index = spr_player_buzzsawBump;
+        sprite_index = sprites.buzzsawBump;
     }
 	
     doTaunt();

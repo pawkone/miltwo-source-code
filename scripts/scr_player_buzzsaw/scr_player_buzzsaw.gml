@@ -1,5 +1,11 @@
 function scr_player_buzzsaw()
 {
+	if character == chars.valentia
+	{
+		scr_playerV_buzzsaw()
+		exit
+	}
+	
     image_speed = 0.7;
     hsp = movespeed * xscale;
     
@@ -20,7 +26,7 @@ function scr_player_buzzsaw()
         if (vsp < 15)
             vsp = 15;
         
-        sprite_index = spr_player_buzzsawFastFall;
+        sprite_index = sprites.buzzsawFastFall;
     }
     
     if (vsp >= -5)
@@ -35,11 +41,11 @@ function scr_player_buzzsaw()
         create_particleStatic(spr_bangeffect, x, y, 1, 1);
         FMODevent_oneshot("event:/Sfx/Player/airbump", x, y);
         image_index = 0;
-        sprite_index = spr_player_buzzsawBump;
+        sprite_index = sprites.buzzsawBump;
     }
     
-    if (animation_end() && sprite_index == spr_player_buzzsawBump)
-        sprite_index = spr_player_buzzsaw;
+    if (animation_end() && sprite_index == sprites.buzzsawBump)
+        sprite_index = sprites.buzzsaw;
     
     if (grounded)
     {
@@ -73,7 +79,7 @@ function scr_player_buzzsaw()
         state = states.mach3;
         jumpstop = true;
         vsp = -7;
-        sprite_index = spr_player_buzzsawCancel;
+        sprite_index = sprites.buzzsawCancel;
         image_index = 0;
     }
 }

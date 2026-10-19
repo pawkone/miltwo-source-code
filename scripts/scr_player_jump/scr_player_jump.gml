@@ -37,7 +37,7 @@ function scr_player_jump()
         sprite_index = spr_player_bumpenemy;
     }
     
-    if (animation_end() && sprite_index == spr_player_grabcancel)
+    if (animation_end() && sprite_index == sprites.grabcancel)
     {
         image_index = 0;
         sprite_index = sprites.fall;
@@ -72,6 +72,6 @@ function scr_player_jump()
     
     doTaunt();
     
-    if (sprite_index != spr_player_grabbump)
+    if (sprite_index != sprites.grabbump)
         doGrab();
 }

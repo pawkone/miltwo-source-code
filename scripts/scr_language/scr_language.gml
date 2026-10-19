@@ -4,8 +4,10 @@ global.langMapArt = ds_map_create();
 
 function lang_init()
 {
-	var _files = ["languageLookup/" + global.language + ".json",
-	"languageLookup/" + global.language + "_mod.json"]
+	var _files = [
+		"gameData/languageLookup/" + global.language + ".json",
+		"gameData/languageLookup/" + global.language + "_mod.json"
+	]
 	var _textFile = ""
 	for (var i = 0; i < array_length(_files); i++)
 	{
@@ -24,15 +26,6 @@ function lang_init()
 			}
 		}
 	}
-    _textFile = string("languageLookup/{0}_assets.json", global.language);
-	if file_exists(_textFile)
-	{
-		try {
-			return json_parse(loadString(_textFile));
-		} catch(e) {return {}}
-	}
-	else
-		return {}
 }
 
 function lang_get_phrase(arg0)
@@ -41,16 +34,4 @@ function lang_get_phrase(arg0)
         return ds_map_find_value(global.langMapWord, arg0);
     else
         return arg0;
-}
-
-function lang_get_asset(arg0)
-{
-    if ds_map_exists(global.langMapArt, arg0)
-        return ds_map_find_value(global.langMapArt, arg0)
-	
-	var _spr = asset_get_index(arg0)
-	if sprite_exists(_spr)
-		return _spr
-	
-    return -1
 }

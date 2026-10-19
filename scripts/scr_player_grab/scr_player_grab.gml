@@ -88,7 +88,7 @@ function scr_player_grab()
     if (move != 0 && move != xscale)
     {
         movespeed = 0;
-        sprite_index = spr_player_grabcancel;
+        sprite_index = sprites.grabcancel;
         state = states.jump;
         exit;
     }
@@ -120,7 +120,7 @@ function scr_player_grab()
         hsp = 0;
         vsp = -6;
         state = states.jump;
-        sprite_index = spr_player_grabbump;
+        sprite_index = sprites.grabbump;
         create_particleStatic(spr_hurteffect, x, y, 1);
         image_index = 0;
         FMODevent_oneshot("event:/Sfx/Player/bump", x, y);

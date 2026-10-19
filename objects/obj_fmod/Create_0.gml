@@ -11,11 +11,11 @@ fmod_main_system = fmod_studio_system_get_core_system()
 banks = ["Master.bank", "Master.strings.bank", "Music.bank", "Sfx.bank", "Ambience.bank"]
 for (var i = 0; i < array_length(banks); i++)
 {
-	if !file_exists("fmodBanks/" + banks[i])
+	if !file_exists("gameData/fmodBanks/" + banks[i])
 	{
 		show_message("fmod bank is missing or invaild")
 		game_end()
 		exit
 	}
-    fmod_studio_system_load_bank_file("fmodBanks/" + banks[i], FMOD_STUDIO_LOAD_BANK.NORMAL)
+    fmod_studio_system_load_bank_file("gameData/fmodBanks/" + banks[i], FMOD_STUDIO_LOAD_BANK.NORMAL)
 }

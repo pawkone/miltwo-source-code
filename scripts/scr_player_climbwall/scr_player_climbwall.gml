@@ -52,7 +52,7 @@ function scr_player_climbwall()
         {
             state = states.buzzsaw;
             image_index = 0;
-            sprite_index = spr_player_buzzsawBump;
+            sprite_index = sprites.buzzsawBump;
             
             if (verticalMovespeed < 14)
                 verticalMovespeed = 14;
