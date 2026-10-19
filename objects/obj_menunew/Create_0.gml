@@ -1,7 +1,3 @@
-surf = -4
-drawsurf = -4
-
-
 shd1 = shader_get_uniform(shd_menunew, "u_count")
 shd2 = shader_get_uniform(shd_menunew, "u_pal")
 var c = [ $000000, $000000, $1b110b, $3e1e3c, $0a3478, $2b1276, $283469, $0e601e, $28600e, $1a5773, $265443, $522b3a, $542d51, $5f2859, $527483, $aa6058, $c38377, $96ffd0, $ff9893 ]
@@ -15,7 +11,17 @@ for (var i = 0; i < shdl; i++)
 	shda[i*3+2] = ((q>>16)&$FF)/255
 }
 
+surf = -4
 state = "files"
+
+drawsurf = -4
+
+tv_static = -1
+tv_change = 0
+tv_index = 0
+tv_file = ""
+tv_indexnext = tv_index
+tv_max = 7
 
 mousemoved = false
 

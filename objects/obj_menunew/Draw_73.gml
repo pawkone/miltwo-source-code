@@ -4,7 +4,7 @@ if state == "files"
 	draw_sprite_ext(spr_menunew, 9, 0, 0, 1, 1, 0, c_white, light_final)
 if state == "draw"
 	draw_sprite_ext(spr_menunew, 12, 0, 0, 1, 1, 0, c_white, light_final*2)
-if state == "tv"
+if state == "tv" && !(tv_static > 7 || video_get_status() == video_status_playing)
 	draw_sprite_ext(spr_menunew, 14, 0, 0, 1, 1, 0, c_white, light_final)
 
 

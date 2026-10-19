@@ -209,7 +209,6 @@
     {"name":"FMOD","order":2,"path":"extensions/FMOD/FMOD.yy",},
     {"name":"font_console","order":1,"path":"fonts/font_console/font_console.yy",},
     {"name":"font_dialogPlaceholder","order":2,"path":"fonts/font_dialogPlaceholder/font_dialogPlaceholder.yy",},
-    {"name":"font_saltif","order":3,"path":"fonts/font_saltif/font_saltif.yy",},
     {"name":"TODO","order":10,"path":"notes/TODO/TODO.yy",},
     {"name":"obj_baconsmacon_dead","order":2,"path":"objects/obj_baconsmacon_dead/obj_baconsmacon_dead.yy",},
     {"name":"obj_baconsmacon","order":1,"path":"objects/obj_baconsmacon/obj_baconsmacon.yy",},
