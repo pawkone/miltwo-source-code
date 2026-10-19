@@ -21,17 +21,6 @@ if partysover
 	}
 }
 
-var _pause = instance_exists(obj_pause) && global.pausenew
-if _pause && obj_pause.active
-	_drawgame = false
-shader_sset(shd_gamerender)
-if instance_exists(obj_pause) && global.pausenew
-{
-	var _m = obj_pause.activelrp
-	shader_set_uniform_f(shader_get_uniform(shd_gamerender, "pause_mult"), _m)
-	if _m > 0 shader_set_uniform_i(shader_get_uniform(shd_gamerender, "pause_seed"), obj_pause.new_seed)
-}
-
 shader_set_uniform_f(shader_get_uniform(shd_gamerender, "hsv_mult"), hueonlrp)
 shader_set_uniform_f(shader_get_uniform(shd_gamerender, "lap3_mult"), lap3_mult)
 if hueonlrp > 0
@@ -48,13 +37,22 @@ if lap3_mult > 0
 }
 if _drawgame
 {
+	gpu_set_blendmode_ext_sepalpha(bm_src_alpha, bm_inv_src_alpha, bm_one, bm_inv_src_alpha)
+	gpu_set_blendenable(false)
+	if !(instance_exists(obj_pause) && obj_pause.active)
+	{
+		if surface_exists(application_surface)
+		{
+			if room != rm_loading
+				draw_surface_ext(application_surface, (global.modifiers.flipped ? 960 : 0 + (1-size)*480), (1-size)*270, (global.modifiers.flipped ? -1 : 1) * size, size, 0, c_white, 1)
+			else
+				draw_surface_ext(application_surface, (1-size)*480, (1-size)*270, size, size, 0, c_white, 1)
+		}
+	}
+	gpu_set_blendenable(true)
 	if surface_exists(gameSurface)
 		draw_surface_ext(gameSurface, (1-size)*480, (1-size)*270, size, size, 0, c_white, 1)
-}
-if _pause
-{
-	with obj_pause
-		event_user(0)
+	gpu_set_blendmode_default()
 }
 shader_reset()
 

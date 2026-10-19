@@ -1,6 +1,9 @@
 function scr_player_mach3()
 {
     hsp = movespeed * xscale;
+	
+	if movespeed < 12
+		movespeed = approach(movespeed, 12, 0.6)
     
     if (sprite_index == sprites.superjumpcancel)
         image_speed = lerp(image_speed, 0.5, 0.15);

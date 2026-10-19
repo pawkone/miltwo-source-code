@@ -20,7 +20,7 @@ for (var i = 0; i < _tile_count; i++)
 shader_reset();
 gpu_set_blendmode(bm_min);
 draw_sprite_tiled(spr_tileDoodles, patternIndex, -camera_get_view_x(view_camera[0]), -camera_get_view_y(view_camera[0]) + patternPos);
-gpu_set_blendmode(bm_normal)
+gpu_set_blendmode_default()
 surface_reset_target();
 draw_set_alpha(patternAlpha);
 pal_swap_set(spr_whitefix, 1, false);

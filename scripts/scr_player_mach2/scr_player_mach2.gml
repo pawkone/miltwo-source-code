@@ -3,12 +3,17 @@ function scr_player_mach2()
     hsp = movespeed * xscale;
     var move = pky_right + pky_left;
     var _accel = 0.1;
-    if character == chars.pepperni
+    if character == chars.pepperni && grounded
 	{
-		sprite_index = sprites.mach3
-		movespeed = 12;
-		state = states.mach3
-		exit;
+		movespeed++
+		if movespeed >= 9
+		{
+			flash = true
+			sprite_index = sprites.mach3hit
+			image_speed = 0.35
+			movespeed = 12
+			state = states.mach3
+		}
 	}
     if (character == chars.milton)
         _accel = 0.065;
@@ -96,7 +101,7 @@ function scr_player_mach2()
         vsp /= 20;
     }
     
-    if (movespeed >= 12 && grounded)
+    if character != chars.pepperni && (movespeed >= 12 && grounded)
     {
         movespeed = max(movespeed, 12);
         flash = true;

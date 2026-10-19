@@ -4,8 +4,6 @@ uniform float lap3_mult;
 uniform int lap3_timer;
 uniform float lap3_offsetx;
 uniform float lap3_offsety;
-uniform float pause_mult;
-uniform int pause_seed;
 uniform float hsv_mult;
 uniform float hsv_hue;
 uniform float hsv_sat;
@@ -23,10 +21,6 @@ vec3 adjustSaturationAndValue(vec3 color)
 	vec4 A2 = vec4(1.0,2.0/3.0,1.0/3.0,3.0);
 	vec3 B2 = abs(fract(vec3(hsv.x + A2.x, hsv.x + A2.y, hsv.x + A2.z))*6.0 - vec3(A2.w));
 	return mix(vec3(A2.x), clamp(B2 - vec3(A2.x),0.0,1.0), hsv.y) * hsv.z;
-}
-float hash(vec2 p)
-{
-	return fract(sin(dot(p + float(pause_seed), vec2(127.1,311.7))) * 43758.5453);
 }
 void main()
 {
@@ -48,22 +42,7 @@ void main()
 		wiggle += vec2(sin((pixel.x + pixel.y) * 0.003 + phase * 3.0), cos((pixel.x - pixel.y) * 0.003 + phase * 3.5)) * 0.5;
 		uv += wiggle * strength / vec2(960.0, 540.0);
 	}
-	if (pause_mult > 0.0)
-	{
-		vec2 texelSize = 1.0 / vec2(960.0,540.0);
-		vec2 pixel = uv / texelSize;
-		float frequency = 0.02;
-		float phase = float(pause_seed);
-		vec2 rippleOffset;
-		rippleOffset.x = sin(pixel.y * frequency + phase);
-		rippleOffset.y = cos(pixel.x * frequency + phase);
-		vec2 block = floor(pixel / 8.0);
-		vec4 tex = v_vColour * texture2D(gm_BaseTexture, (pixel + (rippleOffset + (vec2(hash(block),hash(block + vec2(19.19))) - 0.5) * 2.0) * pause_mult) * texelSize);
-		tex.rgb = mix(tex.rgb, adjustSaturationAndValue(tex.rgb), hsv_mult);
-		vec3 target = (distance(tex.rgb, vec3(0.0)) <= 0.25) ? mix(vec3(1.0), vec3(0.0,0.392,1.0), 0.5) : vec3(0.0,0.392,1.0);
-		gl_FragColor = vec4(mix(tex.rgb,target,pause_mult), step(0.5, tex.a));
-	}
-	else if (hsv_mult > 0.0)
+	if (hsv_mult > 0.0)
 	{
 		gl_FragColor = v_vColour * texture2D(gm_BaseTexture, uv);
 		gl_FragColor.rgb = mix(gl_FragColor.rgb, adjustSaturationAndValue(gl_FragColor.rgb), hsv_mult);

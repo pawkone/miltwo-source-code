@@ -8,6 +8,7 @@ if (xdata_read("General", string("Totem{0}", totem), false) == false)
     obj_totemViewer.goawayTimer = 180;
     obj_totemViewer.totemIndex = totem;
     xdata_write("General", string("Totem{0}", totem), true);
+	obj_totemViewer.countTotems = xdata_read("General", "Totem0", false) + xdata_read("General", "Totem1", false) + xdata_read("General", "Totem2", false)
 }
 
 xdata_close();

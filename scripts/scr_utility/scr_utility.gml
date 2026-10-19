@@ -69,6 +69,11 @@ function loadString(arg0)
 		return ""
 }
 
+function gpu_set_blendmode_default()
+{
+	gpu_set_blendmode(bm_normal)
+}
+
 function scr_fadeout(_accel = 0.1)
 {
 	if instance_exists(obj_fadeout)

@@ -31,7 +31,7 @@ if _open
 
 	surface_set_target(_surf)
 	draw_surface(_clip, 0, 0)
-	gpu_set_blendmode(bm_normal)
+	gpu_set_blendmode_default()
 	surface_reset_target()
 }
 

@@ -1,1 +1,0 @@
-global.pausenew = !global.pausenew

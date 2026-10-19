@@ -8,7 +8,7 @@ if global.modded_phototaunt
 	draw_sprite_ext(spr_taunteffectMask, image_index, 55, 55, 1, 1, image_angle, c_white, 1)
 	gpu_set_blendmode_ext(bm_dest_alpha, bm_zero)
 	draw_sprite_ext(spr_tauntEffectBackground, photoIndex, 55, 55, 1, 1, image_angle, c_white, 1)
-	gpu_set_blendmode(bm_normal)
+	gpu_set_blendmode_default()
 	surface_reset_target()
 	draw_set_alpha(image_alpha)
 	draw_sprite_ext(sprite_index, image_index, x, y, 1, 1, image_angle, c_white, image_alpha)

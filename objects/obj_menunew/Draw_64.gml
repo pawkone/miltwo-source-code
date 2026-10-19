@@ -1,6 +1,6 @@
 if instance_exists(obj_option) exit
 
-shader_set(shd_menunew)
+shader_sset(shd_menunew)
 shader_set_uniform_i(shd1, shdl)
 shader_set_uniform_f_array(shd2, shda)
 draw_surface(surf,0,0)
@@ -21,5 +21,11 @@ else if state == "files"
 {
 	draw_textEX(25, 525-32-32-32,	"[J]/Left Click : Hold")
 	draw_textEX(25, 525-32-32,		"[G]/Right Click : Slap")
+	draw_textEX(25, 525-32,			"[S] : Options")
+}
+else if state == "tv"
+{
+	draw_textEX(25, 525-32-32-32,	"[L] : ")
+	draw_textEX(25, 525-32-32,		"[R] : ")
 	draw_textEX(25, 525-32,			"[S] : Options")
 }

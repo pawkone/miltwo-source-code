@@ -1,15 +1,16 @@
 if (!active && activelrp <= 0) exit
-if global.pausenew exit
 if instance_exists(obj_option) exit
-gpu_set_blendmode(bm_normal)
+gpu_set_blendmode_default()
 if (active)
 {
     shader_sset(shd_wave);
-    shader_set_uniform_f(timeUniform, waveTime);
-    waveTime++;
+    shader_set_uniform_f(timeUniform, waveTime++);
     shader_set_uniform_f(frequencyUniform, freq);
     shader_set_uniform_f(amplitudeUniform, amp*activelrp);
+	gpu_set_blendenable(false)
     draw_sprite(screenSprite, 0, 0, 0);
+	gpu_set_blendenable(true)
+	draw_sprite(screenSprite2, 0, 0, 0);
     shader_reset();
     draw_set_alpha(graphBack.alpha);
     draw_set_colour(c_white);

@@ -11,7 +11,7 @@ draw_clear_alpha(c_white, 0);
 draw_sprite_ext(spr_npcborder, 1, 0, 0, 9.333333, 1.45 * borderscaleYmult, 0, c_white, 1);
 gpu_set_blendmode(bm_min);
 draw_sprite_tiled(spr_flobox, 0, BGX, BGY);
-gpu_set_blendmode(bm_normal)
+gpu_set_blendmode_default()
 surface_reset_target();
 draw_surface(surf, borderX, borderY);
 draw_sprite_ext(spr_npcborder, 0, borderX, borderY, 9.333333, 1.45 * borderscaleYmult, 0, c_white, 1);

@@ -1,5 +1,3 @@
-alarm[1] = 30
-new_seed = irandom(10000)
 depth = obj_screensizer.depth + 200;
 active = false;
 graphBorderSize = 2;
@@ -18,6 +16,7 @@ bacon =
     smokeIndex: 0
 };
 screenSprite = -4;
+screenSprite2 = -4;
 pauseMusic = FMODcreate_event("event:/Music/General/pause");
 vinylSND = FMODcreate_event("event:/Sfx/vinyl");
 selected = 0;
@@ -58,8 +57,9 @@ function doPause()
     active = true;
     FMODsetPauseAll(true);
     
-    screenSprite = sprite_create_from_surface(obj_screensizer.gameSurface, 0, 0, 960, 540, false, false, 0, 0);
-    instance_deactivate_all(true);
+    screenSprite = sprite_create_from_surface(application_surface, 0, 0, 960, 540, false, false, 0, 0);
+    screenSprite2 = sprite_create_from_surface(obj_screensizer.gameSurface, 0, 0, 960, 540, false, false, 0, 0);
+	instance_deactivate_all(true);
     instance_activate_object(obj_inputController);
     instance_activate_object(obj_screensizer);
     instance_activate_object(obj_fmod);
@@ -109,6 +109,8 @@ function doUnpause()
 	
     if (sprite_exists(screenSprite))
         sprite_delete(screenSprite);
+    if (sprite_exists(screenSprite2))
+        sprite_delete(screenSprite2);
     
     active = false;
 }

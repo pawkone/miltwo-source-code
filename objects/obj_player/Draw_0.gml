@@ -11,7 +11,7 @@ if (super)
         var _alpha = abs(sin((current_time * 0.001) + (5 * i))) * 0.1;
         gpu_set_blendmode(bm_add);
         draw_sprite_ext(sprReal, image_index, x + _xx, y + _yy, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, c_red, image_alpha * _alpha);
-        gpu_set_blendmode(bm_normal)
+        gpu_set_blendmode_default()
     }
 }
 
