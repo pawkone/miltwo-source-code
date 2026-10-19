@@ -704,6 +704,7 @@
     {"id":{"name":"scr_playerT","path":"scripts/scr_playerT/scr_playerT.yy",},},
     {"id":{"name":"scr_playerUtil","path":"scripts/scr_playerUtil/scr_playerUtil.yy",},},
     {"id":{"name":"scr_playerV_buzzsaw","path":"scripts/scr_playerV_buzzsaw/scr_playerV_buzzsaw.yy",},},
+    {"id":{"name":"scr_playerV_uppercut","path":"scripts/scr_playerV_uppercut/scr_playerV_uppercut.yy",},},
     {"id":{"name":"scr_retro_pal_swapper","path":"scripts/scr_retro_pal_swapper/scr_retro_pal_swapper.yy",},},
     {"id":{"name":"scr_shell_commands","path":"scripts/scr_shell_commands/scr_shell_commands.yy",},},
     {"id":{"name":"scr_sound","path":"scripts/scr_sound/scr_sound.yy",},},

@@ -201,15 +201,24 @@ function doGrab()
             {
                 FMODevent_oneshot("event:/Sfx/Player/uppercut", x, y);
                 slapBuffer = false;
-                state = states.uppercut;
                 
                 if (coyote_time)
                     vsp = -17;
                 else
                     vsp = -12;
                 
-                sprite_index = sprites.uppercut;
+                if character == chars.valentia
+				{
+					vsp = -16
+					if state == states.mach3 || sprite_index == sprites.longjump || sprite_index == sprites.longjumpend
+						sprite_index = spr_playerV_mach_uppercut
+					else
+						sprite_index = sprites.uppercut
+				}
+                else
+                    sprite_index = sprites.uppercut;
                 image_index = 0;
+				state = states.uppercut;
                 create_particleStatic(spr_jumpeffect, x, y, 1, 1);
                 squashX = 1.5;
                 squashY = 0.6;
@@ -442,6 +451,7 @@ function playerUtil_spr(_e)
 	st.player.groundpoundstart = get_baconera(spr_player_groundpoundstart, _e);
 	st.player.uppercut = get_baconera(spr_player_uppercut, _e);
 	st.player.lookdoor = get_baconera(spr_player_lookdoor, _e);
+	st.player.wallsplat = get_baconera(spr_player_wallsplat, _e);
 	st.player.idleanim1 = get_baconera(spr_player_idleanim1, _e, 1);
 	st.player.idleanim2 = get_baconera(spr_player_idleanim2, _e, 1);
 	st.player.idleanim3 = get_baconera(spr_player_idleanim3, _e, 1);

@@ -213,8 +213,10 @@ function scr_player_normal()
     
     if (pky_run && !place_meeting(x + xscale, y, obj_solid))
     {
-        create_particleStatic(spr_grabcloud, x, y, xscale, 1);
-        movespeed = 6;
+		if character != chars.valentia
+			create_particleStatic(spr_grabcloud, x, y, xscale, 1);
+        if (movespeed < 6)
+            movespeed = 6;
         sprite_index = sprites.mach1;
         image_index = 0;
         state = states.mach2;

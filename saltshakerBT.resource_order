@@ -544,6 +544,7 @@
     {"name":"scr_playerStates","order":9,"path":"scripts/scr_playerStates/scr_playerStates.yy",},
     {"name":"scr_playerUtil","order":6,"path":"scripts/scr_playerUtil/scr_playerUtil.yy",},
     {"name":"scr_playerV_buzzsaw","order":10,"path":"scripts/scr_playerV_buzzsaw/scr_playerV_buzzsaw.yy",},
+    {"name":"scr_playerV_uppercut","order":11,"path":"scripts/scr_playerV_uppercut/scr_playerV_uppercut.yy",},
     {"name":"scr_shell_commands","order":3,"path":"scripts/scr_shell_commands/scr_shell_commands.yy",},
     {"name":"scr_sound","order":10,"path":"scripts/scr_sound/scr_sound.yy",},
     {"name":"scr_xdata","order":1,"path":"scripts/scr_xdata/scr_xdata.yy",},

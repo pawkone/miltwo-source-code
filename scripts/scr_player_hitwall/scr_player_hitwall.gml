@@ -6,7 +6,7 @@ function scr_player_hitwall()
     if (grounded)
         movespeed = 0;
     
-    if (sprite_index == spr_player_wallsplat)
+    if (sprite_index == sprites.wallsplat)
     {
         movespeed = 0;
         hsp = 0;

@@ -1,5 +1,11 @@
 function scr_player_uppercut()
 {
+	if character == chars.valentia
+	{
+		scr_playerV_uppercut()
+		exit
+	}
+	
     var move = pky_right + pky_left;
     hsp = approach(hsp, movespeed * move, 0.8);
     

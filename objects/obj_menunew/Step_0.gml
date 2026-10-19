@@ -25,5 +25,7 @@ if state == "files"
 	event_user(0)
 if state == "draw"
 	event_user(1)
+if state == "tv"
+	event_user(2)
 	
 hand_y = clamp(hand_y, 0, 540)

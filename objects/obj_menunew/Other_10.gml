@@ -21,6 +21,7 @@ var _maxy = 205
 var _rangex = mbright ? 150 : 48
 var _rangey = mbright ? 1000 : 40
 
+var _tvquestionmarrrkkk = hand_x > 448 && hand_x < 704 && hand_y > 0 && hand_y < 0+96
 var _drawingquestionmarrrkkk = hand_x > 47 && hand_x < 47+96 && hand_y > 0 && hand_y < 0+96
 var _drawer1_hover = abs(hand_x-40) < _rangex && abs(hand_y-drawer1_y-210) < _rangey
 var _drawer2_hover = abs(hand_x-340) < _rangex && abs(hand_y-drawer2_y-210) < _rangey
@@ -52,6 +53,12 @@ if mbright
 	hand_x += random_range(-2,2)
 	hand_y += random_range(-2,2)
 	hand_hover = 3
+}
+else if _tvquestionmarrrkkk
+{
+	hand_hover = 4
+	if mbleft
+		state = "tv"
 }
 else if _drawingquestionmarrrkkk
 {

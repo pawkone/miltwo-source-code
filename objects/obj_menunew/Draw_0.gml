@@ -42,3 +42,7 @@ if state == "draw"
 	draw_circle_colour(hand_x+135,hand_y+20,64,#3c1e3e,#3c1e3e,true)
 	draw_circle_colour(hand_x+135,hand_y+20,2,#3c1e3e,#3c1e3e,true)
 }
+if state == "tv"
+{
+	draw_sprite(spr_menunew, 13, 0, 0)
+}

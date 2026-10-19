@@ -28,7 +28,7 @@ function scr_player_machslide()
     {
         FMODevent_oneshot("event:/Sfx/Player/bump", x, y);
         state = states.hitwall;
-        sprite_index = spr_player_wallsplat;
+        sprite_index = sprites.wallsplat;
         image_index = 0;
     }
     
