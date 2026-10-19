@@ -21,8 +21,8 @@ var _maxy = 205
 var _rangex = mbright ? 150 : 48
 var _rangey = mbright ? 1000 : 40
 
-var _tvquestionmarrrkkk = hand_x > 448 && hand_x < 704 && hand_y > 0 && hand_y < 0+96
-var _drawingquestionmarrrkkk = hand_x > 47 && hand_x < 47+96 && hand_y > 0 && hand_y < 0+96
+var _tvquestionmarrrkkk = hand_x > 428 && hand_x < 724 && hand_y < 96
+var _drawingquestionmarrrkkk = hand_x > 7 && hand_x < 7+96 && hand_y < 96
 var _drawer1_hover = abs(hand_x-40) < _rangex && abs(hand_y-drawer1_y-210) < _rangey
 var _drawer2_hover = abs(hand_x-340) < _rangex && abs(hand_y-drawer2_y-210) < _rangey
 var _drawer3_hover = abs(hand_x-640) < _rangex && abs(hand_y-drawer3_y-210) < _rangey

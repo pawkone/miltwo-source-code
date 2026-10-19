@@ -57,12 +57,14 @@ if state == "tv"
 		draw_set_halign(0)
 		draw_set_valign(0)
 		draw_set_colour(c_white)
+		tv_index = 0
 	}
 	else
 	{
 		var _data = video_draw()
 		if _data[0] == 0
 		{
+			tv_nsbuffer = 0
 			draw_surface_stretched(_data[1], 81, 41, 797, 461)
 			
 			var _t = tv_index == -1 ? "Custom" : $"{tv_index}/{tv_max}"

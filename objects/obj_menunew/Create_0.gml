@@ -16,13 +16,13 @@ state = "files"
 
 drawsurf = -4
 
+tv_file = ""
 tv_nsbuffer = 0
 tv_static = -1
 tv_change = 0
-tv_index = 0
-tv_file = ""
-tv_indexnext = tv_index
 tv_max = 7
+tv_index = 0
+tv_indexnext = tv_index
 
 mousemoved = false
 

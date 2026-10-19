@@ -10,16 +10,21 @@ if tv_static < 0
 		{
 			tv_static = 0
 			tv_change = false
+			FMODevent_oneshot("event:/Sfx/UI/Oops!/transition");
 		}
 	}
-	var _move = pky_left2 + pky_right2
-	if _move != 0
+	if tv_index != -1
 	{
-		tv_static = 0
-		tv_change = false
-		tv_indexnext += pky_left2 + pky_right2
-		if tv_indexnext < 1	tv_indexnext = tv_max
-		if tv_indexnext > tv_max tv_indexnext = 1
+		var _move = pky_left2 + pky_right2
+		if _move != 0
+		{
+			tv_static = 0
+			tv_change = false
+			tv_indexnext += pky_left2 + pky_right2
+			if tv_indexnext < 1	tv_indexnext = tv_max
+			if tv_indexnext > tv_max tv_indexnext = 1
+			FMODevent_oneshot("event:/Sfx/UI/Oops!/transition");
+		}
 	}
 }
 else
@@ -30,9 +35,8 @@ else
 		var _stat = video_get_status()
 		if !tv_change
 		{
-			if _stat == video_status_playing
-				video_close()
-			else if _stat == video_status_closed
+			video_close()
+			if _stat == video_status_closed
 			{
 				tv_change = true
 				if tv_file != ""
@@ -45,10 +49,10 @@ else
 				}
 				else
 				{
+					tv_index = tv_indexnext
 					video_open($"gameData/videos/tv{tv_index}.mp4")
 					if video_get_status() == video_status_closed
 						tv_nsbuffer = 90
-					tv_index = tv_indexnext
 				}
 				video_set_volume(global.SfxVolume * global.SfxVolume * 2)
 			}
