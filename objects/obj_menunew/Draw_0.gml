@@ -53,7 +53,7 @@ if state == "tv"
 		draw_set_halign(1)
 		draw_set_valign(1)
 		draw_set_font(global.npcfont)
-		draw_text_transformed(480+light_final*5, 270-light_final*5, tv_nsbuffer-- > 0 ? "SELECTED VIDEO NOT SUPPORTED..." : "NO SIGNAL\n\nLEFT RIGHT : SCROLL BUILTIN VIDEOS\nJUMP : PICK CUSTOM VIDEO\nGRAB : TO STOP VIDEO", 0.8, 1, 2)
+		draw_text_transformed(480+light_final*5, 270-light_final*5, tv_nsbuffer-- > 0 ? "SELECTED VIDEO NOT SUPPORTED..." : "NO SIGNAL\n\nLEFT RIGHT : SCROLL BUILTIN VIDEOS\nJUMP : PICK CUSTOM VIDEO\nGRAB : STOP VIDEO", 0.8, 1, 2)
 		draw_set_halign(0)
 		draw_set_valign(0)
 		draw_set_colour(c_white)
