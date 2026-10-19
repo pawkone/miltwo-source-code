@@ -8,7 +8,8 @@ if state == "tv"
 {
 	draw_set_alpha(1)
 	draw_set_colour(c_white)
-	if video_get_status() != video_status_playing
+	var _p = video_get_status() != video_status_playing
+	if _p
 	{
 		draw_clear(#D0FF96)
 		draw_set_colour(#2e3a1a)
@@ -77,7 +78,7 @@ if state == "tv"
 			pky_jump2 = 1
 			
 		var _t4 = point_in_circle(mouse_x,mouse_y,480-32,48,30)
-		draw_sprite_ext(spr_menunew_tvhint, 3, 480-20, 48, 1, 1, 0, _t4 ? (_c ? c_yellow : c_aqua) : c_white, _alpha)
+		draw_sprite_ext(spr_menunew_tvhint, 3, 480-20, 48, 1, 1, 0, _t4 ? (_c ? c_yellow : c_aqua) : c_white, _p ? 0.5 : _alpha)
 		if _t4 && _c2
 			pky_grab2 = 1
 	}
