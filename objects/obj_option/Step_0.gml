@@ -7,6 +7,7 @@ try
 }
 catch(e)
 {_do = false}
+
 if _do
 {
 	var _d = lang_get_phrase(q.desc)

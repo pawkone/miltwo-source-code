@@ -62,6 +62,8 @@
 	"option_modded_desc_menuoldies": "toggle on features from older builds of wsb!\nmostly from wasted build",
 	"option_modded_title_menuonline": "MENU : ONLINE",
 	"option_modded_desc_menuonline": "ready to play online multiplayer with gamemodes and more?",
+	"option_modded_title_menuonlinenew": "MENU : REWORKED ONLINE",
+	"option_modded_desc_menuonlinenew": "wip rework of oh miltus online\nrecoded from scratch! (no ports. just ip needed!)",
 
 	"option_modded_title_togglegameframe": "GAMEFRAME",
 	"option_modded_desc_togglegameframe": "game restart needed to fully apply this option\nallows gameframe to be enabled and disabled",

@@ -1,5 +1,3 @@
-room_goto(rm_multiplayerSetup)
-
 obj_player.state = -4
 
 var c = [ $000000, $000000, $1b110b, $3e1e3c, $0a3478, $2b1276, $283469, $0e601e, $28600e, $1a5773, $265443, $522b3a, $542d51, $5f2859, $527483, $aa6058, $c38377, $96ffd0, $ff9893 ]
