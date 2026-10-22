@@ -1,19 +1,16 @@
-grav = character == chars.pepperni ? 0.7 : 0.5
-
-if keyboard_check_pressed(vk_f4)
-{
-	if instance_exists(obj_notepad)
-		instance_destroy(obj_notepad)
-	else
-		instance_create(0,0,obj_notepad)
-}
+if character == chars.pepperni && vsp < 0
+	grav = 1
+else
+	grav = 0.5
 
 var yaya = ((
 	place_meeting(x,y,obj_dresser) ||
 	place_meeting(x,y,obj_door) ||
 	place_meeting(x,y,obj_levelgate) ||
 	(instance_place(x,y,obj_exitgate) > 0 && instance_place(x,y,obj_exitgate).openn)
+	
 ) && grounded) * (pky_up ? 2 : (pky_down ? 0.5 : 1))
+
 uparrowadd = lerp(uparrowadd, (yaya - uparrow) * 0.15, 0.5)
 if yaya
 {
@@ -123,7 +120,10 @@ if (hitstun.is == false)
     }
     
     if (grounded)
+	{
+		freefalling = 0
         coyote_time = 10;
+	}
     else if (vsp < 0)
         coyote_time = 0;
     

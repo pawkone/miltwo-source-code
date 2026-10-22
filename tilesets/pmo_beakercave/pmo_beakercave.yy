@@ -21,7 +21,7 @@
     "name":"_decompiled_pmo_beakercave",
     "path":"sprites/_decompiled_pmo_beakercave/_decompiled_pmo_beakercave.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"texturegroup_game",
     "path":"texturegroups/texturegroup_game",

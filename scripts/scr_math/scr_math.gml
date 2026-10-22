@@ -13,6 +13,14 @@ function wrap(arg0, arg1, arg2)
     var range = (_max - _min) + 1;
     return ((((value - _min) % range) + range) % range) + _min;
 }
+function wrap2(arg0, arg1, arg2)
+{
+	var _min = min(arg1, arg2)
+	var range = max(arg1, arg2) - _min
+	if range == 0 return _min
+	return ((((arg0 - _min) % range) + range) % range) + _min
+}
+
 
 function wave(arg0, arg1, arg2, arg3)
 {

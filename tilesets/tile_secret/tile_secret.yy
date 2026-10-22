@@ -21,7 +21,7 @@
     "name":"Stile_secret",
     "path":"sprites/Stile_secret/Stile_secret.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"texturegroup_game",
     "path":"texturegroups/texturegroup_game",

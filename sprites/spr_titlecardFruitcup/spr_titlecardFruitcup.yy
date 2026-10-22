@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"d93bbdd6-f53b-41a3-8256-8198bd12451a","name":"d93bbdd6-f53b-41a3-8256-8198bd12451a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"76e90974-30d8-4755-a107-efe0b6d202e4","name":"76e90974-30d8-4755-a107-efe0b6d202e4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":540,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"f3634591-1d5e-453a-bca4-c89ff06ca6c6","blendMode":0,"displayName":"default","isLocked":false,"name":"f3634591-1d5e-453a-bca4-c89ff06ca6c6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"4c01822e-586a-4721-bc93-1ef952cfc80e","blendMode":0,"displayName":"default","isLocked":false,"name":"4c01822e-586a-4721-bc93-1ef952cfc80e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_titlecardFruitcup",
   "nineSlice":null,
@@ -59,7 +59,7 @@
     },
     "name":"spr_titlecardFruitcup",
     "playback":1,
-    "playbackSpeed":10.0,
+    "playbackSpeed":3.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d93bbdd6-f53b-41a3-8256-8198bd12451a","path":"sprites/spr_titlecardFruitcup/spr_titlecardFruitcup.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"322b30ff-cb15-4d90-a936-ca53466adde4","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"76e90974-30d8-4755-a107-efe0b6d202e4","path":"sprites/spr_titlecardFruitcup/spr_titlecardFruitcup.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"577e3083-d35f-4d25-8311-10b18d60a736","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

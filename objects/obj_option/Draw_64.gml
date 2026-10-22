@@ -1,9 +1,13 @@
+BGX--
+if BGX > 400 BGX = BGX mod 400
+
 draw_set_colour(c_white);
-draw_sprite_tiled_ext(spr_optionsBG, 0, BGX, BGY, 1, 1, c_white, 1);
+draw_sprite_tiled_ext(spr_optionsBG, 0, BGX, wave(-32, 32, 5, 0), 1, 1, c_white, 1);
 
 for (var i = 0; i < array_length(backgrounds); i++)
 {
-    draw_sprite_tiled_ext(spr_optionsBG, backgrounds[i].index, BGX, BGY, 1, 1, c_white, backgrounds[i].alpha);
+	if backgrounds[i].alpha > 0
+		draw_sprite_tiled_ext(spr_optionsBG, backgrounds[i].index, BGX, wave(-32, 32, 5, 0), 1, 1, c_white, backgrounds[i].alpha);
     
     if (backgrounds[i].menu != [optionstype.mainpage])
     {
@@ -299,16 +303,93 @@ switch (m.anchor)
         break;
 		
 	case optionstype.anchor_credits:
+		draw_set_halign(0)
+		draw_set_valign(0)
 		
-		var _credits = 
-		[
-			["pawkone", "creator - coder - artist - ideas - etc", spr_milton_rollstart],
-			["targetbuldoser", "artist - composer - ideas", spr_milton_mach1, spr_milton_mach2, spr_milton_mach3turn, spr_milton_wallslide, spr_player0_groundpoundstart, spr_player0_groundpound, spr_player0_groundpoundbump, spr_soda, spr_tv_soda],
-			["toasty", "fromer artist - ideas", spr_player_chat],
-			["painternoise", "fromer artist", spr_tv_happyT, spr_milton_mach3turnfall],
-			["poly", "volunteered artist", spr_butterAir, spr_butterGround, spr_pepperni_mach1, spr_pepperni_mach3, spr_pepperni_taunt, spr_milton_jump, spr_milton_fall],
-			["cacas.com", "volunteered artist", spr_pepperni_idleanim1],
-		]
+		if miltwocredits_extendview_enabled
+		{
+			if mky_slap2 && buffer == 0
+			{
+				buffer = 2
+				miltwocredits_extendview_enabled = false
+				miltwocredits_extendview_selected = 0
+			}
+			var _gal = miltwocredits_credits[miltwocredits_selected]
+			var _move = mky_left2 + mky_right2
+			miltwocredits_extendview_selected = wrap(miltwocredits_extendview_selected + _move, 0, array_length(_gal)-3)
+			draw_set_font(global.creditsfont)
+			draw_set_halign(1)
+			draw_text(480,480,$"{_gal[miltwocredits_extendview_selected+2]}\n{miltwocredits_extendview_selected+1}/{array_length(_gal)-3}")
+			draw_set_halign(0)
+		}
+		else
+		{
+			var kl = array_length(miltwocredits_creditsshow)
+			miltwocredits_selected = clamp(miltwocredits_selected + mky_down2 - mky_up2, 0, kl-1)
+			miltwocredits_yoffset = lerp(miltwocredits_yoffset, miltwocredits_starty[miltwocredits_selected], 0.25)
+			if mky_slap2 || (mky_jump2 && miltwocredits_selected == 0) && buffer == 0
+			{
+				buffer = 2
+				miltwocredits_selected = 0
+				menus[currentmenu].backfunc();
+				FMODevent_oneshot("event:/Sfx/UI/Pause/menuback");
+			}
+			if mky_jump2 && miltwocredits_selected != 0 && buffer == 0
+			{
+				buffer = 2
+				miltwocredits_extendview_enabled = true
+				// make it show miltwocredits_credits
+				// and not miltwocredits_creditsshow for ONE PERSON
+				// make it like a slideshow and support music (sfx is too low effort, no need to credit) too
+			}
+		
+			var _xx = 228, _yy = 64 - miltwocredits_yoffset
+			for (var k = 0; k < kl; k++)
+			{
+				var ki = miltwocredits_creditsshow[k]
+				var kil = array_length(ki)
+			
+				draw_set_font(global.smallfont)
+				var _w2 = string_width(ki[1]), _h2 = string_height(ki[1])
+				draw_set_font(global.creditsfont)
+				var _w1 = string_width(ki[0]), _h1 = string_height(ki[0])
+			
+				draw_set_colour(miltwocredits_selected == k ? c_aqua : c_black)
+				draw_rectangle(_xx-4,_yy-4,_xx+(max(_w1, _w2))+4,_yy+_h1+_h2+4, false)
+			
+				draw_set_colour(c_white)
+				draw_text(_xx, _yy+1, ki[0])
+				draw_text(_xx, _yy, ki[0])
+				_yy += string_height(ki[0])
+				draw_set_font(global.smallfont)
+				draw_text(_xx, _yy, ki[1])
+			
+				_yy += miltwocredits_startoffset[k] / 2
+				if kil > 3
+				{
+					var _show = (floor(current_time / 500) + ((current_time % 500 > 300) ? power((current_time % 500 - 300) / 200, 3) : 0)) % (kil - 2)
+					var jf = round(_show) + 2, globalfuckeryoffset = 16
+					var fuckme = 48 + ((kil - 2) / 2) * globalfuckeryoffset
+					for (var j = 2; j < kil; j++)
+					{
+						if j != jf
+						{
+							var _xx2 = wrap2(((j - 2) - _show), -(kil - 2) / 2, (kil - 2) / 2), _t = max(0, 1 - abs(wrap2((_show - (j - 2)), -(kil - 2) / 2, (kil - 2) / 2)))
+							draw_sprite_ext(ki[j], (current_time / 1000) * 21, _xx + fuckme + _xx2 * globalfuckeryoffset, _yy, 1, 1, 0, c_white, lerp(0.2, 1, _t))
+						}
+					}
+					if jf >= 2 && jf < kil
+					{
+						var _xx2 = wrap2(((jf - 2) - _show), -(kil - 2) / 2, (kil - 2) / 2), _t = max(0, 1 - abs(wrap2((_show - (jf - 2)), -(kil - 2) / 2, (kil - 2) / 2)))
+						draw_sprite_ext(ki[jf], (current_time / 1000) * 21, _xx + fuckme + _xx2 * globalfuckeryoffset, _yy, 1, 1, 0, c_white, lerp(0.2, 1, _t))
+					}
+				}
+				else if kil == 3
+					draw_sprite_ext(ki[2], (current_time / 1000) * 21, _xx + 48, _yy, 1, 1, 0, c_white, 1)
+				_yy += miltwocredits_startoffset[k] / 2
+
+			}
+		}
 		break;
 }
 

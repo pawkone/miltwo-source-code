@@ -21,7 +21,7 @@
     "name":"tilespr_hotel2",
     "path":"sprites/tilespr_hotel2/tilespr_hotel2.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"texturegroup_game",
     "path":"texturegroups/texturegroup_game",

@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":3,
   "conversionMode":0,
-  "duration":184.32,
+  "duration":131.1533,
   "exportDir":"audioStreamed",
   "name":"mu_peppernilap2",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"mu_peppernilap2.mp3",
+  "soundFile":"mu_peppernilap2.ogg",
   "volume":1.0,
 }

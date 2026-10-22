@@ -67,7 +67,6 @@ function scr_player_jump()
         sprite_index = (move != 0) ? sprites.land2 : sprites.land;
         state = states.normal;
         plrsnds_play(sfx.step, x, y);
-        freefalling = 0;
     }
     
     doTaunt();

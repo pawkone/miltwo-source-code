@@ -21,7 +21,7 @@
     "name":"tilespr_yardA",
     "path":"sprites/tilespr_yardA/tilespr_yardA.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"texturegroup_game",
     "path":"texturegroups/texturegroup_game",

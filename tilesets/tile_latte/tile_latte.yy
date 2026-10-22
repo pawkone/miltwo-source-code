@@ -21,7 +21,7 @@
     "name":"Stile_latte",
     "path":"sprites/Stile_latte/Stile_latte.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"texturegroup_game",
     "path":"texturegroups/texturegroup_game",

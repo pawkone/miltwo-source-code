@@ -21,7 +21,7 @@
     "name":"_decompiled_pmo_secret",
     "path":"sprites/_decompiled_pmo_secret/_decompiled_pmo_secret.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"texturegroup_game",
     "path":"texturegroups/texturegroup_game",

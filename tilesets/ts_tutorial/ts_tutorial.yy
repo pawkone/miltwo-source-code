@@ -21,7 +21,7 @@
     "name":"tilespr_tutorial",
     "path":"sprites/tilespr_tutorial/tilespr_tutorial.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"texturegroup_game",
     "path":"texturegroups/texturegroup_game",

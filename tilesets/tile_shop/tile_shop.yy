@@ -21,7 +21,7 @@
     "name":"Stile__shop",
     "path":"sprites/Stile__shop/Stile__shop.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"texturegroup_game",
     "path":"texturegroups/texturegroup_game",

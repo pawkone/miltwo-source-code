@@ -17,7 +17,7 @@ draw_set_halign(0);
 draw_set_valign(0);
 if state == "files"
 {
-	draw_sprite(spr_minilogo, 0, 796+sin(current_time/777)*4, 433+cos(current_time/777)*4)
+	draw_sprite(spr_minilogo, 0, 866+sin(current_time/777)*4, 483+cos(current_time/777)*4)
 	
 	draw_textEX(25, 525-32-32-32,	"[J]/Left Click : Hold")
 	draw_textEX(25, 525-32-32,		"[G]/Right Click : Slap")

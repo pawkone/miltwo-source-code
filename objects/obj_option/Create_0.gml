@@ -1,3 +1,89 @@
+miltwocredits_credits = 
+[
+	["Back", "note : press confirm on any person to see all\nsprites they did or view music tracks they composed..."],
+	[
+		"Pawkone",
+		"director : coder : artist : ideas : etc",
+		spr_milton_rollstart, spr_baconsmacon_deadlintro, spr_baconsmacon_deadloop,
+		spr_bacadmadLocate, spr_minilogo, spr_menunew, spr_menunew_tvhint,
+		spr_gate_shell, spr_floorgate, spr_floorgate_over, spr_uparrow,
+		spr_titlecardShell, spr_titlecardShellTitle1, tilespr_fruitcup,
+		tilespr_hotel2,
+	],
+	[
+		"MrAlt- (Ex Miltu Member)",
+		"former co director : coder : level designer",
+		tilespr_frontyard, tilespr_outbreak
+	],
+	[
+		"Targetbuldoser (Ex Miltu Member)",
+		"artist : composer : ideas",
+		spr_milton_mach1, spr_milton_mach2, spr_milton_mach3turn, spr_milton_wallslide,
+		spr_player0_groundpoundstart, spr_player0_groundpound, spr_player0_groundpoundbump,
+		spr_soda, spr_tv_soda, spr_titlecardFrontyard, spr_titlecardFrontyardTitle1
+	],
+	[
+		"Toasty64 (Ex Miltu Member)",
+		"coder : artist : ideas",
+		spr_player_chat
+	],
+	[
+		"PaintlesNoise (Ex Miltu Member)",
+		"artist",
+		spr_tv_happyT, spr_milton_mach3turnfall
+	],
+	[
+		"Polyg0n5",
+		"volunteered artist : artist for og miltu",
+		spr_butterAir, spr_butterGround, spr_pepperni_mach1, spr_pepperni_mach3,
+		spr_pepperni_taunt, spr_milton_jump, spr_milton_fall, spr_titlecardFruitcup,
+		spr_titlecardFruitcupTitle1, spr_titlecardFruitcupTitle2
+	],
+	[
+		"ElCacas.XD.RenovadoXD",
+		"volunteered artist",
+		spr_pepperni_idleanim1
+	],
+	[
+		"CoolGuy_The_Guy",
+		"volunteered composer",
+		mu_peppernilap2
+	],
+]
+miltwocredits_creditsshow = []
+miltwocredits_selected = 0
+miltwocredits_yoffset = 0
+miltwocredits_starty = []
+miltwocredits_startoffset = []
+miltwocredits_extendview_enabled = false
+miltwocredits_extendview_selected = 0
+
+var _yy = 0, kl = array_length(miltwocredits_credits)
+draw_set_font(global.creditsfont)
+for (var k = 0; k < kl; k++)
+{
+	miltwocredits_starty[k] = _yy
+	var ki = miltwocredits_credits[k]
+	var kil = array_length(ki)
+	miltwocredits_creditsshow[k] = [ki[0], ki[1]]
+	_yy += string_height(ki[0])
+	var _yoffset = 0
+	for (var j = 2; j < kil; j++)
+	{
+		if sprite_exists(ki[j])
+		{
+			var _h = sprite_get_height(ki[j])
+			if _h < 200
+			{
+				array_push(miltwocredits_creditsshow[k], ki[j])
+				_yoffset = max(_yoffset, _h)
+			}
+		}
+	}
+	_yy += _yoffset+48
+	miltwocredits_startoffset[k] = _yoffset+48
+}
+
 buffer = 0;
 menus = [];
 currentmenu = 0;
@@ -52,8 +138,7 @@ addBackground([1], 1);
 addBackground([2, 10], 2);
 addBackground([3], 3);
 addBackground([4, 5, 6, 7, 8, 9], 4);
-BGX = wave(-32, 32, 5, 0);
-BGY = 0;
+BGX = 0
 depth = obj_pause.depth - 1;
 screamSnd = FMODcreate_event("event:/Sfx/UI/Pause/slider");
 fmod_studio_event_instance_start(screamSnd);
@@ -179,6 +264,7 @@ add_option_press(category, "option_modded", function()
 }, new addPause_icon(8));
 add_option_press(category, "option_credits", function()
 {
+	buffer = 2
     goto_menu(optionstype.credits);
 }, new addPause_icon(8));
 array_push(menus, category);
@@ -764,10 +850,6 @@ add_option_ext(MODDED_CUSTOM, optionstype.element_toggle, "option_modded_slopero
 array_push(menus, MODDED_CUSTOM);
 
 var CREDITS = create_menu(optionstype.credits, optionstype.anchor_credits, 48, function()
-{
-    goto_menu(optionstype.mainpage);
-});
-add_option_press(CREDITS, "option_back", function()
 {
     goto_menu(optionstype.mainpage);
 });

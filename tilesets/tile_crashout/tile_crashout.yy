@@ -21,7 +21,7 @@
     "name":"tilespr_crashout",
     "path":"sprites/tilespr_crashout/tilespr_crashout.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"texturegroup_game",
     "path":"texturegroups/texturegroup_game",

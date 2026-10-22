@@ -21,7 +21,7 @@
     "name":"tilespr_outbreak",
     "path":"sprites/tilespr_outbreak/tilespr_outbreak.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"texturegroup_game",
     "path":"texturegroups/texturegroup_game",
