@@ -57,9 +57,8 @@ function scr_player_mach3()
     
     if (movespeed >= 16 && sprite_index != sprites.crazyrun && sprite_index != sprites.buzzsawCancel)
     {
-        sprite_index = character != chars.pepperni ? sprites.crazyrun : sprites.mach3;
-		if character != chars.pepperni 
-			flash = true;
+        sprite_index = sprites.crazyrun;
+		flash = true;
     }
     
 	if (character == chars.milton && !global.modded_bettermilton)

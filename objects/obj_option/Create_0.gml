@@ -8,12 +8,11 @@ miltwocredits_credits =
 		spr_bacadmadLocate, spr_minilogo, spr_menunew, spr_menunew_tvhint,
 		spr_gate_shell, spr_floorgate, spr_floorgate_over, spr_uparrow,
 		spr_titlecardShell, spr_titlecardShellTitle1, tilespr_fruitcup,
-		tilespr_hotel2,
 	],
 	[
 		"MrAlt- (Ex Miltu Member)",
 		"former co director : coder : level designer",
-		tilespr_frontyard, tilespr_outbreak
+		tilespr_frontyard, tilespr_outbreak, tilespr_hotel2
 	],
 	[
 		"Targetbuldoser (Ex Miltu Member)",
@@ -42,7 +41,7 @@ miltwocredits_credits =
 	[
 		"ElCacas.XD.RenovadoXD",
 		"volunteered artist",
-		spr_pepperni_idleanim1
+		spr_pepperni_idleanim1, spr_pepperni_crazyrun
 	],
 	[
 		"CoolGuy_The_Guy",

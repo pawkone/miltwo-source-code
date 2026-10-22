@@ -21,14 +21,17 @@ if (scene == 0 || scene == 1)
 {
     if fadeIn
     {
-		obj_camera.camera.zoom = 1+fadeAlpha*fadeAlpha*0.75
-        fadeAlpha = approach(fadeAlpha, 1, 0.05);
-        
-        if (fadeAlpha == 1)
+		fadeAlpha = 1
+		circleSizeSpeed++
+		obj_camera.camera.zoom += circleSizeSpeed/100
+		circleSize = lerp(circleSize, 0, 0.2);
+		circleSize = approach(circleSize, 0, 0.1);
+        if circleSize == 0
         {
             if (!FMODevent_isplaying(snd))
                 fmod_studio_event_instance_start(snd);
             
+			circleSizeSpeed = 0
             fadeIn = false;
             scene = 1;
             alarm[0] = 120;
@@ -55,7 +58,7 @@ if (scene == 0 || scene == 1)
 if (scene == 2)
 {
     circleSize = approach(circleSize, 0, circleSizeSpeed);
-    circleSizeSpeed += 1;
+    circleSizeSpeed++;
     
     if (circleSize == 0)
     {

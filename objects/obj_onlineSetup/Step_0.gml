@@ -23,7 +23,7 @@ if (menu == 0)
 		with instance_create(0,0,obj_option)
 		{
 			currentmenu = 11
-			selected = 4
+			selected = 3
 		}
     }
 	
