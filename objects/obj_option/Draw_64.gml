@@ -308,19 +308,65 @@ switch (m.anchor)
 		
 		if miltwocredits_extendview_enabled
 		{
+			var _gal = miltwocredits_credits[miltwocredits_selected]
+			var _gal2 = _gal[miltwocredits_extendview_selected+2], _gal2n = "???"
+			if sprite_exists(_gal2) _gal2n = sprite_get_name(_gal2)
+			else if audio_exists(_gal2) _gal2n = audio_get_name(_gal2)
+			var _oldm = miltwocredits_extendview_selected
+			var _move = mky_left2 + mky_right2
+			miltwocredits_extendview_selected = wrap(miltwocredits_extendview_selected + _move, 0, array_length(_gal)-3)
+			if _oldm != miltwocredits_extendview_selected
+			{
+				audio_stop_sound(miltwocredits_extendview_music)
+				miltwocredits_extendview_music = -4
+			}
+			draw_set_halign(1)
+			draw_set_font(-1)
+			if sprite_exists(_gal2)
+			{
+				var _spd = (sprite_get_speed_type(_gal2) == spritespeed_framespersecond ? ((current_time/1000)*sprite_get_speed(_gal2)) : ((current_time/1000)*60*sprite_get_speed(_gal2)))*0.35
+				var _w = sprite_get_width(_gal2), _h = sprite_get_height(_gal2)
+				var _scale = min(960 / _w, 540 / _h, 1)
+				draw_set_alpha(0.5)
+				draw_rectangle_colour((960 - _w * _scale) / 2, (540 - _h * _scale) / 2, (960 - _w * _scale) / 2 + _w * _scale, (540 - _h * _scale) / 2 + _h * _scale, 0, 0, 0, 0, false)
+				draw_set_alpha(1)
+				draw_sprite_stretched(_gal2, _spd, (960 - _w * _scale) / 2, (540 - _h * _scale) / 2, _w * _scale, _h * _scale)
+			}
+			if audio_exists(_gal2)
+			{
+				draw_set_valign(1)
+				if miltwocredits_extendview_music == -4
+					draw_text(480, 270, $"{_gal2n}\n{timeString(0)}/{timeString(audio_sound_length(_gal2))}")
+				else
+					draw_text(480, 270, $"{_gal2n}\n{timeString(audio_sound_get_track_position(miltwocredits_extendview_music))}/{timeString(audio_sound_length(_gal2))}")
+				if mky_jump2
+				{
+					if miltwocredits_extendview_music == -4
+						miltwocredits_extendview_music = audio_play_sound(_gal2, 10, true)
+					else
+					{
+						audio_stop_sound(miltwocredits_extendview_music)
+						miltwocredits_extendview_music = -4
+					}
+				}
+				draw_set_valign(0)
+			}
+			var _w = string_width(_gal2n)/2+4
+			draw_rectangle_colour(480-_w,460-2,480+_w,460+22,0,0,0,0,false)
+			draw_text(480,460,_gal2n)
+			var _txt = $"{miltwocredits_extendview_selected+1}/{array_length(_gal)-2}"
+			var _w = string_width(_txt)/2+4
+			draw_rectangle_colour(480-_w,484-2,480+_w,484+22,0,0,0,0,false)
+			draw_text(480,484,_txt)
+			draw_set_halign(0)
 			if mky_slap2 && buffer == 0
 			{
 				buffer = 2
 				miltwocredits_extendview_enabled = false
 				miltwocredits_extendview_selected = 0
+				audio_stop_sound(miltwocredits_extendview_music)
+				miltwocredits_extendview_music = -4
 			}
-			var _gal = miltwocredits_credits[miltwocredits_selected]
-			var _move = mky_left2 + mky_right2
-			miltwocredits_extendview_selected = wrap(miltwocredits_extendview_selected + _move, 0, array_length(_gal)-3)
-			draw_set_font(global.creditsfont)
-			draw_set_halign(1)
-			draw_text(480,480,$"{_gal[miltwocredits_extendview_selected+2]}\n{miltwocredits_extendview_selected+1}/{array_length(_gal)-3}")
-			draw_set_halign(0)
 		}
 		else
 		{
@@ -387,7 +433,8 @@ switch (m.anchor)
 				else if kil == 3
 					draw_sprite_ext(ki[2], (current_time / 1000) * 21, _xx + 48, _yy, 1, 1, 0, c_white, 1)
 				_yy += miltwocredits_startoffset[k] / 2
-
+				if k == 0
+					_yy += 72
 			}
 		}
 		break;

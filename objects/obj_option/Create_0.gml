@@ -57,6 +57,7 @@ miltwocredits_starty = []
 miltwocredits_startoffset = []
 miltwocredits_extendview_enabled = false
 miltwocredits_extendview_selected = 0
+miltwocredits_extendview_music = -4
 
 var _yy = 0, kl = array_length(miltwocredits_credits)
 draw_set_font(global.creditsfont)
@@ -81,6 +82,8 @@ for (var k = 0; k < kl; k++)
 		}
 	}
 	_yy += _yoffset+48
+	if k == 0
+		_yy += 72
 	miltwocredits_startoffset[k] = _yoffset+48
 }
 
