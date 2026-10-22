@@ -19,3 +19,5 @@ circleSize = 960;
 circleSizeSpeed = 0;
 titlecardMilton = spr_titlecardMilton_wayback;
 titlecardMiltonIndex = 0;
+x = 0
+y = -540

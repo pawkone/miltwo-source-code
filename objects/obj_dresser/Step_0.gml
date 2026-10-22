@@ -5,18 +5,15 @@ if (place_meeting(x, y, obj_player))
 		saved = false
 		alarm[0] = 120
 		
-        selected += pky_up2 - pky_down2;
-        selected = wrap(selected, 0, array_length(palettes) - 1);
-        
         with (obj_player)
         {
             with (instance_create(x, y, obj_baddiedead))
             {
 				image_speed = 0
 				image_index = irandom(image_number-1)
-                sprite_index = obj_player.sprites.clothes;
+                sprite_index = other.sprites.clothes;
                 usePalette = true;
-                spr_palette = obj_player.sprites.palette;
+                spr_palette = other.sprites.palette;
                 paletteIndex = other.palIndex;
                 spr_pattern = global.patternSpr;
                 patColors = global.PlayerCharacters[other.character].patColors;
@@ -24,7 +21,8 @@ if (place_meeting(x, y, obj_player))
                 vsp = random_range(-10, -14);
             }
             
-            palIndex = other.palettes[other.selected].index;
+            palIndex += pky_up2 - pky_down2;
+			palIndex = wrap(palIndex, 0, sprite_get_width(sprites.palette))
             create_particleStatic(spr_genericpoofeffect, x, y, 1, -1);
             FMODevent_oneshot("event:/Sfx/General/dresser", x, y);
         }

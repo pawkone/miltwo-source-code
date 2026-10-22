@@ -329,7 +329,7 @@ switch (m.anchor)
 			draw_set_font(-1)
 			if sprite_exists(_gal2)
 			{
-				var _spd = (sprite_get_speed_type(_gal2) == spritespeed_framespersecond ? ((current_time/1000)*sprite_get_speed(_gal2)) : ((current_time/1000)*60*sprite_get_speed(_gal2)))*0.35
+				var _spd = (sprite_get_speed_type(_gal2) == spritespeed_framespersecond ? ((current_time/1000)*sprite_get_speed(_gal2)) : ((current_time/1000)*room_speed*sprite_get_speed(_gal2)))*0.35
 				var _w = sprite_get_width(_gal2), _h = sprite_get_height(_gal2)
 				var _scale = min(960 / _w, 540 / _h, 1)
 				draw_set_alpha(0.5)

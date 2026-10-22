@@ -10,8 +10,8 @@
   "name":"obj_multiplayerSetup",
   "overriddenProperties":[],
   "parent":{
-    "name":"Online",
-    "path":"folders/Objects/General Elements/Online.yy",
+    "name":"Rework",
+    "path":"folders/Objects/General Elements/Online/Rework.yy",
   },
   "parentObjectId":null,
   "persistent":false,

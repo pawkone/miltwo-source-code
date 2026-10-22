@@ -9,7 +9,6 @@ if (!ds_list_empty(afterimages))
         {
             var _shd = false;
             var _blend = 16777215;
-            var _drawPattern = false;
             
             switch (type)
             {
@@ -21,7 +20,6 @@ if (!ds_list_empty(afterimages))
                     pal_swap_set(obj_player.spr_palette, obj_player.palIndex, false);
                     _blend = image_blend;
                     _shd = true;
-                    _drawPattern = true;
                     break;
                 
                 case afterimagetype.buzzsaw:
@@ -68,12 +66,6 @@ if (!ds_list_empty(afterimages))
                     _shd = true;
                     break;
                 
-                case afterimagetype.UNKNOWN_2:
-                    break;
-                
-                case afterimagetype.UNKNOWN_3:
-                    break;
-					
 				case afterimagetype.dreamAttack:
                     shader_sset(shd_fullshade);
                     shader_set_uniform_f_array(other.uniformLight, [0.9725490196078431, 0.47058823529411764, 0.6901960784313725]);
@@ -120,9 +112,6 @@ if (!ds_list_empty(afterimages))
             
             if (_shd)
                 shader_reset();
-            
-            if (_drawPattern)
-                pattern_draw(sprite_index, image_index, x, y, image_xscale, 1, 0, _blend, image_alpha * alpha, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors, obj_player.spr_palette, obj_player.palIndex);
-        }
+		}
     }
 }

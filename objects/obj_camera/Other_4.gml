@@ -9,7 +9,7 @@ if improvedyard_on
 {
 	var layer_fx = layer_get_fx("Effect_1")
 	if layer_fx != -1 && fx_get_name(layer_fx) == "_filter_tintfilter"
-		fx_set_parameter(layer_fx, "g_TintCol", [1, 0.45, 0.67, 0.9])
+		fx_set_parameter(layer_fx, "g_TintCol", [1, 0.5, 0.6, 0.9])
 	improvedyard_rain = layer_exists("Backgrounds_rain")
 	if improvedyard_rain
 	{

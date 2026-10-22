@@ -42,21 +42,16 @@ else
         menu = 0;
 		exit
     }
-	if menu == 3
+	if menu == 3 //change player info menu tuff
 	{
 		exit
 	}
 	if menu == 2
 	{
 		room_goto(Mainmenu)
-		if creating
-		{
-			
-		}
-		else
-		{
-			
-		}
+		instance_destroy(obj_multiplayerHandler)
+		with instance_create(0,0,obj_multiplayerHandler)
+			isHost = other.creating
 		exit
 	}
     if (keyboard_check_pressed(vk_anykey))

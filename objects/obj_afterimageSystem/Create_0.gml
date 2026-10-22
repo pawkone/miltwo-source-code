@@ -2,8 +2,6 @@ enum afterimagetype
 {
 	normal,
 	blur,
-	UNKNOWN_2,
-	UNKNOWN_3,
 	buzzsaw,
 	milton,
 	selectcolor,

@@ -1,11 +1,14 @@
+if (scene == 1)
+	draw_clear(c_black)
+
 if (scene == 1 || scene == 2)
 {
-    titlecardName.x = irandom_range(-1, 1);
-    titlecardName.y = irandom_range(-1, 1);
-    draw_sprite(titlecardSprite, 0, 0, 0);
+    titlecardName.x = x + irandom_range(-1, 1);
+    titlecardName.y = -y + irandom_range(-1, 1);
+    draw_sprite(titlecardSprite, 0, x, y);
     
     if (obj_player.character == chars.milton)
-        draw_sprite(titlecardMilton, titlecardMiltonIndex, 0, 0);
+        draw_sprite(titlecardMilton, titlecardMiltonIndex, x, y);
     
     draw_set_alpha(titlecardName.alpha);
     draw_sprite(titlecardName.sprite, 0, titlecardName.x, titlecardName.y);

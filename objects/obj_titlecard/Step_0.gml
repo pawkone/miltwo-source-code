@@ -33,13 +33,12 @@ if (scene == 0 || scene == 1)
             
 			circleSizeSpeed = 0
             fadeIn = false;
+			fadeAlpha = 0
             scene = 1;
             alarm[0] = 120;
             alarm[1] = 210;
         }
     }
-    else
-        fadeAlpha = approach(fadeAlpha, 0, 0.1);
     
     if (titlecardName.fadeIn == true)
     {
@@ -53,6 +52,12 @@ if (scene == 0 || scene == 1)
     }
 	else
         titlecardName.alpha = approach(titlecardName.alpha, 1, 0.1);
+}
+
+if scene > 0
+{
+	y = lerp(y, 0, 0.1)
+	y = approach(y, 0, 0.05)
 }
 
 if (scene == 2)
