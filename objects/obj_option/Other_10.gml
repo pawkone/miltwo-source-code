@@ -21,9 +21,10 @@ miltwocredits_credits =
 	[
 		"Targetbuldoser (Ex Miltu Member)",
 		"artist : composer : ideas",
-		spr_milton_mach1, spr_milton_mach2, spr_milton_mach3turn, spr_milton_wallslide,
-		spr_player0_groundpoundstart, spr_player0_groundpound, spr_player0_groundpoundbump,
-		spr_soda, spr_tv_soda, spr_titlecardFrontyard, spr_titlecardFrontyardTitle1
+		spr_pepperni_idle, spr_milton_mach1, spr_milton_mach2, spr_milton_mach3turn,
+		spr_milton_wallslide, spr_player0_groundpoundstart, spr_player0_groundpound,
+		spr_player0_groundpoundbump, spr_soda, spr_tv_soda, spr_titlecardFrontyard,
+		spr_titlecardFrontyardTitle1
 	],
 	[
 		"Toasty64 (Ex Miltu Member)",
