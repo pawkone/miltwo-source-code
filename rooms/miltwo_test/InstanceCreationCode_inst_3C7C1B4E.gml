@@ -1,0 +1,1 @@
+text = "[J][L][R][T] afyfyahfckk [wave]wooooowwwwwhhhahhh im wavinggg!!"

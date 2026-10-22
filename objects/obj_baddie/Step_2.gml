@@ -160,6 +160,7 @@ with (obj_player)
                 squashY = 0.5;
             }
             
+			flash = true
             hitstun.x = x;
             hitstun.y = y;
             hitstun.time = 5;

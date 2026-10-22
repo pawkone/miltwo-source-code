@@ -1,0 +1,1 @@
+visible = !(place_meeting(x,y,obj_metalblock) || place_meeting(x,y,obj_destructibles))

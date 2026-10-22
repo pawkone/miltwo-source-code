@@ -322,6 +322,8 @@ function parse_textEX(arg0, arg1)
                             break;
                         
                         case "wave":
+						case "wave2":
+						case "wave2nshake":
                         case "shake":
                             _effect = containedStr;
                             break;
@@ -412,6 +414,16 @@ function draw_textEX(arg0, arg1, arg2, arg3 = string_width(arg2))
                 case "wave":
                     _XX = arg0 + _lDat.x;
                     _YY = arg1 + _lDat.y + irandom_range(-1, 1);
+                    break;
+					
+				case "wave2":
+                    _XX = arg0 + _lDat.x + cos(_lDat.x/50+current_time/250)*4;
+                    _YY = arg1 + _lDat.y + sin(_lDat.x/50+current_time/250)*8;
+                    break;
+					
+				case "wave2nshake":
+                    _XX = arg0 + _lDat.x + cos(_lDat.x/50+current_time/250)*4 + irandom_range(-1, 1);
+                    _YY = arg1 + _lDat.y + sin(_lDat.x/50+current_time/250)*8 + irandom_range(-1, 1);
                     break;
             }
             

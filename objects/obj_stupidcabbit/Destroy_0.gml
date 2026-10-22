@@ -1,6 +1,3 @@
-fmod_studio_event_instance_stop(idlesnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
-fmod_studio_event_instance_release(idlesnd);
-
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
     with (instance_create(x + 32, y + 48, obj_baddiedead))

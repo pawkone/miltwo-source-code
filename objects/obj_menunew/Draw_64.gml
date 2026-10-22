@@ -19,17 +19,17 @@ if state == "files"
 {
 	draw_sprite(spr_minilogo, 0, 866+sin(current_time/777)*4, 483+cos(current_time/777)*4)
 	
-	draw_textEX(25, 525-32-32-32,	"[J]/Left Click : Hold")
-	draw_textEX(25, 525-32-32,		"[G]/Right Click : Slap")
-	draw_textEX(25, 525-32,			"[S] : Options")
+	draw_textEX(25, 525-32-32-32, lang_get_phrase("menunew_files_controltip1"))
+	draw_textEX(25, 525-32-32, lang_get_phrase("menunew_files_controltip2"))
+	draw_textEX(25, 525-32, lang_get_phrase("menunew_files_controltip3"))
 }
 else if state == "draw"
 {
-	draw_textEX(25, 525-32-32-32,	"[J]/Left Click : Draw")
-	draw_textEX(25, 525-32-32,		"[G]/Right Click : Erase")
-	draw_textEX(25, 525-32,			"[S] : Go Back")
+	draw_textEX(25, 525-32-32-32, lang_get_phrase("menunew_draw_controltip1"))
+	draw_textEX(25, 525-32-32, lang_get_phrase("menunew_draw_controltip2"))
+	draw_textEX(25, 525-32, lang_get_phrase("menunew_draw_controltip3"))
 }
 else if state == "tv"
 {
-	draw_textEX(25, 525-32,			"[S] : Go Back")
+	draw_textEX(25, 525-32, lang_get_phrase("menunew_tv_controltip1"))
 }

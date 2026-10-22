@@ -27,3 +27,6 @@ switch (global.level)
 		tv.backindex = #f8e080
 		break
 }
+global.Arank = global.Srank / 1.2;
+global.Brank = global.Arank / 2;
+global.Crank = global.Brank / 3;

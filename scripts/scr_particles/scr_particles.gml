@@ -1,22 +1,6 @@
 function create_particleStatic(_spriteindex, _x, _y, _xscale, _depth = 1)
 {
-    var par = 
-    {
-        type: 0,
-        sprite_index: _spriteindex,
-        image_index: 0,
-        image_angle: 0,
-        x: _x,
-        y: _y,
-        image_xscale: _xscale,
-        depth: _depth,
-        hsp: 0,
-        vsp: 0,
-        grav: 0,
-        image_speed: 0.35
-    };
-    ds_list_add(obj_particleSystem.particles, par);
-    return par;
+	return instance_create_depth(_x,_y,_depth,obj_particle,{sprite_index: _spriteindex, image_xscale: _xscale})
 }
 
 function create_particleDebri(arg0, arg1, arg2, arg3, arg4, arg5 = 1, arg6 = random_range(0, 360), arg7 = random_range(-5, 5), arg8 = random_range(10, -10))

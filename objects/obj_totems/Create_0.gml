@@ -4,4 +4,4 @@ ystart = y;
 depth = 25;
 image_speed = 0;
 totem = 0;
-image_index = totem;
+alarm[0] = 1

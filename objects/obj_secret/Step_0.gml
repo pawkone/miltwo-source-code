@@ -1,3 +1,6 @@
+if place_meeting(x,y,obj_metalblock) || place_meeting(x,y,obj_destructibles)
+	exit
+
 if (cutscene == false)
 {
     xscaleMulti = wave(1, 1.3, 3, 4);
@@ -23,8 +26,6 @@ if (place_meeting(x, y, obj_player) && cutscene == false)
     sprite_index = spr_dudle_close;
     image_index = 0;
 }
-
-visible = !place_meeting(x, y, obj_secretmetalblock) && !place_meeting(x, y, obj_destroyable_secret1) && !place_meeting(x, y, obj_destroyable_secret2);
 
 if (cutscene == true)
 {

@@ -1,4 +1,5 @@
 instance_create(x, y, obj_magician);
+scr_transfotip(lang_get_phrase("tip_pickup_magician"))
 global.magician = true;
 FMODevent_oneshot("event:/Sfx/General/Level/Gerome/collect", x, y);
 instance_destroy();

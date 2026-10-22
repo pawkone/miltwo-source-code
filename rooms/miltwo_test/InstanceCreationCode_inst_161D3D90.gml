@@ -1,0 +1,1 @@
+text = "you know im just an actor for whats shaking bacon the game and i get so pissed off every time i have to say bro? its really true, i fucking hate it. im just some middle aged flower, not even an uncle. my familys dead"

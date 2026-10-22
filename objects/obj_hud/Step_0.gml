@@ -1,4 +1,4 @@
-visible = !roomthing && !(global.escapePartyOver && global.escapeActive);
+visible = !instance_exists(obj_uncleflo) && !roomthing && !(global.escapePartyOver && global.escapeActive);
 
 with (kettle)
 {
@@ -154,7 +154,3 @@ if (!ds_list_empty(collectVis))
         }
     }
 }
-
-global.Arank = global.Srank / 1.2;
-global.Brank = global.Arank / 2;
-global.Crank = global.Brank / 3;
