@@ -317,6 +317,11 @@ switch (m.anchor)
 			miltwocredits_extendview_selected = wrap(miltwocredits_extendview_selected + _move, 0, array_length(_gal)-3)
 			if _oldm != miltwocredits_extendview_selected
 			{
+				with obj_pause
+				{
+					if active
+						fmod_studio_event_instance_set_paused(pauseMusic, false)
+				}
 				audio_stop_sound(miltwocredits_extendview_music)
 				miltwocredits_extendview_music = -4
 			}
@@ -335,16 +340,36 @@ switch (m.anchor)
 			if audio_exists(_gal2)
 			{
 				draw_set_valign(1)
+				draw_rectangle_colour(200,150,760,390,0,0,0,0,false)
+				var _txt = ""
 				if miltwocredits_extendview_music == -4
-					draw_text(480, 270, $"{_gal2n}\n{timeString(0)}/{timeString(audio_sound_length(_gal2))}")
+					_txt = $"{_gal2n}\n{timeString(0)}/{timeString(audio_sound_length(_gal2))}"
 				else
-					draw_text(480, 270, $"{_gal2n}\n{timeString(audio_sound_get_track_position(miltwocredits_extendview_music))}/{timeString(audio_sound_length(_gal2))}")
+					_txt = $"{_gal2n}\n{timeString(audio_sound_get_track_position(miltwocredits_extendview_music))}/{timeString(audio_sound_length(_gal2))}"
+				_txt += "\n\n"
+				if miltwocredits_extendview_music == -4
+					_txt += "Press confirm to play music"
+				else
+					_txt += "Press confirm to stop music"
+				draw_text(480, 270, _txt)
 				if mky_jump2
 				{
 					if miltwocredits_extendview_music == -4
-						miltwocredits_extendview_music = audio_play_sound(_gal2, 10, true)
+					{
+						with obj_pause
+						{
+							if active
+								fmod_studio_event_instance_set_paused(pauseMusic, true)
+						}
+						miltwocredits_extendview_music = audio_play_sound(_gal2, 10, true, 1.5)
+					}
 					else
 					{
+						with obj_pause
+						{
+							if active
+								fmod_studio_event_instance_set_paused(pauseMusic, false)
+						}
 						audio_stop_sound(miltwocredits_extendview_music)
 						miltwocredits_extendview_music = -4
 					}
@@ -364,6 +389,11 @@ switch (m.anchor)
 				buffer = 2
 				miltwocredits_extendview_enabled = false
 				miltwocredits_extendview_selected = 0
+				with obj_pause
+				{
+					if active
+						fmod_studio_event_instance_set_paused(pauseMusic, false)
+				}
 				audio_stop_sound(miltwocredits_extendview_music)
 				miltwocredits_extendview_music = -4
 			}

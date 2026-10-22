@@ -1,2 +1,2 @@
 focus = window_has_focus()
-alarm[0] = 60
+alarm[0] = 5
