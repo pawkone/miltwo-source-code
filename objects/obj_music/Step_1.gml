@@ -97,13 +97,10 @@ if (instance_exists(obj_monolith))
 {
     if (!FMODevent_isplaying(monolith) && !FMODevent_isstarting(monolith))
         fmod_studio_event_instance_start(monolith);
-    
     fmod_studio_event_instance_set_paused(monolith, false);
-    var _cam;
-    
+    var _cam = 0;
     with (obj_monolith)
         _cam = in_camera();
-    
     pillar = approach(pillar, _cam, 0.016666666666666666);
 }
 else
