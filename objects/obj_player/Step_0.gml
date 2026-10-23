@@ -162,15 +162,12 @@ if (hitstun.is == false)
 			script_execute(_asset)
 	}
 	
-	mask_index = spr_player_mask;
-    if scr_solid(x,y) || (state == states.crouch || state == states.tumble || state == states.superjumpprep)
-        mask_index = spr_crouchmask;
-    else
-        mask_index = spr_player_mask;
+	mask_index = spr_player_mask
+    mask_index = scr_solid(x,y) || (state == states.crouch || state == states.tumble || state == states.superjumpprep) ? spr_crouchmask : spr_player_mask
 		
 	scr_collide_destructibles()
-    scr_collision();
-    scr_collide_destructibles();
+    scr_collision()
+    scr_collide_destructibles()
 }
 else
 {

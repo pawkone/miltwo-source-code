@@ -43,11 +43,11 @@ if !global.escapeActive
 				
 			var _pitch = 1
 			if room == shell_5 || room == shell_6 || room == shell_7 || room == shell_10
-				_pitch = 0.95
+				_pitch = 0.97
 			if room == shell_11 || room == shell_12 || room == shell_13
-				_pitch = 1.05
+				_pitch = 1.03
 			
-			pitchLrp = lerp(pitchLrp, _pitch, 0.1)
+			pitchLrp = lerp(pitchLrp, _pitch, 0.05)
 			
 			audio_sound_pitch(global.music, pitchLrp)
 			audio_sound_pitch(global.music_old, pitchLrp)
