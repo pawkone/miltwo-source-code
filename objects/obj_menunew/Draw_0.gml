@@ -52,13 +52,6 @@ mouse_yfake = clamp(mouse_yfake, 0, 540)
 
 if window_mouse_get_delta_x() > 0 || window_mouse_get_delta_y() > 0
 	mousemoved = true
-
-if state == "files"
-	event_user(0)
-else if state == "draw"
-	event_user(1)
-else if state == "tv"
-	event_user(2)
 	
 hand_y = clamp(hand_y, 0, 540)
 

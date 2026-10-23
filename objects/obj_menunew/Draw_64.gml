@@ -30,6 +30,11 @@ else if state == "draw"
 	draw_textEX(25, 525-32, lang_get_phrase("menunew_draw_controltip3"))
 }
 else if state == "tv"
-{
 	draw_textEX(25, 525-32, lang_get_phrase("menunew_tv_controltip1"))
-}
+
+if state == "files"
+	event_user(0)
+else if state == "draw"
+	event_user(1)
+else if state == "tv"
+	event_user(2)
