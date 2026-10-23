@@ -1,6 +1,3 @@
-if (obj_player.character == chars.milton)
-    titlecardMiltonIndex = approach(titlecardMiltonIndex, sprite_get_number(titlecardMilton) - 1, 0.4);
-
 if (mky_jump2 && !skip)
 {
     skip = true;
@@ -15,6 +12,7 @@ if (mky_jump2 && !skip)
 	fadeAlpha = 1;
 	alarm[1] = -1;
     alarm[3] = -1;
+	alarm[5] = -1;
 }
 
 if (scene == 0 || scene == 1)
@@ -22,15 +20,20 @@ if (scene == 0 || scene == 1)
     if fadeIn
     {
 		fadeAlpha = 1
-		circleSizeSpeed++
-		obj_camera.camera.zoom += circleSizeSpeed/100
-		circleSize = lerp(circleSize, 0, 0.2);
-		circleSize = approach(circleSize, 0, 0.1);
-        if circleSize == 0
+		circleSizeSpeed = max(circleSizeSpeed + 0.25,16)
+		circleSize -= circleSizeSpeed
+		
+		var _t = (960-circleSize)/960
+		obj_camera.camera.zoom += _t*_t/6
+        if circleSize <= 0
         {
-            if (!FMODevent_isplaying(snd))
-                fmod_studio_event_instance_start(snd);
-            
+			if is_string(titlecardinfo[3])
+				snd = FMODcreate_event(titlecardinfo[3]);
+			else
+			{
+				snd = scr_music(titlecardinfo[3]);
+				audio_sound_loop(snd, false)
+			}
 			circleSizeSpeed = 0
             fadeIn = false;
 			fadeAlpha = 0
@@ -40,30 +43,18 @@ if (scene == 0 || scene == 1)
         }
     }
     
-    if (titlecardName.fadeIn == true)
-    {
-        titlecardName.alpha = approach(titlecardName.alpha, 0, 0.05);
-        
-        if (titlecardName.alpha == 0)
-        {
-            titlecardName.fadeIn = false;
-            titlecardName.sprite = titlecardinfo[2];
-        }
-    }
-	else
-        titlecardName.alpha = approach(titlecardName.alpha, 1, 0.1);
 }
 
 if scene > 0
 {
-	y = lerp(y, 0, 0.1)
-	y = approach(y, 0, 0.05)
+	y = lerp(y, title2 ? 540 : 0, 0.1)
+	y = approach(y, title2 ? 540 : 0, 0.05)
 }
 
 if (scene == 2)
 {
     circleSize = approach(circleSize, 0, circleSizeSpeed);
-    circleSizeSpeed++;
+    circleSizeSpeed = max(circleSizeSpeed, 32)
     
     if (circleSize == 0)
     {

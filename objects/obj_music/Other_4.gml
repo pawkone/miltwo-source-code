@@ -1,29 +1,58 @@
 isSecretStart = string_pos("secret", string_letters(room_get_name(room))) > 0 || room == hotel_soundtest || room = hotel_soundtestentrance;
 
-if !audio_is_playing(mu_hubextra) && room == hotel_extra && !global.escapeActive
+if !global.escapeActive
 {
-	stop_music(false)
-	scr_music(mu_hubextra, true)
-}
-if !audio_is_playing(mu_rockbottom) && room == rockbottom_1 && !global.escapeActive
-{
-	stop_music(false)
-	scr_music(mu_rockbottom, false)
-}
-if !audio_is_playing(mu_crashoutcity) && room == crashout_1 && !global.escapeActive
-{
-	stop_music(false)
-	scr_music(mu_crashoutcity, false)
-}
-if !audio_is_playing(mu_frontyard) && room == frontyard_1 && !global.escapeActive
-{
-	stop_music(false)
-	scr_music(mu_frontyard, false)
-}
-if !audio_is_playing(mu_beaker) && room == beaker_intro && !global.escapeActive
-{
-	stop_music(false)
-	scr_music(mu_beaker, false)
+	if !audio_is_playing(mu_hubextra) && room == hotel_extra
+	{
+		stop_music(false)
+		scr_music(mu_hubextra, true)
+	}
+	if !audio_is_playing(mu_rockbottom) && room == rockbottom_1
+	{
+		stop_music(false)
+		scr_music(mu_rockbottom, false)
+	}
+	if !audio_is_playing(mu_crashoutcity) && room == crashout_1
+	{
+		stop_music(false)
+		scr_music(mu_crashoutcity, false)
+	}
+	if !audio_is_playing(mu_frontyard) && room == frontyard_1
+	{
+		stop_music(false)
+		scr_music(mu_frontyard, false)
+	}
+	if !audio_is_playing(mu_beaker) && room == beaker_intro
+	{
+		stop_music(false)
+		scr_music(mu_beaker, false)
+	}
+	if !audio_is_playing(mu_shellcityA) && room == shell_1
+	{
+		stop_music(false)
+		scr_music(mu_shellcityA, false)
+		func = function()
+		{
+			var _skate = 0 
+			with obj_player
+				_skate = array_contains([states.skateboard, states.skateboardAim, states.skateboardhitwall, states.skateboardIntro, states.skateboardmove, states.skateboardramp, states.skateboardwall], state)
+			if _skate && audio_is_playing(mu_shellcityA)
+				scr_music(mu_shellcityB, true, true)
+			else if !_skate && audio_is_playing(mu_shellcityB)
+				scr_music(mu_shellcityA, true, true)
+				
+			var _pitch = 1
+			if room == shell_5 || room == shell_6 || room == shell_7 || room == shell_10
+				_pitch = 0.95
+			if room == shell_11 || room == shell_12 || room == shell_13
+				_pitch = 1.05
+			
+			pitchLrp = lerp(pitchLrp, _pitch, 0.1)
+			
+			audio_sound_pitch(global.music, pitchLrp)
+			audio_sound_pitch(global.music_old, pitchLrp)
+		}
+	}
 }
 
 if (ds_map_exists(musicDetails, room))

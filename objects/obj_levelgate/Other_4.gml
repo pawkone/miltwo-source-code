@@ -1,5 +1,7 @@
 while (place_meeting(x, y, obj_solid)) y--;
 while (place_meeting(x, y, obj_platform)) y--;
+y += 2
+depth = layer_get_depth("Tiles_1")+1
 
 xdata_open(global.saveFile)
 

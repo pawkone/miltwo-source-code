@@ -10,10 +10,11 @@ function scr_soundeffect(_sfx, _pitch = 1, _loop = false)
 	audio_sound_pitch(_id, _pitch)
 	return _id
 }
-function scr_music(_sfx, fadein = false)
+function scr_music(_sfx, fadein = false, _savepos = false)
 {
 	if premode return -4
 	global.music_fade = 1
+	var _pos = _savepos ? audio_sound_get_track_position(global.music) : 0
 	if fadein
 	{
 		global.music_fade = 0
@@ -26,12 +27,12 @@ function scr_music(_sfx, fadein = false)
 		global.music_multold = global.music_mult
 		global.music = -4
 	}
-	if audio_is_playing(global.music)
+	else if audio_is_playing(global.music)
 		audio_stop_sound(global.music)
 	if audio_exists(_sfx)
 	{
 		global.music_mult = audio_sound_get_gain(_sfx)
-		global.music = audio_play_sound(_sfx, 10, 1, 0, 0, 1)
+		global.music = audio_play_sound(_sfx, 10, 1, 0, _pos, 1)
 	}
 	else
 	{

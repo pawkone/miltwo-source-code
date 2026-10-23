@@ -26,11 +26,12 @@ with (_plr)
 	{
 		obj_camera.xOffset = approach(obj_camera.xOffset, 0, 0.3)
 		x = approach(x, _gate.x, 1.75)
-	    if (image_index == (image_number - 1) && !instance_exists(obj_fadeout) && !instance_exists(obj_titlecard))
+	    if (image_index >= (image_number - 12) && !instance_exists(obj_fadeout) && !instance_exists(obj_titlecard))
 	    {
 	        state = states.enterdoor;
 	        sprite_index = sprites.entergate;
-	        image_index = image_number - 1;
+			if animation_end()
+				image_index = image_number - 1;
 	        generalReset();
 	        targetRoom = _rm;
 	        door = _dr;

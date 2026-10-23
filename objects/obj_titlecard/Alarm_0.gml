@@ -1,1 +1,1 @@
-titlecardName.fadeIn = true;
+title2 = true;

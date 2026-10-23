@@ -573,6 +573,8 @@
     {"name":"mu_peppernilap2","order":3,"path":"sounds/mu_peppernilap2/mu_peppernilap2.yy",},
     {"name":"mu_prophunt_waiting","order":4,"path":"sounds/mu_prophunt_waiting/mu_prophunt_waiting.yy",},
     {"name":"mu_prophunt","order":5,"path":"sounds/mu_prophunt/mu_prophunt.yy",},
+    {"name":"mu_shellcityA","order":4,"path":"sounds/mu_shellcityA/mu_shellcityA.yy",},
+    {"name":"mu_shellcityB","order":5,"path":"sounds/mu_shellcityB/mu_shellcityB.yy",},
     {"name":"mu_tc_beaker","order":3,"path":"sounds/mu_tc_beaker/mu_tc_beaker.yy",},
     {"name":"mu_tc_frontyard","order":2,"path":"sounds/mu_tc_frontyard/mu_tc_frontyard.yy",},
     {"name":"mu_tc_fruitcup","order":6,"path":"sounds/mu_tc_fruitcup/mu_tc_fruitcup.yy",},

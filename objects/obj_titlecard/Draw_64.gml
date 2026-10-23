@@ -3,16 +3,14 @@ if (scene == 1)
 
 if (scene == 1 || scene == 2)
 {
-    titlecardName.x = x + irandom_range(-1, 1);
-    titlecardName.y = -y + irandom_range(-1, 1);
-    draw_sprite(titlecardSprite, 0, x, y);
-    
-    if (obj_player.character == chars.milton)
-        draw_sprite(titlecardMilton, titlecardMiltonIndex, x, y);
-    
-    draw_set_alpha(titlecardName.alpha);
-    draw_sprite(titlecardName.sprite, 0, titlecardName.x, titlecardName.y);
-    draw_set_alpha(1);
+    draw_sprite(titlecardinfo[0], 0, 0, min(y,0))
+    draw_sprite(titlecardinfo[1], 0, irandom_range(-1, 1), -y+irandom_range(-1, 1))
+	draw_sprite(titlecardinfo[2], 0, irandom_range(-1, 1), -y+irandom_range(-1, 1)+540)
+    if obj_player.character == chars.milton
+	{
+        draw_sprite(titlecardMilton, titlecardMiltonIndex, 0, 0)
+		titlecardMiltonIndex = approach(titlecardMiltonIndex, sprite_get_number(titlecardMilton) - 1, 0.4)
+	}
 }
 
 if (!surface_exists(fadeSurface))

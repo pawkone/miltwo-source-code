@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":7.8715873,
+  "duration":4.551111,
   "exportDir":"",
   "name":"mu_tc_shellcity",
   "parent":{

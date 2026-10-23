@@ -1,4 +1,5 @@
 global.songCurInf = {};
+pitchLrp = 1
 musicDetails = ds_map_create();
 music = 
 {
@@ -81,7 +82,7 @@ ds_map_add(musicDetails, yard_1, new add_music("event:/Music/W1/Monolith Mangrov
 ds_map_add(musicDetails, hotel_start, new add_music("event:/Music/W1/hub", -4, -4));
 ds_map_add(musicDetails, hotel_1, new add_music("event:/Music/W1/hub", -4, -4));
 ds_map_add(musicDetails, tutorial_1, new add_music("event:/Music/W1/tutorial", -4, "event:/Ambience/tutorial"));
-ds_map_add(musicDetails, shell_1, new add_music("event:/Music/W1/Shell City/city", "event:/Music/W1/Shell City/citysecret", -4));
+//ds_map_add(musicDetails, shell_1, new add_music("event:/Music/W1/Shell City/city", "event:/Music/W1/Shell City/citysecret", -4));
 ds_map_add(musicDetails, beach_1, new add_music("event:/Music/W1/Berry Beach/shores", "event:/Music/W1/Berry Beach/shoressecret", -4));
 ds_map_add(musicDetails, castle_1, new add_music("event:/Music/W2/Castle Pumpkinstein/castle", -4, -4));
 ds_map_add(musicDetails, Levelselect, new add_music("event:/Music/Ost/mainmenu", -4, -4));
