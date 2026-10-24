@@ -1,4 +1,3 @@
-window_set_caption(global.gameframe_caption_text)
 if instance_exists(obj_fmod)
 {
 	lap3_mult = lerp(lap3_mult, audio_is_playing(mu_lap3), 0.1)

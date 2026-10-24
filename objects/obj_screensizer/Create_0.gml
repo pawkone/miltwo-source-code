@@ -1,6 +1,5 @@
 depth = -998;
 global.debug = false
-global.gameframe_caption_text = "What's Shakin, Bacon?";
 lap2alt = false
 hue = 0;
 huevsp = 0;
