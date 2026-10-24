@@ -14,17 +14,27 @@ miltwocredits_credits =
 		spr_titlecardShell, spr_titlecardShellTitle1, tilespr_fruitcup,
 	],
 	[
-		"MrAlt- (Ex Miltu Member)",
-		"former co director : coder : level designer",
-		tilespr_frontyard, tilespr_outbreak, tilespr_hotel2
-	],
-	[
 		"Targetbuldoser (Ex Miltu Member)",
 		"artist : composer : ideas",
 		spr_pepperni_idle, spr_milton_mach1, spr_milton_mach2, spr_milton_mach3turn,
 		spr_milton_wallslide, spr_player0_groundpoundstart, spr_player0_groundpound,
 		spr_player0_groundpoundbump, spr_soda, spr_tv_soda, spr_titlecardFrontyard,
 		spr_titlecardFrontyardTitle1
+	],
+	[
+		"MrAlt- (Ex Miltu Member)",
+		"former co director : coder : level designer",
+		tilespr_frontyard, tilespr_outbreak, tilespr_hotel2
+	],
+	[
+		"Polyg0n5",
+		"volunteered artist : artist for og miltu",
+		spr_butterAir, spr_butterGround, spr_pepperni_mach1, spr_pepperni_mach3,
+		spr_pepperni_taunt, spr_milton_jump, spr_milton_fall, spr_milton_land,
+		spr_milton_land2, spr_titlecardFruitcup, spr_titlecardFruitcupTitle1,
+		spr_titlecardFruitcupTitle2, spr_tv_idleanim1T, spr_tv_idleanim2T,
+		spr_tv_idleP, spr_tv_machP, spr_tv_crazyrunP, spr_tv_happyT,
+		spr_tv_escapeP, spr_pepperni_mach3turn
 	],
 	[
 		"Toasty64 (Ex Miltu Member)",
@@ -34,21 +44,17 @@ miltwocredits_credits =
 	[
 		"PaintlesNoise (Ex Miltu Member)",
 		"artist",
-		spr_tv_happyT, spr_milton_mach3turnfall
-	],
-	[
-		"Polyg0n5",
-		"volunteered artist : artist for og miltu",
-		spr_butterAir, spr_butterGround, spr_pepperni_mach1, spr_pepperni_mach3,
-		spr_pepperni_taunt, spr_milton_jump, spr_milton_fall, spr_milton_land,
-		spr_milton_land2, spr_titlecardFruitcup, spr_titlecardFruitcupTitle1,
-		spr_titlecardFruitcupTitle2, spr_tv_idleanim1T, spr_tv_idleanim2T,
-		spr_tv_idleP, spr_tv_machP, spr_tv_crazyrunP
+		spr_milton_mach3turnfall
 	],
 	[
 		"ElCacas.XD.RenovadoXD",
 		"volunteered artist",
 		spr_pepperni_idleanim1, spr_pepperni_crazyrun
+	],
+	[
+		"Bobbers6921",
+		"volunteered artist",
+		spr_pepperni_mach2
 	],
 	[
 		"CoolGuy_The_Guy",

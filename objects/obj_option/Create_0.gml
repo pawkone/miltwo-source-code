@@ -190,7 +190,6 @@ var AUDIO = create_menu(optionstype.audio, optionstype.anchor_left, 48, function
     xdata_write("General", "Music", global.MusicVolume);
     xdata_write("General", "Sfx", global.SfxVolume);
     xdata_write("General", "Master", global.MasterVolume);
-    xdata_write("General", "Ambiance", global.AmbianceVolume);
     xdata_write("General", "UnfocusMute", global.unfocus_mute);
 	xdata_close()
 });
@@ -201,7 +200,6 @@ add_option_press(AUDIO, "option_back", function()
     xdata_write("General", "Music", global.MusicVolume);
     xdata_write("General", "Sfx", global.SfxVolume);
     xdata_write("General", "Master", global.MasterVolume);
-    xdata_write("General", "Ambiance", global.AmbianceVolume);
     xdata_write("General", "UnfocusMute", global.unfocus_mute);
 	xdata_close()
 });
@@ -221,14 +219,6 @@ add_option_ext(AUDIO, optionstype.element_slider, "option_audio_music", function
     global.MusicVolume = q.val / 100;
     q.val = global.MusicVolume * 100;
 }, global.MusicVolume * 100, 100);
-add_option_ext(AUDIO, optionstype.element_slider, "option_audio_ambiance", function()
-{
-    var m = menus[currentmenu];
-    var opt = m.options;
-    var q = opt[selected];
-    global.AmbianceVolume = q.val / 100;
-    q.val = global.AmbianceVolume * 100;
-}, global.AmbianceVolume * 100, 100);
 add_option_ext(AUDIO, optionstype.element_slider, "option_audio_sfx", function()
 {
     var m = menus[currentmenu];

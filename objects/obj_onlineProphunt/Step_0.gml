@@ -10,19 +10,12 @@ with obj_music
 	    fmod_studio_event_instance_stop(secretInst, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
 	    fmod_studio_event_instance_release(secretInst);
 	}
-	if (ambienceInst != -4)
-	{
-	    fmod_studio_event_instance_stop(ambienceInst, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
-	    fmod_studio_event_instance_release(ambienceInst);
-	}
 	musicInst = -4;
 	secretInst = -4;
-	ambienceInst = -4;
 	music = 
 	{
 	    regular: "",
-	    secret: "",
-	    ambience: ""
+	    secret: ""
 	};
 	savedMusicPosition = 0;
 	isSecret = false;

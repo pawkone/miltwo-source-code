@@ -3,7 +3,6 @@ if premode exit
 var _paused = !instance_exists(obj_pause) || obj_pause.active
 
 fmod_studio_system_set_parameter_by_name("SfxVolume", global.SfxVolume, true);
-fmod_studio_system_set_parameter_by_name("AmbianceVolume", global.AmbianceVolume, true);
 if (instance_exists(obj_monolith) && !_paused)
 	fmod_studio_system_set_parameter_by_name("MusicVolume", (global.MusicVolume * 1) - obj_music.pillar, true);
 else

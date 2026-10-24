@@ -4,13 +4,11 @@ musicDetails = ds_map_create();
 music = 
 {
     regular: "",
-    secret: "",
-    ambience: ""
+    secret: ""
 };
 isSecretStart = false
 musicInst = -4;
 secretInst = -4;
-ambienceInst = -4;
 isSecret = false;
 lock = false;
 panicStart = false;
@@ -39,22 +37,15 @@ stop_music = function(externaltoo = true)
 	        fmod_studio_event_instance_stop(secretInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
 	        fmod_studio_event_instance_release(secretInst);
 	    }
-	    if (ambienceInst != -4)
-	    {
-	        fmod_studio_event_instance_stop(ambienceInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
-	        fmod_studio_event_instance_release(ambienceInst);
-	    }
 		if externaltoo
 			scr_music(-4, true)
 	
 	    musicInst = -4;
 	    secretInst = -4;
-	    ambienceInst = -4;
 	    music = 
 	    {
 	        regular: "",
-	        secret: "",
-	        ambience: ""
+	        secret: ""
 	    };
 	    savedMusicPosition = 0;
 	    isSecret = false;
@@ -67,10 +58,9 @@ add_music = function(arg0, arg1, arg2, arg3 = function()
 {
     music = arg0;
     secret = arg1;
-    ambience = arg2;
     func = arg3;
 };
-ds_map_add(musicDetails, yard_1, new add_music("event:/Music/W1/Monolith Mangrove/mangrove", "event:/Music/W1/Monolith Mangrove/mangrovesecret", "event:/Ambience/mangrove", function()
+ds_map_add(musicDetails, yard_1, new add_music("event:/Music/W1/Monolith Mangrove/mangrove", "event:/Music/W1/Monolith Mangrove/mangrovesecret", -4, function()
 {
     var _s = 0;
     
@@ -81,12 +71,12 @@ ds_map_add(musicDetails, yard_1, new add_music("event:/Music/W1/Monolith Mangrov
 }));
 ds_map_add(musicDetails, hotel_start, new add_music("event:/Music/W1/hub", -4, -4));
 ds_map_add(musicDetails, hotel_1, new add_music("event:/Music/W1/hub", -4, -4));
-ds_map_add(musicDetails, tutorial_1, new add_music("event:/Music/W1/tutorial", -4, "event:/Ambience/tutorial"));
+ds_map_add(musicDetails, tutorial_1, new add_music("event:/Music/W1/tutorial", -4, -4));
 //ds_map_add(musicDetails, shell_1, new add_music("event:/Music/W1/Shell City/city", "event:/Music/W1/Shell City/citysecret", -4));
 ds_map_add(musicDetails, beach_1, new add_music("event:/Music/W1/Berry Beach/shores", "event:/Music/W1/Berry Beach/shoressecret", -4));
 ds_map_add(musicDetails, castle_1, new add_music("event:/Music/W2/Castle Pumpkinstein/castle", -4, -4));
 ds_map_add(musicDetails, Levelselect, new add_music("event:/Music/Ost/mainmenu", -4, -4));
-ds_map_add(musicDetails, Mainmenu, new add_music(-4, -4, "event:/Ambience/mainmenu"));
+ds_map_add(musicDetails, Mainmenu, new add_music(-4, -4, -4));
 
 captions = {}
 captions.str = [ "RUNNIN' around on a piece of ground on your home town!","Runnin' Around on a piece of ground on your home town!","Runnin' aROUND on a piece of ground on your home town!","Runnin' around ON a piece of ground on your home town!","Runnin' around on A piece of ground on your home town!","Runnin' around on a PIECE of ground on your home town!","Runnin' around on a piece OF ground on your home town!","Runnin' around on a piece of GROUND on your home town!","Runnin' around on a piece of ground ON your home town!","Runnin' around on a piece of ground on YOUR home town!","Runnin' around on a piece of ground on your HOME town!!","Runnin' around on a piece of ground on your HOME TOWN!!!","Runnin' around on a piece of ground on your HOME TOWN!!!...","YOU'VE been livin' a life that you already knew the waaa-aayyyy!","You've BEEN livin' a life that you already knew the waaa-aayyyy!","You've been LIVIN' a life that you already knew the waaa-aayyyy!","You've been livin' A life that you already knew the waaa-aayyyy!","You've been livin' a LIFE that you already knew the waaa-aayyyy!","You've been livin' a life THAT you already knew the waaa-aayyyy!","You've been livin' a life that YOU already knew the waaa-aayyyy!","You've been livin' a life that you ALready knew the waaa-aayyyy!","You've been livin' a life that you alREADY knew the waaa-aayyyy!","You've been livin' a life that you already KNEW the waaa-aayyyy!","You've been livin' a life that you already knew THE waaa-aayyyy!","You've been livin' a life that you already knew the WAAA-aayyyy!!","You've been livin' a life that you already knew the WAAA-AAYYYY!!!","STICKIN' around to see the end of a show that you already knooww-oohh!","Stickin' Around to see the end of a show that you already knooww-oohh!","Stickin' aROUND to see the end of a show that you already knooww-oohh!","Stickin' around TO see the end of a show that you already knooww-oohh!","Stickin' around to SEE the end of a show that you already knooww-oohh!","Stickin' around to see THE end of a show that you already knooww-oohh!","Stickin' around to see the END of a show that you already knooww-oohh!","Stickin' around to see the end OF a show that you already knooww-oohh!","Stickin' around to see the end of A show that you already knooww-oohh!","Stickin' around to see the end of a SHOW that you already knooww-oohh!","Stickin' around to see the end of a show THAT you already knooww-oohh!","Stickin' around to see the end of a show that YOU already knooww-oohh!","Stickin' around to see the end of a show that you ALready knooww-oohh!","Stickin' around to see the end of a show that you alREADY knooww-oohh!","Stickin' around to see the end of a show that you already KNOOWW-oohh!!","Stickin' around to see the end of a show that you already KNOOWW-OOHH!!!","I'VE been waitin' my whole life for someone or something like you..","I've BEEN waitin' my whole life for someone or something like you..","I've been WAITIN' my whole life for someone or something like you..","I've been waitin' MY whole life for someone or something like you..","I've been waitin' my WHOLE life for someone or something like you..","I've been waitin' my whole LIFE for someone or something like you..","I've been waitin' my whole life FOR someone or something like you..","I've been waitin' my whole life for SOMEone or something like you..","I've been waitin' my whole life for SOMEONE or something like you..","I've been waitin' my whole life for someone OR something like you..","I've been waitin' my whole life for someone or SOMEthing like you..","I've been waitin' my whole life for someone or SOMETHING like you..","I've been waitin' my whole life for someone or something LIKE you..","I've been waitin' my whole life for someone or something like YOU..!","R-","Ra-","Rai-","Rais-","Raise...","Raise... The","Raise... The ROOF!",":)","","R-","Ra-","Rai-","Rais-","Raise...","Raise... The","Raise... The ROOF!",";)","","Ta..","Ta.. Ta..","Ta.. Ta.. TA!","RAISE-","RAISE THE-","DA-","DA THE-","DA-","DA THE-","DA THE THE-","DA THE THE THE-","RAISE-","RAISE THE-","RAISE THE ROOF!-","RAISE THE ROOF! THE-","RAISE THE ROOF! THE ROOF!-","AND-","AND RAISE-","AND RAISE (AH)-","THE-","THE DA-","THE-","THE uhh-","DA-","DA DA-","DA DA DA-","DA DA DA DA-","DA DA DA DA DA-","DA DA DA DA DA DA-","DA DA DA DA DA DA DA-","DA DA DA DA DA DA DA DA-","RAISING-","RAISING THE-","RAISING THE ROOF-","RAISING THE ROOF, SO-","RAISING THE ROOF, SO HEY!","THE","THE ROOF..","IM-","IM HAVING-","IM HAVING IT-","IM HAVING IT, RAISEE!!!","RRRR","RRRRAAII","RRRRAAIISSEEEEEE!!","RRRRAAIISSEEEEEE THE-","RRRRAAIISSEEEEEE THE RUF.","RRAAII","RRAAIISSEEE","RRAAIISSEEEAWSDAWdawd","RRAAIISSEEEAWSDAWdawd1231y2euuh32d","AHH","AHH RAISEeeeEEEE","CAN-","CAN RAISEESEeeeee!1!1","CAN RAISAIESADWUDAWUDAWNFWf","):","","(raaiasieie)","","(raaiasieie)","(raiisie)","(raiisie da)","(raiisie da ruf)","(raiise)","(raiise da)","(raiise da ruuufffff)","(raiisiee)","(raiisiee da)","(raiisiee da ruwf)","RAISE","RAISE. THE","RAISE. THE. ROOF","" ]

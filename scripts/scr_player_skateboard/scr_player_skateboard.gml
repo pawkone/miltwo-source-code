@@ -248,15 +248,12 @@ function scr_player_skateboard()
     if (grounded)
         sprayCans = 4;
     
-    if (sprite_index != spr_player_skate_startup)
+    if (pky_grab && sprayCans >= 1)
     {
-        if (pky_grab && sprayCans >= 1)
-        {
-            sprayCans--;
-            aimTime = 15;
-            state = states.skateboardAim;
-            verticalMovespeed = vsp;
-            movespeed = -3 * move;
-        }
+        sprayCans--;
+        aimTime = 15;
+        state = states.skateboardAim;
+        verticalMovespeed = vsp;
+        movespeed = -3 * move;
     }
 }

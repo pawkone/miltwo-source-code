@@ -30,7 +30,6 @@ window_enable_borderless_fullscreen(true)
 global.MasterVolume = xdata_read("General", "Master", 1);
 global.MusicVolume = xdata_read("General", "Music", 1);
 global.SfxVolume = xdata_read("General", "Sfx", 0.8);
-global.AmbianceVolume = xdata_read("General", "Ambiance", 1);
 global.Fullscreen = xdata_read("General", "Fullscreen", 0);
 switch (global.Fullscreen)
 {

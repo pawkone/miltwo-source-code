@@ -16,10 +16,7 @@ else if (sprite_index == asset_get_index(string("spr_lover{0}_shoot", lover)))
     if (!fly)
     {
         repeat (10)
-        {
             instance_create(x + irandom_range(-50, 50), y + irandom_range(-50, 50), obj_loverproj);
-            show_debug_message("disgusting little thing created");
-        }
         
         fly = true;
     }

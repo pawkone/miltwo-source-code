@@ -1,14 +1,12 @@
-if (scene == 1)
-	draw_clear(c_black)
-
 if (scene == 1 || scene == 2)
 {
+	draw_clear(c_black)
     draw_sprite(titlecardinfo[0], 0, 0, min(y,0))
     draw_sprite(titlecardinfo[1], 0, irandom_range(-1, 1), -y+irandom_range(-1, 1))
 	draw_sprite(titlecardinfo[2], 0, irandom_range(-1, 1), -y+irandom_range(-1, 1)+540)
     if obj_player.character == chars.milton
 	{
-        draw_sprite(titlecardMilton, titlecardMiltonIndex, 0, 0)
+        draw_sprite(titlecardMilton, titlecardMiltonIndex, 0, min(y,0))
 		titlecardMiltonIndex = approach(titlecardMiltonIndex, sprite_get_number(titlecardMilton) - 1, 0.4)
 	}
 }

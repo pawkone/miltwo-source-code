@@ -156,8 +156,5 @@ fmod_studio_event_instance_set_paused(escapeInst, isSecret);
 if (musicInst >= 0)
     fmod_studio_event_instance_set_paused(musicInst, isSecret || FMODevent_isplaying(escapeInst) || pauseMusic);
 
-if (ambienceInst >= 0)
-    fmod_studio_event_instance_set_paused(ambienceInst, isSecret || FMODevent_isplaying(escapeInst) || pauseMusic);
-
 if (secretInst >= 0)
     fmod_studio_event_instance_set_paused(secretInst, !isSecret || pauseMusic);

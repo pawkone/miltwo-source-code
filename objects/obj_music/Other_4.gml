@@ -77,23 +77,6 @@ if (ds_map_exists(musicDetails, room))
         }
     }
     
-    if (music.ambience != _map.ambience && !global.escapeActive)
-    {
-        if (ambienceInst != -4)
-        {
-            fmod_studio_event_instance_stop(ambienceInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
-            fmod_studio_event_instance_release(ambienceInst);
-            ambienceInst = -4;
-        }
-        
-        if (_map.ambience != -4)
-        {
-            music.ambience = _map.ambience;
-            ambienceInst = FMODcreate_event(_map.ambience);
-            fmod_studio_event_instance_start(ambienceInst);
-        }
-    }
-    
     if (music.secret != _map.secret)
     {
         if (secretInst != -4)
@@ -118,9 +101,6 @@ fmod_studio_event_instance_set_paused(escapeInst, isSecret);
 
 if (musicInst != -4)
     fmod_studio_event_instance_set_paused(musicInst, isSecret || FMODevent_isplaying(escapeInst));
-
-if (ambienceInst != -4)
-    fmod_studio_event_instance_set_paused(ambienceInst, isSecret || FMODevent_isplaying(ambienceInst));
 
 if (secretInst != -4)
     fmod_studio_event_instance_set_paused(secretInst, !isSecret);
