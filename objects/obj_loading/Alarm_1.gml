@@ -39,13 +39,13 @@ enum chars
 	bacon_redem,
 	bacon_twist,
 	soda,
-	preoutman,
+	preoutman
 }
 
 global.PlayerCharacters = [];
 
 _ac(chars.mildred, "Mildred")
-_ac(chars.valentia, "Valentino")
+_ac(chars.valentia, "Valenta")
 _ac(chars.milton, "Milton")
 _ac(chars.pepperni, "Pepperni")
 _ac(chars.bacon_crash, "Bacon (Crashout)")

@@ -387,11 +387,18 @@ function playerUtil_spr(_e)
     };
 	
 	st.player.patcolours = get_baconera(spr_playerPatCol, _e)
-	//st.player.palette = get_baconera(spr_playerPal, _e)
-	st.player.palette = get_baconera(spr_playerPalHalloween, _e) //HALLOWEEN SPPOKY PALETTES
+	st.player.palette = get_baconera(spr_playerPalHalloween, _e, 1) //HALLOWEEN SPPOKY PALETTES
+	if !sprite_exists(st.player.palette)
+		st.player.palette = get_baconera(spr_playerPal, _e) //if no halloween, please die and try again
 	st.player.pattern = get_baconera(spr_playerPat, _e)
 	st.player.clothes = get_baconera(spr_playerClothes, _e)
 	
+	
+	st.player.crouch = get_baconera(spr_player_crouch, _e)
+	st.player.crouchfall = get_baconera(spr_player_crouchfall, _e)
+	st.player.crouchhop = get_baconera(spr_player_crouchhop, _e)
+	st.player.crouchmove = get_baconera(spr_player_crouchmove, _e)
+	st.player.crouchstart = get_baconera(spr_player_crouchstart, _e)
     st.player.idle = get_baconera(spr_player_idle, _e)
 	st.player.move = get_baconera(spr_player_move, _e)
 	st.player.jump = get_baconera(spr_player_jump, _e)

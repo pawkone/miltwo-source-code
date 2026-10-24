@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"spr_pepperniPal",
   "bboxMode":0,
-  "bbox_bottom":4,
+  "bbox_bottom":5,
   "bbox_left":0,
   "bbox_right":11,
   "bbox_top":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":5,
+  "height":6,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"afb46a55-d8b1-4abc-baa1-9682501cdeff","blendMode":0,"displayName":"default","isLocked":false,"name":"afb46a55-d8b1-4abc-baa1-9682501cdeff","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},

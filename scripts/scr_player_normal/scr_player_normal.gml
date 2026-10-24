@@ -207,7 +207,7 @@ function scr_player_normal()
     {
         image_speed = 0.35;
         image_index = 0;
-        sprite_index = spr_player_crouchstart;
+        sprite_index = sprites.crouchstart;
         state = states.crouch;
     }
     

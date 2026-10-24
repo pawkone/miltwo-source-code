@@ -37,36 +37,34 @@ if (menu == 0)
 }
 else
 {
-    if (mky_slap2)
+    if keyboard_check_pressed(vk_escape)
     {
         menu = 0;
 		exit
     }
 	if menu == 3 //change player info menu tuff
-	{
 		exit
-	}
 	if menu == 2
 	{
 		room_goto(Mainmenu)
 		instance_destroy(obj_multiplayerHandler)
 		with instance_create(0,0,obj_multiplayerHandler)
+		{
+			ip = other.connectIP
 			isHost = other.creating
+		}
 		exit
 	}
-    if (keyboard_check_pressed(vk_anykey))
+	if keyboard_check(vk_control) && keyboard_check(ord("V"))
+	{
+		keyboard_string = clipboard_get_text();
+		textInput = keyboard_string;
+	}
+    if keyboard_check_pressed(vk_enter)
     {
-		if keyboard_check(vk_control) && keyboard_check(ord("V"))
-		{
-			keyboard_string = clipboard_get_text();
-			textInput = keyboard_string;
-		}
-        if (keyboard_check_pressed(vk_enter) || mky_jump2)
-        {
-            connectIP = textInput
-            menu = 2
-        }
-		else
-			textInput = keyboard_string;
+        connectIP = textInput
+        menu = 2
     }
+	else
+		textInput = keyboard_string;
 }

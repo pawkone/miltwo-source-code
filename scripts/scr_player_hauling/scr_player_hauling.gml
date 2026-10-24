@@ -128,7 +128,7 @@ function scr_player_hauling()
     {
         image_speed = 0.35;
         image_index = 0;
-        sprite_index = spr_player_crouch;
+        sprite_index = sprites.crouch;
         state = states.crouch;
     }
     

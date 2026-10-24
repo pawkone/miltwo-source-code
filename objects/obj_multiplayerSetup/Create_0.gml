@@ -32,6 +32,8 @@ menus =
 	    creating = true
 	}],
 	[-4, "Join Lobby", function() {
+		keyboard_string = "127.0.0.1"
+		textInput = keyboard_string
 	    menu = 1
 	    creating = false
 	}],

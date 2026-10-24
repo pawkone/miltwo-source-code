@@ -12,6 +12,7 @@ miltwocredits_credits =
 		spr_bacadmadLocate, spr_minilogo, spr_menunew, spr_menunew_tvhint,
 		spr_gate_shell, spr_floorgate, spr_floorgate_over, spr_uparrow,
 		spr_titlecardShell, spr_titlecardShellTitle1, tilespr_fruitcup,
+		spr_player_skate_jump
 	],
 	[
 		"Targetbuldoser (Ex Miltu Member)",
@@ -34,7 +35,8 @@ miltwocredits_credits =
 		spr_milton_land2, spr_titlecardFruitcup, spr_titlecardFruitcupTitle1,
 		spr_titlecardFruitcupTitle2, spr_tv_idleanim1T, spr_tv_idleanim2T,
 		spr_tv_idleP, spr_tv_machP, spr_tv_crazyrunP, spr_tv_happyT,
-		spr_tv_escapeP, spr_pepperni_mach3turn
+		spr_tv_escapeP, spr_pepperni_mach3turn, spr_player1_pary, spr_player1_crouch,
+		spr_player1_crouchfall, spr_player1_crouchhop, spr_player1_crouchmove
 	],
 	[
 		"Toasty64 (Ex Miltu Member)",

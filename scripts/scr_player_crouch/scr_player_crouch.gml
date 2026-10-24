@@ -10,15 +10,15 @@ function scr_player_crouch()
         state = states.normal;
     }
     
-    if (animation_end() && sprite_index == spr_player_crouchstart)
+    if (animation_end() && sprite_index == sprites.crouchstart)
     {
-        sprite_index = spr_player_crouch;
+        sprite_index = sprites.crouch;
         image_index = 0;
     }
     
-    if (animation_end() && sprite_index == spr_player_crouchhop)
+    if (animation_end() && sprite_index == sprites.crouchhop)
     {
-        sprite_index = spr_player_crouchfall;
+        sprite_index = sprites.crouchfall;
         image_index = 0;
     }
     
@@ -28,26 +28,26 @@ function scr_player_crouch()
         vsp /= 20;
     }
     
-    if (grounded && (sprite_index == spr_player_crouchhop || sprite_index == spr_player_crouchfall))
+    if (grounded && (sprite_index == sprites.crouchhop || sprite_index == sprites.crouchfall))
     {
-        sprite_index = spr_player_crouchstart;
+        sprite_index = sprites.crouchstart;
         image_index = 2;
         create_particleStatic(spr_landeffect, x, y, 1, 1);
     }
     
     if (move != 0)
     {
-        if (sprite_index == spr_player_crouch)
+        if (sprite_index == sprites.crouch)
         {
             image_index = 0;
-            sprite_index = spr_player_crouchmove;
+            sprite_index = sprites.crouchmove;
         }
         
         xscale = move;
         movespeed = approach(movespeed, 4, 0.5);
         buffers.step--;
         
-        if (sprite_index == spr_player_crouchmove)
+        if (sprite_index == sprites.crouchmove)
         {
             image_speed = movespeed / 15;
             
@@ -64,17 +64,17 @@ function scr_player_crouch()
         movespeed = 0;
         image_speed = 0.35;
         
-        if (sprite_index == spr_player_crouchmove)
+        if (sprite_index == sprites.crouchmove)
         {
             image_index = 0;
-            sprite_index = spr_player_crouch;
+            sprite_index = sprites.crouch;
         }
     }
     
-    if (!grounded && sprite_index != spr_player_crouchhop)
+    if (!grounded && sprite_index != sprites.crouchhop)
     {
         image_index = 0;
-        sprite_index = spr_player_crouchfall;
+        sprite_index = sprites.crouchfall;
     }
     
     if (jumpBuffer && grounded)
@@ -83,7 +83,7 @@ function scr_player_crouch()
         create_particleStatic(spr_jumpeffect, x, y, 1, 1);
         image_speed = 0.35;
         image_index = 0;
-        sprite_index = spr_player_crouchhop;
+        sprite_index = sprites.crouchhop;
         vsp = -8;
         jumpstop = false;
         plrsnds_play(sfx.jump, x, y);

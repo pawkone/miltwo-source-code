@@ -1,5 +1,7 @@
 draw_sprite_stretched(spr_box,0,680,60,128,150)
+pal_swap_set(global.PlayerCharacters[select].sprites.player.palette, 1, 0)
 draw_sprite_ext(select == chars.soda ? spr_soda : sprite_index, image_index, 680+64,60+64,1,1,0,c_white,1)
+shader_reset()
 draw_set_halign(1)
 draw_set_valign(1)
 draw_set_alpha(1)
