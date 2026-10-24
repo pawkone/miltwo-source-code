@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_xdata",
   "parent":{
-    "name":"xdata",
-    "path":"folders/Extensions/xdata.yy",
+    "name":"Extensions",
+    "path":"folders/Extensions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

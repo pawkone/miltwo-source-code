@@ -1,18 +1,33 @@
-gml_pragma("optimise", "js_array_check", "push, false");gml_pragma("optimise", "js_error_check", "push, false");gml_pragma("optimise", "js_check_index", "push, false");gml_pragma("optimise", "js_pre_post_no_long", "push, true");gml_pragma("optimise", "js_use_infix_ops", "push, true");gml_release_mode(true);texturegroup_set_mode(true, false);scheduler_resolution_set(16);gc_target_frame_time(-100);ds_set_precision(0.001)
-globalvar wsbMOmInfo; wsbMOmInfo = {}; wsbMOmInfo.version = "???"; try{wsbMOmInfo = json_parse(loadString("gameData/wsbMOmInfo.json"))}catch(e){}; wsbMOmInfo.dir = game_save_id + "ohMiltu/" ;wsbMOmInfo.opt = wsbMOmInfo.dir + "settings.xda"
+gml_pragma("UnityBuild", "true")
+gml_pragma("forceinline")
+gml_pragma("optimise", "js_array_check", "push, false")
+gml_pragma("optimise", "js_error_check", "push, false")
+gml_pragma("optimise", "js_check_index", "push, false")
+gml_pragma("optimise", "js_pre_post_no_long", "push, true")
+gml_pragma("optimise", "js_use_infix_ops", "push, true")
+gml_release_mode(true)
+texturegroup_set_mode(true,false,spr_pixel)
+scheduler_resolution_set(16)
+gc_target_frame_time(-100)
+ds_set_precision(0.001)
 randomise()
+
+globalvar wsbMOmInfo; wsbMOmInfo = {}
+wsbMOmInfo.version = "???"
+wsbMOmInfo.dir = game_save_id + "ohMiltu/"
+wsbMOmInfo.opt = wsbMOmInfo.dir + "settings.xda"
 
 #macro premode (os_type == os_linux)
 
 global.username = string("player{0}",irandom_range(1000,9999))
 wsbMOmInfo.options = [
-"Modded;machdoublejump;0",
-"Modded;phototaunt;0",
-"Modded;spammabletaunt;0",
-"Modded;oldsecreteye;0",
-"Modded;bettermilton;0",
-"Modded;betterwaybackyard;0",
-"Modded;sloperotation;0",
+	"Modded;machdoublejump;0",
+	"Modded;phototaunt;0",
+	"Modded;spammabletaunt;0",
+	"Modded;oldsecreteye;0",
+	"Modded;bettermilton;0",
+	"Modded;betterwaybackyard;0",
+	"Modded;sloperotation;0",
 ]
 
 xdata_open(wsbMOmInfo.opt)

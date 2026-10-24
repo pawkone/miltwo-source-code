@@ -13,8 +13,8 @@
   "name":"obj_shell",
   "overriddenProperties":[],
   "parent":{
-    "name":"rt-shell",
-    "path":"folders/Extensions/rt-shell.yy",
+    "name":"Extensions",
+    "path":"folders/Extensions.yy",
   },
   "parentObjectId":null,
   "persistent":true,
