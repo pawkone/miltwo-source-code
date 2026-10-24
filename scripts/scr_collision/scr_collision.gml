@@ -93,14 +93,13 @@ function scr_solid(arg0, arg1)
 {
     var _collided = false;
     var _id = id;
-    var _collisionArray = [obj_solid, obj_slope, obj_platform, obj_destructibles];
+    var _collisionArray = [obj_solid, obj_slope, obj_platform];
     for (var i = 0; i < array_length(_collisionArray); i++)
     {
         var _obj = _collisionArray[i];
-        var _parentCheck = false;
         with instance_place(arg0, arg1, _obj)
         {
-            switch (object_index)
+            switch (_obj)
             {
                 case obj_solid:
                     _collided = true;
@@ -117,29 +116,8 @@ function scr_solid(arg0, arg1)
                     break;
                 
                 default:
-                    _parentCheck = true;
+                    _collided = true;
                     break;
-            }
-            
-            if (_parentCheck)
-            {
-                switch (object_get_parent(object_index))
-                {
-                    case obj_destructibles:
-                    case obj_solid:
-                        _collided = true;
-                        break;
-                    
-                    case obj_slope:
-                        _collided = scr_slope_collideCheck(_id, arg0, arg1);
-                        break;
-                    
-                    case obj_platform:
-                        if ((_id.bbox_bottom - 1) <= (bbox_top + 1) && _id.vsp >= 0)
-                            _collided = true;
-                        
-                        break;
-                }
             }
         }
     }

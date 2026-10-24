@@ -18,4 +18,7 @@ if (global.escapeActive)
     }
 }
 
+canmove = place_empty(xstart, ystart, obj_solid);
+visible = canmove;
+
 image_alpha = global.escapeActive ? 1 : 0.5;

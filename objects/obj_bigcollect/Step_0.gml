@@ -14,3 +14,6 @@ if (gotoplayer && canmove)
     y += lengthdir_y(movespeed, point);
     movespeed += 0.5;
 }
+
+canmove = place_empty(xstart, ystart, obj_solid);
+visible = canmove;

@@ -387,7 +387,8 @@ function playerUtil_spr(_e)
     };
 	
 	st.player.patcolours = get_baconera(spr_playerPatCol, _e)
-	st.player.palette = get_baconera(spr_playerPal, _e)
+	//st.player.palette = get_baconera(spr_playerPal, _e)
+	st.player.palette = get_baconera(spr_playerPalHalloween, _e) //HALLOWEEN SPPOKY PALETTES
 	st.player.pattern = get_baconera(spr_playerPat, _e)
 	st.player.clothes = get_baconera(spr_playerClothes, _e)
 	

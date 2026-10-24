@@ -22,7 +22,7 @@ if (place_meeting(x, y, obj_player))
             }
             
             palIndex += pky_up2 - pky_down2;
-			palIndex = wrap(palIndex, 0, sprite_get_width(sprites.palette))
+			palIndex = wrap(palIndex, 1, sprite_get_width(sprites.palette)-1)
             create_particleStatic(spr_genericpoofeffect, x, y, 1, -1);
             FMODevent_oneshot("event:/Sfx/General/dresser", x, y);
         }

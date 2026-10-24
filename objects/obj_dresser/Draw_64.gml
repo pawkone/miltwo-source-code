@@ -6,6 +6,6 @@ if textAlpha > 0
 	draw_set_font(global.creditsfont);
 	draw_set_colour(c_white);
 	draw_set_halign(fa_center);
-	draw_textEX(_x, _y, $"{obj_player.palIndex+1} / {sprite_get_width(obj_player.sprites.palette)+1}");
+	draw_textEX(_x, _y, $"{obj_player.palIndex} / {sprite_get_width(obj_player.sprites.palette)-1}");
 	draw_set_alpha(1);
 }

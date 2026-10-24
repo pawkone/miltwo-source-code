@@ -34,9 +34,6 @@ if keyboard_check_pressed(vk_f2)
 	exit
 }
 
-hand_x_old = hand_x
-hand_y_old = hand_y
-
 if light_timer-- < 0
 {
 	light_final = lerp(light_final, random_range(-0.01,0.01)+0.225, 0.5)
@@ -71,7 +68,7 @@ if state == "files"
 if state == "draw"
 {
 	var mbleft = mky_jump || mouse_check_button(mb_left)
-	var mbright = !mbleft && (mky_slap || mouse_check_button(mb_right))
+	var mbright = mky_slap || mouse_check_button(mb_right)
 	
 	var _offset = 132
 	
@@ -89,7 +86,7 @@ if state == "draw"
 	surface_set_target(drawsurf)
 	if mbleft
 		draw_line_width_colour(hand_x_old-_offset+135,hand_y_old+20,hand_x-_offset+135,hand_y+20,2,#3c1e3e,#3c1e3e)
-	if mbright
+	else if mbright
 	{
 		draw_circle_colour(hand_x_old-_offset+135,hand_y_old+20,64,#5860aa,#5860aa,false)
 		draw_circle_colour(hand_x-_offset+135,hand_y+20,64,#5860aa,#5860aa,false)
@@ -102,3 +99,6 @@ if state == "draw"
 	draw_circle_colour(hand_x+135,hand_y+20,64,#3c1e3e,#3c1e3e,true)
 	draw_circle_colour(hand_x+135,hand_y+20,2,#3c1e3e,#3c1e3e,true)
 }
+
+hand_x_old = hand_x
+hand_y_old = hand_y
