@@ -4,7 +4,7 @@ sprite_index = grounded ? spr_butterGround : spr_butterAir;
 if (grounded)
 {
     slippery = true;
-    hsp = 0;
+    hsp = approach(hsp, 0, 0.5);
 }
 
 if (place_meeting(x, y, obj_player))
