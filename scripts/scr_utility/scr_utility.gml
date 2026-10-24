@@ -126,7 +126,6 @@ function levelgetname(_t)
 		
 		//floor 1
 		case "tutorial": return "Overgrown Flo' Patch"
-		
 		case "yard": return "Way Backyard?"
 		case "beach": return "Fruitcup Coast"
 		case "shell": return "Shell O' City"

@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"ts_milkshake",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"ts_milkshake",
+  "out_columns":53,
+  "out_tilehborder":0,
+  "out_tilevborder":0,
+  "parent":{
+    "name":"? Milkshake",
+    "path":"folders/Tile Sets/Levels/? Milkshake.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"tilespr_milkshake",
+    "path":"sprites/tilespr_milkshake/tilespr_milkshake.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"texturegroup_game",
+    "path":"texturegroups/texturegroup_game",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.00015,
+  "tileHeight":32,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":32,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":2840,
+}

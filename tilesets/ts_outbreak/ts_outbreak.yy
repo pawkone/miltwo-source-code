@@ -12,8 +12,8 @@
   "out_tilehborder":0,
   "out_tilevborder":0,
   "parent":{
-    "name":"Radiation OutBreak",
-    "path":"folders/Tile Sets/Levels/Floor 2/Radiation OutBreak.yy",
+    "name":"2 Radiation OutBreak",
+    "path":"folders/Tile Sets/Levels/2 Radiation OutBreak.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

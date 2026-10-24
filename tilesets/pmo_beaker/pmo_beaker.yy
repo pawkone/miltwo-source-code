@@ -13,7 +13,7 @@
   "out_tilevborder":0,
   "parent":{
     "name":"Beaker Backyard",
-    "path":"folders/Tile Sets/Levels/Floor Extra/Beaker Backyard.yy",
+    "path":"folders/Tile Sets/Levels/!Ports/Beaker Backyard.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

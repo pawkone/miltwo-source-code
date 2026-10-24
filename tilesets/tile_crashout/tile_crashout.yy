@@ -13,7 +13,7 @@
   "out_tilevborder":0,
   "parent":{
     "name":"Crashout",
-    "path":"folders/Tile Sets/Levels/Floor Extra/Crashout.yy",
+    "path":"folders/Tile Sets/Levels/!Ports/Crashout.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

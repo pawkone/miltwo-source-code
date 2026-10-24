@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Level Assets",
-    "path":"folders/Sprites/Gameplay/Level Assets.yy",
+    "name":"Milkshake Kingdom",
+    "path":"folders/Sprites/Gameplay/Level Assets/Floor 3/Milkshake Kingdom.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -12,8 +12,8 @@
   "out_tilehborder":0,
   "out_tilevborder":0,
   "parent":{
-    "name":"Tutorial",
-    "path":"folders/Tile Sets/Levels/Floor 1/Tutorial.yy",
+    "name":"0 Tutorial",
+    "path":"folders/Tile Sets/Levels/0 Tutorial.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

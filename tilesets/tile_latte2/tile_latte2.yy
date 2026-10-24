@@ -13,7 +13,7 @@
   "out_tilevborder":0,
   "parent":{
     "name":"Rock Bottom",
-    "path":"folders/Tile Sets/Levels/Floor Extra/Rock Bottom.yy",
+    "path":"folders/Tile Sets/Levels/!Ports/Rock Bottom.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

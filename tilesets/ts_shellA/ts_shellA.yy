@@ -12,8 +12,8 @@
   "out_tilehborder":0,
   "out_tilevborder":0,
   "parent":{
-    "name":"Shell",
-    "path":"folders/Tile Sets/Levels/Floor 1/Shell.yy",
+    "name":"1 Shell",
+    "path":"folders/Tile Sets/Levels/1 Shell.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

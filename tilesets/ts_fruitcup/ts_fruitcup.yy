@@ -12,8 +12,8 @@
   "out_tilehborder":0,
   "out_tilevborder":0,
   "parent":{
-    "name":"Fruitcup",
-    "path":"folders/Tile Sets/Levels/Floor 1/Fruitcup.yy",
+    "name":"1 Fruitcup",
+    "path":"folders/Tile Sets/Levels/1 Fruitcup.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
