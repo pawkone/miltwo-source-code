@@ -277,15 +277,13 @@ with (bar)
 
 with obj_globaltimer
 {
-	if !(global.hide_hud || instance_exists(obj_titlecard) || room == Mainmenu)
+	if global.level != -4 && !(global.hide_hud || instance_exists(obj_titlecard) || room == Mainmenu)
 	{
 		draw_set_font(global.smallfont);
 		draw_set_colour(c_white);
 		draw_set_halign(fa_left);
 		var _xx = (960 - 128) + 16;
-		var _yy = 540 - 32;
-		if (global.level != -4)
-		    draw_text(_xx, _yy, timeString(global.level_timer));
-		draw_text(_xx, _yy - 16, timeString(global.save_timer));
+		var _yy = 540 - 48;
+		draw_text(_xx, _yy, timeString(global.level_timer));
 	}
 }
