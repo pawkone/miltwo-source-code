@@ -162,7 +162,6 @@ function generalReset()
 		combometer.y = -128;
 		combometer.state = -1;
 	}
-	global.secretOriginRoom = -4
 	global.modifiers =
 	{
 		flipped: false,

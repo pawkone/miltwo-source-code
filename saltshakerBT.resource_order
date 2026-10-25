@@ -331,6 +331,7 @@
     {"name":"obj_secretExit","order":2,"path":"objects/obj_secretExit/obj_secretExit.yy",},
     {"name":"obj_secretManager","order":21,"path":"objects/obj_secretManager/obj_secretManager.yy",},
     {"name":"obj_secretmetalblock","order":8,"path":"objects/obj_secretmetalblock/obj_secretmetalblock.yy",},
+    {"name":"obj_secretShader","order":33,"path":"objects/obj_secretShader/obj_secretShader.yy",},
     {"name":"obj_secretStart","order":1,"path":"objects/obj_secretStart/obj_secretStart.yy",},
     {"name":"obj_secrettile","order":4,"path":"objects/obj_secrettile/obj_secrettile.yy",},
     {"name":"obj_serverMenu","order":6,"path":"objects/obj_serverMenu/obj_serverMenu.yy",},

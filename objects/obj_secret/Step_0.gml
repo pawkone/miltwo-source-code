@@ -1,10 +1,16 @@
+if buffer > 0
+{
+	buffer--
+	exit
+}
+
 if place_meeting(x,y,obj_metalblock) || place_meeting(x,y,obj_destructibles)
 	exit
 
 if (cutscene == false)
 {
-    xscaleMulti = wave(1, 1.3, 3, 4);
-    yscaleMulti = wave(1, 0.8, 3, 4);
+    xscaleMulti = lerp(xscaleMulti, wave(1, 1.3, 3, 4), 0.2);
+    yscaleMulti = lerp(yscaleMulti, wave(1, 0.8, 3, 4), 0.2);
 }
 
 if (place_meeting(x, y, obj_player) && cutscene == false)
@@ -15,7 +21,8 @@ if (place_meeting(x, y, obj_player) && cutscene == false)
     with (obj_player)
     {
         FMODevent_oneshot("event:/Sfx/General/Level/Progression/enterpage", x, y);
-		global.secretOriginRoom = room
+		if global.level != "dudles"
+			global.secretOriginRoom = room
         targetRoom = other.targetRoom;
         door = "DOODLE";
         state = -4;

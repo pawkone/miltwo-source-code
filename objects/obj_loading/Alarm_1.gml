@@ -128,4 +128,5 @@ global.client = -4;
 global.connected = false;
 
 // -- the rest ahahah --
+global.secretOriginRoom = -4
 generalReset()

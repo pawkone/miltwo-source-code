@@ -1,3 +1,5 @@
+camera.zoom = 1
+
 var _rmname = room_get_name(room)
 if string_count("_secret" ,_rmname) > 0
 	instance_create(0,0,obj_secretManager)

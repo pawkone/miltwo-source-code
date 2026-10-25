@@ -5,5 +5,5 @@ if dudles_text != -4
 	draw_set_valign(0)
 	draw_set_halign(1)
 	draw_set_colour(c_white)
-	draw_textEX(480,500,string("dudles left : {0}", array_length(global.allsecrets)))
+	draw_textEX(480,500,$"dudles left : {dudles_text}")
 }

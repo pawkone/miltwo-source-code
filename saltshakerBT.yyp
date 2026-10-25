@@ -444,6 +444,7 @@
     {"id":{"name":"obj_secretExit","path":"objects/obj_secretExit/obj_secretExit.yy",},},
     {"id":{"name":"obj_secretManager","path":"objects/obj_secretManager/obj_secretManager.yy",},},
     {"id":{"name":"obj_secretmetalblock","path":"objects/obj_secretmetalblock/obj_secretmetalblock.yy",},},
+    {"id":{"name":"obj_secretShader","path":"objects/obj_secretShader/obj_secretShader.yy",},},
     {"id":{"name":"obj_secretStart","path":"objects/obj_secretStart/obj_secretStart.yy",},},
     {"id":{"name":"obj_secrettile","path":"objects/obj_secrettile/obj_secrettile.yy",},},
     {"id":{"name":"obj_serverMenu","path":"objects/obj_serverMenu/obj_serverMenu.yy",},},

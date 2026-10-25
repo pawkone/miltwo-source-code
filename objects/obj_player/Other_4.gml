@@ -4,7 +4,6 @@ uparrowadd = 0
 var _secreterror = door == "DOODLE" && !instance_exists(obj_secret) && !instance_exists(obj_secretStart)
 if _secreterror
 {
-	global.secretOriginRoom = -4
 	var _list = ["A", "B", "C", "D", "E", "F", "G", "H", "S"]
 	for (var i = 0; i < array_length(_list); i++)
 	{

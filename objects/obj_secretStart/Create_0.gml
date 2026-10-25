@@ -4,6 +4,8 @@ image_speed = 0;
 image_index = 0;
 oldsprite = -4
 customsprite = -4
+targetRoom = -4
+regenerate = false
 
 alarm[0] = 1
 

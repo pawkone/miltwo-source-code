@@ -19,6 +19,17 @@ if (cutscene == true)
     if (animation_end() && sprite_index == spr_dudle_open)
     {
         instance_destroy();
+		if regenerate
+		{
+			with instance_create(x,y,obj_secret)
+			{
+				targetRoom = other.targetRoom
+				regenerate = other.regenerate
+				xscaleMulti = 0
+				yscaleMulti = 0
+				buffer = 60
+			}
+		}
         FMODevent_oneshot("event:/Sfx/General/Level/Doodles/doodleget", x, y);
         create_particleDebri((global.modded_oldsecreteye ? spr_dudle_debri_old : spr_dudle_debri), 0, x, y, 1, -5);
         create_particleDebri((global.modded_oldsecreteye ? spr_dudle_debri_old : spr_dudle_debri), 1, x, y, 1, -5);

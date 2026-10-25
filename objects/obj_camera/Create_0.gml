@@ -13,7 +13,6 @@ camera =
     y: obj_player.y,
     angle: 0,
     zoom: 1,
-	zoomspd: 0,
     width: 960,
     height: 540
 };

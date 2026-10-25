@@ -1,25 +1,24 @@
-tiles = [];
 collectables = [];
-alarm[0] = 10;
+alarm[0] = 2;
 layers = layer_get_all();
 
 for (var i = 0; i < array_length(layers); i++)
 {
     var tileId = layer_tilemap_get_id(layers[i]);
-    
-    if (tileId != -1)
-        array_push(tiles, tileId);
+    if tileId != -1
+        instance_create_depth(0,0,layer_get_depth(layers[i])-1,obj_secretShader).tile = tileId
 }
 
-tiles = array_reverse(tiles);
+thing_q = sprite_get_texture(spr_secretColors, 0)
+thing_p = sprite_get_uvs(spr_secretColors, 0)
+thing_s = texture_get_texel_height(thing_q)
+
 patternPos = 0;
 patternAlpha = 0;
 fadein = true;
 stateTimer = 90;
 patternIndex = irandom_range(0, sprite_get_number(spr_tileDoodles));
-tileSurf = surface_create(960, 540);
 depth = 90;
-need_mask_update = false;
 
 dudles_text = -4
 if global.level == "dudles"
@@ -57,23 +56,7 @@ if global.level == "dudles"
 }
 else if (room != hotel_soundtest && room != hotel_soundtestentrance)
 {
-	global.secretCount++;
-	text_clear(lang_get_phrase("secret_get"));
-	scr_transfotip(lang_get_phrase("secret_get"));
-	if !room_exists(global.secretOriginRoom) || global.secretOriginRoom == room
-	{
-		var _newroom = asset_get_index(string_split(room_get_name(room), "_secret")[0] + "_1")
-		if room_exists(_newroom)
-		{
-			scr_transfotip("ERROR: ORIGIN UNSET, SET EXIT " + room_get_name(_newroom))
-			with obj_secret
-				targetRoom = _newroom
-		}
-		else
-		{
-			scr_transfotip("ERROR: ORIGIN UNSET, EXIT NOT FOUND")
-			with obj_secret
-				targetRoom = room
-		}
-	}
+	global.secretCount++
+	text_clear(lang_get_phrase("secret_get"))
+	scr_transfotip(lang_get_phrase("secret_get"))
 }

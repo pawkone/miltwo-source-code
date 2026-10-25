@@ -17,8 +17,10 @@ if (other.grounded && pky_up && other.state != -4 && other.state != states.enter
 				_rankString = "p";
 			create_notifAsync(string(global.username) + " beated " + string_lower(levelgetname(global.level)) + " : " + _rankString + " rank : " + (global.escapeLap > 0 ? string("lap {0}", global.escapeLap) : "no laps") + ")");
 		}
+		
+		door = "NONE"
         vsp = 0;
-        state = -4;
+        state = -10;
         sprite_index = sprites.lookdoor;
         image_index = 0;
         FMODstopAll();
