@@ -100,7 +100,7 @@ function scr_player_tumble()
 	
 	if global.modded_bettermilton && character == chars.milton && movespeed > 6
 		movespeed -= 0.04
-    if (place_meeting(x + sign(hsp), y, obj_solid))
+    if (place_meeting(x + sign(hsp), y, obj_solid) && !scr_slope(x,y+1))
     {
 		if (character == chars.milton)
         {

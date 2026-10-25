@@ -87,7 +87,7 @@ function scr_player_hammerattack()
     if (vsp >= 2)
         vsp += 0.5;
     
-    if (place_meeting(x + xscale, y, obj_solid))
+    if (place_meeting(x + xscale, y, obj_solid) && !scr_slope(x,y+1))
     {
         state = states.hammerwirl;
         xscale *= -1;
@@ -153,7 +153,7 @@ function scr_player_hammerwirl()
             xscale = move;
     }
     
-    if (place_meeting(x + sign(hsp), y, obj_solid))
+    if (place_meeting(x + sign(hsp), y, obj_solid) && !scr_slope(x,y+1))
     {
         xscale = sign(hsp);
         movespeed = abs(movespeed);
