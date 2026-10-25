@@ -283,7 +283,7 @@ with obj_globaltimer
 		draw_set_colour(c_white);
 		draw_set_halign(fa_left);
 		var _xx = (960 - 128) + 16;
-		var _yy = 540 - 48;
+		var _yy = 540 - 32;
 		draw_text(_xx, _yy, timeString(global.level_timer));
 	}
 }
