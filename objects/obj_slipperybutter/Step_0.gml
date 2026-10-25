@@ -9,13 +9,11 @@ if (grounded)
 
 if (place_meeting(x, y, obj_player))
 {
-    var _cantSlip = [states.skateboard, states.skateboardhitwall, states.skateboardIntro, states.skateboardmove, states.skateboardramp, states.skateboardwall, states.skateboardAim];
-    
     with (obj_player)
     {
         instance_destroy(other);
         
-        if (!array_contains(_cantSlip, state))
+        if !is_transfo_all()
         {
             state = states.slip;
             movespeed = 12;

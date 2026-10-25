@@ -16,7 +16,7 @@ function scr_player_coconut_intro()
 
 function scr_player_coconut_gun()
 {
-    hsp = approach(hsp, movespeed * xscale, 0.35);
+    hsp = approach(hsp, movespeed * xscale, 0.5);
     var move = pky_right + pky_left;
     
     if (jumpstop == false && !pky_jump && vsp < grav)
@@ -29,7 +29,7 @@ function scr_player_coconut_gun()
     {
         image_speed = movespeed / 15;
         xscale = move;
-        movespeed = 11;
+        movespeed = 9;
         
         if (grounded)
             sprite_index = spr_player_coconut_walk;
@@ -43,11 +43,11 @@ function scr_player_coconut_gun()
             sprite_index = spr_player_coconut_idle;
     }
     
-    if (place_meeting(x + xscale, y, obj_solid))
+    if (place_meeting(x + xscale, y, obj_solid) && !scr_slope(x,y+1))
     {
         movespeed = -8;
         hsp = movespeed * xscale;
-        vsp = -4;
+        vsp -= 4;
         jumpstop = true;
     }
     
@@ -60,7 +60,7 @@ function scr_player_coconut_gun()
         create_particleStatic(spr_jumpeffect, x, y, 1, 1);
         image_index = 0;
         sprite_index = spr_player_coconut_jump;
-        vsp = -12;
+        vsp = -14;
         jumpstop = false;
         plrsnds_play(sfx.jump, x, y);
     }
@@ -70,16 +70,20 @@ function scr_player_coconut_gun()
         sprite_index = spr_player_coconut_shoot;
         image_index = 0;
         state = states.coconut_shoot;
-        
-        with (instance_create(x + (16 * xscale), y - 16, obj_coconut_bomb))
+        movespeed = -8
+		vsp = -vsp * 0.5
+		if round(vsp) == 0
+			vsp = -4
+		
+        with (instance_create(x + (4 * xscale), y - 4, obj_coconut_bomb))
         {
             xscale = other.xscale;
-            vsp = -6;
+            vsp = -4;
             
             if (pky_up)
             {
                 vsp = -16;
-                movespeed = 0;
+                movespeed = 2;
             }
         }
     }
@@ -89,7 +93,7 @@ function scr_player_coconut_shoot()
 {
     image_speed = 0.5;
     hsp = movespeed * xscale;
-    movespeed = approach(movespeed, -2, 2);
+    movespeed = approach(movespeed, 0, 0.25);
     
     if (animation_end())
     {

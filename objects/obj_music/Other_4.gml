@@ -33,9 +33,7 @@ if !global.escapeActive
 		scr_music(mu_shellcityA, false)
 		func = function()
 		{
-			var _skate = 0 
-			with obj_player
-				_skate = array_contains([states.skateboard, states.skateboardAim, states.skateboardhitwall, states.skateboardIntro, states.skateboardmove, states.skateboardramp, states.skateboardwall], state)
+			var _skate = is_transfo_all(obj_player.state)
 			if _skate && audio_is_playing(mu_shellcityA)
 				scr_music(mu_shellcityB, true, true)
 			else if !_skate && audio_is_playing(mu_shellcityB)

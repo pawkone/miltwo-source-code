@@ -49,6 +49,11 @@ miltwocredits_credits =
 		spr_milton_mach3turnfall
 	],
 	[
+		"Enno334_123",
+		"volunteered artist",
+		spr_milton_downbox, spr_tv_comboT
+	],
+	[
 		"ElCacas.XD.RenovadoXD",
 		"volunteered artist",
 		spr_pepperni_idleanim1, spr_pepperni_crazyrun

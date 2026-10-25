@@ -1,5 +1,5 @@
 image_speed = 0;
-depth = 50;
+depth = 40;
 
 gateinfo = [];
 

@@ -54,7 +54,7 @@ function scr_player_water()
 		FMODevent_oneshot("event:/Sfx/Player/slipbump", x, y)
 		vsp = 6
 	}
-	if place_meeting(x+_s,y-16,obj_solid) && place_meeting(x+_s,y,obj_solid)
+	if place_meeting(x+_s,y-16,obj_solid) && place_meeting(x+_s,y,obj_solid) && !scr_slope(x,y+1)
 	{
 		squashY = 1.2
 		squashX = 0.8
@@ -75,7 +75,7 @@ function scr_player_water()
 	image_speed = 0.35
 	if grounded
 	{
-		sprite_index = spr_player_mach2
+		sprite_index = sprites.mach2
 		image_speed = abs(movespeed)/30
 		if buffers.step <= 0
 		{
@@ -90,9 +90,9 @@ function scr_player_water()
 			buffers.step--
 	}
 	else if vsp < 0
-		sprite_index = spr_player_groundpoundcancel
+		sprite_index = sprites.groundpoundcancel
 	else
-		sprite_index = spr_player_dive
+		sprite_index = sprites.dive
 	
 	hsp = movespeed
 	

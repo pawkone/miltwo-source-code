@@ -1,6 +1,4 @@
-var _transfoPass = [states.snowball, states.snowball_jump, states.snowball_wall, states.skateboard, states.skateboardAim, states.skateboardhitwall, states.skateboardramp, states.skateboardwall, states.skateboardmove, states.coconut_gun, states.coconut_shoot];
-
-if (array_contains(_transfoPass, other.state))
+if is_transfo_all(other.state)
     exit;
 
 if (other.grounded && pky_up && other.state != states.enterdoor && other.state != states.walkfront && other.state != states.snowball)

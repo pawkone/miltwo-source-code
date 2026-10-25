@@ -1,12 +1,36 @@
+function is_transfo_all(_state = state)
+{
+	if is_transfo_kill(_state) return 1
+	
+	return array_contains(
+		[
+			states.coconut_intro, states.coconut_gun, states.coconut_shoot,
+		],
+	_state)
+}
+function is_transfo_kill(_state = state)
+{
+	return array_contains(
+		[
+			states.snowball, states.snowball_jump, states.snowball_wall,
+			
+			states.skateboard, states.skateboardAim, states.skateboardhitwall,
+			states.skateboardIntro, states.skateboardmove, states.skateboardramp,
+			states.skateboardwall,
+		],
+	_state)
+}
+
 function hurt_player(arg0 = -4)
 {
     with (obj_player)
     {
-        var _cantHurtStates = [states.skateboard, states.skateboardAim, states.skateboardhitwall, states.skateboardIntro, states.skateboardmove, states.skateboardramp, states.skateboardwall, states.coconut_gun, states.coconut_intro, states.coconut_shoot];
-        
-        if (array_contains(_cantHurtStates, state) || i_frame > 0)
-            exit;
-        
+        if is_transfo_all()
+            exit
+			
+		if i_frame > 0
+            exit
+		
         FMODevent_oneshot("event:/Sfx/Player/hurt", x, y);
 		plrsnds_play(sfx.voice_hurt, x,y)
         global.collect -= 100;

@@ -18,11 +18,8 @@ fadein = true;
 stateTimer = 90;
 patternIndex = irandom_range(0, sprite_get_number(spr_tileDoodles));
 tileSurf = surface_create(960, 540);
-depth = 50;
+depth = 90;
 need_mask_update = false;
-
-if (array_length(tiles) == 0)
-    instance_destroy();
 
 dudles_text = -4
 if global.level == "dudles"
@@ -44,7 +41,7 @@ if global.level == "dudles"
 			}
 		}
 		else
-			dudles_text = array_length(global.allsecrets)
+			dudles_text = array_length(global.allsecrets)+1
 		with obj_secret
 		{
 			if array_length(global.allsecrets) == 0

@@ -1,4 +1,4 @@
-if (canGive)
+if !is_transfo_all(other.state)
 {
     with (other)
     {

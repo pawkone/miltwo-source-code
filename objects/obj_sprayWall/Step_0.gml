@@ -1,6 +1,4 @@
-var transtates = [states.skateboard, states.skateboardhitwall, states.skateboardIntro, states.skateboardmove, states.skateboardramp, states.skateboardwall];
-
-if (place_meeting(x, y, obj_player) && array_contains(transtates, obj_player.state))
+if (place_meeting(x, y, obj_player) && is_transfo_all(obj_player.state))
 {
     if (!sprayed)
     {
