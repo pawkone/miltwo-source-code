@@ -1,6 +1,4 @@
 if notext exit
-
-var _plr = obj_player.id
 if distance >= 500 exit
 
 draw_set_alpha(1-clamp(distance/500,0,1));
@@ -9,6 +7,7 @@ draw_set_valign(fa_middle);
 draw_set_colour(c_white);
 draw_set_font(global.creditsfont);
 
+var _plr = obj_player.id
 var _fall = _plr.state == states.enterdoor
 var _active = distance <= 0
 for (var i = 0; i < (level_len + 1); i++)

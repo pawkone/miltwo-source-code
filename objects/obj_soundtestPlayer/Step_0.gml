@@ -12,7 +12,6 @@ if (place_meeting(x, y, obj_player))
             }
                 
             playing = !playing;
-            show_debug_message(string("Playing? {0}", playing));
             image_index = 1;
             alarm[0] = 10;
         }

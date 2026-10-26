@@ -197,7 +197,6 @@ function scr_player_skateboardmove()
     {
         if (onSlope == true && prevOnSlope == false && wasRamp)
         {
-            show_debug_message("Ramp Jumped!");
             onSlope = prevOnSlope;
             vsp = -12;
             movespeed = 13;

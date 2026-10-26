@@ -1,3 +1,5 @@
+hud_alpha = 0
+
 kettle = {};
 kettle.x = 124;
 kettle.y = 54;

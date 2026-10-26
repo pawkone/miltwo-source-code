@@ -176,7 +176,6 @@ function scr_player_mach2()
             sprite_index = sprites.mach2turn;
             image_index = 0;
             state = states.machturn;
-            show_debug_message("mach turned from mach 2");
             exit;
         }
     }

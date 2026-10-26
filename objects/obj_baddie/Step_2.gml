@@ -25,15 +25,12 @@ if (y > (room_height + 100) || y < -100)
 if ((x > (room_width + 100) || x < -100 || y < -100) && state == states.thrown)
     instance_destroy();
 
-if (escape && spawnerId == -4)
+if escape && spawnerId < 0
 {
-    with (instance_create(x, y, obj_escapespawn))
-    {
-        content = other.id;
-        other.spawnerId = self;
-    }
-    
-    instance_deactivate_object(self);
+    spawnerId = instance_create(x, y, obj_escapespawn)
+    spawnerId.content = id
+    instance_deactivate_object(id)
+	exit
 }
 
 with (obj_player)

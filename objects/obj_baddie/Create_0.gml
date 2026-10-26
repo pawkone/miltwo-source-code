@@ -5,6 +5,7 @@ grav = 0.5;
 state = states.move;
 movespeed = 0;
 xscale = sign(image_xscale);
+image_xscale = 1
 buffers = {};
 buffers.step = 0;
 hitstun = {};

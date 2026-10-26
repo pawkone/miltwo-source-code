@@ -6,9 +6,19 @@ with (obj_player)
 	state = -4
 	with obj_camera
 	{
-		_bth.spd += 1/750
-		camera.zoom = lerp(camera.zoom, 1 + (other.backtohubY-other.y)/1250, _bth.spd*0.5)
-		camera.y = lerp(camera.y, other.backtohubY - 50 - (other.backtohubY-other.y)/5, _bth.spd)
+		if _bth.start < 0.1
+		{
+			state = -4
+			camera.x = obj_player.backtohubX
+			camera.y = obj_player.backtohubY
+			camera.zoom = 0.01
+		}
+		else
+		{
+			_bth.spd += 1/675
+			camera.zoom = lerp(camera.zoom, 1 - (other.backtohubY-other.y)/1250, _bth.spd*0.5)
+			camera.y = lerp(camera.y, other.backtohubY - 50 - (other.backtohubY-other.y)/5, _bth.spd)
+		}
 	}
 	if (other.start == 1)
     {

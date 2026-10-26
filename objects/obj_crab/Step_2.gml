@@ -1,7 +1,7 @@
 if (hitstun.is == false)
 {
     event_inherited();
-    
+	
     switch (state)
     {
         case states.tumble:
@@ -11,20 +11,26 @@ if (hitstun.is == false)
             hsp = movespeed * xscale;
             sprite_index = spr_crab_roll;
             
-            if (place_meeting(x + hsp + 2, y, obj_destructibles))
-            {
-                with (instance_place(x + hsp + 2, y, obj_destructibles))
-                    instance_destroy();
-            }
+			with instance_place(x + hsp + xscale, y, obj_metalblock) instance_destroy()
+            with instance_place(x + hsp + xscale, y, obj_destructibles) instance_destroy()
+			with instance_place(x + hsp + xscale, y, obj_stupidcabbit) instance_destroy()
             
-            if (place_meeting(x + hsp, y - 6, obj_solid) && !place_meeting(x + hsp, y - 6, obj_stupidcabbit))
-                instance_destroy();
-            
-            if (place_meeting(x + hsp, y + vsp, obj_stupidcabbit))
-            {
-                with (instance_place(x + hsp, y + vsp, obj_stupidcabbit))
-                    instance_destroy();
-            }
+			// lovely i know vvv
+            if (
+				place_meeting(x + hsp + xscale, y, obj_solid) &&
+				!place_meeting(x + hsp + xscale, y, obj_metalblock) &&
+				!place_meeting(x + hsp + xscale, y, obj_destructibles) &&
+				!place_meeting(x + hsp + xscale, y, obj_destructibles) &&
+				!scr_slope(x,y+1)
+			) || (
+				place_meeting(x + xscale, y-6, obj_solid) &&
+				!place_meeting(x + xscale, y-6, obj_metalblock) &&
+				!place_meeting(x + xscale, y-6, obj_destructibles) &&
+				!place_meeting(x + xscale, y-6, obj_destructibles)
+			)
+			{
+                instance_destroy()
+			}
             
             if (place_meeting(x + hsp, y + vsp, obj_baddie))
             {

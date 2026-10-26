@@ -11,7 +11,6 @@ camera =
     target: obj_player,
     x: obj_player.x,
     y: obj_player.y,
-    angle: 0,
     zoom: 1,
     width: 960,
     height: 540

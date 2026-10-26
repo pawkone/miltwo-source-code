@@ -24,7 +24,7 @@ if (scene == 0 || scene == 1)
 		circleSize -= circleSizeSpeed
 		
 		var _t = (960-circleSize)/960
-		obj_camera.camera.zoom += _t*_t/6
+		obj_camera.camera.zoom -= _t*_t/5
         if circleSize <= 0
         {
 			if is_string(titlecardinfo[3])
@@ -53,6 +53,13 @@ else if (scene == 2)
         scene = 3;
         alarm[2] = skip ? 1 : 45;
     }
+}
+else if (scene == 4)
+{
+    circleSize = approach(circleSize, 960, circleSizeSpeed);
+    circleSizeSpeed += 1;
+    if (circleSize == 960)
+        instance_destroy()
 }
 
 if scene > 0

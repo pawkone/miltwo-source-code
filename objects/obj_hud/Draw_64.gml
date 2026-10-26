@@ -1,5 +1,23 @@
 if (global.hide_hud)
     exit;
+	
+with obj_globaltimer
+{
+	if global.level != -4 && !instance_exists(obj_titlecard)
+	{
+		draw_set_font(global.smallfont);
+		draw_set_colour(c_white);
+		draw_set_halign(fa_left);
+		var _xx = (960 - 128) + 16;
+		var _yy = 540 - 32;
+		draw_text(_xx, _yy, timeString(global.level_timer));
+	}
+}
+
+var _ha = hud_alpha
+
+if _ha <= 0
+	exit
 
 if (!ds_list_empty(collectVis))
 {
@@ -8,12 +26,13 @@ if (!ds_list_empty(collectVis))
         var q = ds_list_find_value(collectVis, i);
         
         with (q)
-            draw_sprite_ext(sprite_index, 4, x, y, 1, 1, 0, c_white, 1);
+            draw_sprite_ext(sprite_index, 4, x, y, 1, 1, 0, c_white, _ha);
     }
 }
 
 with (kettle)
 {
+	draw_set_alpha(_ha)
     draw_sprite(get_baconera(spr_kettleScore, obj_player.character), 0, kx, ky - offset);
     draw_set_font(global.fnt_kettle[obj_player.character]);
     draw_set_halign(fa_center);
@@ -37,9 +56,11 @@ with (kettle)
         rankScale = 2;
     }
     
+	draw_set_alpha(1)
+	
     var rankX = x + (sin(current_time * 0.001) * 2);
     var rankY = (y + (cos(current_time * 0.001) * 2)) - offset;
-    draw_sprite_ext(spr_hudRanks, rankindex, rankX + 160, rankY, rankScale, rankScale, 0, c_white, 1);
+    draw_sprite_ext(spr_hudRanks, rankindex, rankX + 160, rankY, rankScale, rankScale, 0, c_white, _ha);
     var perc = 0;
     
     switch (rankindex)
@@ -73,7 +94,7 @@ with (kettle)
     var top = sprite_get_height(spr_hudRanksFill) - amt;
     var xo = sprite_get_xoffset(spr_hudRanksFill);
     var yo = sprite_get_yoffset(spr_hudRanksFill);
-    draw_sprite_part_ext(spr_hudRanksFill, rankindex, 0, top, sprite_get_width(spr_hudRanksFill), sprite_get_height(spr_hudRanksFill) - top, (rankX + 160) - xo, (rankY - yo) + top, rankScale, rankScale, c_white, 1);
+    draw_sprite_part_ext(spr_hudRanksFill, rankindex, 0, top, sprite_get_width(spr_hudRanksFill), sprite_get_height(spr_hudRanksFill) - top, (rankX + 160) - xo, (rankY - yo) + top, rankScale, rankScale, c_white, _ha);
     
     if (obj_player.x < 295 && obj_player.y < 170)
         offset = approach(offset, 300, 50);
@@ -141,6 +162,7 @@ with (combometer)
             state = -1;
     }
     
+	draw_set_alpha(_ha)
     draw_sprite(spr_combo_meter, 1, x, y - other.tv.offset);
     
     for (var i = 0; i < array_length(lights); i++)
@@ -187,29 +209,35 @@ with (combometer)
     draw_set_font(global.comboFont);
     draw_set_halign(fa_right);
     draw_text(x - 4, (y + 32) - other.tv.offset, global.combo.amt);
+	draw_set_alpha(1)
 }
 
 var _sprites = sprites
 with (tv)
 {
+	
 	if obj_player.character == chars.preoutman
 	{
+		draw_set_alpha(_ha)
 		pal_swap_set(obj_player.spr_palette, obj_player.palIndex, false);
 		draw_sprite(_sprites.idle, -1, x, y - offset);
 		shader_reset();
-		pattern_draw(_sprites.idle, -1, x, y - offset, 1, 1, 0, 16777215, 1, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors);
+		draw_set_alpha(1)
+		pattern_draw(_sprites.idle, -1, x, y - offset, 1, 1, 0, 16777215, _ha, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors);
     
 	}
 	else
 	{
 	    if (sprite_index != _sprites.turnon)
-	        draw_sprite_ext(_sprites.bg, 0, x, y - offset,1,1,0,backindex,1);
-    
+	        draw_sprite_ext(_sprites.bg, 0, x, y - offset,1,1,0,backindex,_ha);
+		draw_set_alpha(_ha)
 	    pal_swap_set(obj_player.spr_palette, obj_player.palIndex, false);
 	    draw_sprite(sprite_index, image_index, x, y - offset);
 	    shader_reset();
-	    pattern_draw(sprite_index, image_index, x, y - offset, 1, 1, 0, 16777215, 1, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors);
+		draw_set_alpha(1)
+	    pattern_draw(sprite_index, image_index, x, y - offset, 1, 1, 0, 16777215, _ha, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors);
     
+		draw_set_alpha(_ha)
 	    if (state == states.move)
 	        draw_sprite(_sprites.trans, switchindex, x, y - offset);
 	
@@ -234,6 +262,7 @@ with (tv)
         offset = approach(offset, 400, 100);
     else
         offset = approach(offset, 0, 100);
+	draw_set_alpha(1)
 }
 
 with (bar)
@@ -262,28 +291,18 @@ with (bar)
         var _cigarOffset = 42;
         var _chunkFill = 1 - (global.escapeTimer / global.escapeMaxTimer);
         var _fill = _width * _chunkFill;
+        sparkIndex += 0.35;
+		
+		draw_set_alpha(_ha)
         draw_sprite_part(spr_timerBar, 1, 0, 0, _fill, _height, x - (_width / 2) - _cigarOffset, y - (_height / 2));
         draw_sprite_part(spr_timerBar, 0, _fill, 0, _width, _height, ((x - (_width / 2)) + _fill) - _cigarOffset, y - (_height / 2));
-        sparkIndex += 0.35;
         draw_sprite(spr_timerMoon, sparkIndex, x + (_width / 2) + 10, y);
         draw_sprite(spr_timerBar_flame, sparkIndex, (x - (_width / 2) - _cigarOffset) + (_width * _chunkFill), y);
         draw_text(x, y - 24, _timer);
+		draw_set_alpha(1)
     }
     else
     {
         y = 540 + 100;
     }
-}
-
-with obj_globaltimer
-{
-	if global.level != -4 && !(global.hide_hud || instance_exists(obj_titlecard) || room == Mainmenu)
-	{
-		draw_set_font(global.smallfont);
-		draw_set_colour(c_white);
-		draw_set_halign(fa_left);
-		var _xx = (960 - 128) + 16;
-		var _yy = 540 - 32;
-		draw_text(_xx, _yy, timeString(global.level_timer));
-	}
 }

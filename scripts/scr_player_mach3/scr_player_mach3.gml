@@ -136,7 +136,6 @@ function scr_player_mach3()
         sprite_index = sprites.mach3turn;
         image_index = 0;
         state = states.machturn;
-        show_debug_message("mach turned from mach 3");
         exit;
     }
     

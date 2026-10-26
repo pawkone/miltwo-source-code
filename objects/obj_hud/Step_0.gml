@@ -1,4 +1,11 @@
-visible = !instance_exists(obj_uncleflo) && !roomthing && !(global.escapePartyOver && global.escapeActive);
+visible = !(global.escapePartyOver && global.escapeActive)
+if !visible
+	hud_alpha = 0
+else
+{
+	var _visible = !instance_exists(obj_uncleflo) && !instance_exists(obj_titlecard) && !roomthing
+	hud_alpha = approach(hud_alpha, _visible, 0.1)
+}
 
 with (kettle)
 {
