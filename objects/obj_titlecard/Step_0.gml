@@ -56,13 +56,21 @@ else if (scene == 2)
 }
 else if (scene == 4)
 {
-    circleSize = approach(circleSize, 960, circleSizeSpeed);
-    circleSizeSpeed += 1;
-    if (circleSize == 960)
+	if !(obj_player.state == states.walkfront && obj_player.sprite_index == obj_player.sprites.walkfront)
+	{
+		circleSizeSpeed++
+		circleSize = approach(circleSize, 1280, circleSizeSpeed)
+	}
+	else
+	{
+		circleSizeSpeed = 0
+		circleSize = lerp(circleSize, 35, 0.125)
+	}
+    if (circleSize == 1280)
         instance_destroy()
 }
 
-if scene > 0
+if scene > 0 && scene < 3
 {
 	y = lerp(y, title2 ? 540 : 0, 0.1)
 	y = approach(y, title2 ? 540 : 0, 0.05)

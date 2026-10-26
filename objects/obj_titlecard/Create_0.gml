@@ -5,9 +5,11 @@ fadeIn = true;
 scene = 0;
 title2 = false
 depth = -600;
-fadeSurface = surface_create(960, 540);
+fadeSurface = -4
 circleSize = 960;
 circleSizeSpeed = 0;
+
+titlecardinfo = [-4,-4,-4,-4]
 
 titlecardMilton = spr_titlecardMilton_wayback;
 titlecardMiltonIndex = 0;
