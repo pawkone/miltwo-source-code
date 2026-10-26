@@ -25,7 +25,6 @@ wsbMOmInfo.options = [
 	"Modded;phototaunt;0",
 	"Modded;spammabletaunt;0",
 	"Modded;oldsecreteye;0",
-	"Modded;bettermilton;0",
 	"Modded;betterwaybackyard;0",
 	"Modded;sloperotation;0",
 ]

@@ -1,7 +1,7 @@
 with (obj_player)
 {
     var _block = other;
-    var _milton = (((state == states.tumble && sprite_index != sprites.dive && movespeed >= 12 && (character == chars.milton)) || (state == states.tumble && sprite_index == sprites.dive && (character == chars.milton)) || state == states.hammerattack || state == states.hammerwirl) && global.modded_bettermilton)
+    var _milton = (((state == states.tumble && sprite_index != sprites.dive && movespeed >= 12 && (character == chars.milton)) || (state == states.tumble && sprite_index == sprites.dive && (character == chars.milton)) || state == states.hammerattack || state == states.hammerwirl))
     if (_milton || state == states.mach3 || state == states.buzzsaw || state == states.groundpound)
     {
         var _y = y;

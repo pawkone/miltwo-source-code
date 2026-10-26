@@ -98,8 +98,8 @@ function scr_player_tumble()
 	}
 	
 	
-	if global.modded_bettermilton && character == chars.milton && movespeed > 6
-		movespeed -= 0.04
+	if character == chars.milton && movespeed > 6
+		movespeed -= 0.02
     if (place_meeting(x + sign(hsp), y, obj_solid) && !scr_slope(x,y+1))
     {
 		if (character == chars.milton)
@@ -109,7 +109,7 @@ function scr_player_tumble()
             xscale *= -1;
             squashX = 1.3;
             squashY = 0.8;
-            if !global.modded_bettermilton || grounded
+            if grounded
 			{
 		        if (movespeed < 20)
 		            movespeed++

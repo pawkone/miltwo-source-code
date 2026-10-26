@@ -2,16 +2,10 @@ function scr_player_hammerattack()
 {
     hsp = movespeed * xscale;
     
-	if global.modded_bettermilton
-	{
-		if movespeed > 12
-			movespeed -= 0.03
-	}
-	else
-	{
-	    if movespeed < 13
-	        movespeed = approach(movespeed, 13, 1);
-	}
+	if movespeed > 13
+		movespeed -= 0.005
+	if movespeed < 13
+	    movespeed = approach(movespeed, 13, 1);
     
     buffers.hammer = approach(buffers.hammer, 0, 1);
     
@@ -111,10 +105,7 @@ function scr_player_hammerwirl()
 {
     hsp = movespeed;
     var move = pky_right + pky_left;
-    if (global.modded_bettermilton)
-		 movespeed = approach(movespeed, move * 12, 0.6);
-	else
-		movespeed = approach(movespeed, move * 11, 0.7);
+	movespeed = approach(movespeed, move * 12, 0.6);
 	
     if (grounded && vsp >= 0)
     {

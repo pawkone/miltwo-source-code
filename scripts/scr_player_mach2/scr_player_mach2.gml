@@ -32,7 +32,7 @@ function scr_player_mach2()
 		exit
 	}
     if (character == chars.milton)
-        _accel = 0.065;
+        _accel = 0.08;
     
 	if (movespeed < 6)
 		movespeed = 6
@@ -207,7 +207,7 @@ function scr_player_mach2()
         
         if (_climb)
         {
-            verticalMovespeed = movespeed+((character == chars.milton)&&global.modded_bettermilton*3);
+            verticalMovespeed = movespeed+(character == chars.milton*3);
             state = states.climbwall;
             sprite_index = sprites.wallclimb;
             image_index = 0;

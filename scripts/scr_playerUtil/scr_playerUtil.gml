@@ -249,7 +249,7 @@ function doGrab()
         }
         else
         {
-            if pky_up && global.modded_bettermilton
+            if pky_up
 			{
 				slapBuffer = false;
 	            if (move != 0)

@@ -131,7 +131,7 @@ function scr_player_climbwall()
 		}
 	}
 
-    if (pky_down2 && character == chars.milton && global.modded_bettermilton)
+    if (pky_down2 && character == chars.milton)
     {
         image_index = 0;
         sprite_index = sprites.rolling;

@@ -36,9 +36,7 @@ function scr_player_mach3()
     }
     
     var move = pky_right + pky_left, _accel
-	if (character == chars.milton && !global.modded_bettermilton)
-		_accel = mach4mode ? 0.05 : 0.01
-	else if (character == chars.milton && global.modded_bettermilton)
+	if (character == chars.milton)
 		_accel = mach4mode ? 0.075 : 0.0175
 	else
 		_accel = mach4mode ? 0.1 : 0.025
@@ -61,9 +59,7 @@ function scr_player_mach3()
 		flash = true;
     }
     
-	if (character == chars.milton && !global.modded_bettermilton)
-		mach4mode = (movespeed >= 24)
-	else if (character == chars.milton && global.modded_bettermilton)
+	if (character == chars.milton)
 		mach4mode = (movespeed >= 22)
 	else
 		mach4mode = (movespeed >= 16)
@@ -177,7 +173,7 @@ function scr_player_mach3()
         
         if (_climb)
         {
-            verticalMovespeed = movespeed+((character == chars.milton)&&global.modded_bettermilton*3);
+            verticalMovespeed = movespeed+(character == chars.milton*3);
             state = states.climbwall;
             sprite_index = sprites.wallclimb;
             exit;

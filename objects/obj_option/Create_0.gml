@@ -735,14 +735,6 @@ add_option_ext(MODDED_CUSTOM, optionstype.element_toggle, "option_modded_betterw
 	global.modded_betterwaybackyard = q.val;
 	q.val = global.modded_betterwaybackyard;
 }, global.modded_betterwaybackyard, 1);
-add_option_ext(MODDED_CUSTOM, optionstype.element_toggle, "option_modded_bettermilton", function()
-{
-	var m = menus[currentmenu];
-	var opt = m.options;
-	var q = opt[selected];
-	global.modded_bettermilton = q.val;
-	q.val = global.modded_bettermilton;
-}, global.modded_bettermilton, 1);
 add_option_ext(MODDED_CUSTOM, optionstype.element_toggle, "option_modded_spammabletaunt", function()
 {
 	var m = menus[currentmenu];
