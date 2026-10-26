@@ -9,8 +9,8 @@
   },
   "name":"ts_outbreak",
   "out_columns":21,
-  "out_tilehborder":0,
-  "out_tilevborder":0,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
   "parent":{
     "name":"2 Radiation OutBreak",
     "path":"folders/Tile Sets/Levels/2 Radiation OutBreak.yy",

@@ -9,8 +9,8 @@
   },
   "name":"tile_latte",
   "out_columns":45,
-  "out_tilehborder":0,
-  "out_tilevborder":0,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
   "parent":{
     "name":"Rock Bottom",
     "path":"folders/Tile Sets/Levels/!Ports/Rock Bottom.yy",

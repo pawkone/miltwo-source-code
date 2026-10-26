@@ -9,8 +9,8 @@
   },
   "name":"ts_shellB",
   "out_columns":64,
-  "out_tilehborder":0,
-  "out_tilevborder":0,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
   "parent":{
     "name":"1 Shell",
     "path":"folders/Tile Sets/Levels/1 Shell.yy",

@@ -9,8 +9,8 @@
   },
   "name":"ts_tutorial",
   "out_columns":32,
-  "out_tilehborder":0,
-  "out_tilevborder":0,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
   "parent":{
     "name":"0 Tutorial",
     "path":"folders/Tile Sets/Levels/0 Tutorial.yy",

@@ -9,8 +9,8 @@
   },
   "name":"ts_fruitcup",
   "out_columns":20,
-  "out_tilehborder":0,
-  "out_tilevborder":0,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
   "parent":{
     "name":"1 Fruitcup",
     "path":"folders/Tile Sets/Levels/1 Fruitcup.yy",

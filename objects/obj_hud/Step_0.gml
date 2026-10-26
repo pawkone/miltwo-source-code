@@ -4,7 +4,8 @@ if !visible
 else
 {
 	var _visible = !instance_exists(obj_uncleflo) && !instance_exists(obj_titlecard) && !roomthing
-	hud_alpha = approach(hud_alpha, _visible, 1/60)
+	hud_alpha = lerp(hud_alpha, _visible, 0.05)
+	hud_alpha = approach(hud_alpha, _visible, 0.003)
 }
 
 with (kettle)

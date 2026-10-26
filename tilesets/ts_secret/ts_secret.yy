@@ -9,8 +9,8 @@
   },
   "name":"ts_secret",
   "out_columns":32,
-  "out_tilehborder":0,
-  "out_tilevborder":0,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
   "parent":{
     "name":"Levels",
     "path":"folders/Tile Sets/Levels.yy",

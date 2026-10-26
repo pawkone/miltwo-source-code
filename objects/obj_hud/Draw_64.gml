@@ -1,23 +1,19 @@
-if (global.hide_hud)
-    exit;
-	
+if (global.hide_hud) exit
+var _ha = hud_alpha
+if _ha <= 0 exit
+
 with obj_globaltimer
 {
-	if global.level != -4 && !instance_exists(obj_titlecard)
+	if global.level != -4
 	{
 		draw_set_font(global.smallfont);
 		draw_set_colour(c_white);
 		draw_set_halign(fa_left);
 		var _xx = (960 - 128) + 16;
 		var _yy = 540 - 32;
-		draw_text(_xx, _yy, timeString(global.level_timer));
+		draw_text(_xx, _yy + lerp(48, 0, _ha), timeString(global.level_timer));
 	}
 }
-
-var _ha = hud_alpha
-
-if _ha <= 0
-	exit
 
 if (!ds_list_empty(collectVis))
 {
@@ -102,7 +98,7 @@ with (kettle)
 
 with (combometer)
 {
-	var _offset2 = lerp(-350, 0, _ha)
+	var _offset2 = lerp(-400, 0, _ha)
     var _perc = global.combo.timer / 60;
     
     if (state == -1)
@@ -218,17 +214,17 @@ with (tv)
 		pal_swap_set(obj_player.spr_palette, obj_player.palIndex, false);
 		draw_sprite(_sprites.idle, -1, x, y - offset + _offset2);
 		shader_reset();
-		pattern_draw(_sprites.idle, -1, x, y - offset + _offset2, 1, 1, 0, 16777215, _ha, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors);
+		pattern_draw(_sprites.idle, -1, x, y - offset + _offset2, 1, 1, 0, 16777215, 1, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors);
     
 	}
 	else
 	{
 	    if (sprite_index != _sprites.turnon)
-	        draw_sprite_ext(_sprites.bg, 0, x, y - offset + _offset2,1,1,0,backindex,_ha);
+	        draw_sprite_ext(_sprites.bg, 0, x, y - offset + _offset2,1,1,0,backindex,1);
 	    pal_swap_set(obj_player.spr_palette, obj_player.palIndex, false);
 	    draw_sprite(sprite_index, image_index, x, y - offset + _offset2);
 	    shader_reset();
-	    pattern_draw(sprite_index, image_index, x, y - offset + _offset2, 1, 1, 0, 16777215, _ha, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors);
+	    pattern_draw(sprite_index, image_index, x, y - offset + _offset2, 1, 1, 0, 16777215, 1, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors);
     
 	    if (state == states.move)
 	        draw_sprite(_sprites.trans, switchindex, x, y - offset + _offset2);

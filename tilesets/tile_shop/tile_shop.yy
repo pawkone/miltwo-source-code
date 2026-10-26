@@ -9,8 +9,8 @@
   },
   "name":"tile_shop",
   "out_columns":20,
-  "out_tilehborder":0,
-  "out_tilevborder":0,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
   "parent":{
     "name":"Rock Bottom",
     "path":"folders/Tile Sets/Levels/!Ports/Rock Bottom.yy",

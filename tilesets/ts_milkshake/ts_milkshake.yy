@@ -9,8 +9,8 @@
   },
   "name":"ts_milkshake",
   "out_columns":53,
-  "out_tilehborder":0,
-  "out_tilevborder":0,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
   "parent":{
     "name":"? Milkshake",
     "path":"folders/Tile Sets/Levels/? Milkshake.yy",
