@@ -63,6 +63,16 @@ if (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_exitgate) || place_
     state = states.walkfront;
     image_index = 0;
     sprite_index = sprites.walkfront;
+	if place_meeting(x, y, obj_exitgate)
+	{
+		obj_camera.hud_alpha = 0
+		with instance_create(0,0,obj_titlecardFadeout)
+		{
+			circleSize = 0
+			scene = 4
+			fadeAlpha = 1
+		}
+	}
 }
 
 with (obj_followplayer)

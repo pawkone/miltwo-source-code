@@ -1,5 +1,6 @@
 alpha = approach(alpha, 0, 0.01)
 if start < 1 start += 1/60
+
 var _bth = id
 with (obj_player)
 {

@@ -13,7 +13,8 @@ function scr_player_skateboardIntro()
         slopeObj = -4;
         wasRamp = false;
         sprayCans = 4;
-        instance_create(x, y, obj_skateboardViewer);
+		if !instance_exists(obj_skateboardViewer)
+			instance_create(0, 0, obj_skateboardViewer);
     }
 }
 
@@ -25,7 +26,6 @@ function scr_player_skateboardAim()
     hsp = movespeed;
     movespeed = lerp(movespeed, 0, 0.15);
     verticalMovespeed = lerp(verticalMovespeed, 0, 0.15);
-    aimTime--;
     
     if ((hsp == 0 && vsp == 0) || !pky_grab)
     {
@@ -78,7 +78,6 @@ function scr_player_skateboardwall()
     if (pky_grab2 && sprayCans >= 1)
     {
         sprayCans--;
-        aimTime = 15;
         state = states.skateboardAim;
         verticalMovespeed = vsp;
         movespeed = hsp;
@@ -134,7 +133,6 @@ function scr_player_skateboardramp()
     if (pky_grab2 && sprayCans >= 1)
     {
         sprayCans--;
-        aimTime = 15;
         state = states.skateboardAim;
         verticalMovespeed = vsp;
         movespeed = hsp;
@@ -231,7 +229,6 @@ function scr_player_skateboardmove()
     if (pky_grab2 && sprayCans >= 1)
     {
         sprayCans--;
-        aimTime = 15;
         state = states.skateboardAim;
         verticalMovespeed = vsp;
         movespeed = hsp;
@@ -250,7 +247,6 @@ function scr_player_skateboard()
     if (pky_grab && sprayCans >= 1)
     {
         sprayCans--;
-        aimTime = 15;
         state = states.skateboardAim;
         verticalMovespeed = vsp;
         movespeed = -3 * move;

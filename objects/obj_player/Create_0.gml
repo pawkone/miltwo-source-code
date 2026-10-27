@@ -84,7 +84,6 @@ prevOnSlope = false;
 onSlope = false;
 slopeObj = -4;
 wasRamp = false;
-aimTime = 0;
 canHit = true;
 sprayCans = 4;
 supertaunt = 0;

@@ -3,7 +3,7 @@ if !visible
 	hud_alpha = 0
 else
 {
-	var _visible = !instance_exists(obj_uncleflo) && !instance_exists(obj_titlecard) && !roomthing
+	var _visible = !instance_exists(obj_uncleflo) && !(instance_exists(obj_titlecardFadeout) && obj_titlecardFadeout.circleSize < 256) && !roomthing
 	hud_alpha = lerp(hud_alpha, _visible, 0.05)
 	hud_alpha = approach(hud_alpha, _visible, 0.003)
 }

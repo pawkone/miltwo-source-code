@@ -5,4 +5,5 @@ with obj_player
 staticIndex = 0;
 showStatic = true;
 showTechnical = false;
-technicalIndex = irandom_range(0, 2);
+technicalSprite = get_baconera(spr_pleasestandby, obj_player.character)
+technicalIndex = irandom_range(0, sprite_get_number(technicalSprite)-1);

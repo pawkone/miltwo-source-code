@@ -664,6 +664,7 @@ add_option_press(MODDED, "option_modded_menuonline", function()
 	generalReset()
 	room_goto(serverMenuShit)
 });
+/*
 add_option_press(MODDED, "option_modded_menuonlinenew", function()
 {
 	instance_destroy()
@@ -672,6 +673,7 @@ add_option_press(MODDED, "option_modded_menuonlinenew", function()
 	generalReset()
 	room_goto(rm_multiplayerSetup)
 });
+*/
 array_push(menus, AUDIO);
 array_push(menus, VIDEO);
 array_push(menus, GAME);

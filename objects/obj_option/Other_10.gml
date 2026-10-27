@@ -15,19 +15,6 @@ miltwocredits_credits =
 		spr_player_skate_jump
 	],
 	[
-		"Targetbuldoser (Ex Miltu Member)",
-		"artist : composer : ideas",
-		spr_pepperni_idle, spr_milton_mach1, spr_milton_mach2, spr_milton_mach3turn,
-		spr_milton_wallslide, spr_player0_groundpoundstart, spr_player0_groundpound,
-		spr_player0_groundpoundbump, spr_soda, spr_tv_soda, spr_titlecardFrontyard,
-		spr_titlecardFrontyardTitle1
-	],
-	[
-		"MrAlt- (Ex Miltu Member)",
-		"former co director : coder : level designer",
-		tilespr_frontyard, tilespr_outbreak, tilespr_hotel2
-	],
-	[
 		"Polyg0n5",
 		"volunteered artist : artist for og miltu",
 		spr_butterAir, spr_butterGround, spr_pepperni_mach1, spr_pepperni_mach3,
@@ -36,27 +23,24 @@ miltwocredits_credits =
 		spr_titlecardFruitcupTitle2, spr_tv_idleanim1T, spr_tv_idleanim2T,
 		spr_tv_idleP, spr_tv_machP, spr_tv_crazyrunP, spr_tv_happyT,
 		spr_tv_escapeP, spr_pepperni_mach3turn, spr_player1_pary, spr_player1_crouch,
-		spr_player1_crouchfall, spr_player1_crouchhop, spr_player1_crouchmove
-	],
-	[
-		"Toasty64 (Ex Miltu Member)",
-		"coder : artist : ideas",
-		spr_player_chat
-	],
-	[
-		"PaintlesNoise (Ex Miltu Member)",
-		"artist",
-		spr_milton_mach3turnfall
+		spr_player1_crouchfall, spr_player1_crouchhop, spr_player1_crouchmove,
+		spr_pleasestandbyT
 	],
 	[
 		"Enno334_123",
 		"volunteered artist",
-		spr_milton_downbox, spr_tv_comboT
+		spr_milton_downbox, spr_tv_comboT, spr_milton_superjumpprepstart,
+		spr_milton_superjumpprep
 	],
 	[
 		"ElCacas.XD.RenovadoXD",
 		"volunteered artist",
 		spr_pepperni_idleanim1, spr_pepperni_crazyrun
+	],
+	[
+		"Shampox_85584",
+		"volunteered artist",
+		spr_gate_crashout
 	],
 	[
 		"Bobbers6921",
@@ -67,6 +51,30 @@ miltwocredits_credits =
 		"CoolGuy_The_Guy",
 		"volunteered composer",
 		mu_peppernilap2
+	],
+	[
+		"Targetbuldoser (Ex Miltu Member)",
+		"artist : composer : ideas",
+		spr_pepperni_idle, spr_milton_mach1, spr_milton_mach2, spr_milton_mach3turn,
+		spr_milton_wallslide, spr_player0_groundpoundstart, spr_player0_groundpound,
+		spr_player0_groundpoundbump, spr_soda, spr_tv_soda, spr_titlecardFrontyard,
+		spr_titlecardFrontyardTitle1
+	],
+	[
+		"MrAlt- (Ex Miltu Member)",
+		"former co director : coder : level designer",
+		spr_bacadmad_face,
+		tilespr_frontyard, tilespr_outbreak, tilespr_hotel2
+	],
+	[
+		"Toasty64 (Ex Miltu Member)",
+		"coder : artist : ideas",
+		spr_player_chat
+	],
+	[
+		"PaintlesNoise (Ex Miltu Member)",
+		"artist",
+		spr_milton_mach3turnfall
 	],
 ]
 miltwocredits_creditsshow = []
@@ -93,7 +101,7 @@ for (var k = 0; k < kl; k++)
 		if sprite_exists(ki[j])
 		{
 			var _h = sprite_get_height(ki[j])
-			if _h < 200
+			if _h < 350
 			{
 				array_push(miltwocredits_creditsshow[k], ki[j])
 				_yoffset = max(_yoffset, _h)

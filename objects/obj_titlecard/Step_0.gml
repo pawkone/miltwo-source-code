@@ -1,4 +1,4 @@
-if (mky_jump2 && !skip)
+if (mky_jump2 && !skip && scene < 3)
 {
     skip = true;
 	scr_soundeffect(sfx_skiptitlecard, 0.95, false)
@@ -53,21 +53,6 @@ else if (scene == 2)
         scene = 3;
         alarm[2] = skip ? 1 : 45;
     }
-}
-else if (scene == 4)
-{
-	if !(obj_player.state == states.walkfront && obj_player.sprite_index == obj_player.sprites.walkfront)
-	{
-		circleSizeSpeed++
-		circleSize = approach(circleSize, 1280, circleSizeSpeed)
-	}
-	else
-	{
-		circleSizeSpeed = 0
-		circleSize = lerp(circleSize, 35, 0.125)
-	}
-    if (circleSize == 1280)
-        instance_destroy()
 }
 
 if scene > 0 && scene < 3

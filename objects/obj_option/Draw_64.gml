@@ -451,17 +451,25 @@ switch (m.anchor)
 						if j != jf
 						{
 							var _xx2 = wrap2(((j - 2) - _show), -(kil - 2) / 2, (kil - 2) / 2), _t = max(0, 1 - abs(wrap2((_show - (j - 2)), -(kil - 2) / 2, (kil - 2) / 2)))
-							draw_sprite_ext(ki[j], (current_time / 1000) * 21, _xx + fuckme + _xx2 * globalfuckeryoffset, _yy, 1, 1, 0, c_white, lerp(0.2, 1, _t))
+							var _w = sprite_get_width(ki[j]), _h = sprite_get_height(ki[j])
+							var _spd = (sprite_get_speed_type(ki[j]) == spritespeed_framespersecond ? ((current_time/1000)*sprite_get_speed(ki[j])) : ((current_time/1000)*room_speed*sprite_get_speed(ki[j])))*0.35
+							draw_sprite_stretched_ext(ki[j], _spd, _xx + fuckme + _xx2 * globalfuckeryoffset-_w/2, _yy-_h/2, _w, _h, c_white, lerp(0.125, 1, _t))
 						}
 					}
 					if jf >= 2 && jf < kil
 					{
 						var _xx2 = wrap2(((jf - 2) - _show), -(kil - 2) / 2, (kil - 2) / 2), _t = max(0, 1 - abs(wrap2((_show - (jf - 2)), -(kil - 2) / 2, (kil - 2) / 2)))
-						draw_sprite_ext(ki[jf], (current_time / 1000) * 21, _xx + fuckme + _xx2 * globalfuckeryoffset, _yy, 1, 1, 0, c_white, lerp(0.2, 1, _t))
+						var _w = sprite_get_width(ki[jf]), _h = sprite_get_height(ki[jf])
+						var _spd = (sprite_get_speed_type(ki[jf]) == spritespeed_framespersecond ? ((current_time/1000)*sprite_get_speed(ki[jf])) : ((current_time/1000)*room_speed*sprite_get_speed(ki[jf])))*0.35
+						draw_sprite_stretched_ext(ki[jf], _spd, _xx + fuckme + _xx2 * globalfuckeryoffset-_w/2, _yy-_h/2, _w, _h, c_white, lerp(0.125, 1, _t))
 					}
 				}
 				else if kil == 3
-					draw_sprite_ext(ki[2], (current_time / 1000) * 21, _xx + 48, _yy, 1, 1, 0, c_white, 1)
+				{
+					var _w = sprite_get_width(ki[2]), _h = sprite_get_height(ki[2])
+					var _spd = (sprite_get_speed_type(ki[2]) == spritespeed_framespersecond ? ((current_time/1000)*sprite_get_speed(ki[2])) : ((current_time/1000)*room_speed*sprite_get_speed(ki[2])))*0.35
+					draw_sprite_stretched_ext(ki[2], _spd, _xx + 48-_w/2, _yy-_h/2, _w, _h, c_white, 1)
+				}
 				_yy += miltwocredits_startoffset[k] / 2
 				if k == 0
 					_yy += 72
