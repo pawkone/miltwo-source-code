@@ -15,7 +15,8 @@ if (other.grounded && pky_up && other.state != -4 && other.state != states.enter
 				_rankString = "s";
 			if (scr_Prank())
 				_rankString = "p";
-			create_notifAsync(string(global.username) + " beated " + string_lower(levelgetname(global.level)) + " : " + _rankString + " rank : " + (global.escapeLap > 0 ? string("lap {0}", global.escapeLap) : "no laps") + ")");
+			lastestMessageNum = wrap(lastestMessageNum+1, 123, 233)
+			lastestMessage = " beat " + string_lower(levelgetname(global.level)) + " : " + _rankString + " Rank : " + (global.escapeLap > 0 ? string("Lap {0}", global.escapeLap) : "No Laps") + ")"
 		}
 		
 		door = "NONE"

@@ -100,7 +100,7 @@ function scr_player_tumble()
 	
 	if character == chars.milton && movespeed > 6
 		movespeed -= 0.02
-    if (place_meeting(x + sign(hsp), y, obj_solid) && !scr_slope(x,y+1))
+    if (place_meeting(x + sign(hsp), y, obj_solid) && !scr_slope(x,y+1)) || (place_meeting(x + sign(hsp), y-6, obj_solid) && !place_meeting(x, y-6, obj_solid))
     {
 		if (character == chars.milton)
         {

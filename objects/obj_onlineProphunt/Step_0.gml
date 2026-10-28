@@ -82,7 +82,11 @@ else
 				{
 					obj_player.image_alpha = 1
 					global.prophuntmode.select = -4
-					obj_onlineHandler.create_notifAsync(global.username + lang_get_phrase("online_prophunt_caught") + name)
+					with obj_onlineHandler
+					{
+						lastestMessageNum = wrap(lastestMessageNum+1, 123, 233)
+						lastestMessage = lang_get_phrase("online_prophunt_caught") + name
+					}
 					break
 				}
 			}

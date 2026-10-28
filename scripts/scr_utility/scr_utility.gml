@@ -69,6 +69,23 @@ window_set_size(res[global.windowSize][0], res[global.windowSize][1])
 window_center()
 xdata_close()
 
+/*
+var i = 0
+var _xx = 0, _yy = 40
+repeat (4)
+{
+	if MultiClientGetID() == i
+		window_set_rectangle(_xx,_yy,960,480)
+	_xx += 960
+	if _xx >= 1920
+	{
+		_xx = 0
+		_yy += 510
+	}
+	i++
+}
+*/
+
 function loadString(arg0)
 {
 	if file_exists(arg0)

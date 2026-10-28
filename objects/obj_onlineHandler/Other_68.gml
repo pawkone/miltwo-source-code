@@ -113,7 +113,7 @@ if async_load[? "type"] == network_type_data
             case networkpacket.notification:
 				var _buf = string_lower(buffer_read(buff, buffer_string))
 				scr_soundeffect(sfx_pop, random_range(0.98,1.02))
-                array_push(notifs, [_buf, 400]);
+                array_push(notifs, [_buf, 400, c_white]);
                 break;
             
             case networkpacket.player:
@@ -159,10 +159,31 @@ if async_load[? "type"] == network_type_data
 						xscale = ((flags & (1 << 2)) != 0) ? -1 : 1
 						breakdance = (flags & (1 << 3)) != 0
 						
-						name = buffer_read(buff, buffer_string);
+						name = buffer_read(buff, buffer_string)
+						
+						var _lastestMessageNum = buffer_read(buff, buffer_u8)
+						var _lastestMessage = buffer_read(buff, buffer_string)
+						if _lastestMessageNum != lastestMessageNum || _lastestMessage != lastestMessage
+						{
+							lastestMessageNum = _lastestMessageNum
+							lastestMessage = _lastestMessage
+							if lastestMessage != ""
+							{
+								if lastestMessageNum >= 234
+									obj_onlineHandler.create_notifAsyncClientSide(lastestMessage)
+								else if lastestMessageNum >= 123
+									obj_onlineHandler.create_notifAsyncClientSide(name + lastestMessage, name)
+								else
+									obj_onlineHandler.create_notifAsyncClientSide("<" + name + "> " + lastestMessage, name)
+							}
+						}
 	                }
 					if instance_exists(_objPl)
+					{
+						if !ds_map_exists(plrsconnected, _socket)
+							self.create_notifAsyncClientSide(_objPl.name + " has connected")
 						ds_map_set(plrsconnected, _socket, [240, _objPl.name])
+					}
 				}
                 
                 break;

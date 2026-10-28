@@ -1,1 +1,1 @@
-global.username = string_lower(get_string("New Username",global.username))
+get_string_async("Enter your new username:", global.username)

@@ -6,6 +6,7 @@ if idds == 0 && !global.racemode.active
 		instance_destroy(obj_onlineLevelSelect)
 		exit
 	}
+	
 	if global.prophuntmode.active
 	{
 		global.prophuntmode.active = 0
@@ -14,7 +15,11 @@ if idds == 0 && !global.racemode.active
 		with obj_player
 			image_alpha = 1
 		room_goto(Mainmenu)
-		create_notifAsync("Server : " + lang_get_phrase("online_prophunt_ended"))
+		with obj_onlineHandler
+		{
+			lastestMessageNum = wrap(lastestMessageNum+1, 234, 255)
+			lastestMessage = "[Server] " + lang_get_phrase("online_prophunt_ended")
+		}
 		exit
 	}
 

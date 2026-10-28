@@ -19,7 +19,7 @@ if plrId >= 0
 		flags |= bool(plrObj.xscale == -1) << 1
 		flags |= bool(instance_exists(obj_chargeeffect) && plrObj.state == states.mach3) << 2
 		flags |= bool(instance_exists(obj_chargeeffect) && plrObj.state == states.groundpound) << 3
-		flags |= bool(plrObj.breakdancespeed > 0.5 && plrObj.sprite_index == plrObj.sprites.breakdance) << 4
+		flags |= bool(plrObj.breakdancespeed >= 0.5 && plrObj.sprite_index == plrObj.sprites.breakdance) << 4
 		array_push(_data, buffer_u8, flags)
 		
 		array_push(_data, buffer_u16, plrObj.sprites.palette)

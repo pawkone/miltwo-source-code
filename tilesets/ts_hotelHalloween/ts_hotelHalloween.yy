@@ -1,0 +1,43 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"ts_hotelHalloween",
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"autotile_1","closed_edge":false,"name":"autotile_1","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[
+        99,204,200,99,72,99,99,99,76,99,99,99,99,99,99,99,130,130,130,130,68,68,68,68,134,134,134,134,196,196,
+        196,196,99,99,66,66,70,70,198,198,194,194,99,99,99,99,99,
+      ],},
+  ],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"ts_hotelHalloween",
+  "out_columns":47,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Hub",
+    "path":"folders/Tile Sets/Hub.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"tilespr_hotelHalloween",
+    "path":"sprites/tilespr_hotelHalloween/tilespr_hotelHalloween.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"texturegroup_game",
+    "path":"texturegroups/texturegroup_game",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.00015,
+  "tileHeight":32,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":32,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":2176,
+}

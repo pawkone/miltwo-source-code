@@ -111,7 +111,6 @@ else
 						ip = other.connectIP
 						port = other.connectPort
 					}
-                    obj_onlineHandler.create_notifAsync(string(global.username) + " has connected!");
                 }
             }
         }

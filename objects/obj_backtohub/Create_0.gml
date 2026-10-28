@@ -4,6 +4,9 @@ fakeVsp = 5;
 spd = 0
 
 with obj_onlineHandler
-	create_notifAsync(string(global.username) + " went back to the hotel");
+{
+	lastestMessageNum = wrap(lastestMessageNum+1, 123, 233)
+	lastestMessage = " went back to the Hub!"
+}
 
 depth = -600

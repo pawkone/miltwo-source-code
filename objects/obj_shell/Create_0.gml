@@ -367,7 +367,10 @@ function _execute_script(arg0, arg1 = false)
 	        array_push(output, ">" + consoleString);
 	        array_push(output, "Command is blacklisted: " + consoleString);
 			with obj_onlineHandler
-				create_notifAsync(global.username + lang_get_phrase("online_caught") + string(arg0[0]))
+			{
+				lastestMessageNum = wrap(lastestMessageNum+1, 0, 122)
+				lastestMessage = "HEY GUYS! I TRIED TO USE '" + consoleString + "' IM A CHEATY CHEATER"
+			}
 	        array_push(history, consoleString);
 	        self._update_positions();
 			exit
@@ -407,8 +410,11 @@ function _execute_script(arg0, arg1 = false)
         array_push(output, ">" + consoleString);
         array_push(output, "No such command: " + consoleString);
 		with obj_onlineHandler
-			create_notifAsync(global.username + " : " + string_copy(other.consoleString,0,48))
-        array_push(history, consoleString);
+		{
+			lastestMessageNum = wrap(lastestMessageNum+1, 0, 122)
+			lastestMessage = string_copy(other.consoleString,0,48)
+		}
+		array_push(history, consoleString);
         self._update_positions();
     }
 }

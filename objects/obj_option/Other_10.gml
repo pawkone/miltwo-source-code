@@ -12,7 +12,7 @@ miltwocredits_credits =
 		spr_bacadmadLocate, spr_minilogo, spr_menunew, spr_menunew_tvhint,
 		spr_gate_shell, spr_floorgate, spr_floorgate_over, spr_uparrow,
 		spr_titlecardShell, spr_titlecardShellTitle1, tilespr_fruitcup,
-		spr_player_skate_jump
+		spr_player_skate_jump, spr_preoutman_mach, spr_preoutman_breakdance
 	],
 	[
 		"Polyg0n5",

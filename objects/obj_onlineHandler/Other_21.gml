@@ -1,6 +1,12 @@
 ///@description race mode - activate
 if idds == 0 && !global.prophuntmode.active
 {
+	if instance_exists(obj_onlineLevelSelect)
+	{
+		instance_destroy(obj_onlineLevelSelect)
+		exit
+	}
+	
 	if global.racemode.active
 	{
 		global.racemode.active = 0
@@ -9,7 +15,11 @@ if idds == 0 && !global.prophuntmode.active
 		with obj_player
 			image_alpha = 1
 		room_goto(Mainmenu)
-		create_notifAsync("Server : " + lang_get_phrase("online_racemode_ended"))
+		with obj_onlineHandler
+		{
+			lastestMessageNum = wrap(lastestMessageNum+1, 234, 255)
+			lastestMessage = "[Server] " + lang_get_phrase("online_racemode_ended")
+		}
 		exit
 	}
 	

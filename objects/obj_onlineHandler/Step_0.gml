@@ -24,7 +24,7 @@ if playerupdate >= 2
 		oldplayer = {
 		    x: obj_player.x,
 		    y: obj_player.y,
-		    sprite_index: (obj_player.character == chars.soda ? spr_soda : obj_player.sprite_index),
+		    sprite_index: playerUtil_realSpr(),
 		    image_index: obj_player.image_index,
 		    xscale: obj_player.xscale,
 		    image_alpha: obj_player.image_alpha,
@@ -34,7 +34,7 @@ if playerupdate >= 2
 		    depth: obj_player.depth,
 		    spr_palette: obj_player.spr_palette,
 		    palIndex: obj_player.palIndex,
-		    breakdance: obj_player.breakdancespeed > 0.5 && obj_player.sprite_index == obj_player.sprites.breakdance,
+		    breakdance: obj_player.breakdancespeed >= 0.5 && obj_player.sprite_index == obj_player.sprites.breakdance,
 		}
 	}
 	var _prophunt = global.prophuntmode.active && instance_exists(obj_onlineProphunt)
@@ -66,6 +66,8 @@ if playerupdate >= 2
 	flags |= (p.breakdance ? 1 : 0) << 3
 	buffer_write(playerBuff, buffer_u8, flags)
 	buffer_write(playerBuff, buffer_string, global.username)
+	buffer_write(playerBuff, buffer_u8, lastestMessageNum)
+	buffer_write(playerBuff, buffer_string, lastestMessage)
 	self.network_send_packetServ(playerBuff, buffer_get_size(playerBuff));
 
 
@@ -99,19 +101,22 @@ if playerupdate >= 2
 }
 else
 	playerupdate++
-if !global.prophuntmode
+
+if old_lastestMessage != lastestMessage || old_lastestMessageNum != lastestMessageNum
 {
-	with obj_onlinePlayer
+	old_lastestMessage = lastestMessage
+	old_lastestMessageNum = lastestMessageNum
+	if lastestMessage != ""
 	{
-		if distance_to_object(obj_player) < 25 && room == currentRoom
-		{
-			obj_player.image_alpha = 1
-			global.prophuntmode.select = -4
-			obj_onlineHandler.create_notifAsync(global.username + lang_get_phrase("online_prophunt_caught") + name)
-			break
-		}
+		if lastestMessageNum >= 234
+			create_notifAsyncClientSide(lastestMessage)
+		else if lastestMessageNum >= 123
+			create_notifAsyncClientSide(global.username + lastestMessage, global.username)
+		else
+			create_notifAsyncClientSide("<" + global.username + "> " + lastestMessage, global.username)
 	}
 }
+
 if idds == 0
 {
 	if global.racemode.active

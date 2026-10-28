@@ -1,3 +1,6 @@
+lastestMessageNum = -4
+lastestMessage = ""
+
 object = -4
 hunter = 0
 

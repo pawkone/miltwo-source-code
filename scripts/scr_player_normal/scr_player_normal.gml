@@ -145,7 +145,7 @@ function scr_player_normal()
     
     if (buffers.breakdanceheld > 10)
     {
-        breakdancespeed = approach(breakdancespeed, 0.6, 0.005);
+        breakdancespeed = approach(breakdancespeed, 0.5, 0.005);
         
         if (sprite_index != sprites.breakdance)
             sprite_index = sprites.breakdance;
@@ -153,10 +153,11 @@ function scr_player_normal()
         image_speed = breakdancespeed;
     }
     
-    if (breakdancespeed > 0.5)
+    if (breakdancespeed >= 0.5)
     {
         if (breakdanceID == -4)
         {
+			image_index = 0
             with (instance_create(x, y, obj_beatbox))
             {
                 other.breakdanceID = id;
@@ -170,13 +171,6 @@ function scr_player_normal()
         if (buffers.notes <= 0)
         {
             buffers.notes = 10;
-            
-            if (instance_exists(obj_onlineHandler))
-            {
-                with (obj_onlineHandler)
-                    instance_create_online(other.x + irandom_range(-70, 70), other.y + irandom_range(-70, 70), other.depth, obj_notes);
-            }
-            
             instance_create(x + irandom_range(-70, 70), y + irandom_range(-70, 70), obj_notes);
         }
     }
@@ -186,8 +180,11 @@ function scr_player_normal()
     if (!coyote_time)
     {
         freefalling = 0;
-        image_index = 0;
-        sprite_index = sprites.fall;
+		if sprite_index != sprites.breakdance
+		{
+	        image_index = 0;
+	        sprite_index = sprites.fall;
+		}
         state = states.jump;
     }
     
@@ -195,8 +192,11 @@ function scr_player_normal()
     {
         jumpBuffer = false;
         create_particleStatic(spr_jumpeffect, x, y, 1, 1);
-        image_index = 0;
-        sprite_index = sprites.jump;
+		if sprite_index != sprites.breakdance
+		{
+	        image_index = 0;
+	        sprite_index = sprites.jump;
+		}
         state = states.jump;
         vsp = -12;
         jumpstop = false;

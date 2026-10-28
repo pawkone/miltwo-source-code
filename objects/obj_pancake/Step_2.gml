@@ -24,7 +24,8 @@ if (hitstun.is == false)
             
             if (place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_hallway) || (!(place_meeting(x + (xscale * 18), y + 31, obj_solid) || place_meeting(x + (xscale * 18), y + 31, obj_slope) || place_meeting(x + (xscale * 18), y + 31, obj_platform)) && grounded))
             {
-                vsp = -5;
+				if grounded
+					vsp = -5;
                 xscale *= -1;
             }
             

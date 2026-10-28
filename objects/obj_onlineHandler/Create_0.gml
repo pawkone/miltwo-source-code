@@ -5,6 +5,11 @@ enum networkpacket
 	mode,
 }
 
+lastestMessage = ""
+lastestMessageNum = -4
+old_lastestMessage = ""
+old_lastestMessageNum = -4
+
 ip = "localhost"
 port = 2222
 
@@ -63,14 +68,15 @@ network_send_packetServ = function(buff, size)
 		network_send_udp(global.client, ip, port, buff, size)
 };
 
-create_notifAsync = function(arg0)
+create_notifAsyncClientSide = function(arg0, arg1 = -4)
 {
-    var buff = buffer_create(192, buffer_fixed, 1)
-    buffer_write(buff, buffer_u8, networkpacket.notification)
-	buffer_write(buff, buffer_string, arg0)
-    self.network_send_packetServ(buff, buffer_get_size(buff))
-    buffer_delete(buff);
-	
+	var _c = c_white, _hash = 0
+	if is_string(arg1)
+	{
+		for (var i = 1; i <= string_length(arg1); i++)
+			_hash = (_hash * 31 + ord(string_char_at(arg1, i))) mod 16777216
+		_c = make_color_hsv(_hash mod 256, 60 + (floor(_hash / 256) mod 63), 255)
+	}
 	scr_soundeffect(sfx_pop, random_range(0.98,1.02))
-    array_push(notifs, [string_lower(arg0), 400])
+    array_push(notifs, [arg0, 400, _c])
 };

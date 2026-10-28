@@ -300,9 +300,9 @@ function slope_momentum(arg0 = 0.1, arg1 = 0)
     }
 }
 
-function doTaunt()
+function doTaunt(_force = false, _supertauntenabled = true)
 {
-    if (pky_taunt2)
+    if (_force || pky_taunt2)
     {
         tauntVars = 
         {
@@ -315,7 +315,7 @@ function doTaunt()
             image_speed: image_speed
         };
         tauntTimer = 15;
-        var _isSupertaunt = canSupertaunt && pky_up;
+        var _isSupertaunt = _supertauntenabled && canSupertaunt && pky_up;
         
         if (!_isSupertaunt)
         {
@@ -373,11 +373,13 @@ global.__baconera_cache = ds_map_create()
 function get_baconera(arg0, arg1, notexists_returnnone = false)
 {
 	if arg1 == 0 return arg0
-	var _arr1 = ["playerV","milton","pepperni","player0","player1","player2","player3", "", "preoutman"]
+	var _arr1 = ["playerV","milton","pepperni","player0","player1","player2","player3", "playersoda", "preoutman"]
 	var _arr2 = ["V","T","P","B0","B1","B2","B3", "", "POM"]
-	var _asset = sprite_get_name(arg0), _spr = arg0, _key = string(arg0) + "|" + string(arg1), _result = arg0
+	var _key = string(arg0) + "|" + string(arg1)
 	if ds_map_exists(global.__baconera_cache, _key)
 		return global.__baconera_cache[? _key]
+	
+	var _asset = sprite_get_name(arg0), _spr = arg0, _result = arg0
 	if string_starts_with(_asset, "spr_player")
 		_spr = asset_get_index(string_replace(_asset, "spr_player", "spr_" + _arr1[arg1-1]))
 	else
@@ -396,7 +398,12 @@ function playerUtil_realSpr()
 	{
 		var sprReal = character == chars.soda ? spr_soda : sprite_index
 		if character == chars.preoutman
-			sprReal = round(hsp) != 0 ? (abs(hsp) > 16 ? spr_preoutman_mach : spr_preoutman_move) : spr_preoutman_idle
+		{
+			if string_starts_with(sprite_get_name(sprite_index), "spr_preoutman_")
+				sprReal = sprite_index
+			else
+				sprReal = round(hsp) != 0 ? (abs(hsp) > 16 ? spr_preoutman_mach : spr_preoutman_move) : spr_preoutman_idle
+		}
 		return sprReal
 	}
 }
@@ -410,6 +417,7 @@ function playerUtil_spr(_e)
     };
 	
 	st.player.patcolours = get_baconera(spr_playerPatCol, _e)
+	st.player.palettepreview = get_baconera(spr_dressermenu_palgrid, _e)
 	st.player.palette = get_baconera(spr_playerPalHalloween, _e, 1) //HALLOWEEN SPPOKY PALETTES
 	if !sprite_exists(st.player.palette)
 		st.player.palette = get_baconera(spr_playerPal, _e) //if no halloween, please die and try again

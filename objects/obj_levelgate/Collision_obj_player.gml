@@ -38,13 +38,13 @@ with (_plr)
 	        backtohubRoom = room;
 	        backtohubX = x;
 	        backtohubY = y;
-			with obj_onlineHandler
-			{
-				if global.level == -4
-					create_notifAsync(string(global.username) + " went to " + string_lower(_gate.levelname));
-			}
 	        global.level = _gate.level;
 	        global.resetRoom = _rm;
+			with obj_onlineHandler
+			{
+				lastestMessageNum = wrap(lastestMessageNum+1, 123, 233)
+				lastestMessage = " went to " + levelgetname(global.level)
+			}
 	        if (global.level == "tutorial")
 				scr_fadeout()
 	        else if (!instance_exists(obj_titlecard))
