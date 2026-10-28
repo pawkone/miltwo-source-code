@@ -29,6 +29,8 @@
     {"name":"inst_4CA5DDE8","path":"rooms/hotel_halloween_0/hotel_halloween_0.yy",},
     {"name":"inst_5C4CD065","path":"rooms/hotel_halloween_0/hotel_halloween_0.yy",},
     {"name":"inst_6B709E7E","path":"rooms/hotel_halloween_0/hotel_halloween_0.yy",},
+    {"name":"inst_EA79389","path":"rooms/hotel_halloween_0/hotel_halloween_0.yy",},
+    {"name":"inst_769FB1D","path":"rooms/hotel_halloween_0/hotel_halloween_0.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -79,6 +81,8 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":-2.0,"scaleY":4.0,"x":-32.0,"y":416.0,},
         {"$GMRInstance":"v4","%Name":"inst_5C4CD065","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5C4CD065","objectId":{"name":"obj_doorG","path":"objects/obj_doorG/obj_doorG.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-64.0,"y":640.0,},
         {"$GMRInstance":"v4","%Name":"inst_6B709E7E","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6B709E7E","objectId":{"name":"obj_levelgate","path":"objects/obj_levelgate/obj_levelgate.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1344.0,"y":570.0,},
+        {"$GMRInstance":"v4","%Name":"inst_EA79389","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_EA79389","objectId":{"name":"obj_treasureViewer","path":"objects/obj_treasureViewer/obj_treasureViewer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":960.0,"y":704.0,},
+        {"$GMRInstance":"v4","%Name":"inst_769FB1D","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_769FB1D","objectId":{"name":"obj_uncleflo","path":"objects/obj_uncleflo/obj_uncleflo.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":567.0,"y":530.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_2","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_2","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":34,"SerialiseWidth":69,"TileCompressedData":[
           -171,0,4,713,714,715,716,-32,0,3,709,710,711,-30,0,4,745,746,747,748,-23,0,3,709,710,711,-6,0,3,741,

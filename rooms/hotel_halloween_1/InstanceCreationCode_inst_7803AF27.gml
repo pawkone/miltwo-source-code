@@ -1,0 +1,1 @@
+text = "[wave]Nephew, I wanna eat the creamy SHIT out of that goodness right next to me bro, mmm .... What? .... Oh, bro.. I didn't mean it like that.. HELL NO bro, not like that!... UGH, don't say that to me, I'm your uncle bro!";

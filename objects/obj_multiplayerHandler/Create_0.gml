@@ -1,3 +1,5 @@
+show_message("UNFINISHED AND SCRAPPED DONT USE!!!!!!")
+
 ip = "127.0.0.1"
 
 isHost = false

@@ -417,7 +417,6 @@
     {"name":"frontyard_treasure","order":1,"path":"rooms/frontyard_treasure/frontyard_treasure.yy",},
     {"name":"hotel_2","order":7,"path":"rooms/hotel_2/hotel_2.yy",},
     {"name":"hotel_2763","order":1,"path":"rooms/hotel_2763/hotel_2763.yy",},
-    {"name":"hotel_3","order":10,"path":"rooms/hotel_3/hotel_3.yy",},
     {"name":"hotel_character","order":5,"path":"rooms/hotel_character/hotel_character.yy",},
     {"name":"hotel_extra","order":3,"path":"rooms/hotel_extra/hotel_extra.yy",},
     {"name":"hotel_halloween_0","order":11,"path":"rooms/hotel_halloween_0/hotel_halloween_0.yy",},

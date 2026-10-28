@@ -1,0 +1,1 @@
+text = "[wave]Hey bro, well... You're not my bro... You're my nephew. Nephew bro! Did you ever wonder how I would look like with a new haircut bro? ... What do you mean? I have my rad beard, bro! ... Bro, I mean.. Maybe my petals can be apart of my haircut but it's kinda discouraged in the family, bro...";

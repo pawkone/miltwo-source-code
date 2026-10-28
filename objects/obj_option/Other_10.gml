@@ -30,7 +30,7 @@ miltwocredits_credits =
 		"Enno334_123",
 		"volunteered artist",
 		spr_milton_downbox, spr_tv_comboT, spr_milton_superjumpprepstart,
-		spr_milton_superjumpprep
+		spr_milton_superjumpprep, spr_gate_milkshake, spr_gate_milkshakeBG
 	],
 	[
 		"ElCacas.XD.RenovadoXD",

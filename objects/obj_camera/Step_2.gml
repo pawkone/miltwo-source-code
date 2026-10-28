@@ -72,9 +72,9 @@ _realY += irandom_range(cameraShake, -cameraShake) + (instance_exists(obj_secret
 camera_set_view_pos(view_camera[0], _realX, _realY)
 camera_set_view_size(view_camera[0], camera.width, camera.height)
 
-var _xc = _realX+camera.width/2, _yc = _realY+camera.height/2, _si = max(camera.width/1.35, 712) //< sweet spot
+var _xc = _realX+camera.width/2, _yc = _realY+camera.height/2, _si = max(camera.width/1.23, 712) //< sweet spot
 var _pad = [
-	obj_levelgate, obj_uncleflo, obj_floorgate,
+	obj_levelgate, obj_uncleflo, obj_floorgate, obj_dresser,
 	obj_secret, obj_secretStart,
 	obj_collect, obj_bigcollect, obj_collect_escape, obj_bigcollect_escape,
 	obj_destructibles, obj_metalblock,

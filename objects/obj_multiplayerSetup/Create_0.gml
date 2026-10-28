@@ -1,3 +1,5 @@
+show_message("UNFINISHED AND SCRAPPED DONT USE!!!!!!")
+
 bgs =
 [
 	[bg_yardAForestTop3, bg_yardAForestTop2, bg_yardAForestTop1],

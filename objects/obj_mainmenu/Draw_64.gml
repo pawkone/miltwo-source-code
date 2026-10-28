@@ -38,13 +38,7 @@ draw_textEX(779, -45, "[S]");
 draw_set_font(global.creditsfont);
 draw_sprite(spr_deletefile, 0, 832, 448);
 draw_textEX(768, 448, "[T]");
-draw_set_font(global.smallfont);
 draw_set_colour(c_white);
-draw_set_halign(fa_right);
-var _xx = 960 - 32;
-var _yy = 540 - 32;
-draw_text(_xx, _yy, wsbMOmInfo.version);
-draw_set_alpha(1);
 
 if (dark)
     draw_sprite(spr_mainmenu_dark, 0, 0, 0);

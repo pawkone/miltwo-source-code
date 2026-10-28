@@ -13,7 +13,6 @@ ds_set_precision(0.001)
 randomise()
 
 globalvar wsbMOmInfo; wsbMOmInfo = {}
-wsbMOmInfo.version = "???"
 wsbMOmInfo.dir = game_save_id + "ohMiltu/"
 wsbMOmInfo.opt = wsbMOmInfo.dir + "settings.xda"
 
@@ -138,23 +137,24 @@ function levelgetname(_t)
 {
 	switch _t
 	{
-		case "dudles": return "! The Dudles In The Notebook"
+		case "dudles": return "(WIP) Dudles in the Notebook"
 		
 		//floor 1
 		case "tutorial": return "Overgrown Flo' Patch"
 		case "yard": return "Way Backyard?"
-		case "beach": return "Fruitcup Coast"
 		case "shell": return "Shell O' City"
+		case "beach": return "(WIP) Fruitcup Coast"
 			
 		//floor 2
-		case "frontyard": return "! Beaker's Frontyard"
-		case "clock": return "! Courted Clocks"			
-		case "outbreak": return "! Radiation Outbreak"			
+		case "frontyard": return "(WIP) Beaker's Frontyard"
+		case "clock": return "(WIP) Courted Clocks"			
+		case "outbreak": return "(WIP) Radiation Outbreak"	
+		case "milkshake": return "(WIP) Milkshake Peaks"
 		
 		//floor extra
-		case "crashout": return "Crashout City (Crashout Era)"
-		case "bottom": return "Rock Bottom (Dream Era)"
-		case "beaker": return "! Beaker Backyard (Twisted Era)"
+		case "crashout": return "Crashout City (Crashout)"
+		case "bottom": return "Rock Bottom (Dream)"
+		case "beaker": return "(WIP) Beaker Backyard (Twisted)"
 	}
 	return _t
 }
