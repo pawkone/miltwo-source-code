@@ -32,6 +32,7 @@
     {"name":"inst_100641","path":"rooms/beach_lap/beach_lap.yy",},
     {"name":"inst_100642","path":"rooms/beach_lap/beach_lap.yy",},
     {"name":"inst_100643","path":"rooms/beach_lap/beach_lap.yy",},
+    {"name":"inst_6D4AC9C4","path":"rooms/beach_lap/beach_lap.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -66,6 +67,7 @@
         {"$GMRInstance":"v4","%Name":"inst_100641","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_100641","objectId":{"name":"obj_collect","path":"objects/obj_collect/obj_collect.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":512.0,},
         {"$GMRInstance":"v4","%Name":"inst_100642","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_100642","objectId":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":1.0,"x":352.0,"y":384.0,},
         {"$GMRInstance":"v4","%Name":"inst_100643","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_100643","objectId":{"name":"obj_slope","path":"objects/obj_slope/obj_slope.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":-2.0,"scaleY":2.0,"x":736.0,"y":736.0,},
+        {"$GMRInstance":"v4","%Name":"inst_6D4AC9C4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6D4AC9C4","objectId":{"name":"obj_doorS","path":"objects/obj_doorS/obj_doorS.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":320.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4286545791,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":true,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

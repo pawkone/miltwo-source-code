@@ -174,6 +174,7 @@
     {"name":"inst_100505","path":"rooms/beach_6/beach_6.yy",},
     {"name":"inst_1F49BC9B","path":"rooms/beach_6/beach_6.yy",},
     {"name":"inst_1AB50CBB","path":"rooms/beach_6/beach_6.yy",},
+    {"name":"inst_44E9F06C","path":"rooms/beach_6/beach_6.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -351,6 +352,7 @@
         {"$GMRInstance":"v4","%Name":"inst_100616","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_100616","objectId":{"name":"obj_coconutgun","path":"objects/obj_coconutgun/obj_coconutgun.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":495.0,"y":790.0,},
         {"$GMRInstance":"v4","%Name":"inst_1F49BC9B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1F49BC9B","objectId":{"name":"obj_monolith","path":"objects/obj_monolith/obj_monolith.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3840.0,"y":448.0,},
         {"$GMRInstance":"v4","%Name":"inst_1AB50CBB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1AB50CBB","objectId":{"name":"obj_partyportalexit","path":"objects/obj_partyportalexit/obj_partyportalexit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3904.0,"y":544.0,},
+        {"$GMRInstance":"v4","%Name":"inst_44E9F06C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_44E9F06C","objectId":{"name":"obj_doorS","path":"objects/obj_doorS/obj_doorS.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3904.0,"y":480.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances_Water","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_100617","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_100617","objectId":{"name":"obj_water","path":"objects/obj_water/obj_water.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":8.5,"scaleY":6.0,"x":864.0,"y":1248.0,},
