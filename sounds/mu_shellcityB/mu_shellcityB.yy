@@ -8,9 +8,9 @@
   "bitDepth":1,
   "channelFormat":1,
   "compression":1,
-  "compressionQuality":3,
+  "compressionQuality":1,
   "conversionMode":0,
-  "duration":191.47597,
+  "duration":155.07692,
   "exportDir":"audioStreamed",
   "name":"mu_shellcityB",
   "parent":{

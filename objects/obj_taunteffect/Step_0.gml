@@ -1,4 +1,4 @@
-if global.modded_phototaunt
+if sprite_index == spr_taunteffect_old
 {
 	if (target.state != states.taunt)
 		destroy = true;

@@ -131,3 +131,47 @@ function scr_player_dreamspin()
         sprite_index = spr_player1_spincancelloop;
 }
 
+function scr_player_dreamcrusher()
+{
+    image_speed = 0.35;
+	var move = pky_right + pky_left
+    hsp = approach(hsp, movespeed * move, 1.5);
+    
+    if (move != 0)
+    {
+        if (abs(hsp) < 13)
+            movespeed = 9;
+    }
+    else
+        movespeed = 0
+    if (vsp > 5 && vsp < 20)
+        vsp += 1.5;
+	if vsp > 12
+        sprite_index = spr_player1_umbrellafall
+    else
+    {
+        sprite_index = spr_player1_umbrellaStart
+        if animation_end()
+            image_index = 8
+    }
+ 
+    buffers.afterimageBlur = approach(buffers.afterimageBlur, 0, 1);
+    
+    if (buffers.afterimageBlur <= 0)
+    {
+        create_blur_effect(sprite_index, image_index, x, y, xscale);
+        buffers.afterimageBlur = 4;
+    }
+    
+    if (grounded && vsp > 0 && !place_meeting(x, y + 1, obj_destructibles) && !place_meeting(x, y + 1, obj_metalblock))
+    {
+        sprite_index = sprites.groundpoundland
+        image_index = 0
+        vsp = 0
+        hsp = 0
+        state = states.freefallland
+        movespeed = abs(movespeed)
+		shake_camera(10,15)
+        plrsnds_play(sfx.slam, x, y)
+    }
+}

@@ -59,8 +59,9 @@ states =
 	crashoutbounce: 55,
 	dreambounce: 56,
 	dreamspin: 57,
-	retwistedBuzzsaw: 58,
-	water: 59,
+	dreamcrusher: 58,
+	retwistedBuzzsaw: 59,
+	water: 60,
 }
 
 

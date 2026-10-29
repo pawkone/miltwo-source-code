@@ -102,7 +102,10 @@ function scr_playerSounds_load()
 			sfx.gasp = -4
 		break
 		case chars.soda:
-			sfx.laugh = sfx_soda
+			sfx.laugh = sfx_playersoda0
+			sfx.voice_hurt = -4
+			sfx.ok = -4
+			sfx.gasp = -4
 		break
 	}
 	

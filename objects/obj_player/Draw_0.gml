@@ -1,4 +1,4 @@
-var sprReal = playerUtil_realSpr()
+var realInfo = playerUtil_realSpr()
 
 var _new = character == chars.milton || isMildred || character == chars.pepperni || character == chars.soda
 
@@ -10,22 +10,22 @@ if (super)
         var _yy = cos((current_time * 0.001) + (1 * i)) * 2 * i;
         var _alpha = abs(sin((current_time * 0.001) + (5 * i))) * 0.1;
         gpu_set_blendmode(bm_add);
-        draw_sprite_ext(sprReal, image_index, x + _xx, y + _yy, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, c_red, image_alpha * _alpha);
+        draw_sprite_ext(realInfo[0], realInfo[1], x + _xx, y + _yy, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, c_red, image_alpha * _alpha);
         gpu_set_blendmode_default()
     }
 }
 
 pal_swap_set(spr_palette, palIndex, false);
-draw_sprite_ext(sprReal, image_index, x, y, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha);
+draw_sprite_ext(realInfo[0], realInfo[1], x, y, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha);
 shader_reset();
 squashX = lerp(squashX, 1, 0.25);
 squashY = lerp(squashY, 1, 0.25);
-pattern_draw(sprReal, image_index, x, y, xscale * (_new ? squashX : 1) * yscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha, global.patternSpr, global.PlayerCharacters[character].patColors);
+pattern_draw(realInfo[0], realInfo[1], x, y, xscale * (_new ? squashX : 1) * yscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha, global.patternSpr, global.PlayerCharacters[character].patColors);
 
 if (flash)
 {
     shader_sset(shd_silo);
-    draw_sprite_ext(sprReal, image_index, x, y, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha);
+    draw_sprite_ext(realInfo[0], realInfo[1], x, y, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha);
     shader_reset();
 }
 
@@ -42,8 +42,8 @@ if instance_exists(obj_onlineHandler)
 		_c = make_color_hsv(_hash mod 256, 60 + (floor(_hash / 256) mod 63), 255)
 	}
 	
-	if sprite_exists(sprite_index)
-		ylerpname = lerp(ylerpname, sprite_get_bbox_top(sprite_index), 0.05)
+	if sprite_exists(realInfo[0])
+		ylerpname = lerp(ylerpname, sprite_get_bbox_top(realInfo[0]), 0.05)
 	
     draw_set_font(global.smallfont);
     draw_set_colour(_c);

@@ -1,4 +1,4 @@
-if global.modded_phototaunt
+if sprite_index == spr_taunteffect_old
 {
 	if !surface_exists(photoSurf)
 		photoSurf = surface_create(110, 110)

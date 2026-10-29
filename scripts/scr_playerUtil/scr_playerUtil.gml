@@ -374,7 +374,7 @@ function get_baconera(arg0, arg1, notexists_returnnone = false)
 {
 	if arg1 == 0 return arg0
 	var _arr1 = ["playerV","milton","pepperni","player0","player1","player2","player3", "playersoda", "preoutman"]
-	var _arr2 = ["V","T","P","B0","B1","B2","B3", "", "POM"]
+	var _arr2 = ["V","T","P","B0","B1","B2","B3", "SODA", "POM"]
 	var _key = string(arg0) + "|" + string(arg1)
 	if ds_map_exists(global.__baconera_cache, _key)
 		return global.__baconera_cache[? _key]
@@ -396,15 +396,19 @@ function playerUtil_realSpr()
 {
 	with obj_player
 	{
-		var sprReal = character == chars.soda ? spr_soda : sprite_index
+		var sprReal = character == chars.soda ? spr_playersoda_idle : sprite_index
+		var imgReal = character == chars.soda ? clamp(palIndex-1,0,sprite_get_number(spr_playersoda_idle)-1) : image_index
 		if character == chars.preoutman
 		{
 			if string_starts_with(sprite_get_name(sprite_index), "spr_preoutman_")
 				sprReal = sprite_index
 			else
+			{
 				sprReal = round(hsp) != 0 ? (abs(hsp) > 16 ? spr_preoutman_mach : spr_preoutman_move) : spr_preoutman_idle
+				imgReal = (current_time/1000)*24
+			}
 		}
-		return sprReal
+		return [sprReal, imgReal]
 	}
 }
 

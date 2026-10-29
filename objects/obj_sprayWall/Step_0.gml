@@ -2,6 +2,12 @@ if (place_meeting(x, y, obj_player) && is_transfo_all(obj_player.state))
 {
     if (!sprayed)
     {
+		with (obj_player)
+		{
+		    if character == chars.soda || (irandom(100) <= 25)
+				plrsnds_play(sfx.laugh,x,y);
+		}
+		
         FMODevent_oneshot("event:/Sfx/General/Shell City/spray", x, y);
         sprayed = true;
         alarm[0] = 4;

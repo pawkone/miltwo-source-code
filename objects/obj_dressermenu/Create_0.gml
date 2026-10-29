@@ -10,7 +10,7 @@ for (var i = 0; i < select_count; i++)
 {
 	spr_pal[i] = global.PlayerCharacters[i].sprites.player.palette
 	count_pal[i] = sprite_get_width(spr_pal[i])
-	select_pal[i] = min(obj_player.palIndex,count_pal[i]-1)
+	select_pal[i] = i == select ? min(obj_player.palIndex,count_pal[i]-1) : 1
 }
 
 selectadd = 0

@@ -1,5 +1,23 @@
-if (func != -4)
-    func();
+var _trans = is_transfo_all(obj_player.state)
+if _trans && audio_is_playing(mu_shellcityA)
+	scr_music(mu_shellcityB, true, true)
+else if !_trans && audio_is_playing(mu_shellcityB)
+	scr_music(mu_shellcityA, true, true)
+				
+var _pitch = 1
+if room == shell_5 || room == shell_6 || room == shell_7 || room == shell_10
+	_pitch = 0.97
+if room == shell_11 || room == shell_12 || room == shell_13
+	_pitch = 1.03
+			
+pitchLrp = lerp(pitchLrp, _pitch, 0.05)
+			
+if audio_exists(global.music)
+	audio_sound_pitch(global.music, pitchLrp)
+if audio_exists(global.music_old)
+	audio_sound_pitch(global.music_old, pitchLrp)
+
+
 
 if !(global.escapeActive && global.escapeLap == 2)
 	global.escapePartyOver = false
@@ -49,46 +67,63 @@ else
 			audio_stop_sound(mu_lap3)
 	    if (global.escapeLap == 2)
 	    {
-			if instance_exists(obj_player) && obj_player.character == chars.milton
+			var _arr = [
+				[chars.milton, mu_miltonlap2],
+				[chars.pepperni, mu_peppernilap2],
+				[chars.soda, mu_sodalap2],
+				
+				[chars.bacon_crash, mu_baconcrashlap2],
+				[chars.bacon_dream, mu_bacondreamlap2],
+				[chars.bacon_redem, mu_baconredemlap2],
+				[chars.bacon_twist, mu_bacontwistlap2],
+			]
+			if instance_exists(obj_player)
 			{
-				if (FMODevent_isplaying(escapeInst))
+				for (var i = 0; i < array_length(_arr); i++)
 				{
-					stop_music(false)
-					fmod_studio_event_instance_stop(escapeInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
+					if obj_player.character == _arr[i][0]
+					{
+						if FMODevent_isplaying(escapeInst)
+						{
+							stop_music(false)
+							fmod_studio_event_instance_stop(escapeInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT)
+						}
+				        if !audio_is_playing(_arr[i][1])
+							scr_music(_arr[i][1], false)
+					}
 				}
-		        if !audio_is_playing(mu_miltonlap2)
-					scr_music(mu_miltonlap2, true)
 			}
-			else if obj_player.character == chars.pepperni
-			{
-				if (FMODevent_isplaying(escapeInst))
-				{
-					stop_music(false)
-					fmod_studio_event_instance_stop(escapeInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
-				}
-			    if !audio_is_playing(mu_peppernilap2)
-					scr_music(mu_peppernilap2, true)
-			}
-			else
-			{
-		        fmod_studio_event_instance_set_parameter_by_name(escapeInst, "state", 2);
-		        fmod_studio_event_instance_set_callback(escapeInst, FMOD_STUDIO_EVENT_CALLBACK.TIMELINE_BEAT);
-			}
+		    fmod_studio_event_instance_set_parameter_by_name(escapeInst, "state", 2);
+		    fmod_studio_event_instance_set_callback(escapeInst, FMOD_STUDIO_EVENT_CALLBACK.TIMELINE_BEAT);
 	    }
 		else
 		{
-			if obj_player.character = chars.pepperni
+			var _arr = [
+				[chars.pepperni, mu_peppernilap1],
+				[chars.soda, mu_sodalap1],
+				
+				[chars.bacon_crash, mu_baconcrashlap1],
+				[chars.bacon_dream, mu_bacondreamlap1],
+				[chars.bacon_redem, mu_baconredemlap1],
+				[chars.bacon_twist, mu_bacontwistlap1],
+			]
+			if instance_exists(obj_player)
 			{
-				if (FMODevent_isplaying(escapeInst))
+				for (var i = 0; i < array_length(_arr); i++)
 				{
-					stop_music(false)
-					fmod_studio_event_instance_stop(escapeInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
+					if obj_player.character == _arr[i][0]
+					{
+						if FMODevent_isplaying(escapeInst)
+						{
+							stop_music(false)
+							fmod_studio_event_instance_stop(escapeInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT)
+						}
+				        if !audio_is_playing(_arr[i][1])
+							scr_music(_arr[i][1], false)
+					}
 				}
-				if !audio_is_playing(mu_pepperniescape)
-					scr_music(mu_pepperniescape, true)
 			}
-			else
-				fmod_studio_event_instance_set_parameter_by_name(escapeInst, "state", 0);
+			fmod_studio_event_instance_set_parameter_by_name(escapeInst, "state", 0);
 		}
 	}
 }
@@ -119,17 +154,18 @@ if (isSecret != isSecretStart)
     
     if (isSecret)
     {
-		audio_pause_sound(global.music)
-		audio_pause_sound(global.music_old)
-        var _timelineMusic = fmod_studio_event_instance_get_timeline_position(musicInst);
-        var _length = _timelineMusic / FMODget_eventLength(music.regular);
-        var _pos = _length * FMODget_eventLength(music.secret);
-        fmod_studio_event_instance_set_timeline_position(secretInst, _pos);
+		if audio_exists(global.music)
+			audio_pause_sound(global.music)
+		if audio_exists(global.music_old)
+			audio_pause_sound(global.music_old)
+        fmod_studio_event_instance_set_timeline_position(secretInst, (fmod_studio_event_instance_get_timeline_position(musicInst) / FMODget_eventLength(music.regular)) * FMODget_eventLength(music.secret));
     }
 	else
 	{
-		audio_resume_sound(global.music)
-		audio_resume_sound(global.music_old)	
+		if audio_exists(global.music)
+			audio_resume_sound(global.music)
+		if audio_exists(global.music_old)
+			audio_resume_sound(global.music_old)	
 	}
 }
 

@@ -12,7 +12,7 @@ if (global.escapeActive)
     
 	with (obj_player)
 	{
-	    if (irandom(100) <= 25)
+	    if character == chars.soda || (irandom(100) <= 25)
 			plrsnds_play(sfx.laugh,x,y);
 	}
 }

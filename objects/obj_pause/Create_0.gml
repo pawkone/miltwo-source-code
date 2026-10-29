@@ -145,7 +145,7 @@ var _restart =
                 
                 with (obj_music)
                 {
-                    stop_music();
+                    stop_music(true, true);
                     
                     if (FMODevent_isplaying(escapeInst))
                         fmod_studio_event_instance_stop(escapeInst, FMOD_STUDIO_STOP_MODE.IMMEDIATE);

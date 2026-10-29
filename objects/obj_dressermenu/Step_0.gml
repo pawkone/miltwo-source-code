@@ -1,5 +1,6 @@
 onlrpbe = approach(onlrp, !closee, 0.35)
-onlrp = lerp(onlrp, onlrpbe, 0.2)
+onlrp = lerp(onlrp, onlrpbe, 0.25)
+onlrp = approach(onlrp, onlrpbe, 0.005)
 
 if closee
 {

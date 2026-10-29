@@ -15,6 +15,20 @@ miltwocredits_credits =
 		spr_player_skate_jump, spr_preoutman_mach, spr_preoutman_breakdance
 	],
 	[
+		"Targetbuldoser",
+		"artist : composer : ideas",
+		mu_peppernilap1,
+		
+		spr_pepperni_idle, spr_milton_mach1, spr_milton_mach2, spr_milton_mach3turn,
+		spr_milton_wallslide, spr_player0_groundpoundstart, spr_player0_groundpound,
+		spr_player0_groundpoundbump, spr_player0_groundpoundland, spr_playersoda_idle,
+		spr_tv_soda, spr_dressermenu_palgridSODA,  spr_dressermenu_palgrid,
+		spr_dressermenu_palgridPOM, spr_dressermenu_palgridB0, spr_dressermenu_palgridB1,
+		spr_dressermenu_palgridB2, spr_dressermenu_palgridB3, spr_dressermenu_palgridT,
+		spr_dressermenu_palgridP, spr_dressermenu_palgridV, spr_titlecardFrontyard,
+		spr_titlecardFrontyardTitle1
+	],
+	[
 		"Polyg0n5",
 		"volunteered artist : artist for og miltu",
 		spr_butterAir, spr_butterGround, spr_pepperni_mach1, spr_pepperni_mach3,
@@ -24,7 +38,7 @@ miltwocredits_credits =
 		spr_tv_idleP, spr_tv_machP, spr_tv_crazyrunP, spr_tv_happyT,
 		spr_tv_escapeP, spr_pepperni_mach3turn, spr_player1_pary, spr_player1_crouch,
 		spr_player1_crouchfall, spr_player1_crouchhop, spr_player1_crouchmove,
-		spr_pleasestandbyT
+		spr_pleasestandbyT, spr_player_coconut_intro, spr_player_coconut_idle
 	],
 	[
 		"Enno334_123",
@@ -51,14 +65,6 @@ miltwocredits_credits =
 		"CoolGuy_The_Guy",
 		"volunteered composer",
 		mu_peppernilap2
-	],
-	[
-		"Targetbuldoser (Ex Miltu Member)",
-		"artist : composer : ideas",
-		spr_pepperni_idle, spr_milton_mach1, spr_milton_mach2, spr_milton_mach3turn,
-		spr_milton_wallslide, spr_player0_groundpoundstart, spr_player0_groundpound,
-		spr_player0_groundpoundbump, spr_soda, spr_tv_soda, spr_titlecardFrontyard,
-		spr_titlecardFrontyardTitle1
 	],
 	[
 		"MrAlt- (Ex Miltu Member)",

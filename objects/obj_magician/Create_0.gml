@@ -1,13 +1,4 @@
 event_inherited();
-with obj_hud tv_anim(sprites.happy, 180);
-global.combo.timer = 60;
-
-with (obj_player)
-{
-	if (irandom(100) <= 25)
-		plrsnds_play(sfx.laugh,x,y);
-}
-
 spr_idle = spr_magician_idle;
 spr_walk = spr_magician_move;
 spr_panicidle = spr_magician_idle;

@@ -212,9 +212,9 @@ with (tv)
 	if obj_player.character == chars.preoutman
 	{
 		pal_swap_set(obj_player.spr_palette, obj_player.palIndex, false);
-		draw_sprite(_sprites.idle, -1, x, y - offset + _offset2);
+		draw_sprite(_sprites.idle, current_time, x, y - offset + _offset2);
 		shader_reset();
-		pattern_draw(_sprites.idle, -1, x, y - offset + _offset2, 1, 1, 0, 16777215, 1, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors);
+		pattern_draw(_sprites.idle, current_time, x, y - offset + _offset2, 1, 1, 0, 16777215, 1, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors);
     
 	}
 	else
@@ -235,7 +235,7 @@ with (tv)
 	        draw_sprite(_sprites.empty, 0, x, y - offset + _offset2);
 	        if obj_player.character == chars.milton shader_reset();
 			if obj_player.character == chars.soda
-				draw_sprite(spr_tv_soda, 0, x, y - offset + _offset2);
+				draw_sprite(spr_tv_soda, clamp(obj_player.palIndex-1,0,sprite_get_number(spr_playersoda_idle)-1), x, y - offset + _offset2);
 	    }
     
 	    if (sprite_index == _sprites.turnon)

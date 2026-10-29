@@ -26,7 +26,7 @@ function scr_player_machturn()
         squashY = 0.8;
         
         if (!grounded)
-            FMODevent_oneshot("event:/Sfx/Player/gasp", x, y);
+            plrsnds_play(sfx.gasp, x, y);
     }
     
     if (animation_end() && sprite_index == sprites.mach3turn)

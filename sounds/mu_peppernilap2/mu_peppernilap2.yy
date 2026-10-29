@@ -8,9 +8,9 @@
   "bitDepth":1,
   "channelFormat":1,
   "compression":1,
-  "compressionQuality":3,
+  "compressionQuality":1,
   "conversionMode":0,
-  "duration":131.1533,
+  "duration":0.0,
   "exportDir":"audioStreamed",
   "name":"mu_peppernilap2",
   "parent":{

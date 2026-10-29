@@ -16,6 +16,11 @@ switch (global.level)
         tv.backindex = #A56B7A
         break;
 	
+    case "beach":
+        global.Srank = 0
+        tv.backindex = #E3AF88
+        break;
+	
 	case "rockbottom":	
 		global.escapeMaxTimer = 12600
 		global.Srank = 17000

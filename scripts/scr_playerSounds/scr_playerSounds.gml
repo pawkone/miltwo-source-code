@@ -4,17 +4,13 @@ global.plrsnds_gmsndact = ds_map_create()
 function plrsnds_play(event, xx, yy)
 {
 	if is_string(event)
-	{
 		FMODevent_oneshot(event, xx, yy)
-		FMODevent_oneshot_online(event, xx, yy)
-	}
 	else
 	{
 		if is_array(event)
 			event = event[irandom(array_length(event)-1)]
-		var _pitch = random_range(0.92,1.08)
+		var _pitch = random_range(0.9,1.1)
 		var _sfx = scr_soundeffect(event, _pitch, false)
-		scr_soundeffect_online(event, _pitch, false)
 		audio_sound_gain(_sfx, global.SfxVolume * audio_sound_get_gain(event), 0)
 	}
 }

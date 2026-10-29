@@ -21,11 +21,12 @@ if playerupdate >= 2
 			else
 				ds_map_set(plrsconnected, sockets[i], [_value[0]-1, _value[1]])
 		}
+		var realInfo = playerUtil_realSpr()
 		oldplayer = {
 		    x: obj_player.x,
 		    y: obj_player.y,
-		    sprite_index: playerUtil_realSpr(),
-		    image_index: obj_player.image_index,
+		    sprite_index: realInfo[0],
+		    image_index: realInfo[1],
 		    xscale: obj_player.xscale,
 		    image_alpha: obj_player.image_alpha,
 		    image_blend: obj_player.image_blend,

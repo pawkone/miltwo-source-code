@@ -1,4 +1,4 @@
-isMildred = character == chars.mildred || character == chars.valentia
+isMildred = character == chars.mildred || character == chars.valentia || character == chars.soda
 
 if (pky_jump2)
     jumpBuffer = 15;

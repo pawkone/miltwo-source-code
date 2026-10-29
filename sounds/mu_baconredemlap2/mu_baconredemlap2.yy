@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_baconredemlap2",
+  "audioGroupId":{
+    "name":"audioGroupMusic",
+    "path":"audiogroups/audioGroupMusic",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":1,
+  "conversionMode":0,
+  "duration":192.05225,
+  "exportDir":"audioStreamed",
+  "name":"mu_baconredemlap2",
+  "parent":{
+    "name":"Eras",
+    "path":"folders/Sounds/Music/Escape/Characters/Eras.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_baconredemlap2.mp3",
+  "volume":1.0,
+}

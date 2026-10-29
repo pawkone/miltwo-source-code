@@ -2,6 +2,17 @@ if potableIndex > -1 && potableIndex < 5
 	global.toppins[potableIndex] = true
 instance_destroy()
 
+global.collect += 1000;
+global.combo.timer = 60;
+create_smalltext(1000);
+FMODevent_oneshot("event:/Sfx/General/Collects/toppinget", x, y);
+with obj_hud tv_anim(sprites.happy, 180);
+with (obj_player)
+{
+    if character == chars.soda || (irandom(100) <= 25)
+		plrsnds_play(sfx.laugh,x,y);
+}
+
 var _t = global.toppins[0]+global.toppins[1]+global.toppins[2]+global.toppins[3]+global.toppins[4]
 if _t >= 5
 	scr_transfotip(lang_get_phrase("tip_pickup_potablesall"))
@@ -12,9 +23,3 @@ repeat (4)
     create_particleDebri(spr_juiceboxcage_debri, irandom_range(0, sprite_get_number(spr_juiceboxcage_debri)), x, y, 1);
 
 ds_list_add(global.saveroom, id);
-
-with (obj_player)
-{
-	if (irandom(100) <= 25)
-		plrsnds_play(sfx.laugh,x,y);
-}

@@ -14,7 +14,7 @@ function scr_music(_sfx, fadein = false, _savepos = false)
 {
 	if premode return -4
 	global.music_fade = 1
-	var _pos = _savepos ? audio_sound_get_track_position(global.music) : 0
+	var _pos = 0
 	if fadein
 	{
 		global.music_fade = 0
@@ -25,10 +25,14 @@ function scr_music(_sfx, fadein = false, _savepos = false)
 		else
 			global.music_old = -4
 		global.music_multold = global.music_mult
+		_pos = _savepos ? audio_sound_get_track_position(global.music) : 0
 		global.music = -4
 	}
 	else if audio_is_playing(global.music)
+	{
+		_pos = _savepos ? audio_sound_get_track_position(global.music) : 0
 		audio_stop_sound(global.music)
+	}
 	if audio_exists(_sfx)
 	{
 		global.music_mult = audio_sound_get_gain(_sfx)

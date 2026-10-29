@@ -8,7 +8,7 @@
   "bitDepth":1,
   "channelFormat":1,
   "compression":1,
-  "compressionQuality":3,
+  "compressionQuality":1,
   "conversionMode":0,
   "duration":191.47597,
   "exportDir":"audioStreamed",

@@ -38,5 +38,5 @@
     "path":"sprites/spr_taunteffect/spr_taunteffect.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

@@ -1,7 +1,11 @@
 if character == chars.pepperni && vsp < 0
 	grav = 1
 else
+{
 	grav = 0.5
+	if character == chars.bacon_dream && vsp >= 20
+		vsp += grav
+}
 
 var yaya = ((
 	place_meeting(x,y,obj_dresser) ||
@@ -55,7 +59,7 @@ else if character == chars.bacon_crash
 else
 	angle = 0
 
-instakill = state == states.water || sprite_index == spr_milton_dive || state == states.slip || state == states.mach3 || state == states.skateboard || state == states.skateboardwall || state == states.skateboardramp || state == states.skateboardmove || state == states.hammerattack || (state == states.machturn && sprite_index == sprites.mach3turn) || state == states.superjump || state == states.uppercut || state == states.groundpound || state == states.groundpoundstart || state == states.buzzsaw || state == states.snowball || state == states.snowball_jump || state == states.snowball_wall;
+instakill = state == states.dreamcrusher || state == states.water || sprite_index == spr_milton_dive || state == states.slip || state == states.mach3 || state == states.skateboard || state == states.skateboardwall || state == states.skateboardramp || state == states.skateboardmove || state == states.hammerattack || (state == states.machturn && sprite_index == sprites.mach3turn) || state == states.superjump || state == states.uppercut || state == states.groundpound || state == states.groundpoundstart || state == states.buzzsaw || state == states.snowball || state == states.snowball_jump || state == states.snowball_wall;
 
 if (hitstun.is == false)
 {
@@ -118,7 +122,30 @@ if (hitstun.is == false)
             }
         }
     }
-    
+	
+    if character == chars.soda
+		sfx.laugh = asset_get_index($"sfx_playersoda{playerUtil_realSpr()[1]}")
+	if character == chars.bacon_dream
+	{
+	    switch (state)
+	    {
+	        case states.normal:
+	        case states.jump:
+	        case states.mach2:
+	        case states.mach3:
+	        case states.dreambounce:
+	            if (pky_up && pky_jump2 && !grounded)
+	            {
+	                state = states.dreamcrusher;
+	                vsp = -17;
+					plrsnds_play(sfx.jump, x, y);
+					FMODevent_oneshot("event:/Sfx/Player/slip", x, y);
+	                sprite_index = spr_player1_umbrellaStart;
+	                image_index = 0;
+	            }
+	    }
+	}
+	
     if (grounded)
 	{
 		freefalling = 0

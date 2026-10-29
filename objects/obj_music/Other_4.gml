@@ -1,54 +1,34 @@
 isSecretStart = string_pos("secret", string_letters(room_get_name(room))) > 0 || room == hotel_soundtest || room = hotel_soundtestentrance;
 
+var _arr = [
+	[mu_hubhalloween, room == hotel_halloween_start || room == hotel_halloween_0 || room == hotel_halloween_1],
+
+	[mu_hubextra, room == hotel_extra],
+	
+	[mu_rockbottom, room == rockbottom_1],
+	
+	[mu_crashoutcity, room == crashout_1],
+	
+	[mu_frontyard, room == frontyard_1],
+	
+	[mu_beaker, room == beaker_intro],
+	
+	[mu_shellcityA, room == shell_1],
+]
+
 if !global.escapeActive
 {
-	if !audio_is_playing(mu_hubextra) && room == hotel_extra
+	for (var i = 0; i < array_length(_arr); i++)
 	{
-		stop_music(false)
-		scr_music(mu_hubextra, true)
-	}
-	if !audio_is_playing(mu_rockbottom) && room == rockbottom_1
-	{
-		stop_music(false)
-		scr_music(mu_rockbottom, false)
-	}
-	if !audio_is_playing(mu_crashoutcity) && room == crashout_1
-	{
-		stop_music(false)
-		scr_music(mu_crashoutcity, false)
-	}
-	if !audio_is_playing(mu_frontyard) && room == frontyard_1
-	{
-		stop_music(false)
-		scr_music(mu_frontyard, false)
-	}
-	if !audio_is_playing(mu_beaker) && room == beaker_intro
-	{
-		stop_music(false)
-		scr_music(mu_beaker, false)
-	}
-	if !audio_is_playing(mu_shellcityA) && room == shell_1
-	{
-		stop_music(false)
-		scr_music(mu_shellcityA, false)
-		func = function()
+		var _q = _arr[i]
+		if _q[1]
 		{
-			var _skate = is_transfo_all(obj_player.state)
-			if _skate && audio_is_playing(mu_shellcityA)
-				scr_music(mu_shellcityB, true, true)
-			else if !_skate && audio_is_playing(mu_shellcityB)
-				scr_music(mu_shellcityA, true, true)
-				
-			var _pitch = 1
-			if room == shell_5 || room == shell_6 || room == shell_7 || room == shell_10
-				_pitch = 0.97
-			if room == shell_11 || room == shell_12 || room == shell_13
-				_pitch = 1.03
-			
-			pitchLrp = lerp(pitchLrp, _pitch, 0.05)
-			
-			audio_sound_pitch(global.music, pitchLrp)
-			audio_sound_pitch(global.music_old, pitchLrp)
+			if !audio_is_playing(_q[0])
+			{
+				stop_music(false)
+				scr_music(_q[0], true)
+			}
+			break
 		}
 	}
 }

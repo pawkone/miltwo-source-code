@@ -4,19 +4,19 @@ if (other.grounded && pky_up && other.state != -4 && other.state != states.enter
     {
 		with obj_onlineHandler
 		{
-			var _rankString = "d";
+			var _rankString = "D";
 			if (global.collect >= global.Crank)
-				_rankString = "c";
+				_rankString = "C";
 			if (global.collect >= global.Brank)
-				_rankString = "b";
+				_rankString = "B";
 			if (global.collect >= global.Arank)
-				_rankString = "a";
+				_rankString = "A";
 			if (global.collect >= global.Srank)
-				_rankString = "s";
+				_rankString = "S";
 			if (scr_Prank())
-				_rankString = "p";
+				_rankString = "P";
 			lastestMessageNum = wrap(lastestMessageNum+1, 123, 233)
-			lastestMessage = " beat " + string_lower(levelgetname(global.level)) + " : " + _rankString + " Rank : " + (global.escapeLap > 0 ? string("Lap {0}", global.escapeLap) : "No Laps") + ")"
+			lastestMessage = " beat " + string_lower(levelgetname(global.level)) + " (" + _rankString + " Rank - " + (global.escapeLap > 0 ? string("Lap {0}", global.escapeLap) : "No Laps") + ")"
 		}
 		
 		door = "NONE"

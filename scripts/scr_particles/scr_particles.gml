@@ -63,7 +63,11 @@ function create_afterimage(_sprite, _imageindex, _x, _y, _xscale, alpha = 1)
     };
 	
 	if object_index == obj_player && aft.sprite_index == sprite_index
-		aft.sprite_index = playerUtil_realSpr()
+	{
+		var realInfo = playerUtil_realSpr()
+		aft.sprite_index = realInfo[0]
+		aft.image_index = realInfo[1]
+	}
     ds_list_add(obj_afterimageSystem.afterimages, aft);
     return aft;
 }

@@ -13,7 +13,6 @@ isSecret = false;
 lock = false;
 panicStart = false;
 playingSecret = false;
-func = -4;
 monolith = FMODcreate_event("event:/Music/General/monolith");
 escapeInst = FMODcreate_event("event:/Music/General/escape");
 pillar = 0;
@@ -23,7 +22,7 @@ musicPos = 0;
 currentMusic = "";
 pauseMusic = false;
 
-stop_music = function(externaltoo = true)
+stop_music = function(externaltoo = true, _instant = false)
 {
 	with obj_music
 	{
@@ -38,7 +37,7 @@ stop_music = function(externaltoo = true)
 	        fmod_studio_event_instance_release(secretInst);
 	    }
 		if externaltoo
-			scr_music(-4, true)
+			scr_music(-4, !_instant)
 	
 	    musicInst = -4;
 	    secretInst = -4;
