@@ -34,6 +34,8 @@ if global.prophuntmode.waitphase
 	{
 		with obj_player
 		{
+			with obj_beakerintro
+				start = 0
 			state = -4
 			if sprite_index != sprites.gateslam
 			{
