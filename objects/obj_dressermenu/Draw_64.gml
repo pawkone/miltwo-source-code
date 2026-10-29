@@ -1,5 +1,5 @@
 draw_set_alpha(onlrp*0.5)
-draw_rectangle_colour(0, lerp(270,0,onlrp),960,lerp(270,540,onlrp),c_white,c_white,c_white,c_white,false)
+draw_rectangle_colour(0, lerp(270,0,onlrp),960,lerp(270,540,onlrp),0,0,0,0,false)
 draw_set_alpha(1)
 
 var _sl1 = selectthinglrp >= 0.5 ? oldoldSelect : select, _sl2 = abs(selectthinglrp-0.5)*2

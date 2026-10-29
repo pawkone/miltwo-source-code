@@ -1,8 +1,6 @@
 isSecretStart = string_pos("secret", string_letters(room_get_name(room))) > 0 || room == hotel_soundtest || room = hotel_soundtestentrance;
 
 var _arr = [
-	[mu_hubhalloween, room == hotel_halloween_start || room == hotel_halloween_0 || room == hotel_halloween_1],
-
 	[mu_hubextra, room == hotel_extra],
 	
 	[mu_rockbottom, room == rockbottom_1],

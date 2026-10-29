@@ -3,7 +3,7 @@ scr_collision();
 movespeed = approach(movespeed, 0, 0.25)
 
 hsp = movespeed * xscale;
-var _objKillshit = [obj_baddie, obj_stupidcabbit, obj_destructibles];
+var _objKillshit = [obj_metalblock, obj_baddie, obj_stupidcabbit, obj_destructibles];
 
 for (var i = 0; i < array_length(_objKillshit); i++)
 {

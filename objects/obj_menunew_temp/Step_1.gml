@@ -1,6 +1,6 @@
 if pky_jump2
 {
-	var _rm = hotel_halloween_start;
+	var _rm = hotel_start;
 	var _dr = "A";
 	with (obj_player)
 	{

@@ -422,9 +422,7 @@ function playerUtil_spr(_e)
 	
 	st.player.patcolours = get_baconera(spr_playerPatCol, _e)
 	st.player.palettepreview = get_baconera(spr_dressermenu_palgrid, _e)
-	st.player.palette = get_baconera(spr_playerPalHalloween, _e, 1) //HALLOWEEN SPPOKY PALETTES
-	if !sprite_exists(st.player.palette)
-		st.player.palette = get_baconera(spr_playerPal, _e) //if no halloween, please die and try again
+	st.player.palette = get_baconera(spr_playerPal, _e)
 	st.player.pattern = get_baconera(spr_playerPat, _e)
 	st.player.clothes = get_baconera(spr_playerClothes, _e)
 	

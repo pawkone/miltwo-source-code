@@ -259,8 +259,8 @@
   ],
   "name":"hotel_halloween_start",
   "parent":{
-    "name":"Hub (Hotel)",
-    "path":"folders/Rooms/Levels/Hub (Hotel).yy",
+    "name":"halloween",
+    "path":"folders/Rooms/Levels/Hub (Hotel)/halloween.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
