@@ -80,12 +80,13 @@ else
 			{
 				if distance_to_object(obj_player) < 25 && hunter && room == currentRoom
 				{
+					var _name = name
 					obj_player.image_alpha = 1
 					global.prophuntmode.select = -4
 					with obj_onlineHandler
 					{
 						lastestMessageNum = wrap(lastestMessageNum+1, 123, 233)
-						lastestMessage = lang_get_phrase("online_prophunt_caught") + name
+						lastestMessage = lang_get_phrase("online_prophunt_caught") + _name
 					}
 					break
 				}

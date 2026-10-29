@@ -369,7 +369,7 @@ function _execute_script(arg0, arg1 = false)
 			with obj_onlineHandler
 			{
 				lastestMessageNum = wrap(lastestMessageNum+1, 0, 122)
-				lastestMessage = "HEY GUYS! I TRIED TO USE '" + consoleString + "' IM A CHEATY CHEATER"
+				lastestMessage = "HEY GUYS! I TRIED TO USE '" + other.consoleString + "', IM A CHEATY CHEATER"
 			}
 	        array_push(history, consoleString);
 	        self._update_positions();
