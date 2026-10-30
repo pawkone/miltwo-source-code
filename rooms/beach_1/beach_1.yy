@@ -239,7 +239,7 @@
         {"$GMRInstance":"v4","%Name":"inst_6D5FA120","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6D5FA120","objectId":{"name":"obj_collect_escape","path":"objects/obj_collect_escape/obj_collect_escape.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1536.0,"y":672.0,},
         {"$GMRInstance":"v4","%Name":"inst_1F7DDFBF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1F7DDFBF","objectId":{"name":"obj_collect_escape","path":"objects/obj_collect_escape/obj_collect_escape.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1568.0,"y":704.0,},
         {"$GMRInstance":"v4","%Name":"inst_FA29903","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_FA29903","objectId":{"name":"obj_collect_escape","path":"objects/obj_collect_escape/obj_collect_escape.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1568.0,"y":672.0,},
-      ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":true,},
+      ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":false,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":35,"SerialiseWidth":124,"TileCompressedData":[
           11,311,312,313,314,315,316,317,318,193,194,195,-12,-2147483648,112,93,94,95,311,312,313,314,315,316,
           317,318,319,320,311,312,313,314,315,316,317,318,319,320,311,312,313,314,315,316,317,318,319,320,311,
@@ -397,7 +397,7 @@
           6,248,249,250,255,256,0,-118,-2147483648,6,279,280,281,286,287,0,-958,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"ts_fruitcup","path":"tilesets/ts_fruitcup/ts_fruitcup.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Tiles_BG2","depth":400,"effectEnabled":true,"effectType":"_filter_contrast","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_BG2","properties":[
-        {"name":"g_ContrastIntensity","type":0,"value":"0.45",},
+        {"name":"g_ContrastIntensity","type":0,"value":"0.6",},
         {"name":"g_ContrastBrightness","type":0,"value":"0.8",},
       ],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":35,"SerialiseWidth":124,"TileCompressedData":[
           -111,0,20,404,405,406,407,408,409,410,411,412,413,404,405,406,314,315,316,317,318,319,320,-101,0,25,
