@@ -32,7 +32,7 @@ function scr_player_buzzsaw()
     if (vsp >= -5)
         vsp += 0.15;
     
-    if (place_meeting(x + sign(hsp), y, obj_solid) && !grounded && !place_meeting(x + sign(hsp), y, obj_metalblock) && !place_meeting(x + sign(hsp), y, obj_secretmetalblock) && !place_meeting(x + hsp, y, obj_destructibles))
+    if (place_meeting(x + sign(hsp), y, obj_solid) && !grounded && !place_meeting(x + sign(hsp), y, obj_metalblock) && !place_meeting(x + hsp, y, obj_destructibles))
     {
         if (vsp < 10)
             vsp = 10;

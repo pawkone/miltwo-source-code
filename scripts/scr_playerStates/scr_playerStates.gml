@@ -62,6 +62,7 @@ states =
 	dreamcrusher: 58,
 	retwistedBuzzsaw: 59,
 	water: 60,
+	fries4wall: 61,
 }
 
 

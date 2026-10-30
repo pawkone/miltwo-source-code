@@ -39,7 +39,10 @@ enum chars
 	bacon_redem,
 	bacon_twist,
 	soda,
-	preoutman
+	preoutman,
+	skatenic,
+	juan,
+	fries4,
 }
 
 global.PlayerCharacters = [];
@@ -54,6 +57,9 @@ _ac(chars.bacon_redem, "ReBacon")
 _ac(chars.bacon_twist, "BaconTu")
 _ac(chars.soda, "Soda")
 _ac(chars.preoutman, "Preoutman")
+_ac(chars.skatenic, "Skatenic")
+_ac(chars.juan, "Juan Danger")
+_ac(chars.fries4, "Fries4")
 
 for (var i = 0; i < array_length(global.PlayerCharacters); i++)
 {

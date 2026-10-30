@@ -373,8 +373,8 @@ global.__baconera_cache = ds_map_create()
 function get_baconera(arg0, arg1, notexists_returnnone = false)
 {
 	if arg1 == 0 return arg0
-	var _arr1 = ["playerV","milton","pepperni","player0","player1","player2","player3", "playersoda", "preoutman"]
-	var _arr2 = ["V","T","P","B0","B1","B2","B3", "SODA", "POM"]
+	var _arr1 = ["playerV","milton","pepperni","player0","player1","player2","player3", "playersoda", "preoutman","playerS","playerJ","playerF4"]
+	var _arr2 = ["V","T","P","B0","B1","B2","B3", "SODA", "POM","S","J","F4"]
 	var _key = string(arg0) + "|" + string(arg1)
 	if ds_map_exists(global.__baconera_cache, _key)
 		return global.__baconera_cache[? _key]
@@ -407,6 +407,11 @@ function playerUtil_realSpr()
 				sprReal = round(hsp) != 0 ? (abs(hsp) > 16 ? spr_preoutman_mach : spr_preoutman_move) : spr_preoutman_idle
 				imgReal = (current_time/1000)*24
 			}
+		}
+		if character == chars.fries4
+		{
+			sprReal = spr_playerF4_idle
+			imgReal = 0
 		}
 		return [sprReal, imgReal]
 	}

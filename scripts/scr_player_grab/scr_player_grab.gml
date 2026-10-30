@@ -105,6 +105,25 @@ function scr_player_grab()
         create_particleStatic(spr_grabcloud, x, y, xscale, 1);
     }
     
+	if (!grounded && scr_solid(x+hsp,y+vsp)) || (grounded && scr_solid(x+hsp,y)) && character == chars.fries4
+	{
+		var _targetdir = ""
+		if -pky_left _targetdir = point_direction(0,0,-1,0)
+		if pky_right _targetdir = point_direction(0,0,1,0)
+		if pky_up _targetdir = point_direction(0,0,0,-1)
+		if pky_down _targetdir = point_direction(0,0,0,1)
+		if -pky_left&&pky_up _targetdir = point_direction(0,0,-1,-1)
+		if pky_right&&pky_up _targetdir = point_direction(0,0,1,-1)
+		if -pky_left&&pky_down _targetdir = point_direction(0,0,-1,1)
+		if pky_right&&pky_down _targetdir = point_direction(0,0,1,1)
+		if _targetdir != ""
+			direction = _targetdir
+		else
+			direction = xscale == -1 ? 180 : 0
+		state = states.fries4wall
+		exit
+	}
+	
     if (place_meeting(x + sign(hsp), y, obj_solid) && !grounded)
     {
         wallgrab = 10;

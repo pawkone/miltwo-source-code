@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_playerT",
   "parent":{
-    "name":"States (Milton)",
-    "path":"folders/Scripts/Player Related/States (Milton).yy",
+    "name":"Player Related",
+    "path":"folders/Scripts/Player Related.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
