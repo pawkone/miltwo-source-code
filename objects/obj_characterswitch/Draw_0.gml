@@ -1,1 +1,0 @@
-draw_sprite(spr_lever, leftright, 704, 384)

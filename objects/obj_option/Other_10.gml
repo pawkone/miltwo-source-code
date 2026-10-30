@@ -11,7 +11,7 @@ miltwocredits_credits =
 		spr_milton_rollstart, spr_baconsmacon_deadlintro, spr_baconsmacon_deadloop,
 		spr_bacadmadLocate, spr_minilogo, spr_menunew, spr_menunew_tvhint,
 		spr_gate_shell, spr_floorgate, spr_floorgate_over, spr_uparrow,
-		spr_titlecardShell, spr_titlecardShellTitle1, tilespr_fruitcup,
+		spr_titlecardShell, spr_titlecardShellTitle1,
 		spr_player_skate_jump, spr_preoutman_mach, spr_preoutman_breakdance
 	],
 	[
@@ -41,6 +41,12 @@ miltwocredits_credits =
 		spr_pleasestandbyT, spr_player_coconut_intro, spr_player_coconut_idle
 	],
 	[
+		"MrAlt-",
+		"former co director : coder : level designer",
+		spr_bacadmad_face, tilespr_frontyard, tilespr_outbreak,
+		tilespr_hotel2, tilespr_fruitcup
+	],
+	[
 		"Enno334_123",
 		"volunteered artist",
 		spr_milton_downbox, spr_tv_comboT, spr_milton_superjumpprepstart,
@@ -65,12 +71,6 @@ miltwocredits_credits =
 		"CoolGuy_The_Guy",
 		"volunteered composer",
 		mu_peppernilap2
-	],
-	[
-		"MrAlt- (Ex Miltu Member)",
-		"former co director : coder : level designer",
-		spr_bacadmad_face,
-		tilespr_frontyard, tilespr_outbreak, tilespr_hotel2
 	],
 	[
 		"Toasty64 (Ex Miltu Member)",

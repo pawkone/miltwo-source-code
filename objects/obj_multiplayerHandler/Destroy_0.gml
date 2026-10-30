@@ -1,1 +1,0 @@
-if socket != -4 network_destroy(socket)

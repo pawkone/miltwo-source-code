@@ -24,7 +24,7 @@
   ],
   "name":"spr_milton_superjumpprep",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Milton",
     "path":"folders/Sprites/Gameplay/Characters/Newer/Milton.yy",
@@ -80,7 +80,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":60,
-    "yorigin":60,
+    "yorigin":64,
   },
   "swatchColours":null,
   "swfPrecision":2.525,

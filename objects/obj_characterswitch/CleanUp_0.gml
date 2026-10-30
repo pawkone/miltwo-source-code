@@ -1,1 +1,0 @@
-obj_camera.state = states.normal

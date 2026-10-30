@@ -111,28 +111,6 @@ if (!ds_list_empty(afterimages))
                     
                     break;
             }
-			if onlineDelay-- == 0
-			{
-				if instance_exists(obj_multiplayerHandler)
-				{
-					var _size = 32, _data = []
-					array_push(_data, buffer_u8, multiplayerType.createAfterimage)
-					array_push(_data, buffer_u16, room)
-					array_push(_data, buffer_u8, obj_multiplayerHandler.plrId)
-					array_push(_data, buffer_u8, image_alpha*255)
-					array_push(_data, buffer_u8, fadeoutAlpha*255)
-					array_push(_data, buffer_u8, alpha*255)
-					array_push(_data, buffer_u8, type)
-					array_push(_data, buffer_u32, image_blend)
-					with obj_multiplayerHandler
-					{
-						if isHost
-							sendDataHost(_data, _size)
-						else
-							sendDataClient(_data, _size)
-					}
-				}
-			}
         }
     }
 }

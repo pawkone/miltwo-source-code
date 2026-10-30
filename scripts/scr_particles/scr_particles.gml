@@ -52,7 +52,6 @@ function create_afterimage(_sprite, _imageindex, _x, _y, _xscale, alpha = 1)
         y: _y,
         image_xscale: _xscale,
         image_blend: choose(12603647, 8191824),
-		onlineDelay: instance_exists(obj_multiplayerHandler) ? 1 : -1,
         alarm: [15],
         type: afterimagetype.normal,
         alpha: alpha,
