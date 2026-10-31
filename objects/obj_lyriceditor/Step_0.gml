@@ -1,7 +1,30 @@
 if keyboard_check_pressed(vk_f5)
 {
-	clipboard_set_text(string_concat("captions.str = ", captions.str, "\ncaptions.timing = ", captions.timing))
-	show_message("copied lyrics to clipboard")
+	var _fn = game_save_id + $"lyricssaves/{real(date_current_datetime())}.json"
+	var _json = json_stringify({"text": captions.str, "time": captions.timing}, true)
+	var _file = file_text_open_write(_fn)
+	file_text_write_string(_file, _json)
+	file_text_close(_file)
+	show_message($"saved lyrics at\n{_fn}")
+}
+if keyboard_check_pressed(vk_f6)
+{
+	var _file = get_string("enter lyric file name", "")
+	var _path = "gameData/languageLookup/" + global.language + "/songs/" + _file + ".json"
+	try
+	{
+		var _str = loadString(_path)
+		if _str == ""
+			throw {message: "File is empty/doesn't exist"}
+		_str = json_parse(_str)
+		captions.str = _str.text
+		captions.timing = _str.time
+		show_message($"loaded successfully!")
+	}
+	catch(e)
+	{
+		show_message($"error loading - " + e.message)
+	}
 }
 if keyboard_check_pressed(vk_enter)
 	pause = !pause
