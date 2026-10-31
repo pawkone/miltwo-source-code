@@ -154,6 +154,27 @@ function scr_player_dreamcrusher()
         if animation_end()
             image_index = 8
     }
+	
+	if character == chars.skatenic
+	{
+		if slapBuffer > 0
+		{
+		    slapBuffer = false
+		    state = states.mach2
+			movespeed = 13
+			scale = 1.7
+			image_speed = 0.5
+		    image_index = 0
+		    sprite_index = spr_skatenic_wallclimbcancel
+			vsp = -7
+			jumpstop = true
+			flash = true
+			if sign(move) != 0
+				xscale = sign(move)
+			else if sign(hsp) != 0
+				xscale = sign(hsp)
+		}
+	}
  
     buffers.afterimageBlur = approach(buffers.afterimageBlur, 0, 1);
     
@@ -165,13 +186,25 @@ function scr_player_dreamcrusher()
     
     if (grounded && vsp > 0 && !place_meeting(x, y + 1, obj_destructibles) && !place_meeting(x, y + 1, obj_metalblock))
     {
-        sprite_index = sprites.groundpoundland
-        image_index = 0
-        vsp = 0
-        hsp = 0
-        state = states.freefallland
-        movespeed = abs(movespeed)
-		shake_camera(10,15)
-        plrsnds_play(sfx.slam, x, y)
+		if (scr_slope(x, y + 1) && sprite_index != spr_player_piledriver)
+        {
+            var slope = instance_place(x, y + 1, obj_slope);
+            xscale = -sign(slope.image_xscale);
+            movespeed = (freefallsmash >= 10) ? 12 : 8;
+            state = states.tumble;
+            sprite_index = sprites.rolling;
+            create_particleStatic(spr_superdashcloud, x, y, xscale, 1);
+        }
+		else
+		{
+	        sprite_index = sprites.groundpoundland
+	        image_index = 0
+	        vsp = 0
+	        hsp = 0
+	        state = states.freefallland
+	        movespeed = abs(movespeed)
+			shake_camera(10,15)
+	        plrsnds_play(sfx.slam, x, y)
+		}
     }
 }

@@ -28,7 +28,7 @@ function scr_player_uppercut()
     if (animation_end())
         image_index = image_number - 1;
     
-	if scr_solid(x+hsp,y+vsp) && character == chars.fries4
+	if character == chars.fries4 && scr_solid(x+hsp,y+vsp)
 	{
 		var _targetdir = ""
 		if -pky_left _targetdir = point_direction(0,0,-1,0)

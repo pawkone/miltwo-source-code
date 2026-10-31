@@ -59,7 +59,7 @@ else if character == chars.bacon_crash
 else
 	angle = 0
 
-instakill = state == states.dreamcrusher || state == states.water || sprite_index == spr_milton_dive || state == states.slip || state == states.mach3 || state == states.skateboard || state == states.skateboardwall || state == states.skateboardramp || state == states.skateboardmove || state == states.hammerattack || (state == states.machturn && sprite_index == sprites.mach3turn) || state == states.superjump || state == states.uppercut || state == states.groundpound || state == states.groundpoundstart || state == states.buzzsaw || state == states.snowball || state == states.snowball_jump || state == states.snowball_wall;
+instakill = skatenic_is_tornado() || state == states.dreamcrusher || state == states.water || sprite_index == spr_milton_dive || state == states.slip || state == states.mach3 || state == states.skateboard || state == states.skateboardwall || state == states.skateboardramp || state == states.skateboardmove || state == states.hammerattack || (state == states.machturn && sprite_index == sprites.mach3turn) || state == states.superjump || state == states.uppercut || state == states.groundpound || state == states.groundpoundstart || state == states.buzzsaw || state == states.snowball || state == states.snowball_jump || state == states.snowball_wall;
 
 if (hitstun.is == false)
 {
@@ -134,6 +134,26 @@ if (hitstun.is == false)
 	        case states.mach2:
 	        case states.mach3:
 	        case states.dreambounce:
+	            if (pky_up && pky_jump2 && !grounded)
+	            {
+	                state = states.dreamcrusher;
+	                vsp = -17;
+					plrsnds_play(sfx.jump, x, y);
+					FMODevent_oneshot("event:/Sfx/Player/slip", x, y);
+	                sprite_index = spr_player1_umbrellaStart;
+	                image_index = 0;
+	            }
+	    }
+	}
+	if character == chars.skatenic
+	{
+	    switch (state)
+	    {
+	        case states.normal:
+	        case states.jump:
+	        case states.mach2:
+	        case states.mach3:
+	        case states.climbwall:
 	            if (pky_up && pky_jump2 && !grounded)
 	            {
 	                state = states.dreamcrusher;

@@ -1,3 +1,9 @@
+function skatenic_is_tornado()
+{
+	with obj_player
+		return character == chars.skatenic && (sprite_index == sprites.dive || sprite_index == spr_skatenic_diveground)
+}
+
 function is_transfo_all(_state = state)
 {
 	if is_transfo_kill(_state) return 1
@@ -373,7 +379,7 @@ global.__baconera_cache = ds_map_create()
 function get_baconera(arg0, arg1, notexists_returnnone = false)
 {
 	if arg1 == 0 return arg0
-	var _arr1 = ["playerV","milton","pepperni","player0","player1","player2","player3", "playersoda", "preoutman","playerS","playerJ","playerF4"]
+	var _arr1 = ["playerV","milton","pepperni","player0","player1","player2","player3", "playersoda", "preoutman","skatenic","juan","playerF4"]
 	var _arr2 = ["V","T","P","B0","B1","B2","B3", "SODA", "POM","S","J","F4"]
 	var _key = string(arg0) + "|" + string(arg1)
 	if ds_map_exists(global.__baconera_cache, _key)

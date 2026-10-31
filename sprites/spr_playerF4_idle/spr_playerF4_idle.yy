@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Fries4",
-    "path":"folders/Sprites/Gameplay/Characters/Older/Fries4.yy",
+    "path":"folders/Sprites/Gameplay/Characters/Misc/Fries4.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

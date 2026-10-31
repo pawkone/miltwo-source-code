@@ -1,1 +1,0 @@
-fmod_studio_event_instance_set_timeline_position(escapeInst, 360*1000)

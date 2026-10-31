@@ -3,6 +3,8 @@ y = wave(ystart - 5, ystart + 5, 5, 5);
 
 if (place_meeting(x, y, obj_player))
 {
+	global.combo.timer = 60
+	
 	xdata_open(global.saveFile)
 	xdata_write("General", $"Totem{totem}", true)
 	obj_savesystem.saveiconTimer = 60

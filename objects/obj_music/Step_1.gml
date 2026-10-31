@@ -1,21 +1,24 @@
-var _trans = is_transfo_all(obj_player.state)
-if _trans && audio_is_playing(mu_shellcityA)
-	scr_music(mu_shellcityB, true, true)
-else if !_trans && audio_is_playing(mu_shellcityB)
-	scr_music(mu_shellcityA, true, true)
+if !instance_exists(obj_secretManager)
+{
+	var _trans = is_transfo_all(obj_player.state)
+	if _trans && audio_is_playing(mu_shellcityA)
+		scr_music(mu_shellcityB, true, true)
+	else if !_trans && audio_is_playing(mu_shellcityB)
+		scr_music(mu_shellcityA, true, true)
 				
-var _pitch = 1
-if room == shell_5 || room == shell_6 || room == shell_7 || room == shell_10
-	_pitch = 0.97
-if room == shell_11 || room == shell_12 || room == shell_13
-	_pitch = 1.03
+	var _pitch = 1
+	if room == shell_5 || room == shell_6 || room == shell_7 || room == shell_10
+		_pitch = 0.97
+	if room == shell_11 || room == shell_12 || room == shell_13
+		_pitch = 1.03
 			
-pitchLrp = lerp(pitchLrp, _pitch, 0.05)
+	pitchLrp = lerp(pitchLrp, _pitch, 0.05)
 			
-if audio_exists(global.music)
-	audio_sound_pitch(global.music, pitchLrp)
-if audio_exists(global.music_old)
-	audio_sound_pitch(global.music_old, pitchLrp)
+	if audio_exists(global.music)
+		audio_sound_pitch(global.music, pitchLrp)
+	if audio_exists(global.music_old)
+		audio_sound_pitch(global.music_old, pitchLrp)
+}
 
 
 

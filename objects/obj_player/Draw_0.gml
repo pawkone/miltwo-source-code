@@ -1,6 +1,6 @@
 var realInfo = playerUtil_realSpr()
 
-var _new = character == chars.milton || isMildred || character == chars.pepperni || character == chars.soda
+var _new = character == chars.valentia || character == chars.milton || character == chars.skatenic || isMildred || character == chars.pepperni || character == chars.soda
 
 if (super)
 {

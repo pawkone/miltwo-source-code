@@ -5,7 +5,7 @@ function scr_collide_destructibles()
 		if scr_collide_destructibles_helper(x,y,x, y + vsp * 1.33)
 			vsp = 0
 	}
-	if (state == states.dreamcrusher || state == states.hammerwirl || state == states.mach2 || state == states.mach3 || state == states.grab || state == states.tumble || state == states.hammerattack || (sprite_index == spr_player_swingading && state == states.hauling) || state == states.snowball || state == states.dreamspin || state == states.dreambounce || state == states.retwistedBuzzsaw || state == states.tumble || state == states.groundpound || state == states.uppercut || state == states.superjump || state == states.buzzsaw || state == states.climbwall || state == states.skateboard || state == states.skateboardmove || state == states.skateboardwall || state == states.skateboardramp || state == states.slip || state = states.water)
+	if (state == states.dreamcrusher || state == states.hammerwirl || state == states.mach2 || state == states.mach3 || state == states.grab || state == states.tumble || state == states.hammerattack || (sprite_index == spr_player_swingading && state == states.hauling) || state == states.snowball || state == states.dreamspin || state == states.dreambounce || state == states.retwistedBuzzsaw || state == states.groundpound || state == states.uppercut || state == states.superjump || state == states.buzzsaw || state == states.climbwall || state == states.skateboard || state == states.skateboardmove || state == states.skateboardwall || state == states.skateboardramp || state == states.slip || state = states.water)
 		scr_collide_destructibles_helper(x, y, x + xscale + hsp * 1.33, y + vsp * 1.33)
 }
 

@@ -1,5 +1,10 @@
 function scr_player_climbwall()
 {
+	if character == chars.skatenic
+	{
+		scr_skatenic_climbwall()
+		exit
+	}
     hsp = 0;
     image_speed = 0.6;
     vsp = -verticalMovespeed;

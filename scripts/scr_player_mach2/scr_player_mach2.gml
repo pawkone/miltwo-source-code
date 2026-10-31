@@ -207,7 +207,15 @@ function scr_player_mach2()
         
         if (_climb)
         {
-            verticalMovespeed = movespeed+(character == chars.milton*3);
+			if character == chars.skatenic
+			{
+				verticalMovespeed = -18
+				grounded = false
+				squashX = 1.5
+				squashY = 0.5
+			}
+			else
+				verticalMovespeed = movespeed+(character == chars.milton*3);
             state = states.climbwall;
             sprite_index = sprites.wallclimb;
             image_index = 0;

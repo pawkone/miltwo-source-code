@@ -105,7 +105,7 @@ function scr_player_grab()
         create_particleStatic(spr_grabcloud, x, y, xscale, 1);
     }
     
-	if (!grounded && scr_solid(x+hsp,y+vsp)) || (grounded && scr_solid(x+hsp,y)) && character == chars.fries4
+	if character == chars.fries4 && ((!grounded && scr_solid(x+hsp,y+vsp)) || (grounded && scr_solid(x+hsp,y)))
 	{
 		var _targetdir = ""
 		if -pky_left _targetdir = point_direction(0,0,-1,0)
@@ -127,7 +127,15 @@ function scr_player_grab()
     if (place_meeting(x + sign(hsp), y, obj_solid) && !grounded)
     {
         wallgrab = 10;
-        verticalMovespeed = movespeed;
+		if character == chars.skatenic
+		{
+			verticalMovespeed = -18
+			grounded = false
+			squashX = 1.5
+			squashY = 0.5
+		}
+		else
+			verticalMovespeed = movespeed;
         state = states.climbwall;
         sprite_index = sprites.wallclimb;
         image_index = 0;

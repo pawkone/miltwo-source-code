@@ -34,19 +34,26 @@ if global.prophuntmode.waitphase
 	{
 		with obj_player
 		{
-			with obj_beakerintro
-				start = 0
-			state = -4
-			if sprite_index != sprites.gateslam
+			if instance_exists(obj_beakerintro)
 			{
-				image_index = 0
-				image_speed = 0.3
-				sprite_index = sprites.gateslam
+				state = -4
+				with obj_beakerintro
+					start = 0
 			}
-			if animation_end()
-				image_speed = -0.6
-			if image_index < 1 && image_speed < 0
-				image_speed = 0.3
+			else
+			{
+				state = -4
+				if sprite_index != sprites.gateslam
+				{
+					image_index = 0
+					image_speed = 0.3
+					sprite_index = sprites.gateslam
+				}
+				if animation_end()
+					image_speed = -0.6
+				if image_index < 1 && image_speed < 0
+					image_speed = 0.3
+			}
 		}
 	}
 	if audio_sound_get_asset(global.music) != mu_prophunt_waiting

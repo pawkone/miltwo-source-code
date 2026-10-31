@@ -5,8 +5,8 @@ global.langMapArt = ds_map_create();
 function lang_init()
 {
 	var _files = [
-		"gameData/languageLookup/" + global.language + ".json",
-		"gameData/languageLookup/" + global.language + "_mod.json"
+		"gameData/languageLookup/" + global.language + "/base.json",
+		"gameData/languageLookup/" + global.language + "/mod.json"
 	]
 	var _textFile = ""
 	for (var i = 0; i < array_length(_files); i++)

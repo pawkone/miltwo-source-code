@@ -11,8 +11,10 @@ miltwocredits_credits =
 		spr_milton_rollstart, spr_baconsmacon_deadlintro, spr_baconsmacon_deadloop,
 		spr_bacadmadLocate, spr_minilogo, spr_menunew, spr_menunew_tvhint,
 		spr_gate_shell, spr_floorgate, spr_floorgate_over, spr_uparrow,
-		spr_titlecardShell, spr_titlecardShellTitle1,
-		spr_player_skate_jump, spr_preoutman_mach, spr_preoutman_breakdance
+		spr_titlecardShell, spr_titlecardShellTitle1, spr_player_skate_jump,
+		spr_preoutman_mach, spr_preoutman_breakdance, spr_skatenic_rollgetup,
+		spr_skatenic_mach3turnfall, spr_skatenic_mach3turn, spr_skatenic_mach2turn,
+		spr_skatenic_mach2turnfall,  spr_skatenic_mach3jump
 	],
 	[
 		"Targetbuldoser",
@@ -26,7 +28,7 @@ miltwocredits_credits =
 		spr_dressermenu_palgridPOM, spr_dressermenu_palgridB0, spr_dressermenu_palgridB1,
 		spr_dressermenu_palgridB2, spr_dressermenu_palgridB3, spr_dressermenu_palgridT,
 		spr_dressermenu_palgridP, spr_dressermenu_palgridV, spr_titlecardFrontyard,
-		spr_titlecardFrontyardTitle1
+		spr_titlecardFrontyardTitle1, spr_skatenic_mach1, spr_skatenic_mach2
 	],
 	[
 		"Polyg0n5",
@@ -38,7 +40,10 @@ miltwocredits_credits =
 		spr_tv_idleP, spr_tv_machP, spr_tv_crazyrunP, spr_tv_happyT,
 		spr_tv_escapeP, spr_pepperni_mach3turn, spr_player1_pary, spr_player1_crouch,
 		spr_player1_crouchfall, spr_player1_crouchhop, spr_player1_crouchmove,
-		spr_pleasestandbyT, spr_player_coconut_intro, spr_player_coconut_idle
+		spr_pleasestandbyT, spr_player_coconut_intro, spr_player_coconut_idle,
+		spr_skatenic_mach3hit, spr_skatenic_mach2jump, spr_skatenic_mach2jumpend,
+		spr_skatenic_diveground, spr_skatenic_jump, spr_skatenic_fall,
+		spr_skatenic_land, spr_skatenic_land2
 	],
 	[
 		"MrAlt-",

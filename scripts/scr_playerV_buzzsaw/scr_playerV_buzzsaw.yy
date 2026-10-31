@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_playerV_buzzsaw",
   "parent":{
-    "name":"Player Related",
-    "path":"folders/Scripts/Player Related.yy",
+    "name":"States (Custom)",
+    "path":"folders/Scripts/Player Related/States (Custom).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

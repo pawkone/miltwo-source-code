@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Soda",
-    "path":"folders/Sprites/Gameplay/Characters/Older/Soda.yy",
+    "path":"folders/Sprites/Gameplay/Characters/Misc/Soda.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
