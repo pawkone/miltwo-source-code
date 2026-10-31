@@ -1,5 +1,48 @@
-captions.curtime = fmod_studio_event_instance_get_timeline_position(escapeInst)/1000
-if captions.curtime < 346.41
+var _file = ""
+captions.curtime = 0
+if global.escapeActive && global.escapeLap && fmod_studio_event_instance_get_parameter_by_name(escapeInst, "state").value
+{
+	_file = "escapeInst_2"
+	captions.curtime = fmod_studio_event_instance_get_timeline_position(escapeInst)/1000
+}
+else if audio_exists(global.music) && audio_sound_get_asset(global.music) == mu_sodalap1
+{
+	_file = "mu_sodalap1"
+	captions.curtime = audio_sound_get_track_position(global.music)
+}
+
+if captions.file != _file
+{
+	if _file == ""
+	{
+		show_debug_message($"obj_music.captions - lyrics unloaded - {captions.file}")
+		captions.file = ""
+		captions.str = []
+		captions.timing = []
+	}
+	else
+	{
+		var _path = "gameData/languageLookup/" + global.language + "/songs/" + _file + ".json"
+		show_debug_message($"obj_music.captions - loading {_path}")
+		try
+		{
+			var _str = loadString(_path)
+			if _str == ""
+				throw {message: "File is empty/doesn't exist"}
+			_str = json_parse(_str)
+			captions.str = _str.text
+			captions.timing = _str.time
+			show_debug_message($"obj_music.captions - loaded successfully!")
+		}
+		catch(e)
+		{
+			show_debug_message($"obj_music.captions - error loading - " + e.message)
+		}
+		captions.file = _file
+	}
+}
+
+if captions.file != ""
 	exit
 
 draw_set_font(-1)

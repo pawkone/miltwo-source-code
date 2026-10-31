@@ -20,8 +20,6 @@ if !instance_exists(obj_secretManager)
 		audio_sound_pitch(global.music_old, pitchLrp)
 }
 
-
-
 if !(global.escapeActive && global.escapeLap == 2)
 	global.escapePartyOver = false
 if !global.escapeActive
@@ -80,12 +78,14 @@ else
 				[chars.bacon_redem, mu_baconredemlap2],
 				[chars.bacon_twist, mu_bacontwistlap2],
 			]
+			var _not = true
 			if instance_exists(obj_player)
 			{
 				for (var i = 0; i < array_length(_arr); i++)
 				{
 					if obj_player.character == _arr[i][0]
 					{
+						_not = false
 						if FMODevent_isplaying(escapeInst)
 						{
 							stop_music(false)
@@ -96,9 +96,12 @@ else
 					}
 				}
 			}
-		    fmod_studio_event_instance_set_parameter_by_name(escapeInst, "state", 2);
-		    fmod_studio_event_instance_set_callback(escapeInst, FMOD_STUDIO_EVENT_CALLBACK.TIMELINE_BEAT);
-	    }
+			if _not
+			{
+				fmod_studio_event_instance_set_parameter_by_name(escapeInst, "state", 2);
+				fmod_studio_event_instance_set_callback(escapeInst, FMOD_STUDIO_EVENT_CALLBACK.TIMELINE_BEAT);
+			}
+		}
 		else
 		{
 			var _arr = [
@@ -139,7 +142,7 @@ if (instance_exists(obj_monolith))
     var _cam = 0;
     with (obj_monolith)
         _cam = in_camera();
-    pillar = approach(pillar, _cam, 0.016666666666666666);
+    pillar = approach(pillar, _cam, 1/60);
 }
 else
 {

@@ -78,6 +78,7 @@ ds_map_add(musicDetails, Levelselect, new add_music("event:/Music/Ost/mainmenu",
 ds_map_add(musicDetails, Mainmenu, new add_music(-4, -4, -4));
 
 captions = {}
+captions.file = ""
 captions.str = []
 captions.timing = []
 captions.toggle = 1
