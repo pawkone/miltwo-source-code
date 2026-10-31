@@ -32,6 +32,7 @@ if captions.file != _file
 			_str = json_parse(_str)
 			captions.str = _str.text
 			captions.timing = _str.time
+			show_debug_message($"obj_music.captions - str length ({array_length(captions.str)}) & timing length ({array_length(captions.timing)})")
 			show_debug_message($"obj_music.captions - loaded successfully!")
 		}
 		catch(e)
@@ -42,7 +43,7 @@ if captions.file != _file
 	}
 }
 
-if captions.file != ""
+if array_length(captions.str) <= 0
 	exit
 
 draw_set_font(-1)
@@ -73,7 +74,7 @@ for (var i = array_length(captions.timing)-1; i >= 0; i--)
 		}
 		if captions.str[i] != ""
 		{
-			draw_set_alpha(0.5)
+			draw_set_alpha(0.8)
 			draw_set_colour(c_black)
 			draw_set_font(-1)
 			var _strw = string_width(captions.str[i])
