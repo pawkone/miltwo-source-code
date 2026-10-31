@@ -8,6 +8,9 @@ miltwocredits_credits =
 	[
 		"Pawkone",
 		"director : coder : artist : ideas : etc",
+		mu_bossbacon,
+		
+		bg_boss_bacon1, bg_boss_bacon2, bg_boss_bacon3,
 		spr_milton_rollstart, spr_baconsmacon_deadlintro, spr_baconsmacon_deadloop,
 		spr_bacadmadLocate, spr_minilogo, spr_menunew, spr_menunew_tvhint,
 		spr_gate_shell, spr_floorgate, spr_floorgate_over, spr_uparrow,

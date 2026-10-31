@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_bossbacon",
+  "audioGroupId":{
+    "name":"audioGroupMusic",
+    "path":"audiogroups/audioGroupMusic",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":1,
+  "conversionMode":0,
+  "duration":121.69014,
+  "exportDir":"audioStreamed",
+  "name":"mu_bossbacon",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_bossbacon.wav",
+  "volume":1.0,
+}
