@@ -2,6 +2,12 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 {
     ds_list_add(global.saveroom, id);
     shake_camera(25, 25);
+	
+	with obj_tiledestroy
+	{
+		if place_meeting(x,y,other)
+			instance_destroy()
+	}
     
     repeat (8)
         create_particleDebri(spr_metalblock_debri, random_range(0, sprite_get_number(spr_metalblock_debri)), x + 16, y + 16, 1, -1);
