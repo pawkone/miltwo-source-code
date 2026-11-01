@@ -46,7 +46,8 @@ miltwocredits_credits =
 		spr_pleasestandbyT, spr_player_coconut_intro, spr_player_coconut_idle,
 		spr_skatenic_mach3hit, spr_skatenic_mach2jump, spr_skatenic_mach2jumpend,
 		spr_skatenic_diveground, spr_skatenic_jump, spr_skatenic_fall,
-		spr_skatenic_land, spr_skatenic_land2
+		spr_skatenic_land, spr_skatenic_land2, spr_pepperni_jump,
+		spr_pepperni_fall
 	],
 	[
 		"MrAlt-",
@@ -64,6 +65,11 @@ miltwocredits_credits =
 		"ElCacas.XD.RenovadoXD",
 		"volunteered artist",
 		spr_pepperni_idleanim1, spr_pepperni_crazyrun
+	],
+	[
+		"CharlieIssigma83838",
+		"volunteered artist",
+		spr_skatenic_taunt, spr_player_idlemilkshake
 	],
 	[
 		"Shampox_85584",

@@ -107,6 +107,16 @@ function scr_playerSounds_load()
 			sfx.ok = -4
 			sfx.gasp = -4
 		break
+		case chars.skatenic:
+			sfx.step = sfx_skatenic_step
+			sfx.jump = sfx_skatenic_jump
+			sfx.machturn = sfx_skatenic_machturn
+			sfx.machend = sfx_skatenic_machend
+			sfx.mach = "sfx_skatenic_mach"
+			sfx.grab = "sfx_skatenic_grab"
+			sfx.voice_hurt = sfx_skatenic_hurt
+			sfx.gasp = -4
+		break
 	}
 	
 	scr_playerSounds_loadcheck("taunt", "event:/Sfx/Player/taunt")

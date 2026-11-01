@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_skatenic_mach3",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":2.727279,
+  "exportDir":"",
+  "name":"sfx_skatenic_mach3",
+  "parent":{
+    "name":"skatenic",
+    "path":"folders/Sounds/SFX/Charactes/skatenic.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_skatenic_mach3.ogg",
+  "volume":1.0,
+}

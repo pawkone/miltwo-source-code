@@ -1,5 +1,7 @@
 function scr_player_normal()
 {
+	var _idle = global.level == "milkshake" ? spr_player_idlemilkshake : sprites.idle
+	
     hsp = movespeed * xscale;
     var move = pky_right + pky_left;
 	
@@ -63,14 +65,14 @@ function scr_player_normal()
 		}
 		else
 		{
-	        if (sprite_index != sprites.idle && sprite_index != sprites.idleanim1 && sprite_index != sprites.idleanim2 && sprite_index != sprites.idleanim3 && sprite_index != sprites.idleanim4 && sprite_index != sprites.idleanim5 && sprite_index != sprites.land && sprite_index != sprites.machslideend && sprite_index != sprites.breakdance && sprite_index != spr_player_statue && sprite_index != spr_player_statuestart)
+	        if (sprite_index != _idle && sprite_index != sprites.idleanim1 && sprite_index != sprites.idleanim2 && sprite_index != sprites.idleanim3 && sprite_index != sprites.idleanim4 && sprite_index != sprites.idleanim5 && sprite_index != sprites.land && sprite_index != sprites.machslideend && sprite_index != sprites.breakdance && sprite_index != spr_player_statue && sprite_index != spr_player_statuestart)
 	        {
 	            image_speed = movespeed / 15;
             
 	            if (movespeed == 0)
 	            {
 	                image_index = 0;
-	                sprite_index = sprites.idle;
+	                sprite_index = _idle;
 	                image_speed = 0.35;
 	                buffers.idle = 150;
 	            }
@@ -80,7 +82,7 @@ function scr_player_normal()
         
 	        movespeed = approach(movespeed, 0, 0.65);
         
-	        if (sprite_index == sprites.idle)
+	        if (sprite_index == _idle)
 	            buffers.idle--;
         
 	        if (buffers.idle <= 0 && sprite_index != sprites.breakdance && sprite_index != spr_player_statue && sprite_index != spr_player_statuestart)
@@ -106,13 +108,13 @@ function scr_player_normal()
 	        if (animation_end() && (sprite_index == sprites.idleanim1 || sprite_index == sprites.idleanim2 || sprite_index == sprites.idleanim3 || sprite_index == sprites.idleanim4 || sprite_index == sprites.idleanim5))
 	        {
 	            image_index = 0;
-	            sprite_index = sprites.idle;
+	            sprite_index = _idle;
 	        }
         
 	        if (animation_end() && sprite_index == sprites.land)
 	        {
 	            image_index = 0;
-	            sprite_index = sprites.idle;
+	            sprite_index = _idle;
 	        }
         
 	        if (animation_end() && sprite_index == spr_player_statuestart)
@@ -124,7 +126,7 @@ function scr_player_normal()
 	        if (animation_end() && sprite_index == sprites.machslideend)
 	        {
 	            image_index = 0;
-	            sprite_index = sprites.idle;
+	            sprite_index = _idle;
 	        }
 		}
     }
@@ -140,7 +142,7 @@ function scr_player_normal()
         breakdancespeed = 0.25;
         
         if (sprite_index == sprites.breakdance)
-            sprite_index = sprites.idle;
+            sprite_index = _idle;
     }
     
     if (buffers.breakdanceheld > 10)
