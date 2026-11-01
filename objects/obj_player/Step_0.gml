@@ -5,6 +5,8 @@ else
 	grav = 0.5
 	if character == chars.bacon_dream && vsp >= 20
 		vsp += grav
+	if character == chars.bacon_twist && vsp >= 20
+		vsp += grav
 }
 
 var yaya = ((
