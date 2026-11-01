@@ -1,6 +1,5 @@
 event_inherited();
 
-unbumpable = true
 spr_idle = spr_beant_idle;
 spr_move = spr_idle;
 spr_turn = spr_idle;
@@ -10,5 +9,5 @@ spr_dead = spr_beant_dead;
 state = states.move;
 sprite_index = spr_idle;
 
-throwTimer = 120
+throwTimer = 50
 projectile = -4

@@ -36,7 +36,7 @@ if (hitstun.is == false)
 				}
 			}
 			else
-				throwTimer = approach(throwTimer, 120, 4)
+				throwTimer = approach(throwTimer, 50, 4)
             break;
 			
         case states.tumble:
@@ -59,7 +59,7 @@ if (hitstun.is == false)
 			if sprite_index == spr_beant_throw_wait && !instance_exists(projectile)
 			{
 				projectile = -4
-				throwTimer = 120
+				throwTimer = 50
 				state = states.move
 			}
             break;
@@ -69,11 +69,7 @@ if (hitstun.is == false)
             break;
         
         case states.thrown:
-            invincable = true;
-            state = states.tumble;
-            sprite_index = spr_crab_roll;
-            vsp = -2;
-            movespeed = 16;
+            scr_enemy_thrown()
             break;
     }
 }
