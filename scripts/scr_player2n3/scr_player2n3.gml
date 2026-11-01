@@ -13,7 +13,7 @@ function scr_player_retwistedBuzzsaw()
 		buffers.afterimageBlur = 3
 	}
 	
-	if _t && sprite_index != spr_player3_buzzsawCancel && sprite_index != spr_player3_superjumpcancel
+	if _t && sprite_index != spr_player3_buzzsawCancel && sprite_index != spr_player3_longjumpend
 	{
 		buffers.dashcloud = approach(buffers.dashcloud, 0, 1);
 		if (buffers.dashcloud == 0)
@@ -58,7 +58,7 @@ function scr_player_retwistedBuzzsaw()
 	}
 	
 	if sprite_index == spr_player3_buzzsawCancel
-	|| sprite_index == spr_player3_superjumpcancel
+	|| sprite_index == spr_player3_longjumpend
 	|| sprite_index == spr_player2P_skatespin
 	{
 		hsp = approach(hsp, move*13, 1.2)
@@ -104,7 +104,7 @@ function scr_player_retwistedBuzzsaw()
 	if sprite_index != spr_player3_buzzsaw
 	&& sprite_index != spr_player3_bounceLand
 	&& sprite_index != spr_player3_buzzsawCancel
-	&& sprite_index != spr_player3_superjumpcancel
+	&& sprite_index != spr_player3_longjumpend
 	&& sprite_index != spr_player2_buzzsaw
 	&& sprite_index != spr_player2_bounceLand
 	&& sprite_index != spr_player2P_skatespin
@@ -116,7 +116,7 @@ function scr_player_retwistedBuzzsaw()
 	if (sprite_index == spr_player3_buzzsawCancel) && animation_end()
 	{
 		image_index = 0
-		sprite_index = spr_player3_superjumpcancel
+		sprite_index = spr_player3_longjumpend
 	}
 	if (sprite_index == spr_player2_bounceLand || sprite_index == spr_player3_bounceLand) && animation_end()
 	{
@@ -132,7 +132,7 @@ function scr_player_retwistedBuzzsaw()
 	if grounded
 	{
 		if sprite_index == spr_player3_buzzsawCancel
-		|| sprite_index == spr_player3_superjumpcancel
+		|| sprite_index == spr_player3_longjumpend
 		|| sprite_index == spr_player2P_skatespin
 		{
 			if move != 0
