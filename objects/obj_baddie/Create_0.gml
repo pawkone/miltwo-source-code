@@ -24,5 +24,6 @@ yoffset = 0;
 xscaleMulti = 1;
 yscaleMulti = 1;
 invincable = false;
+unbumpable = false
 supertauntKill = false;
 spawned = false;

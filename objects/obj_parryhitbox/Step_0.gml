@@ -5,6 +5,15 @@ image_xscale = obj_player.xscale;
 x = obj_player.x;
 y = obj_player.y;
 
+if (place_meeting(x, y, obj_beantProjectile))
+{
+    with (instance_place(x, y, obj_beantProjectile))
+    {
+		instance_destroy()
+    }
+    event_user(0);
+}
+
 if (place_meeting(x, y, obj_forkbox))
 {
     with (instance_place(x, y, obj_forkbox))

@@ -1,8 +1,13 @@
+if !instance_exists(target)
+{
+	instance_destroy()
+	exit
+}
 speed -= 0.5
 if speed < 0
 {
 	anglespd += 2
-	if place_meeting(x,y,obj_beant)
+	if place_meeting(x,y,target)
 	{
 		instance_destroy()
 		exit

@@ -11,28 +11,18 @@ if (hitstun.is == false)
             break;
         
         case states.hit:
-            invincable = true;
-            
-            if (hitstun.is == false)
-            {
-                xscale = obj_player.xscale;
-                state = states.tumble;
-                sprite_index = spr_crab_roll;
-                vsp = -6;
-                movespeed = 16;
-            }
-            
+            scr_enemy_hit();
             break;
         
         case states.turn:
             scr_enemy_turn();
             break;
         
-        case states.normal:
+        case states.move:
             image_speed = 0.35;
             hsp = 0;
             sprite_index = spr_idle;
-			if distance_to_object(_plrid) < 200 //in range type shit
+			if distance_to_object(_plrid) < 400 //in range type shit
 			{
 				var _xscale = sign(_plrid.x - x)
 				if _xscale != 0
@@ -43,7 +33,6 @@ if (hitstun.is == false)
 					state = states.tumble
 					image_index = 0
 					sprite_index = spr_beant_throw_start
-					throwTimer = 120
 				}
 			}
 			else
@@ -59,6 +48,7 @@ if (hitstun.is == false)
 					image_index = 0
 					sprite_index = spr_beant_throw_end
 					projectile = instance_create(x,y,obj_beantProjectile)
+					projectile.target = id
 				}
 				else if sprite_index == spr_beant_throw_end
 				{
@@ -70,7 +60,7 @@ if (hitstun.is == false)
 			{
 				projectile = -4
 				throwTimer = 120
-				state = states.normal
+				state = states.move
 			}
             break;
 			

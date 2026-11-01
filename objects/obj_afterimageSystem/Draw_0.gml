@@ -91,7 +91,7 @@ if (!ds_list_empty(afterimages))
                     shader_set_uniform_f_array(other.uniformLight, [col[0], col[1], col[2]]);
                     shader_set_uniform_f_array(other.uniformDark, [1, 1, 1]);
                     _shd = true;
-					alpha = 0.55
+					alpha = 0.75
 					fadeoutAlpha = 1
                     break;
 				
@@ -102,13 +102,13 @@ if (!ds_list_empty(afterimages))
                     shader_set_uniform_f_array(other.uniformLight, [col[0], col[1], col[2]]);
                     shader_set_uniform_f_array(other.uniformDark, [col2[0], col2[1], col2[2]]);
                     _shd = true;
-					alpha = 0.55
+					alpha = 0.75
 					fadeoutAlpha = 1
                     break;
             }
             
             if (visible)
-                draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 0, _blend, image_alpha * alpha * fadeoutAlpha);
+                draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, angle, _blend, image_alpha * alpha * fadeoutAlpha);
             
             if (_shd)
                 shader_reset();

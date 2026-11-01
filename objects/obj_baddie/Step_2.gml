@@ -92,7 +92,7 @@ with (obj_player)
     {
         var _baddie = other;
         
-        if (state == states.mach2 || state == states.tumble)
+        if (state == states.mach2 || state == states.tumble)&& !other.unbumpable
         {
             with (_baddie)
             {

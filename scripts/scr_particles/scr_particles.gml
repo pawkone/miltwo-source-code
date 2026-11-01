@@ -57,6 +57,7 @@ function create_afterimage(_sprite, _imageindex, _x, _y, _xscale, alpha = 1)
         alpha: alpha,
         fadeoutAlpha: 1,
         fadeout: false,
+		angle: 0,
         image_alpha: 1,
         visible: true
     };
