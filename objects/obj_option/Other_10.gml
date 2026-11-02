@@ -39,8 +39,8 @@ miltwocredits_credits =
 		spr_butterAir, spr_butterGround, spr_pepperni_mach1, spr_pepperni_mach3,
 		spr_pepperni_taunt, spr_milton_jump, spr_milton_fall, spr_milton_land,
 		spr_milton_land2, spr_titlecardFruitcup, spr_titlecardFruitcupTitle1,
-		spr_titlecardFruitcupTitle2, spr_tv_idleanim1T, spr_tv_idleanim2T,
-		spr_tv_idleP, spr_tv_machP, spr_tv_crazyrunP, spr_tv_happyT,
+		spr_titlecardFruitcupTitle2, spr_tv_idleanim1M, spr_tv_idleanim2M,
+		spr_tv_idleP, spr_tv_machP, spr_tv_crazyrunP, spr_tv_happyM,
 		spr_tv_escapeP, spr_pepperni_mach3turn, spr_player1_pary, spr_player1_crouch,
 		spr_player1_crouchfall, spr_player1_crouchhop, spr_player1_crouchmove,
 		spr_pleasestandbyT, spr_player_coconut_intro, spr_player_coconut_idle,
@@ -58,7 +58,7 @@ miltwocredits_credits =
 	[
 		"Enno334_123",
 		"volunteered artist",
-		spr_milton_downbox, spr_tv_comboT, spr_milton_superjumpprepstart,
+		spr_milton_downbox, spr_tv_comboM, spr_milton_superjumpprepstart,
 		spr_milton_superjumpprep, spr_gate_milkshake, spr_gate_milkshakeBG
 	],
 	[
