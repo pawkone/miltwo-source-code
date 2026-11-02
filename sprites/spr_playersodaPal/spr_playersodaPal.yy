@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Soda",
-    "path":"folders/Sprites/Gameplay/Characters/Misc/Soda.yy",
+    "name":"Misc",
+    "path":"folders/Sprites/Gameplay/Characters/Misc.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
