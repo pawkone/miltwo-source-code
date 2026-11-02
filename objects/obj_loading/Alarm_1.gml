@@ -39,7 +39,6 @@ enum chars
 	soda,
 	preoutman,
 	skatenic,
-	juan,
 	fries4,
 }
 var _ex = [
@@ -54,7 +53,6 @@ var _ex = [
 	["playersoda",	"",		"Soda"],
 	["preoutman",	"POM",	"Preoutman"],
 	["skatenic",	"S",	"Skatenic"],
-	["juan",		"J",	"Juan Danger"],
 	["playerF4",	"F4",	"Fries4"]
 ];
 
