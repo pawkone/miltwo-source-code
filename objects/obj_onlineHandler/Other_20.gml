@@ -53,7 +53,7 @@ if idds == 0 && !global.racemode.active
 				{
 					generalReset();
 					room_goto(global.prophuntmode.room)
-					state = states.enterdoor
+					state = scr_player_enterdoor
 					sprite_index = sprites.walkfront
 					targetRoom = global.prophuntmode.room
 					door = "A"

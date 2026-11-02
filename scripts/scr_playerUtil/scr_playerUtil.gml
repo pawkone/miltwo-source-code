@@ -10,7 +10,7 @@ function is_transfo_all(_state = state)
 	
 	return array_contains(
 		[
-			states.coconut_intro, states.coconut_gun, states.coconut_shoot,
+			scr_player_coconut_intro, scr_player_coconut_gun, scr_player_coconut_shoot,
 		],
 	_state)
 }
@@ -18,11 +18,11 @@ function is_transfo_kill(_state = state)
 {
 	return array_contains(
 		[
-			states.snowball, states.snowball_jump, states.snowball_wall,
+			scr_player_snowball, scr_player_snowball_jump, scr_player_snowball_wall,
 			
-			states.skateboard, states.skateboardAim, states.skateboardhitwall,
-			states.skateboardIntro, states.skateboardmove, states.skateboardramp,
-			states.skateboardwall,
+			scr_player_skateboard, scr_player_skateboardAim, scr_player_skateboardhitwall,
+			scr_player_skateboardIntro, scr_player_skateboardmove, scr_player_skateboardramp,
+			scr_player_skateboardwall,
 		],
 	_state)
 }
@@ -61,7 +61,7 @@ function hurt_player(arg0 = -4)
         hsp = 8 * xscale;
         sprite_index = !sameFace ? spr_player_hurt : spr_player_hurt2;
         flash = true;
-        state = states.hurt;
+        state = scr_player_hurt;
         vsp = -12;
         
         repeat (8)
@@ -218,7 +218,7 @@ function doGrab()
             if (!pky_up)
             {
                 slapBuffer = false;
-                state = states.grab;
+                state = scr_player_grab;
                 sprite_index = sprites.grab;
                 image_index = 0;
                 create_particleStatic(spr_grabcloud, x, y, xscale, 1);
@@ -239,7 +239,7 @@ function doGrab()
                 if character == chars.valentia
 				{
 					vsp = -16
-					if state == states.mach3 || sprite_index == sprites.longjump || sprite_index == sprites.longjumpend
+					if state == scr_player_mach3 || sprite_index == sprites.longjump || sprite_index == sprites.longjumpend
 						sprite_index = spr_playerV_mach_uppercut
 					else
 						sprite_index = sprites.uppercut
@@ -247,7 +247,7 @@ function doGrab()
                 else
                     sprite_index = sprites.uppercut;
                 image_index = 0;
-				state = states.uppercut;
+				state = scr_player_uppercut;
                 create_particleStatic(spr_jumpeffect, x, y, 1, 1);
                 squashX = 1.5;
                 squashY = 0.6;
@@ -262,7 +262,7 @@ function doGrab()
 	                xscale = move;
 				vsp = -12
 				movespeed = hsp/2
-				state = states.hammerwirl;
+				state = scr_player_hammerwirl;
 				sprite_index = spr_milton_hammerwirl;
 				image_index = 0;
 				FMODevent_oneshot("event:/Sfx/Player/uppercut", x, y);
@@ -276,7 +276,7 @@ function doGrab()
 	            vsp = 0;
 	            buffers.hammer = 25;
 	            slapBuffer = false;
-	            state = states.hammerattack;
+	            state = scr_player_hammerattack;
             
 	            if (movespeed < 12)
 	                movespeed = 12;
@@ -325,7 +325,7 @@ function doTaunt(_force = false, _supertauntenabled = true)
         
         if (!_isSupertaunt)
         {
-            state = states.taunt;
+            state = scr_player_taunt;
             image_speed = 0;
             sprite_index = sprites.taunt;
             image_index = irandom_range(0, image_number);
@@ -338,7 +338,7 @@ function doTaunt(_force = false, _supertauntenabled = true)
         }
         else
         {
-            state = states.taunt;
+            state = scr_player_taunt;
             image_speed = 0.35;
             sprite_index = choose(spr_player_supertaunt1, spr_player_supertaunt2, spr_player_supertaunt3);
             image_index = 0;

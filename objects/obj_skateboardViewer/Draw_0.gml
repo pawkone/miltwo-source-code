@@ -7,7 +7,7 @@ if !is_transfo_all(obj_player.state)
 var pl = obj_player.id;
 draw_healthbar(pl.x - 64, pl.y - 64, (pl.x - 64) + 12, (pl.y - 64) + 12, (pl.sprayCans / 4) * 100, c_black, c_white, c_white, 3, true, false);
 
-var _thing = pl.state == states.skateboardAim
+var _thing = pl.state == scr_player_skateboardAim
 
 image_yscale = lerp(image_yscale, _thing, 0.2)
 image_yscale = approach(image_yscale, _thing, 0.002)

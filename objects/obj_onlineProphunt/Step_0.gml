@@ -67,7 +67,7 @@ else
 		with obj_player
 		{
 			if state == -4
-				state = states.normal
+				state = scr_player_normal
 		}
 	}
 	else

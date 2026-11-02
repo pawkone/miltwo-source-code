@@ -28,7 +28,7 @@ if (place_meeting(x, y, obj_player))
             
             if (sign(other.image_yscale) == 1)
             {
-                state = states.superjump;
+                state = scr_player_superjump;
                 sprite_index = spr_player_spinout;
                 image_index = 0;
                 verticalMovespeed = -14;
@@ -39,7 +39,7 @@ if (place_meeting(x, y, obj_player))
             }
             else if (sign(other.image_yscale) == -1)
             {
-                state = states.groundpound;
+                state = scr_player_groundpound;
                 sprite_index = spr_player_spinout;
                 image_index = 0;
                 create_particleStatic(spr_cloudeffect, x, y, 1, 1);

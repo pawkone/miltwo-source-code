@@ -1,4 +1,4 @@
-if (other.grounded && pky_up && other.state != states.enterdoor && other.state != states.walkfront && other.state != states.snowball && open)
+if (other.grounded && pky_up && other.state != scr_player_enterdoor && other.state != scr_player_walkfront && other.state != scr_player_snowball && open)
 {
     global.key = false;
     ds_list_add(global.saveroom, id);
@@ -11,7 +11,7 @@ if (other.grounded && pky_up && other.state != states.enterdoor && other.state !
         movespeed = 0;
         vsp = 0;
         hsp = 0;
-        state = states.enterdoor;
+        state = scr_player_enterdoor;
         
         if (ds_list_find_index(global.saveroom, id) == -1)
         {

@@ -11,11 +11,11 @@ function scr_enemy_stun()
     {
         sprite_index = spr_move;
         image_index = 0;
-        state = states.move;
+        state = "move";
         hsp = movespeed * xscale;
     }
     
-    if (obj_player.state == states.taunt)
+    if (obj_player.state == scr_player_taunt)
     {
         scared = 0;
         

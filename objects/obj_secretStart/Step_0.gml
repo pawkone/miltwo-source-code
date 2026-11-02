@@ -38,7 +38,7 @@ if (cutscene == true)
         {
             jumpstop = true;
             vsp = 10;
-            state = states.groundpound;
+            state = scr_player_groundpound;
             sprite_index = sprites.groundpound;
             xscaleMulti = 1;
             yscaleMulti = 1;

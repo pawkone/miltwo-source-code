@@ -4,7 +4,7 @@ if (hitstun.is == false)
 	
     switch (state)
     {
-        case states.tumble:
+        case "tumble":
             image_speed = 0.4;
             movespeed = 16;
             invincable = true;
@@ -63,17 +63,17 @@ if (hitstun.is == false)
             
             break;
         
-        case states.stun:
+        case "stun":
             scr_enemy_stun();
             break;
         
-        case states.hit:
+        case "hit":
             invincable = true;
             
             if (hitstun.is == false)
             {
                 xscale = obj_player.xscale;
-                state = states.tumble;
+                state = "tumble";
                 sprite_index = spr_crab_roll;
                 vsp = -6;
                 movespeed = 16;
@@ -81,11 +81,11 @@ if (hitstun.is == false)
             
             break;
         
-        case states.turn:
+        case "turn":
             scr_enemy_turn();
             break;
         
-        case states.normal:
+        case "normal":
             image_speed = 0.35;
             hsp = 0;
             
@@ -106,7 +106,7 @@ if (hitstun.is == false)
                     yscaleMulti = 0.5;
                     vsp = -5;
                     scared = 120;
-                    state = states.stun;
+                    state = "stun";
                     sprite_index = spr_stun;
                     image_blend = c_white;
                 }
@@ -114,7 +114,7 @@ if (hitstun.is == false)
             
             break;
         
-        case states.move:
+        case "move":
             image_speed = 0.35;
             hsp = movespeed * xscale;
             movespeed = 1;
@@ -134,7 +134,7 @@ if (hitstun.is == false)
                 xscale *= -1;
             }
             
-            if (point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 160 && (obj_player.state == states.mach3 || obj_player.state == states.buzzsaw))
+            if (point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 160 && (obj_player.state == scr_player_mach3 || obj_player.state == scr_player_buzzsaw))
             {
                 vsp = -5;
                 
@@ -143,18 +143,18 @@ if (hitstun.is == false)
                 
                 sprite_index = spr_scared;
                 scared = 120;
-                state = states.stun;
+                state = "stun";
             }
             
             break;
         
-        case states.grab:
+        case "grab":
             scr_enemy_grabbed();
             break;
         
-        case states.thrown:
+        case "thrown":
             invincable = true;
-            state = states.tumble;
+            state = "tumble";
             sprite_index = spr_crab_roll;
             vsp = -2;
             movespeed = 16;

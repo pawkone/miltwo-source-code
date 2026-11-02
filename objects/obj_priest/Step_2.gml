@@ -6,12 +6,12 @@ with instance_place(x,y,obj_player)
 	flash = true
 	if (pky_run)
 	{
-		state = states.mach2;
+		state = scr_player_mach2;
 		sprite_index = sprites.mach2;
 	}
 	else
 	{
-		state = states.normal;
+		state = scr_player_normal;
 		sprite_index = sprites.idle;
 	}
 

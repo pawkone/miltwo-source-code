@@ -16,7 +16,7 @@ if _secreterror
 }
 
 
-if state == states.enterdoor
+if state == scr_player_enterdoor
 	visible = true
 
 var doorOBJ = asset_get_index(string("obj_door{0}", door)), _hallway = -4;
@@ -46,21 +46,21 @@ if (instance_exists(doorOBJ))
 if (place_meeting(x, y + 4, obj_ballofbeer) || place_meeting(x, y - 16, obj_ballofbeer))
 {
     hallway = false;
-    state = states.crouch;
+    state = scr_player_crouch;
 }
 
 if door == "BACKTOHUB"
 {
 	x = backtohubX
 	y = backtohubY
-    state = states.walkfront;
+    state = scr_player_walkfront;
     image_index = 0;
     sprite_index = sprites.walkfront;
 }
 
-if (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_exitgate) || place_meeting(x, y, obj_magicianDoor) || place_meeting(x, y, obj_levelgate) || (place_meeting(x, y, obj_keydoor) && state == states.enterdoor && !instance_exists(obj_backtohub)))
+if (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_exitgate) || place_meeting(x, y, obj_magicianDoor) || place_meeting(x, y, obj_levelgate) || (place_meeting(x, y, obj_keydoor) && state == scr_player_enterdoor && !instance_exists(obj_backtohub)))
 {
-    state = states.walkfront;
+    state = scr_player_walkfront;
     image_index = 0;
     sprite_index = sprites.walkfront;
 	if place_meeting(x, y, obj_exitgate)

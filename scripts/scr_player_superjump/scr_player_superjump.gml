@@ -1,46 +1,3 @@
-function scr_player_superjumpprep()
-{
-	hsp = movespeed * xscale;
-    image_speed = 0.35;
-    
-    if (animation_end() && sprite_index == sprites.superjumpprepstart)
-    {
-        image_index = 0;
-        sprite_index = sprites.superjumpprep;
-    }
-    
-    if (sprite_index != sprites.superjumpprepstart)
-    {
-        var move = pky_right + pky_left;
-        
-        if (move != 0)
-        {
-            sprite_index = sprites.superjumpprepwalk;
-            xscale = move;
-            movespeed = approach(movespeed, 3, 0.5);
-        }
-        else
-        {
-            sprite_index = sprites.superjumpprep;
-            movespeed = 0;
-        }
-        
-        if (!pky_up)
-        {
-            state = states.superjump;
-            sprite_index = sprites.superjump;
-            image_index = 0;
-            verticalMovespeed = -14;
-            vsp = verticalMovespeed;
-            plrsnds_play(sfx.sjump_release, x, y);
-        }
-    }
-    else
-    {
-        movespeed = approach(movespeed, 0, 1);
-    }
-}
-
 function scr_player_superjump()
 {
     var move = pky_right + pky_left;
@@ -100,7 +57,7 @@ function scr_player_superjump()
             shake_camera(15);
             sprite_index = spr_player_hitceiling;
             image_index = 0;
-            state = states.freefallland;
+            state = scr_player_freefallland;
             plrsnds_play(sfx.slam, x, y);
         }
         
@@ -130,7 +87,7 @@ function scr_player_superjump()
             create_particleStatic(spr_crazyrunothereffect, x, y, xscale, 1);
             create_particleStatic(spr_grabcloud, x, y, xscale, 1);
             movespeed = 12;
-            state = states.mach3;
+            state = scr_player_mach3;
             jumpstop = true;
             vsp = -5;
             sprite_index = sprites.superjumpcancel;

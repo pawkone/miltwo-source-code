@@ -3,7 +3,7 @@ var _dr = "A";
 var _gate = id
 var _plr = other.id
 
-if (pky_up && _plr.state == states.normal)
+if (pky_up && _plr.state == scr_player_normal)
 {
     with (_plr)
     {
@@ -11,7 +11,7 @@ if (pky_up && _plr.state == states.normal)
         movespeed = 0;
         vsp = 0;
         hsp = 0;
-        state = states.enterdoor;
+        state = scr_player_enterdoor;
         sprite_index = sprites.entergate;
         image_index = 0;
     }
@@ -28,7 +28,7 @@ with (_plr)
 		x = approach(x, _gate.x, 1.75)
 	    if (image_index >= (image_number - 12) && !instance_exists(obj_fadeout) && !instance_exists(obj_titlecard))
 	    {
-	        state = states.enterdoor;
+	        state = scr_player_enterdoor;
 	        sprite_index = sprites.entergate;
 			if animation_end()
 				image_index = image_number - 1;

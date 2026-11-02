@@ -4,19 +4,19 @@ if (hitstun.is == false)
     
     switch (state)
     {
-        case states.stun:
+        case "stun":
             scr_enemy_stun();
             break;
         
-        case states.hit:
+        case "hit":
             scr_enemy_hit();
             break;
         
-        case states.turn:
+        case "turn":
             scr_enemy_turn();
             break;
         
-        case states.move:
+        case "move":
             attackTimer--;
             image_speed = 0.35;
             hsp = movespeed * xscale;
@@ -42,7 +42,7 @@ if (hitstun.is == false)
                 xscale *= -1;
             }
             
-            if (point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 160 && (obj_player.state == states.mach3 || obj_player.state == states.buzzsaw))
+            if (point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 160 && (obj_player.state == scr_player_mach3 || obj_player.state == scr_player_buzzsaw))
             {
                 vsp = -5;
                 
@@ -51,32 +51,32 @@ if (hitstun.is == false)
                 
                 sprite_index = spr_scared;
                 scared = 120;
-                state = states.stun;
+                state = "stun";
             }
             
             break;
         
-        case states.grab:
+        case "grab":
             scr_enemy_grabbed();
             break;
         
-        case states.thrown:
+        case "thrown":
             scr_enemy_thrown();
             break;
         
-        case states.buzzsaw:
+        case "buzzsaw":
             hsp = 0;
             
             if (animation_end())
             {
                 sprite_index = spr_move;
                 image_index = 0;
-                state = states.move;
+                state = "move";
             }
             
             break;
         
-        case states.uppercut:
+        case "uppercut":
             hsp = 0;
             image_speed = 0.2;
             
@@ -88,16 +88,16 @@ if (hitstun.is == false)
                     hsp = 8 * other.xscale;
                 }
                 
-                state = states.buzzsaw;
+                state = "buzzsaw";
             }
             
             break;
     }
     
-    if (attackTimer <= 0 && point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 42 && state == states.move)
+    if (attackTimer <= 0 && point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 42 && state == "move")
     {
         attackTimer = 120;
-        state = states.uppercut;
+        state = "uppercut";
         sprite_index = spr_tiki_spit;
         image_index = 0;
         

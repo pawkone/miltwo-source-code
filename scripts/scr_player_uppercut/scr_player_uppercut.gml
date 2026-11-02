@@ -43,7 +43,7 @@ function scr_player_uppercut()
 			direction = _targetdir
 		else
 			direction = 90
-		state = states.fries4wall
+		state = scr_player_fries4wall
 		exit
 	}
 	
@@ -52,7 +52,7 @@ function scr_player_uppercut()
         create_particleStatic(spr_landeffect, x, y, 1, 1);
         image_index = 0;
         sprite_index = (move != 0) ? sprites.land2 : sprites.land;
-        state = states.normal;
+        state = scr_player_normal;
         plrsnds_play(sfx.step, x, y);
         movespeed = abs(hsp);
         

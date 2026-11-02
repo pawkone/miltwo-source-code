@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"state_player_superjump",
+  "%Name":"scr_player_groundpoundstart",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"state_player_superjump",
+  "name":"scr_player_groundpoundstart",
   "parent":{
     "name":"States (General)",
     "path":"folders/Scripts/Player Related/States (General).yy",

@@ -14,7 +14,7 @@ with instance_place(x,y,obj_player)
     if !is_transfo_all()
     {
 		grounded = false
-        state = states.slip;
+        state = scr_player_slip;
         movespeed = 12;
         vsp = -15;
         sprite_index = spr_player_slipsyrup;

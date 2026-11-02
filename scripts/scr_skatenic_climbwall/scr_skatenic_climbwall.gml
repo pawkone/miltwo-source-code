@@ -30,7 +30,7 @@ function scr_skatenic_climbwall()
 	if slapBuffer > 0
 	{
 	    slapBuffer = false
-	    state = states.mach2
+	    state = scr_player_mach2
 		movespeed = 13
 		scale = 1.7
 		image_speed = 0.5
@@ -48,13 +48,13 @@ function scr_skatenic_climbwall()
 	{
 	    image_index = 0;
 	    sprite_index = sprites.rolling;
-	    state = states.tumble;
+	    state = scr_player_tumble;
 	    create_particleStatic(spr_grabcloud, x, y, xscale, 1);
 	}
 	else if verticalMovespeed >= 0 && grounded
 	{
 		wallgrab = 0
-	    state = states.mach3
+	    state = scr_player_mach3
 		image_speed = 0.35
 	    image_index = 0
 	    sprite_index = sprites.mach3hit

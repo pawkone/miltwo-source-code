@@ -42,7 +42,7 @@ function scr_player_climbwall()
     if ((!pky_run && wallgrab <= 0) || (verticalMovespeed <= 0 && character != chars.milton))
     {
         vsp = 0;
-        state = states.jump;
+        state = scr_player_jump;
         movespeed = -5;
         sprite_index = sprites.fall;
     }
@@ -55,7 +55,7 @@ function scr_player_climbwall()
         
         if (!(character == chars.milton) && isMildred)
         {
-            state = states.buzzsaw;
+            state = scr_player_buzzsaw;
             image_index = 0;
             sprite_index = sprites.buzzsawBump;
             
@@ -68,7 +68,7 @@ function scr_player_climbwall()
         }
         else if (verticalMovespeed >= 12)
         {
-            state = states.mach3;
+            state = scr_player_mach3;
             movespeed = verticalMovespeed;
             flash = true;
             sprite_index = sprites.mach3;
@@ -76,7 +76,7 @@ function scr_player_climbwall()
         }
         else
         {
-            state = states.mach2;
+            state = scr_player_mach2;
             movespeed = verticalMovespeed;
             sprite_index = sprites.mach2;
             vsp = 0;
@@ -106,7 +106,7 @@ function scr_player_climbwall()
             vsp = -16;
             xscale *= -1;
             movespeed = verticalMovespeed * xscale;
-            state = states.hammerwirl;
+            state = scr_player_hammerwirl;
             sprite_index = spr_milton_hammerwirl;
             image_index = 0;
             plrsnds_play(sfx.jump, x, y);
@@ -118,7 +118,7 @@ function scr_player_climbwall()
         vsp = -11;
         xscale *= -1;
         movespeed = 10;
-        state = states.mach2;
+        state = scr_player_mach2;
         jumpstop = false;
         sprite_index = sprites.walljumpstart;
         image_index = 0;
@@ -132,7 +132,7 @@ function scr_player_climbwall()
 	        xscale *= -1;
 	        movespeed = 0;
 	        image_index = 0;
-	        state = states.dreambounce;
+	        state = scr_player_dreambounce;
 		}
 	}
 
@@ -140,7 +140,7 @@ function scr_player_climbwall()
     {
         image_index = 0;
         sprite_index = sprites.rolling;
-        state = states.tumble;
+        state = scr_player_tumble;
         movespeed = abs(movespeed);
         if (movespeed < 12)
             movespeed = 12;
@@ -149,7 +149,7 @@ function scr_player_climbwall()
     {
         freefallsmash = 20;
         vsp = 10;
-        state = states.groundpound;
+        state = scr_player_groundpound;
         create_particleStatic(spr_cloudeffect, x, y, 1, 1);
         buffers.crazyothereffect = 0;
         sprite_index = spr_player_wallpoundstart;
@@ -163,7 +163,7 @@ function scr_player_climbwall()
         shake_camera(15);
         sprite_index = spr_player_hitceiling;
         image_index = 0;
-        state = states.freefallland;
+        state = scr_player_freefallland;
         plrsnds_play(sfx.slam, x, y);
     }
 }

@@ -1,4 +1,4 @@
-snowballstates = [states.snowball, states.snowball_jump, states.snowball_wall];
+snowballstates = [scr_player_snowball, scr_player_snowball_jump, scr_player_snowball_wall];
 
 if (place_meeting(x, y, obj_player) && array_contains(snowballstates, obj_player.state) && _throw <= 0)
 {
@@ -6,7 +6,7 @@ if (place_meeting(x, y, obj_player) && array_contains(snowballstates, obj_player
     {
         x = lerp(x, other.x, 0.2);
         y = lerp(y, other.y - 50, 0.2);
-        state = states.snowball_jump;
+        state = scr_player_snowball_jump;
         hsp = 0;
         vsp = 0;
         movespeed = 0;

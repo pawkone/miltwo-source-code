@@ -16,7 +16,7 @@ function scr_player_mach2()
 			sprite_index = sprites.mach3
 			image_speed = 0.35
 			movespeed = 12
-			state = states.mach3
+			state = scr_player_mach3
 		}
 		exit
 	}
@@ -28,7 +28,7 @@ function scr_player_mach2()
 		sprite_index = sprites.mach3
 		image_speed = 0.35
 		movespeed = 12
-		state = states.mach3
+		state = scr_player_mach3
 		exit
 	}
     if (character == chars.milton)
@@ -121,7 +121,7 @@ function scr_player_mach2()
     {
         movespeed = max(movespeed, 12);
         flash = true;
-        state = states.mach3;
+        state = scr_player_mach3;
         
         if (sprite_index != sprites.rollgetup)
         {
@@ -147,7 +147,7 @@ function scr_player_mach2()
     {
         if (sprite_index == sprites.mach1)
         {
-            state = states.normal;
+            state = scr_player_normal;
             sprite_index = sprites.idle;
             image_index = 0;
             image_speed = 0.35;
@@ -156,7 +156,7 @@ function scr_player_mach2()
         else
         {
             plrsnds_play(sfx.machend, x, y);
-            state = states.machslide;
+            state = scr_player_machslide;
             sprite_index = sprites.machslidestart;
             image_index = 0;
         }
@@ -175,7 +175,7 @@ function scr_player_mach2()
             plrsnds_play(sfx.machturn, x, y);
             sprite_index = sprites.mach2turn;
             image_index = 0;
-            state = states.machturn;
+            state = scr_player_machturn;
             exit;
         }
     }
@@ -183,7 +183,7 @@ function scr_player_mach2()
     if (place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x, y + 1, obj_slope) && grounded)
     {
         FMODevent_oneshot("event:/Sfx/Player/bump", x, y);
-        state = states.hitwall;
+        state = scr_player_hitwall;
         sprite_index = sprites.wallsplat;
         image_index = 0;
         exit;
@@ -193,7 +193,7 @@ function scr_player_mach2()
     {
         image_index = 0;
         sprite_index = sprites.rollstart;
-        state = states.tumble;
+        state = scr_player_tumble;
         create_particleStatic(spr_grabcloud, x, y, xscale, 1);
         exit;
     }
@@ -216,7 +216,7 @@ function scr_player_mach2()
 			}
 			else
 				verticalMovespeed = movespeed+(character == chars.milton*3);
-            state = states.climbwall;
+            state = scr_player_climbwall;
             sprite_index = sprites.wallclimb;
             image_index = 0;
             exit;
@@ -230,7 +230,7 @@ function scr_player_mach2()
 		{
 			vsp = -14;
 			movespeed *= xscale
-			state = states.hammerwirl;
+			state = scr_player_hammerwirl;
 			sprite_index = spr_milton_hammerwirl;
 			image_index = 0;
 			plrsnds_play(sfx.jump, x, y);
@@ -239,7 +239,7 @@ function scr_player_mach2()
         image_index = 0;
         FMODevent_oneshot("event:/Sfx/Player/airspin", x, y);
         vsp = -11;
-        state = states.buzzsaw;
+        state = scr_player_buzzsaw;
         image_index = 0;
         sprite_index = sprites.buzzsawBump;
     }

@@ -21,13 +21,13 @@ function scr_player_machslide()
     {
         sprite_index = sprites.machslideend;
         image_index = 0;
-        state = states.normal;
+        state = scr_player_normal;
     }
     
     if (place_meeting(x + sign(hsp), y, obj_solid))
     {
         FMODevent_oneshot("event:/Sfx/Player/bump", x, y);
-        state = states.hitwall;
+        state = scr_player_hitwall;
         sprite_index = sprites.wallsplat;
         image_index = 0;
     }

@@ -1,7 +1,7 @@
 depth = target.depth + 1;
 if target >= 0 && target.character == chars.bacon_dream
 	depth -= 2
-if (target.state == states.mach3)
+if (target.state == scr_player_mach3)
 {
     x = target.x;
     y = target.y;

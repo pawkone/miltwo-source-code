@@ -14,7 +14,7 @@ function meta_noclip()
 function sh_noclip(arg0)
 {
     with (obj_player)
-        state = states.noclip;
+        state = scr_player_noclip;
 }
 
 function meta_test_lap3()

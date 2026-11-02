@@ -19,7 +19,7 @@ function scr_player_surfing()
         if (!place_meeting(x, y, obj_beer))
         {
             movespeed = abs(movespeed);
-            state = states.mach2;
+            state = scr_player_mach2;
             sprite_index = sprites.longjump;
             image_index = 0;
             jumpstop = true;

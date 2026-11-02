@@ -37,7 +37,7 @@ else
     vsp = 0;
 }
 
-if (obj_player.state == states.enterdoor || obj_player.state == states.walkfront || instance_exists(obj_fadeout) || obj_player.state == -4)
+if (obj_player.state == scr_player_enterdoor || obj_player.state == scr_player_walkfront || instance_exists(obj_fadeout) || obj_player.state == -4)
     image_alpha = 0;
 x += hsp;
 y += vsp;

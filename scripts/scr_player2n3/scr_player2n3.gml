@@ -25,7 +25,7 @@ function scr_player_retwistedBuzzsaw()
 	if pky_down2 && _t
 	{
 		sprite_index = spr_player3_spinnygroundpound
-		state = states.groundpound
+		state = scr_player_groundpound
 		movespeed = abs(hsp)
 		vsp = 12;
 		exit
@@ -43,7 +43,7 @@ function scr_player_retwistedBuzzsaw()
 		slapBuffer = 0
 		image_index = 2
 		sprite_index = _t ? spr_player3_longjump : spr_player2_longjump
-		state = states.mach3
+		state = scr_player_mach3
 		jumpstop = true
 		vsp = -7
 		if move != 0
@@ -143,7 +143,7 @@ function scr_player_retwistedBuzzsaw()
 		movespeed = abs(hsp)
 		if movespeed < 13
 			movespeed = 13
-		state = pky_run ? states.mach3 : states.normal
+		state = pky_run ? scr_player_mach3 : scr_player_normal
 		sprite_index = pky_run ? sprites.mach3 : sprites.land
 	}
 }

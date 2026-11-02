@@ -28,7 +28,7 @@ function scr_player_dreambounce()
     {
         if (pky_run)
         {
-	        state = states.mach3;
+	        state = scr_player_mach3;
         
 			if move != 0
 				xscale = move
@@ -55,7 +55,7 @@ function scr_player_dreambounce()
                 sprite_index = spr_player1_land;
             
             image_index = 0;
-            state = states.normal;
+            state = scr_player_normal;
         }
     }
 	
@@ -70,7 +70,7 @@ function scr_player_dreambounce()
     {
         sprite_index = spr_player1_spincancel;
         image_index = 0;
-        state = states.dreamspin;
+        state = scr_player_dreamspin;
         if (movespeed < 12)
             movespeed = 12;
         if (move != 0)
@@ -104,13 +104,13 @@ function scr_player_dreamspin()
         movespeed = 0;
         sprite_index = spr_player1_grabspinny;
         image_index = 0;
-        state = states.dreambounce;
+        state = scr_player_dreambounce;
 		create_particleStatic(spr_dreambounceeffect, x, y, 1, -2);
     }
     
     if (grounded)
     {
-        state = states.mach3;
+        state = scr_player_mach3;
         
 		if move != 0
 			xscale = move
@@ -160,7 +160,7 @@ function scr_player_dreamcrusher()
 		if slapBuffer > 0
 		{
 		    slapBuffer = false
-		    state = states.mach2
+		    state = scr_player_mach2
 			movespeed = 13
 			scale = 1.7
 			image_speed = 0.5
@@ -191,7 +191,7 @@ function scr_player_dreamcrusher()
             var slope = instance_place(x, y + 1, obj_slope);
             xscale = -sign(slope.image_xscale);
             movespeed = (freefallsmash >= 10) ? 12 : 8;
-            state = states.tumble;
+            state = scr_player_tumble;
             sprite_index = sprites.rolling;
             create_particleStatic(spr_superdashcloud, x, y, xscale, 1);
         }
@@ -201,7 +201,7 @@ function scr_player_dreamcrusher()
 	        image_index = 0
 	        vsp = 0
 	        hsp = 0
-	        state = states.freefallland
+	        state = scr_player_freefallland
 	        movespeed = abs(movespeed)
 			shake_camera(10,15)
 	        plrsnds_play(sfx.slam, x, y)

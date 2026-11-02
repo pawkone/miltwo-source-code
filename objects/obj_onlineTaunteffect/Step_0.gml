@@ -17,7 +17,7 @@ if (target == -4)
     if (_found)
         target = _objPl;
 }
-else if (target.state != states.taunt)
+else if (target.state != scr_player_taunt)
 {
 	if oldtaunt
 		destroy = true;

@@ -25,7 +25,7 @@ else
             create_particleStatic(spr_genericpoofeffect, x, y, 1, -1);
             sprite_index = spr_stun;
             scared = 30;
-            state = states.stun;
+            state = "stun";
         }
     }
     

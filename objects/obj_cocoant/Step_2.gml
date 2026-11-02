@@ -4,19 +4,19 @@ if (hitstun.is == false)
     
     switch (state)
     {
-        case states.stun:
+        case "stun":
             scr_enemy_stun();
             break;
         
-        case states.hit:
+        case "hit":
             scr_enemy_hit();
             break;
         
-        case states.turn:
+        case "turn":
             scr_enemy_turn();
             break;
         
-        case states.move:
+        case "move":
             attackTimer--;
             image_speed = 0.35;
             hsp = movespeed * xscale;
@@ -37,7 +37,7 @@ if (hitstun.is == false)
                 xscale *= -1;
             }
             
-            if (point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 160 && (obj_player.state == states.mach3 || obj_player.state == states.buzzsaw))
+            if (point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 160 && (obj_player.state == scr_player_mach3 || obj_player.state == scr_player_buzzsaw))
             {
                 vsp = -5;
                 
@@ -46,20 +46,20 @@ if (hitstun.is == false)
                 
                 sprite_index = spr_scared;
                 scared = 120;
-                state = states.stun;
+                state = "stun";
             }
             
             break;
         
-        case states.grab:
+        case "grab":
             scr_enemy_grabbed();
             break;
         
-        case states.thrown:
+        case "thrown":
             scr_enemy_thrown();
             break;
         
-        case states.uppercut:
+        case "uppercut":
             image_speed = 0.35;
             
             if (animation_end() && sprite_index == spr_cocoant_shootprep)
@@ -82,17 +82,17 @@ if (hitstun.is == false)
             {
                 image_index = 0;
                 sprite_index = spr_move;
-                state = states.move;
+                state = "move";
             }
             
             movespeed = 0;
             break;
     }
     
-    if (attackTimer <= 0 && point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 42 && state == states.move)
+    if (attackTimer <= 0 && point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 42 && state == "move")
     {
         attackTimer = 120;
-        state = states.uppercut;
+        state = "uppercut";
         sprite_index = spr_cocoant_shootprep;
         image_index = 0;
         

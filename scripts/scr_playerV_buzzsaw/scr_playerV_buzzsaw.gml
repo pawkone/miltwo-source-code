@@ -53,7 +53,7 @@ function scr_playerV_buzzsaw()
             movespeed = 12;
         
         flash = true;
-        state = states.mach3
+        state = scr_player_mach3
         sprite_index = spr_playerV_rollgetup;
         image_index = 0;
         FMODevent_oneshot("event:/Sfx/Player/sawland", x, y);
@@ -75,7 +75,7 @@ function scr_playerV_buzzsaw()
         if (movespeed < 13)
             movespeed = 13;
         
-        state = states.mach3;
+        state = scr_player_mach3;
         jumpstop = true;
         vsp = -8;
         sprite_index = spr_playerV_buzzsawCancel;

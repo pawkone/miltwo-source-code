@@ -36,6 +36,6 @@ function scr_player_fries4wall()
 		var _s = sign(hsp)
 		if _s != 0
 			xscale = _s
-		state = states.mach2
+		state = scr_player_mach2
 	}
 }

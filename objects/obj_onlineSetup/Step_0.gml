@@ -88,7 +88,7 @@ else
                     }
                     global.connected = true;
                     room_goto(Mainmenu);
-                    obj_player.state = states.normal;
+                    obj_player.state = scr_player_normal;
 					instance_destroy(obj_onlineHandler)
                     with instance_create(x, y, obj_onlineHandler)
 					{
@@ -103,7 +103,7 @@ else
                     global.client = network_create_socket(network_socket_udp);
 					global.server = -4
                     global.connected = true;
-                    obj_player.state = states.normal;
+                    obj_player.state = scr_player_normal;
                     room_goto(Mainmenu);
 					instance_destroy(obj_onlineHandler)
                     with instance_create(x, y, obj_onlineHandler)

@@ -40,7 +40,7 @@ function scr_player_slip()
         image_index = image_number - 1;
 		if (movespeed == 0 && grounded && sprite_index == spr_player_beakerintro)
         {
-            state = states.normal;
+            state = scr_player_normal;
             movespeed = 0;
             sprite_index = sprites.land;
         }

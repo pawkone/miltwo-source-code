@@ -6,5 +6,5 @@ function scr_player_noclip()
 	hsp = 0
 	vsp = 0
 	if pky_jump2
-		state = states.normal
+		state = scr_player_normal
 }

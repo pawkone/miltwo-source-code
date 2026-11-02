@@ -20,7 +20,7 @@ var yaya = ((
 uparrowadd = lerp(uparrowadd, (yaya - uparrow) * 0.15, 0.5)
 if yaya
 {
-	if state == states.enterdoor || instance_exists(obj_rank)
+	if state == scr_player_enterdoor || instance_exists(obj_rank)
 		uparrow = approach(uparrow, 3, 0.2)
 	else
 		uparrow += uparrowadd
@@ -61,11 +61,11 @@ else if character == chars.bacon_crash
 else
 	angle = 0
 
-instakill = skatenic_is_tornado() || state == states.dreamcrusher || state == states.water || sprite_index == spr_milton_dive || state == states.slip || state == states.mach3 || state == states.skateboard || state == states.skateboardwall || state == states.skateboardramp || state == states.skateboardmove || state == states.hammerattack || (state == states.machturn && sprite_index == sprites.mach3turn) || state == states.superjump || state == states.uppercut || state == states.groundpound || state == states.groundpoundstart || state == states.buzzsaw || state == states.snowball || state == states.snowball_jump || state == states.snowball_wall;
+instakill = skatenic_is_tornado() || state == scr_player_dreamcrusher || state == scr_player_water || sprite_index == spr_milton_dive || state == scr_player_slip || state == scr_player_mach3 || state == scr_player_skateboard || state == scr_player_skateboardwall || state == scr_player_skateboardramp || state == scr_player_skateboardmove || state == scr_player_hammerattack || (state == scr_player_machturn && sprite_index == sprites.mach3turn) || state == scr_player_superjump || state == scr_player_uppercut || state == scr_player_groundpound || state == scr_player_groundpoundstart || state == scr_player_buzzsaw || state == scr_player_snowball || state == scr_player_snowball_jump || state == scr_player_snowball_wall;
 
 if (hitstun.is == false)
 {
-    if (!instance_exists(obj_technicaldifficulty) && obj_player.state != states.enterdoor && obj_player.state != states.skateboardIntro && obj_player.state != states.walkfront && !instance_exists(obj_fadeout) && obj_player.state != -4)
+    if (!instance_exists(obj_technicaldifficulty) && obj_player.state != scr_player_enterdoor && obj_player.state != scr_player_skateboardIntro && obj_player.state != scr_player_walkfront && !instance_exists(obj_fadeout) && obj_player.state != -4)
         global.combo.timer = approach(global.combo.timer, 0, 0.15);
     
     if (global.combo.previouscombo != global.combo.amt)
@@ -131,14 +131,14 @@ if (hitstun.is == false)
 	{
 	    switch (state)
 	    {
-	        case states.normal:
-	        case states.jump:
-	        case states.mach2:
-	        case states.mach3:
-	        case states.dreambounce:
+	        case scr_player_normal:
+	        case scr_player_jump:
+	        case scr_player_mach2:
+	        case scr_player_mach3:
+	        case scr_player_dreambounce:
 	            if (pky_up && pky_jump2 && !grounded)
 	            {
-	                state = states.dreamcrusher;
+	                state = scr_player_dreamcrusher;
 	                vsp = -17;
 					plrsnds_play(sfx.jump, x, y);
 					FMODevent_oneshot("event:/Sfx/Player/slip", x, y);
@@ -151,14 +151,14 @@ if (hitstun.is == false)
 	{
 	    switch (state)
 	    {
-	        case states.normal:
-	        case states.jump:
-	        case states.mach2:
-	        case states.mach3:
-	        case states.climbwall:
+	        case scr_player_normal:
+	        case scr_player_jump:
+	        case scr_player_mach2:
+	        case scr_player_mach3:
+	        case scr_player_climbwall:
 	            if (pky_up && pky_jump2 && !grounded)
 	            {
-	                state = states.dreamcrusher;
+	                state = scr_player_dreamcrusher;
 	                vsp = -17;
 					plrsnds_play(sfx.jump, x, y);
 					FMODevent_oneshot("event:/Sfx/Player/slip", x, y);
@@ -178,15 +178,15 @@ if (hitstun.is == false)
     
     coyote_time--;
     
-    if (state != states.hurt)
+    if (state != scr_player_hurt)
         i_frame = approach(i_frame, 0, 1);
     
-    if (i_frame > 0 && state != states.hurt)
+    if (i_frame > 0 && state != scr_player_hurt)
         image_alpha = round(wave(0, 1, 0.1, 0));
     else
         image_alpha = 1;
     
-    if (state == states.walkfront && sprite_index == sprites.walkfront)
+    if (state == scr_player_walkfront && sprite_index == sprites.walkfront)
         image_blend = make_colour_hsv(0, 0, (image_index / image_number) * 255);
     else
         image_blend = make_colour_hsv(0, 0, 255);
@@ -204,15 +204,11 @@ if (hitstun.is == false)
         }
     }
 
-	if state >= 0
-	{
-		var _asset = asset_get_index("scr_player_" + state_names[state])
-		if script_exists(_asset)
-			script_execute(_asset)
-	}
+	if is_callable(state)
+		state()
 	
 	mask_index = spr_player_mask
-    mask_index = scr_solid(x,y) || (state == states.crouch || state == states.tumble || state == states.superjumpprep) ? spr_crouchmask : spr_player_mask
+    mask_index = scr_solid(x,y) || (state == scr_player_crouch || state == scr_player_tumble || state == scr_player_superjumpprep) ? spr_crouchmask : spr_player_mask
 		
 	scr_collide_destructibles()
     scr_collision()

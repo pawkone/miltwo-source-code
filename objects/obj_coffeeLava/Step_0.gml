@@ -2,7 +2,7 @@ with obj_player
 {
 	if place_meeting(x,y,other)
 	{
-		state = states.burned
+		state = scr_player_burned
 		vsp = -20;
 		sprite_index = spr_player3_burn;
         image_index = 0;

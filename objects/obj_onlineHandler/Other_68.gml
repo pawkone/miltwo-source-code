@@ -42,7 +42,7 @@ if async_load[? "type"] == network_type_data
 						{
 							generalReset();
 							room_goto(global.prophuntmode.room)
-							state = states.enterdoor
+							state = scr_player_enterdoor
 							sprite_index = sprites.walkfront
 							targetRoom = global.prophuntmode.room
 							door = "A"

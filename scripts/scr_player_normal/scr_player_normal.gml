@@ -187,7 +187,7 @@ function scr_player_normal()
 	        image_index = 0;
 	        sprite_index = sprites.fall;
 		}
-        state = states.jump;
+        state = scr_player_jump;
     }
     
     if (jumpBuffer && coyote_time)
@@ -199,7 +199,7 @@ function scr_player_normal()
 	        image_index = 0;
 	        sprite_index = sprites.jump;
 		}
-        state = states.jump;
+        state = scr_player_jump;
         vsp = -12;
         jumpstop = false;
         plrsnds_play(sfx.jump, x, y);
@@ -210,7 +210,7 @@ function scr_player_normal()
         image_speed = 0.35;
         image_index = 0;
         sprite_index = sprites.crouchstart;
-        state = states.crouch;
+        state = scr_player_crouch;
     }
     
     if (pky_run && !place_meeting(x + xscale, y, obj_solid))
@@ -221,7 +221,7 @@ function scr_player_normal()
             movespeed = 6;
         sprite_index = sprites.mach1;
         image_index = 0;
-        state = states.mach2;
+        state = scr_player_mach2;
 		if character == chars.pepperni
 			flash = true;
     }

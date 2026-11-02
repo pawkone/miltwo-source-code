@@ -6,4 +6,4 @@ for (var i = 0; i <= 18; i++)
 }
 xdata_close()
 if instance_exists(obj_player)
-	obj_player.state = states.normal
+	obj_player.state = scr_player_normal

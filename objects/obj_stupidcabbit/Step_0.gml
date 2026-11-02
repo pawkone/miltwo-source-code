@@ -10,7 +10,7 @@ with (obj_player)
 }
 with (obj_crab)
 {
-    if place_meeting(x + hsp, y + vsp, other) && state == states.taunt
+    if place_meeting(x + hsp, y + vsp, other) && state == scr_player_taunt
 	{
 		instance_destroy(other)
 		exit

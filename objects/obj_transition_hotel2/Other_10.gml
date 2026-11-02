@@ -70,7 +70,7 @@ with instance_create(5105,672,obj_floorgate)
 			instance_create(0,0,obj_goodmode)
 			visible = true
 			image_speed = 0.35
-			state = states.slip
+			state = scr_player_slip
 			xscale = choose(-1,1)
 			movespeed = 100
 			vsp = -66

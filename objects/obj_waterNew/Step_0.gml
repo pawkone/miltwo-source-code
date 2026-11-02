@@ -1,9 +1,9 @@
 with instance_place(x,y,obj_player)
 {
-	var _states = [states.water, states.noclip]
+	var _states = [scr_player_water, scr_player_noclip]
 	if !array_contains(_states, state) && !is_transfo_all()
 	{
 		movespeed = hsp
-		state = states.water
+		state = scr_player_water
 	}
 }

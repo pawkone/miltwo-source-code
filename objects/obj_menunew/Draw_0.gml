@@ -18,7 +18,7 @@ if keyboard_check_pressed(vk_f2)
 	    movespeed = 0;
 	    vsp = 0;
 	    hsp = 0;
-	    state = states.enterdoor;
+	    state = scr_player_enterdoor;
 	}
 	global.level = -4;
 	global.resetRoom = _rm;

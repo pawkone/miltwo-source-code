@@ -45,7 +45,7 @@ function scr_player_machturn()
         {
             xscale *= -1;
             movespeed = 8;
-            state = states.mach2;
+            state = scr_player_mach2;
             sprite_index = sprites.mach2;
             image_index = 0;
         }
@@ -53,7 +53,7 @@ function scr_player_machturn()
         {
             xscale *= -1;
             movespeed = 12;
-            state = states.mach3;
+            state = scr_player_mach3;
             sprite_index = sprites.mach3;
             image_index = 0;
         }
@@ -65,7 +65,7 @@ function scr_player_machturn()
         {
             xscale *= -1;
             movespeed = 8;
-            state = states.mach2;
+            state = scr_player_mach2;
             sprite_index = sprites.mach2;
             image_index = 0;
         }
@@ -73,7 +73,7 @@ function scr_player_machturn()
         {
             xscale *= -1;
             movespeed = 12;
-            state = states.mach3;
+            state = scr_player_mach3;
             sprite_index = sprites.mach3;
             image_index = 0;
         }

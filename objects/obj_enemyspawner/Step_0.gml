@@ -13,7 +13,7 @@ if (distance_to_object(obj_player) <= 300 && !instance_exists(baddieID))
     with (baddieID)
     {
         vsp = -5;
-        state = states.stun;
+        state = "stun";
         scared = 100;
         sprite_index = spr_stun;
         xscale = other.image_xscale;

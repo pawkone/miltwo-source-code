@@ -4,19 +4,19 @@ if (hitstun.is == false)
     
     switch (state)
     {
-        case states.stun:
+        case "stun":
             scr_enemy_stun();
             break;
         
-        case states.hit:
+        case "hit":
             scr_enemy_hit();
             break;
         
-        case states.turn:
+        case "turn":
             scr_enemy_turn();
             break;
         
-        case states.mach2:
+        case "mach2":
             image_speed = 0.4;
             hsp = movespeed * xscale;
             movespeed = 8;
@@ -31,7 +31,7 @@ if (hitstun.is == false)
             
             break;
         
-        case states.crouch:
+        case "crouch":
             image_speed = 0.5;
             sprite_index = spr_pancake_getup;
             
@@ -41,7 +41,7 @@ if (hitstun.is == false)
                     xscale = -sign(obj_player.x - x);
                 
                 vsp = -11;
-                state = states.mach2;
+                state = "mach2";
                 
                 with (instance_create(x, y, obj_slipperybutter))
                 {
@@ -53,7 +53,7 @@ if (hitstun.is == false)
             
             break;
         
-        case states.move:
+        case "move":
             image_speed = 0.35;
             movespeed = 0;
             hsp = movespeed * xscale;
@@ -69,17 +69,17 @@ if (hitstun.is == false)
                     if (obj_player.x != x)
                         xscale = sign(obj_player.x - x);
                     
-                    state = states.crouch;
+                    state = "crouch";
                 }
             }
             
             break;
         
-        case states.grab:
+        case "grab":
             scr_enemy_grabbed();
             break;
         
-        case states.thrown:
+        case "thrown":
             scr_enemy_thrown();
             break;
     }

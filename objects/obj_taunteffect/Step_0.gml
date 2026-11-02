@@ -1,6 +1,6 @@
 if sprite_index == spr_taunteffect_old
 {
-	if (target.state != states.taunt)
+	if (target.state != scr_player_taunt)
 		destroy = true;
 
 	if (destroy)
@@ -8,7 +8,7 @@ if sprite_index == spr_taunteffect_old
 }
 else
 {
-	if (target.state != states.taunt)
+	if (target.state != scr_player_taunt)
 	    instance_destroy();
 	x = target.x;
 	y = target.y;

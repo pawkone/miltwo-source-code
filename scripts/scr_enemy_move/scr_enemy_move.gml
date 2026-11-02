@@ -16,12 +16,12 @@ function scr_enemy_move()
     if (place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_hallway) || (!(place_meeting(x + (xscale * 18), y + 31, obj_solid) || place_meeting(x + (xscale * 18), y + 31, obj_slope) || place_meeting(x + (xscale * 18), y + 31, obj_platform)) && grounded))
     {
         image_speed = 0.35;
-        state = states.turn;
+        state = "turn";
         sprite_index = spr_turn;
         image_index = 0;
     }
     
-    if (point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 160 && (obj_player.state == states.mach3 || obj_player.state == states.buzzsaw || (obj_player.state == states.snowball && obj_player.movespeed >= 8)))
+    if (point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 160 && (obj_player.state == scr_player_mach3 || obj_player.state == scr_player_buzzsaw || (obj_player.state == scr_player_snowball && obj_player.movespeed >= 8)))
     {
         vsp = -5;
         
@@ -30,6 +30,6 @@ function scr_enemy_move()
         
         sprite_index = spr_scared;
         scared = 120;
-        state = states.stun;
+        state = "stun";
     }
 }

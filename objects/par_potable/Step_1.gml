@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case "normal":
         image_speed = 0.35;
         
         if (sprite_index != spr_intro)
@@ -18,11 +18,11 @@ switch (state)
                 sprite_index = global.escapeActive ? spr_panicidle : spr_idle;
             }
             
-            if (obj_player.state == states.taunt)
+            if (obj_player.state == scr_player_taunt)
             {
                 sprite_index = spr_taunt;
                 image_index = irandom_range(0, image_number);
-                state = states.taunt;
+                state = "taunt";
                 image_speed = 0;
             }
         }
@@ -34,7 +34,7 @@ switch (state)
         
         break;
     
-    case states.taunt:
+    case "taunt":
         var supertauntArr = [spr_player_supertaunt1, spr_player_supertaunt2, spr_player_supertaunt3];
         
         if (array_contains(supertauntArr, obj_player.sprite_index) && sprite_index == spr_taunt)
@@ -51,9 +51,9 @@ switch (state)
             tauntInst.target = self;
         }
         
-        if (obj_player.state != states.taunt)
+        if (obj_player.state != scr_player_taunt)
         {
-            state = states.normal;
+            state = "normal";
             interp = 0;
         }
         

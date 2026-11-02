@@ -27,7 +27,7 @@ function scr_playerV_uppercut()
     if (place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x + sign(hsp), y, obj_destructibles) && sprite_index == spr_playerV_mach_uppercut)
     {
         FMODevent_oneshot("event:/Sfx/Player/bump", x, y);
-        state = states.hitwall;
+        state = scr_player_hitwall;
         sprite_index = sprites.wallsplat;
         image_index = 0;
         exit;
@@ -41,7 +41,7 @@ function scr_playerV_uppercut()
         create_particleStatic(spr_landeffect, x, y, 1, 1);
         image_index = 0;
         sprite_index = (move != 0) ? spr_playerV_land2 : spr_playerV_land;
-        state = states.normal;
+        state = scr_player_normal;
         FMODevent_oneshot("event:/Sfx/Player/step", x, y);
         movespeed = abs(hsp);
         

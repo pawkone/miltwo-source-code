@@ -56,7 +56,7 @@ function scr_player_buzzsaw()
             movespeed = 12;
         
         flash = true;
-        state = states.mach3;
+        state = scr_player_mach3;
         sprite_index = sprites.rollgetup;
         image_index = 0;
     }
@@ -76,7 +76,7 @@ function scr_player_buzzsaw()
         if (movespeed < 13)
             movespeed = 13;
         
-        state = states.mach3;
+        state = scr_player_mach3;
         jumpstop = true;
         vsp = -7;
         sprite_index = sprites.buzzsawCancel;

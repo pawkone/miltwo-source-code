@@ -51,7 +51,7 @@ if buffer < 0
 			sprite_index = sprites.idle
 			image_index = 0
 			image_speed = 0.35
-			state = states.normal
+			state = scr_player_normal
 			hsp = 0
 			vsp = 0
 			movespeed = 0

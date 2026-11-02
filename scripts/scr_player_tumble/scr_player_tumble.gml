@@ -67,7 +67,7 @@ function scr_player_tumble()
             vsp = -6;
             sprite_index = sprites.divebomb;
             image_index = 0;
-            state = states.groundpoundstart;
+            state = scr_player_groundpoundstart;
             squashX = 1.3;
             squashY = 0.8;
         }
@@ -80,7 +80,7 @@ function scr_player_tumble()
         
         if (jumpBuffer && !scr_solid(x, y - 16) && grounded)
         {
-            state = states.hammerwirl;
+            state = scr_player_hammerwirl;
             flash = true;
             vsp = -16;
             squashX = 1.3;
@@ -100,7 +100,7 @@ function scr_player_tumble()
 			if character == chars.bacon_twist
 				scr_soundeffect(sfx_player_bt_ballbounce)
 			vsp = -14
-			state = states.retwistedBuzzsaw
+			state = scr_player_retwistedBuzzsaw
 			exit
 		}
 		if character == chars.skatenic
@@ -122,7 +122,7 @@ function scr_player_tumble()
 		jumpstop = false;
 	    sprite_index = spr_player1_grabspinny;
 	    image_index = 0;
-	    state = states.dreambounce;
+	    state = scr_player_dreambounce;
 	    vsp = -15;
 	}
 	
@@ -168,7 +168,7 @@ function scr_player_tumble()
 		{
             crouchslip = 0;
             FMODevent_oneshot("event:/Sfx/Player/bump", x, y);
-            state = states.hitwall;
+            state = scr_player_hitwall;
             sprite_index = sprites.wallsplat;
             image_index = 0;
 		}
@@ -182,7 +182,7 @@ function scr_player_tumble()
 			movespeed = abs(hsp)
 			grounded = false
 			scale = 1.35
-            state = states.climbwall;
+            state = scr_player_climbwall;
             sprite_index = sprites.wallclimb;
 		}
 		else
@@ -190,7 +190,7 @@ function scr_player_tumble()
 	        plrsnds_play(sfx.rollgetup, x, y);
 	        image_index = 0;
 	        sprite_index = sprites.rollgetup;
-	        state = states.mach2;
+	        state = scr_player_mach2;
 		}
     }
 }

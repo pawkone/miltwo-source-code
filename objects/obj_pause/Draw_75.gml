@@ -108,15 +108,3 @@ with (bacon)
 }
     
 graphBorderSize = lerp(graphBorderSize, active ? 1 : 2, 0.15);
-    
-if (active)
-{
-    if (tipText != "")
-    {
-        draw_set_font(global.creditsfont);
-        draw_set_colour(c_white);
-        draw_set_halign(fa_center);
-        draw_textEX(960 / 2, 540 - 64, tipText);
-        draw_set_alpha(1);
-    }
-}

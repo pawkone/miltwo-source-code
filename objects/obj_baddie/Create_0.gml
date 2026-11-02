@@ -2,7 +2,7 @@ depth = 3;
 image_speed = 0.35;
 scr_collision_init();
 grav = 0.5;
-state = states.move;
+state = "move";
 movespeed = 0;
 xscale = sign(image_xscale);
 image_xscale = 1

@@ -1,5 +1,5 @@
 with (obj_player)
 {
-    state = states.normal;
+    state = scr_player_normal;
     sprite_index = sprites.idle;
 }

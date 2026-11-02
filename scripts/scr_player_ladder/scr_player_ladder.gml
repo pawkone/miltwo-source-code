@@ -29,13 +29,13 @@ function scr_player_ladder()
 	}
     else
     {
-        state = states.normal;
+        state = scr_player_normal;
         vsp = 0;
     }
     
     if (pky_down && grounded && !place_meeting(x, y+vsp, obj_platform))
     {
-        state = states.normal;
+        state = scr_player_normal;
         vsp = 0;
     }
     
@@ -53,7 +53,7 @@ function scr_player_ladder()
         create_particleStatic(spr_jumpeffect, x, y, 1, 1);
         image_index = 0;
         sprite_index = sprites.jump;
-        state = states.jump;
+        state = scr_player_jump;
         vsp = -12;
         jumpstop = false;
         plrsnds_play(sfx.jump, x, y);

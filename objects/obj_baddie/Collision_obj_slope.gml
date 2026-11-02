@@ -1,2 +1,2 @@
-if (state == states.thrown)
+if (state == "thrown")
     instance_destroy();

@@ -8,7 +8,7 @@ draw_set_colour(c_white);
 draw_set_font(global.creditsfont);
 
 var _plr = obj_player.id
-var _fall = _plr.state == states.enterdoor
+var _fall = _plr.state == scr_player_enterdoor
 var _active = distance <= 0
 for (var i = 0; i < (level_len + 1); i++)
 {

@@ -37,12 +37,12 @@ with (tv)
     if (global.combo.amt >= 15 && !isSecret)
         _idleSprite = _sprites.combo;
     
-    if (obj_player.state == states.ski)
+    if (obj_player.state == scr_player_ski)
         _idleSprite = _sprites.ski;
     
     if (!other.visible)
     {
-        state = states.normal;
+        state = scr_player_normal;
         sprite_index = _sprites.off;
     }
     
@@ -50,7 +50,7 @@ with (tv)
     
     switch (state)
     {
-        case states.normal:
+        case scr_player_normal:
             switch (sprite_index)
             {
                 case _sprites.off:
@@ -77,7 +77,7 @@ with (tv)
                 
                 case _sprites.crazyrun:
                 case _sprites.mach:
-                    if (obj_player.state != states.mach3 && obj_player.state != states.climbwall && obj_player.state != states.buzzsaw)
+                    if (obj_player.state != scr_player_mach3 && obj_player.state != scr_player_climbwall && obj_player.state != scr_player_buzzsaw)
                         tv_anim(_idleSprite);
                     
                     if (obj_player.mach4mode && expressionSprite == _sprites.mach)
@@ -100,7 +100,7 @@ with (tv)
                     if (expressionSprite != _idleSprite)
                         tv_anim(_idleSprite);
                     
-                    if (obj_player.state == states.mach3)
+                    if (obj_player.state == scr_player_mach3)
                         tv_anim(_sprites.mach);
                     
                     break;
@@ -108,14 +108,14 @@ with (tv)
             
             break;
         
-        case states.move:
+        case "move":
             switchindex = approach(switchindex, sprite_get_number(_sprites.trans) - 1, 0.35);
             
             if (switchindex >= (sprite_get_number(_sprites.trans) - 1))
             {
                 sprite_index = expressionSprite;
                 switchindex = 0;
-                state = states.normal;
+                state = scr_player_normal;
                 image_speed = 0.35;
             }
             

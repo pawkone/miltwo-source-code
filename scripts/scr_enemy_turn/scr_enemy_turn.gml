@@ -7,7 +7,7 @@ function scr_enemy_turn()
         xscale *= -1;
         sprite_index = spr_move;
         image_index = 0;
-        state = states.move;
+        state = "move";
         hsp = movespeed * xscale;
     }
 }

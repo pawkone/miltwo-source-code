@@ -7,7 +7,7 @@ function scr_player_crouch()
     {
         image_index = 0;
         sprite_index = sprites.idle;
-        state = states.normal;
+        state = scr_player_normal;
     }
     
     if (animation_end() && sprite_index == sprites.crouchstart)

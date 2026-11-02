@@ -66,14 +66,14 @@ function scr_player_crashoutbounce()
         }
         else if (!pky_run)
         {
-            state = states.normal;
+            state = scr_player_normal;
             sprite_index = spr_player0_land;
             image_index = 0;
             movespeed = abs(movespeed);
         }
         else
         {
-            state = states.mach3;
+            state = scr_player_mach3;
             flash = true;
             sprite_index = spr_player0_mach3hit;
             image_index = 0;

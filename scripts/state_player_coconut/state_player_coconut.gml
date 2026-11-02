@@ -8,7 +8,7 @@ function scr_player_coconut_intro()
     {
         sprite_index = spr_player_coconut_idle;
         image_index = 0;
-        state = states.coconut_gun;
+        state = scr_player_coconut_gun;
         movespeed = 0;
         hsp = 0;
     }
@@ -69,7 +69,7 @@ function scr_player_coconut_gun()
     {
         sprite_index = spr_player_coconut_shoot;
         image_index = 0;
-        state = states.coconut_shoot;
+        state = scr_player_coconut_shoot;
         movespeed = -8
 		vsp = -vsp * 0.5
 		if round(vsp) == 0
@@ -99,7 +99,7 @@ function scr_player_coconut_shoot()
     {
         sprite_index = spr_player_coconut_idle;
         image_index = 0;
-        state = states.coconut_gun;
+        state = scr_player_coconut_gun;
         movespeed = 0;
     }
 }

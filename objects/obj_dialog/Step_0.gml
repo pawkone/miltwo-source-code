@@ -2,7 +2,7 @@ if (active)
 {
     if (mky_jump2 && canProgress)
     {
-		if is_method(dialogStuff[currentDialog][2])
+		if is_callable(dialogStuff[currentDialog][2])
 			dialogStuff[currentDialog][2]()
         currentDialog++
         textVisual = ""

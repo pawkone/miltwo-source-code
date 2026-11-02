@@ -23,7 +23,7 @@ function scr_player_taunt()
         
         if (_isSupertaunt)
         {
-            state = states.taunt;
+            state = scr_player_taunt;
             image_speed = 0.35;
             sprite_index = choose(spr_player_supertaunt1, spr_player_supertaunt2, spr_player_supertaunt3);
             image_index = 0;

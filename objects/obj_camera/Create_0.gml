@@ -4,7 +4,7 @@ cameraShake = 0;
 cameraShakeTimer = 0;
 cameraShakeMax = 0
 cameraShakeTimerMax = 0
-state = states.normal;
+state = "normal";
 xOffset = 0;
 camera = 
 {

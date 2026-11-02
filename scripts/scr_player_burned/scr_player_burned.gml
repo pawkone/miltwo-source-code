@@ -12,7 +12,7 @@ function scr_player_burned()
 	if (grounded && vsp > 0 && (!place_meeting(x,y+1,obj_stupidcabbit)))
 	{
 		movespeed = 0;
-		state = states.normal;
+		state = scr_player_normal;
 		image_index = 0;
 	}
 }

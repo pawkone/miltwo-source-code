@@ -40,7 +40,7 @@ function scr_player_ski()
                 jumpBuffer = false;
                 vsp = -12;
                 jumpstop = false;
-                state = states.skibounce;
+                state = scr_player_skibounce;
                 plrsnds_play(sfx.jump, x, y);
                 image_index = 0;
                 sprite_index = spr_player_ski_bounce;
@@ -50,7 +50,7 @@ function scr_player_ski()
             {
                 slapBuffer = false;
                 movespeed = 17;
-                state = states.skirow;
+                state = scr_player_skirow;
                 image_index = 0;
                 sprite_index = spr_player_ski_row;
             }
@@ -103,7 +103,7 @@ function scr_player_skibounce()
     
     if (grounded && vsp >= 0)
     {
-        state = states.ski;
+        state = scr_player_ski;
         sprite_index = spr_player_ski_getup;
         image_index = 0;
     }
@@ -118,14 +118,14 @@ function scr_player_skirow()
     
     if (animation_end())
     {
-        state = states.ski;
+        state = scr_player_ski;
         image_index = 0;
         sprite_index = spr_player_ski_getup;
     }
     
     if (!grounded)
     {
-        state = states.ski;
+        state = scr_player_ski;
         sprite_index = spr_player_ski_fall;
     }
 }

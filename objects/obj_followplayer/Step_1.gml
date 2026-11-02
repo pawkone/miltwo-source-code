@@ -20,7 +20,7 @@ if (!obj_player.hitstun.is)
     space = approach(space, image_xscale, 0.1 / (pos / 4));
     image_alpha = obj_player.image_alpha;
     
-    if (obj_player.state == states.ladder || obj_player.state == states.superjump || obj_player.state == states.groundpound || obj_player.state == states.groundpoundstart || obj_player.state == states.walkfront || obj_player.state == states.enterdoor)
+    if (obj_player.state == scr_player_ladder || obj_player.state == scr_player_superjump || obj_player.state == scr_player_groundpound || obj_player.state == scr_player_groundpoundstart || obj_player.state == scr_player_walkfront || obj_player.state == scr_player_enterdoor)
         xoffset = approach(xoffset, 0, 3);
     else
         xoffset = approach(xoffset, 32, 5);

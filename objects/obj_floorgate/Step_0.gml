@@ -34,7 +34,7 @@ else
 				if _ran == 5
 				{
 					image_speed = 0.35
-					state = states.slip
+					state = scr_player_slip
 					xscale = choose(-1,1)
 					movespeed = irandom(7)
 					vsp = -16
@@ -45,7 +45,7 @@ else
 				else if _ran == 4
 				{
 					image_speed = 0.35
-					state = states.hurt
+					state = scr_player_hurt
 					xscale = choose(-1,1)
 					hsp = irandom(8) * xscale
 					vsp = -12

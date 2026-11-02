@@ -6,7 +6,7 @@ function scr_player_grab()
         
         if (pky_run)
         {
-            state = states.mach2;
+            state = scr_player_mach2;
             sprite_index = sprites.mach2;
             image_index = 0;
         }
@@ -14,7 +14,7 @@ function scr_player_grab()
         {
             sprite_index = sprites.idle;
             image_index = 0;
-            state = states.normal;
+            state = scr_player_normal;
             
             if (move == 0)
                 movespeed = 0;
@@ -79,7 +79,7 @@ function scr_player_grab()
         crouchslip = 25;
         sprite_index = sprites.crouchslip;
         image_index = 0;
-        state = states.tumble;
+        state = scr_player_tumble;
         movespeed = 12;
         create_particleStatic(spr_superdashcloud, x, y, xscale, 1);
         exit;
@@ -89,7 +89,7 @@ function scr_player_grab()
     {
         movespeed = 0;
         sprite_index = sprites.grabcancel;
-        state = states.jump;
+        state = scr_player_jump;
         exit;
     }
     
@@ -98,7 +98,7 @@ function scr_player_grab()
         jumpBuffer = false;
         image_index = 0;
         sprite_index = sprites.longjump;
-        state = states.mach2;
+        state = scr_player_mach2;
         vsp = -12;
         jumpstop = false;
         plrsnds_play(sfx.rollgetup, x, y);
@@ -120,7 +120,7 @@ function scr_player_grab()
 			direction = _targetdir
 		else
 			direction = xscale == -1 ? 180 : 0
-		state = states.fries4wall
+		state = scr_player_fries4wall
 		exit
 	}
 	
@@ -136,7 +136,7 @@ function scr_player_grab()
 		}
 		else
 			verticalMovespeed = movespeed;
-        state = states.climbwall;
+        state = scr_player_climbwall;
         sprite_index = sprites.wallclimb;
         image_index = 0;
     }
@@ -146,7 +146,7 @@ function scr_player_grab()
         movespeed = 0;
         hsp = 0;
         vsp = -6;
-        state = states.jump;
+        state = scr_player_jump;
         sprite_index = sprites.grabbump;
         create_particleStatic(spr_hurteffect, x, y, 1);
         image_index = 0;

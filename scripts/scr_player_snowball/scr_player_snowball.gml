@@ -38,7 +38,7 @@ function scr_player_snowball()
     if (grounded && vsp > 0 && jumpBuffer > 0)
     {
         jumpstop = false;
-        state = states.snowball_jump;
+        state = scr_player_snowball_jump;
         jumpBuffer = 0;
         vsp = -11;
         image_index = 0;
@@ -48,13 +48,13 @@ function scr_player_snowball()
     if (place_meeting(x + (1 * sign(move)), y, obj_solid))
     {
         vsp = -5;
-        state = states.snowball_wall;
+        state = scr_player_snowball_wall;
         exit;
     }
     
     if (!grounded)
     {
-        state = states.snowball_jump;
+        state = scr_player_snowball_jump;
         exit;
     }
     
@@ -106,7 +106,7 @@ function scr_player_snowball_jump()
     
     if (grounded && vsp > 0)
     {
-        state = states.snowball;
+        state = scr_player_snowball;
         exit;
     }
     
@@ -115,7 +115,7 @@ function scr_player_snowball_jump()
         if (vsp > 0)
             vsp = 0;
         
-        state = states.snowball_wall;
+        state = scr_player_snowball_wall;
         exit;
     }
 }
@@ -131,7 +131,7 @@ function scr_player_snowball_wall()
     {
         grav = 0.5;
         jumpstop = true;
-        state = states.snowball_jump;
+        state = scr_player_snowball_jump;
         exit;
     }
     
@@ -143,7 +143,7 @@ function scr_player_snowball_wall()
         jumpBuffer = 0;
         jumpstop = true;
         vsp = -11;
-        state = states.snowball_jump;
+        state = scr_player_snowball_jump;
         exit;
     }
     

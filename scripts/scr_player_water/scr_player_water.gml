@@ -106,7 +106,7 @@ function scr_player_water()
 		movespeed = abs(hsp)
 		if _s != 0
 			xscale = _s
-		state = states.mach2
+		state = scr_player_mach2
 	}
 	
 	doTaunt()

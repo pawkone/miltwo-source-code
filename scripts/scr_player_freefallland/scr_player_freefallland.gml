@@ -9,21 +9,21 @@ function scr_player_freefallland()
     {
         if (sprite_index == spr_player_hitceiling)
         {
-            state = states.jump;
+            state = scr_player_jump;
             sprite_index = spr_player_spinout;
             vsp = 2;
         }
         
         if (sprite_index == sprites.groundpoundland || sprite_index == sprites.divebombland)
         {
-            state = states.normal;
+            state = scr_player_normal;
             image_index = 0;
             sprite_index = sprites.land;
         }
         
         if (sprite_index == spr_player_piledriverend)
         {
-            state = states.jump;
+            state = scr_player_jump;
             vsp = -8;
             image_index = 0;
             sprite_index = sprites.fall;

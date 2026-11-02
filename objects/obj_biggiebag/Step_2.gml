@@ -4,27 +4,27 @@ if (hitstun.is == false)
     
     switch (state)
     {
-        case states.stun:
+        case "stun":
             scr_enemy_stun();
             break;
         
-        case states.hit:
+        case "hit":
             scr_enemy_hit();
             break;
         
-        case states.turn:
+        case "turn":
             scr_enemy_turn();
             break;
         
-        case states.move:
+        case "move":
             scr_enemy_move();
             break;
         
-        case states.grab:
+        case "grab":
             scr_enemy_grabbed();
             break;
         
-        case states.thrown:
+        case "thrown":
             scr_enemy_thrown();
             break;
     }

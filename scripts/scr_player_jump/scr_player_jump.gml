@@ -105,7 +105,7 @@ function scr_player_jump()
         vsp = -6;
         sprite_index = sprites.groundpoundstart;
         image_index = 0;
-        state = states.groundpoundstart;
+        state = scr_player_groundpoundstart;
         squashX = 1.3;
         squashY = 0.8;
         freefalling = 0;
@@ -119,7 +119,7 @@ function scr_player_jump()
 	        image_index = 0;
 	        sprite_index = (move != 0) ? sprites.land2 : sprites.land;
 		}
-        state = states.normal;
+        state = scr_player_normal;
         plrsnds_play(sfx.step, x, y);
     }
 	

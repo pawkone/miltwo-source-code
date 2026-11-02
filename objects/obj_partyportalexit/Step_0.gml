@@ -42,7 +42,7 @@ if (cutscene)
                 jumpstop = true;
                 vsp = 5;
                 sprite_index = sprites.fall;
-                state = states.jump;
+                state = scr_player_jump;
                 xscaleMulti = 1;
                 yscaleMulti = 1;
             }

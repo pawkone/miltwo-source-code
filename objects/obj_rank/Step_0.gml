@@ -72,7 +72,7 @@ switch (cutscenePart)
                     movespeed = 0;
                     vsp = 0;
                     hsp = 0;
-                    state = states.enterdoor;
+                    state = scr_player_enterdoor;
                     door = "BACKTOHUB";
                     visible = true;
                     targetRoom = backtohubRoom;
@@ -133,7 +133,7 @@ if (canContinue)
             movespeed = 0;
             vsp = 0;
             hsp = 0;
-            state = states.enterdoor;
+            state = scr_player_enterdoor;
             door = "BACKTOHUB";
             visible = true;
             room_goto(backtohubRoom);

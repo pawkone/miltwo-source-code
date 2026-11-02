@@ -6,6 +6,6 @@ function scr_player_hurt()
     {
         movespeed = 0;
         sprite_index = sprites.land;
-        state = states.normal;
+        state = scr_player_normal;
     }
 }

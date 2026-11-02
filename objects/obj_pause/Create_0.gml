@@ -23,7 +23,6 @@ selected = 0;
 options = [];
 hearts = [];
 buffer = 0;
-tipText = "";
 playerPalIndex = 0;
 heartFind = 1;
 character = chars.mildred;
@@ -51,7 +50,6 @@ function doPause()
 	audio_pause_all()
 	if pauseMusic >= 0
 		fmod_studio_event_instance_set_parameter_by_name(pauseMusic, "state", obj_player.character == chars.milton);
-    playeractiveState = obj_player.state;
     playerPalIndex = obj_player.palIndex;
     character = obj_player.character;
     active = true;
@@ -80,21 +78,6 @@ function doPause()
     fmod_studio_system_set_parameter_by_name("musicfade", 0, false);
     graphBack.alpha = 0;
     selected = 0;
-    
-    switch (playeractiveState)
-    {
-        case states.ski:
-            tipText = lang_get_phrase("tip_ski");
-            break;
-        
-        case states.surfing:
-            tipText = lang_get_phrase("tip_surf");
-            break;
-        
-        default:
-            tipText = "";
-            break;
-    }
 }
 
 function doUnpause()
@@ -157,7 +140,7 @@ var _restart =
                     movespeed = 0;
                     vsp = 0;
                     hsp = 0;
-                    state = states.enterdoor;
+                    state = scr_player_enterdoor;
                 }
                 
                 room_goto(_og);

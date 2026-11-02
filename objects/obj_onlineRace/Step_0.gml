@@ -9,5 +9,5 @@ with obj_player
 		movespeed = 0
 	}
 	else if state == -6
-		state = states.normal
+		state = scr_player_normal
 }

@@ -6,7 +6,7 @@ function scr_enemy_grabbed()
     movespeed = 0;
     xscale = playerID.xscale;
     
-    if (playerID.state == states.hauling)
+    if (playerID.state == scr_player_hauling)
     {
         x = playerID.x - (10 * xscale);
         y = playerID.y - 46;
@@ -85,7 +85,7 @@ function scr_enemy_grabbed()
             }
         }
     }
-    else if (playerID.state == states.groundpound || playerID.state == states.groundpoundstart)
+    else if (playerID.state == scr_player_groundpound || playerID.state == scr_player_groundpoundstart)
     {
         x = playerID.x + (45 * xscale);
         y = playerID.y - 25;
@@ -96,11 +96,11 @@ function scr_enemy_grabbed()
         y = playerID.y - 5;
     }
     
-    if (playerID.state != states.hauling && playerID.state != states.finishingblow && playerID.state != states.groundpoundstart && playerID.state != states.groundpound)
+    if (playerID.state != scr_player_hauling && playerID.state != scr_player_finishingblow && playerID.state != scr_player_groundpoundstart && playerID.state != scr_player_groundpound)
     {
         xscale = obj_player.xscale;
         scared = 120;
-        state = states.stun;
+        state = "stun";
         x = playerID.x;
         y = playerID.y;
     }

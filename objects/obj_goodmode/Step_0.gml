@@ -8,10 +8,10 @@ global.debug = false
 obj_player.hsp *= random_range(0.9, 1.1)
 obj_player.movespeed *= random_range(0.9, 1.1)
 obj_player.grav = random(1.5)
-if obj_player.state == states.uppercut || obj_player.state == states.groundpound || obj_player.state == states.groundpoundstart
+if obj_player.state == scr_player_uppercut || obj_player.state == scr_player_groundpound || obj_player.state == scr_player_groundpoundstart
 {
-	if obj_player.state == states.groundpoundstart
-		obj_player.state = states.groundpound
+	if obj_player.state == scr_player_groundpoundstart
+		obj_player.state = scr_player_groundpound
 	obj_player.vsp += 4
 	with obj_player
 	{

@@ -5,19 +5,19 @@ if (hitstun.is == false)
     
     switch (state)
     {
-        case states.stun:
+        case "stun":
             scr_enemy_stun();
             break;
         
-        case states.hit:
+        case "hit":
             scr_enemy_hit();
             break;
         
-        case states.turn:
+        case "turn":
             scr_enemy_turn();
             break;
         
-        case states.crouch:
+        case "crouch":
             image_speed = 0.4;
             hsp = movespeed * xscale;
             
@@ -32,7 +32,7 @@ if (hitstun.is == false)
                     yscaleMulti = 0.5;
                     vsp = -5;
                     scared = 120;
-                    state = states.stun;
+                    state = "stun";
                     movespeed = -5;
                     sprite_index = spr_stun;
                 }
@@ -43,7 +43,7 @@ if (hitstun.is == false)
             
             break;
         
-        case states.move:
+        case "move":
             image_speed = 0.35;
             movespeed = 0;
             hsp = movespeed * xscale;
@@ -59,17 +59,17 @@ if (hitstun.is == false)
                     if (obj_player.x != x)
                         xscale = sign(obj_player.x - x);
                     
-                    state = states.crouch;
+                    state = "crouch";
                 }
             }
             
             break;
         
-        case states.grab:
+        case "grab":
             scr_enemy_grabbed();
             break;
         
-        case states.thrown:
+        case "thrown":
             scr_enemy_thrown();
             break;
     }

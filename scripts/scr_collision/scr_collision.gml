@@ -110,7 +110,7 @@ function scr_solid(arg0, arg1)
                     break;
                 
                 case obj_platform:
-                    if ((_id.bbox_bottom - 1) <= (bbox_top + 1) && _id.vsp >= 0) && !(_id.object_index == obj_player && _id.state == states.ladder)
+                    if ((_id.bbox_bottom - 1) <= (bbox_top + 1) && _id.vsp >= 0) && !(_id.object_index == obj_player && _id.state == scr_player_ladder)
                         _collided = true;
                     
                     break;

@@ -226,7 +226,7 @@ with (tv)
 	    shader_reset();
 	    pattern_draw(sprite_index, image_index, x, y - offset + _offset2, 1, 1, 0, 16777215, 1, global.patternSpr, global.PlayerCharacters[obj_player.character].patColors);
     
-	    if (state == states.move)
+	    if (state == "move")
 	        draw_sprite(_sprites.trans, switchindex, x, y - offset + _offset2);
 	
 	    if (sprite_index != _sprites.turnon)

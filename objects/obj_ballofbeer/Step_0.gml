@@ -1,6 +1,6 @@
 with (obj_player)
 {
-    if (place_meeting(x, y + 10, other) && other.dir == 1 && (pky_down || state == states.groundpound) && state != states.enterdoor)
+    if (place_meeting(x, y + 10, other) && other.dir == 1 && (pky_down || state == scr_player_groundpound) && state != scr_player_enterdoor)
     {
         targetRoom = other.targetRoom;
         door = other.targetDoor;
@@ -12,11 +12,11 @@ with (obj_player)
         y = other.y;
         sprite_index = spr_player_downbox;
         image_index = 0;
-        state = states.enterdoor;
+        state = scr_player_enterdoor;
         FMODevent_oneshot("event:/Sfx/General/Level/Progression/downbeer", x, y);
     }
     
-    if (place_meeting(x, y - 10, other) && other.dir == -1 && (pky_up || state == states.superjump) && state != states.enterdoor)
+    if (place_meeting(x, y - 10, other) && other.dir == -1 && (pky_up || state == scr_player_superjump) && state != scr_player_enterdoor)
     {
         targetRoom = other.targetRoom;
         door = other.targetDoor;
@@ -28,7 +28,7 @@ with (obj_player)
         y = other.y - 20;
         sprite_index = spr_player_upbox;
         image_index = 0;
-        state = states.enterdoor;
+        state = scr_player_enterdoor;
         FMODevent_oneshot("event:/Sfx/General/Level/Progression/downbeer", x, y);
     }
 }

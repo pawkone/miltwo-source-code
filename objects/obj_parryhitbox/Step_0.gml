@@ -1,4 +1,4 @@
-if (obj_player.state != states.taunt)
+if (obj_player.state != scr_player_taunt)
     instance_destroy();
 
 image_xscale = obj_player.xscale;
@@ -22,7 +22,7 @@ if (place_meeting(x, y, obj_forkbox))
         {
             hitHsp = 25 * obj_player.xscale;
             hitVsp = 0;
-            state = states.thrown;
+            state = "thrown";
         }
     }
     

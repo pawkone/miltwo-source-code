@@ -1,7 +1,7 @@
 switch (state)
 {
-    case states.normal:
-        if (camera.target.state == states.mach2 || camera.target.state == states.mach3 || camera.target.state == states.tumble)
+    case "normal":
+        if (camera.target.state == scr_player_mach2 || camera.target.state == scr_player_mach3 || camera.target.state == scr_player_tumble)
         {
             var far = camera.target.movespeed * 10 * camera.target.xscale;
             var chargeSpd = 0.3;
@@ -11,7 +11,7 @@ switch (state)
             
             xOffset = approach(xOffset, far, chargeSpd);
         }
-        else if (camera.target.state == states.surfing)
+        else if (camera.target.state == scr_player_surfing)
         {
             var far = camera.target.movespeed * 10 * camera.target.xscale;
             var chargeSpd = 4;
@@ -38,7 +38,7 @@ switch (state)
     
     case -4:
         if (obj_player.state != -4)
-            state = states.normal;
+            state = "normal";
         
         break;
 }

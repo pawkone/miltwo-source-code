@@ -1,7 +1,7 @@
 if is_transfo_all(other.state)
     exit;
 
-if (other.grounded && pky_up && other.state != states.enterdoor && other.state != states.walkfront && other.state != states.snowball)
+if (other.grounded && pky_up && other.state != scr_player_enterdoor && other.state != scr_player_walkfront && other.state != scr_player_snowball)
 {
     with (other)
     {
@@ -11,7 +11,7 @@ if (other.grounded && pky_up && other.state != states.enterdoor && other.state !
         movespeed = 0;
         vsp = 0;
         hsp = 0;
-        state = states.enterdoor;
+        state = scr_player_enterdoor;
         sprite_index = sprites.lookdoor;
         image_index = 0;
     }

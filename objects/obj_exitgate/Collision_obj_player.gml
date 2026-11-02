@@ -1,4 +1,4 @@
-if (other.grounded && pky_up && other.state != -4 && other.state != states.enterdoor && other.state != states.walkfront && openn)
+if (other.grounded && pky_up && other.state != -4 && other.state != scr_player_enterdoor && other.state != scr_player_walkfront && openn)
 {
     with (other)
     {

@@ -1,4 +1,4 @@
-state = states.normal;
+state = "normal";
 og_x = x;
 og_y = y;
 event_inherited();

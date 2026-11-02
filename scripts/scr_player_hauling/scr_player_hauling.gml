@@ -41,7 +41,7 @@ function scr_player_hauling()
         
         if (place_meeting(x + xscale, y, obj_solid) && !place_meeting(x + xscale, y, obj_destructibles))
         {
-            state = states.finishingblow;
+            state = scr_player_finishingblow;
             sprite_index = spr_player_swingadingend;
             image_index = 0;
             exit;
@@ -111,7 +111,7 @@ function scr_player_hauling()
     if (slapBuffer)
     {
         slapBuffer = false;
-        state = states.finishingblow;
+        state = scr_player_finishingblow;
         
         if (pky_up)
             sprite_index = spr_player_finisheruppercut;
@@ -129,7 +129,7 @@ function scr_player_hauling()
         image_speed = 0.35;
         image_index = 0;
         sprite_index = sprites.crouch;
-        state = states.crouch;
+        state = scr_player_crouch;
     }
     
     if (pky_down2 && !grounded)
@@ -137,73 +137,12 @@ function scr_player_hauling()
         vsp = -6;
         sprite_index = spr_player_piledriver;
         image_index = 0;
-        state = states.groundpoundstart;
+        state = scr_player_groundpoundstart;
     }
     
     if (!instance_exists(enemyID))
     {
-        state = states.normal;
+        state = scr_player_normal;
         sprite_index = sprites.idle;
-    }
-}
-
-function scr_player_finishingblow()
-{
-    image_speed = 0.4;
-    hsp = movespeed * xscale;
-    
-    if (floor(image_index) < 4 && sprite_index != spr_player_swingadingend)
-        movespeed = approach(movespeed, 0, 1);
-    
-    if (instance_exists(enemyID) && (floor(image_index) > 4 || sprite_index == spr_player_swingadingend) && enemyID.state == states.grab)
-    {
-        movespeed = -5;
-        vsp = -5;
-        FMODevent_oneshot("event:/Sfx/Player/punch", x, y);
-        
-        repeat (8)
-        {
-            create_particleDebri(spr_baddie_gibs, irandom_range(0, sprite_get_number(spr_baddie_gibs)), x, y, 1, -5);
-            create_particleDebri(spr_slapstar, irandom_range(0, sprite_get_number(spr_slapstar)), x, y, 1, -5);
-        }
-        
-        create_particleStatic(spr_kungfueffect, x, y, 1, 2);
-        
-        if (sprite_index == spr_player_finisheruppercut)
-        {
-            with (enemyID)
-            {
-                hitHsp = 0;
-                hitVsp = -25;
-                state = states.thrown;
-            }
-        }
-        else
-        {
-            with (enemyID)
-            {
-                hitHsp = 25 * other.xscale;
-                hitVsp = 0;
-                state = states.thrown;
-            }
-        }
-        
-        enemyID = -4;
-    }
-    
-    if (animation_end())
-    {
-        slapBuffer = false;
-        state = states.jump;
-        sprite_index = sprites.fall;
-        jumpstop = true;
-    }
-    
-    buffers.afterimageMach = approach(buffers.afterimageMach, 0, 1);
-    
-    if (buffers.afterimageMach == 0)
-    {
-        buffers.afterimageMach = 4;
-        create_machEffect(sprite_index, image_index, x, y, xscale, 1);
     }
 }

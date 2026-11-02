@@ -1,7 +1,7 @@
 with (obj_player)
 {
     shake_camera(25);
-    state = states.parry;
+    state = scr_player_parry;
     sprite_index = spr_player_parry1;
     create_particleStatic(spr_parryeffect, x, y, 1);
     FMODevent_oneshot("event:/Sfx/Player/parry", x, y);

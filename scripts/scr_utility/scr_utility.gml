@@ -208,7 +208,7 @@ function tv_anim(arg0, arg1 = 0)
         if (expressionSprite != arg0)
         {
             switchindex = 0;
-            state = states.move;
+            state = "move";
             expressionSprite = arg0;
             expressionTimer = arg1;
         }

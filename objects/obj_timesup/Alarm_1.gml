@@ -10,7 +10,7 @@ with (obj_player)
     movespeed = 0;
     vsp = 0;
     hsp = 0;
-    state = states.enterdoor;
+    state = scr_player_enterdoor;
     door = "NONE";
     room_goto(backtohubRoom);
     
