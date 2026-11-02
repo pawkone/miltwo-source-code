@@ -719,7 +719,6 @@
     {"id":{"name":"scr_player2n3","path":"scripts/scr_player2n3/scr_player2n3.yy",},},
     {"id":{"name":"scr_playerSounds_data","path":"scripts/scr_playerSounds_data/scr_playerSounds_data.yy",},},
     {"id":{"name":"scr_playerSounds","path":"scripts/scr_playerSounds/scr_playerSounds.yy",},},
-    {"id":{"name":"scr_playerStates","path":"scripts/scr_playerStates/scr_playerStates.yy",},},
     {"id":{"name":"scr_playerUtil","path":"scripts/scr_playerUtil/scr_playerUtil.yy",},},
     {"id":{"name":"scr_playerV_buzzsaw","path":"scripts/scr_playerV_buzzsaw/scr_playerV_buzzsaw.yy",},},
     {"id":{"name":"scr_playerV_uppercut","path":"scripts/scr_playerV_uppercut/scr_playerV_uppercut.yy",},},

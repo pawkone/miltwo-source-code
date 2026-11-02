@@ -562,7 +562,6 @@
     {"name":"scr_player2n3","order":2,"path":"scripts/scr_player2n3/scr_player2n3.yy",},
     {"name":"scr_playerSounds_data","order":8,"path":"scripts/scr_playerSounds_data/scr_playerSounds_data.yy",},
     {"name":"scr_playerSounds","order":5,"path":"scripts/scr_playerSounds/scr_playerSounds.yy",},
-    {"name":"scr_playerStates","order":7,"path":"scripts/scr_playerStates/scr_playerStates.yy",},
     {"name":"scr_playerUtil","order":4,"path":"scripts/scr_playerUtil/scr_playerUtil.yy",},
     {"name":"scr_playerV_buzzsaw","order":2,"path":"scripts/scr_playerV_buzzsaw/scr_playerV_buzzsaw.yy",},
     {"name":"scr_playerV_uppercut","order":3,"path":"scripts/scr_playerV_uppercut/scr_playerV_uppercut.yy",},
