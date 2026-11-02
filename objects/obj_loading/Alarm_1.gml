@@ -44,7 +44,7 @@ var _ex = [
 	["player",		"",		"Mildred"],
 	["playerV",		"V",	"Valenta"],
 	["milton",		"M",	"Milton"],
-	["pepperni",	"p",	"Pepperni"],
+	["pepperni",	"P",	"Pepperni"],
 	["player0",		"B0",	"Bacon1"],
 	["player1",		"B1",	"Bacon2"],
 	["player2",		"B2",	"ReBacon"],
