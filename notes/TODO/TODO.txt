@@ -2,7 +2,7 @@
 X = Done
 
 X - Finish rockbottom
-0 - Finish beaker
+X - Finish beaker
 0 - Finish floor 2 levels
 	0 - Level BF
 	0 - Level CC
