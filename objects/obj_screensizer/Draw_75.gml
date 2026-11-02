@@ -61,18 +61,16 @@ if (global.debug)
     var devWindow = []
     array_push(devWindow, "Oh Mil.. Two?")
 	array_push(devWindow, "")
-    array_push(devWindow, string("ROOM+-#{0}", room_get_name(room)))
-    array_push(devWindow, string("FPS (Game)+-#{0}", floor(fps)))
-    array_push(devWindow, string("FPS (CPU)+-#{0}", floor(fps_real)))
-    array_push(devWindow, string("Build Type+-#{0}", GM_build_type))
+    array_push(devWindow, $"ROOM+-#{room_get_name(room)}")
+    array_push(devWindow, $"FPS (Game)+-#{floor(fps)}")
+    array_push(devWindow, $"FPS (CPU)+-#{floor(fps_real)}")
+    array_push(devWindow, $"Build Type+-#{GM_build_type}")
     if (instance_exists(obj_player))
     {
-		var _state = real(obj_player.state), _name = ""
-		try {_name = state_names[_state]} catch(e) {}
-	    array_push(devWindow, string("Player X+-#{0}", obj_player.x))
-	    array_push(devWindow, string("Player Y+-#{0}", obj_player.y))
-	    array_push(devWindow, string("Player State+-#{0} ({1})", _name, _state))
-	    array_push(devWindow, string("Player Sprite+-#{0}", sprite_get_name(obj_player.sprite_index)))
+	    array_push(devWindow, $"Player X+-#{obj_player.x}", obj_player.x)
+	    array_push(devWindow, $"Player Y+-#{obj_player.y}", obj_player.y)
+	    array_push(devWindow, $"Player State+-#{obj_player.state}")
+	    array_push(devWindow, $"Player Sprite+-#{sprite_get_name(obj_player.sprite_index)}")
     }
     
     draw_set_font(-1)

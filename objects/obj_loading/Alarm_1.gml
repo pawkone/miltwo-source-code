@@ -26,8 +26,6 @@ global.saveFile = wsbMOmInfo.dir + "/default0.xda";
 
 // -- CHARACTERS --
 
-var _ac = function(enu, title = enu){var _sprites=playerUtil_spr(enu);global.PlayerCharacters[enu]={name: title,sprites: _sprites};global.PlayerCharacters[enu].patColors=_sprites.player.patcolours;global.PlayerCharacters[enu].patternSpr=_sprites.player.pattern}
-
 enum chars
 {
 	mildred,
@@ -44,22 +42,37 @@ enum chars
 	juan,
 	fries4,
 }
+var _ex = [
+	["player",		"",		"Mildred"],
+	["playerV",		"V",	"Valenta"],
+	["milton",		"M",	"Milton"],
+	["pepperni",	"p",	"Pepperni"],
+	["player0",		"B0",	"Bacon1"],
+	["player1",		"B1",	"Bacon2"],
+	["player2",		"B2",	"ReBacon"],
+	["player3",		"B3",	"BaconTu"],
+	["playersoda",	"",		"Soda"],
+	["preoutman",	"POM",	"Preoutman"],
+	["skatenic",	"S",	"Skatenic"],
+	["juan",		"J",	"Juan Danger"],
+	["playerF4",	"F4",	"Fries4"]
+];
 
-global.PlayerCharacters = [];
-
-_ac(chars.mildred, "Mildred")
-_ac(chars.valentia, "Valenta")
-_ac(chars.milton, "Milton")
-_ac(chars.pepperni, "Pepperni")
-_ac(chars.bacon_crash, "Bacon1")
-_ac(chars.bacon_dream, "Bacon2")
-_ac(chars.bacon_redem, "ReBacon")
-_ac(chars.bacon_twist, "BaconTu")
-_ac(chars.soda, "Soda")
-_ac(chars.preoutman, "Preoutman")
-_ac(chars.skatenic, "Skatenic")
-_ac(chars.juan, "Juan Danger")
-_ac(chars.fries4, "Fries4")
+for (var i = 0; i < array_length(_ex); i++)
+{
+	global.PlayerCharacters[i] =
+	{
+		name: _char[2],
+		ps: _char[0],
+		ms: _char[1]
+	}
+	
+	var _sprites = playerUtil_spr(i), _char = _ex[i]
+	
+	global.PlayerCharacters[i].sprites = _sprites
+	global.PlayerCharacters[i].patColors = _sprites.player.patcolours
+	global.PlayerCharacters[i].patternSpr = _sprites.player.pattern
+}
 
 for (var i = 0; i < array_length(global.PlayerCharacters); i++)
 {
