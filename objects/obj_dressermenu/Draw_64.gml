@@ -57,7 +57,6 @@ _p(-1,-175+selectadd)
 _p(-2,-175*2+selectadd)
 _p(0,selectadd)
 
-//draw_sprite_ext(spr_uparrow,0,960-116,270,3*onlrp,3,point_direction(_x,_y+(sin(selectadd/75)*100),960-96,_y)+90,c_white,1)
 draw_set_font(global.smallfont)
 draw_set_halign(2)
 draw_set_valign(1)
@@ -66,11 +65,11 @@ if _sl1 == chars.soda
 {
 	switch clamp(select_pal[_sl1]-1, 0, sprite_get_width(spr_playersoda_idle)-1)
 	{
-		case 1: _n += " : liquor" break
-		case 2: _n += " : ludicrous" break
-		case 3: _n += " : pbsb" break
-		case 4: _n += " : burger" break
-		case 5: _n += " : bacon prime" break
+		case 1: _n += " (liquor)" break
+		case 2: _n += " (ludicrous)" break
+		case 3: _n += " (pbsb)" break
+		case 4: _n += " (burger)" break
+		case 5: _n += " (bacon prime)" break
 	}
 }
 draw_text_transformed(_x-100,270,_n,1,onlrp*_sl2,0)
