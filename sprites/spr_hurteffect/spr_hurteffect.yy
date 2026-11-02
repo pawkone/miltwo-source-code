@@ -33,8 +33,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"ZZZ im sick of this, im doing it later",
-    "path":"folders/Sprites/ZZZ im sick of this, im doing it later.yy",
+    "name":"Effects",
+    "path":"folders/Sprites/Visuals/Effects.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -56,8 +56,8 @@ function reset_input()
 }
 
 function read_input(arg0, arg1 = false)
-{try{
-    if (obj_shell.isOpen)
+{
+    if (instance_exists(obj_shell) && obj_shell.isOpen)
         return false;
 	
     var _returnButton = false, _returnJoy = false, _axLH = -4, _axLV = -4, _axRH = -4, _axRV = -4, _pDeadzone = 0, _horizDeadzone = 0, _vertDeadzone = 0, _prejoy = false
@@ -154,4 +154,4 @@ function read_input(arg0, arg1 = false)
 	}
 	else
 		return _returnButton || _returnJoy
-}catch(e){return false}}
+}

@@ -1,4 +1,4 @@
-if !instance_exists(obj_secretManager)
+if !instance_exists(obj_secretManager) && global.level == "shell"
 {
 	var _trans = is_transfo_all(obj_player.state)
 	if _trans && audio_is_playing(mu_shellcityA)
