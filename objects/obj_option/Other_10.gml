@@ -58,8 +58,9 @@ miltwocredits_credits =
 	[
 		"Enno334_123",
 		"volunteered artist",
-		spr_milton_downbox, spr_tv_comboM, spr_milton_superjumpprepstart,
-		spr_milton_superjumpprep, spr_gate_milkshake, spr_gate_milkshakeBG
+		spr_skatenic_treasureget, spr_milton_downbox, spr_tv_comboM,
+		spr_milton_superjumpprepstart, spr_milton_superjumpprep, spr_gate_milkshake,
+		spr_gate_milkshakeBG
 	],
 	[
 		"ElCacas.XD.RenovadoXD",
@@ -74,7 +75,7 @@ miltwocredits_credits =
 	[
 		"Shampox_85584",
 		"volunteered artist",
-		spr_gate_crashout
+		spr_tv_idleS, spr_gate_crashout
 	],
 	[
 		"Bobbers6921",

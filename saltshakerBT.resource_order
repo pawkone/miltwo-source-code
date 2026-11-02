@@ -1852,6 +1852,7 @@
     {"name":"spr_skatenic_rollgetup","order":21,"path":"sprites/spr_skatenic_rollgetup/spr_skatenic_rollgetup.yy",},
     {"name":"spr_skatenic_rolling","order":22,"path":"sprites/spr_skatenic_rolling/spr_skatenic_rolling.yy",},
     {"name":"spr_skatenic_taunt","order":23,"path":"sprites/spr_skatenic_taunt/spr_skatenic_taunt.yy",},
+    {"name":"spr_skatenic_treasureget","order":27,"path":"sprites/spr_skatenic_treasureget/spr_skatenic_treasureget.yy",},
     {"name":"spr_skatenic_wallclimb","order":24,"path":"sprites/spr_skatenic_wallclimb/spr_skatenic_wallclimb.yy",},
     {"name":"spr_skatenic_wallclimbcancel","order":25,"path":"sprites/spr_skatenic_wallclimbcancel/spr_skatenic_wallclimbcancel.yy",},
     {"name":"spr_skatenicPal","order":3,"path":"sprites/spr_skatenicPal/spr_skatenicPal.yy",},
