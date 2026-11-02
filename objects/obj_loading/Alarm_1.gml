@@ -60,15 +60,9 @@ var _ex = [
 
 for (var i = 0; i < array_length(_ex); i++)
 {
-	global.PlayerCharacters[i] =
-	{
-		name: _char[2],
-		ps: _char[0],
-		ms: _char[1]
-	}
-	
-	var _sprites = playerUtil_spr(i), _char = _ex[i]
-	
+	var _char = _ex[i]
+	global.PlayerCharacters[i] = {ps: _char[0], ms: _char[1], name: _char[2]}
+	var _sprites = playerUtil_spr(i)
 	global.PlayerCharacters[i].sprites = _sprites
 	global.PlayerCharacters[i].patColors = _sprites.player.patcolours
 	global.PlayerCharacters[i].patternSpr = _sprites.player.pattern
