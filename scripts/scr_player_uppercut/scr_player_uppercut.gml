@@ -28,25 +28,6 @@ function scr_player_uppercut()
     if (animation_end())
         image_index = image_number - 1;
     
-	if character == chars.fries4 && scr_solid(x+hsp,y+vsp)
-	{
-		var _targetdir = ""
-		if -pky_left _targetdir = point_direction(0,0,-1,0)
-		if pky_right _targetdir = point_direction(0,0,1,0)
-		if pky_up _targetdir = point_direction(0,0,0,-1)
-		if pky_down _targetdir = point_direction(0,0,0,1)
-		if -pky_left&&pky_up _targetdir = point_direction(0,0,-1,-1)
-		if pky_right&&pky_up _targetdir = point_direction(0,0,1,-1)
-		if -pky_left&&pky_down _targetdir = point_direction(0,0,-1,1)
-		if pky_right&&pky_down _targetdir = point_direction(0,0,1,1)
-		if _targetdir != ""
-			direction = _targetdir
-		else
-			direction = 90
-		state = scr_player_fries4wall
-		exit
-	}
-	
     if (grounded && vsp > 0)
     {
         create_particleStatic(spr_landeffect, x, y, 1, 1);

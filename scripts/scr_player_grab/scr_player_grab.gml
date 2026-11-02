@@ -104,25 +104,6 @@ function scr_player_grab()
         plrsnds_play(sfx.rollgetup, x, y);
         create_particleStatic(spr_grabcloud, x, y, xscale, 1);
     }
-    
-	if character == chars.fries4 && ((!grounded && scr_solid(x+hsp,y+vsp)) || (grounded && scr_solid(x+hsp,y)))
-	{
-		var _targetdir = ""
-		if -pky_left _targetdir = point_direction(0,0,-1,0)
-		if pky_right _targetdir = point_direction(0,0,1,0)
-		if pky_up _targetdir = point_direction(0,0,0,-1)
-		if pky_down _targetdir = point_direction(0,0,0,1)
-		if -pky_left&&pky_up _targetdir = point_direction(0,0,-1,-1)
-		if pky_right&&pky_up _targetdir = point_direction(0,0,1,-1)
-		if -pky_left&&pky_down _targetdir = point_direction(0,0,-1,1)
-		if pky_right&&pky_down _targetdir = point_direction(0,0,1,1)
-		if _targetdir != ""
-			direction = _targetdir
-		else
-			direction = xscale == -1 ? 180 : 0
-		state = scr_player_fries4wall
-		exit
-	}
 	
     if (place_meeting(x + sign(hsp), y, obj_solid) && !grounded)
     {

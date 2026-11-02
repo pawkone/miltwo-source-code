@@ -95,24 +95,6 @@ function scr_player_groundpound()
         sprite_index = spr_player_wallpound;
     if (grounded && (!place_meeting(x, y + vsp, obj_destructibles) && !place_meeting(x, y + vsp, obj_metalblock)))
     {
-		if character == chars.fries4
-		{
-			var _targetdir = ""
-			if -pky_left _targetdir = point_direction(0,0,-1,0)
-			if pky_right _targetdir = point_direction(0,0,1,0)
-			if pky_up _targetdir = point_direction(0,0,0,-1)
-			if pky_down _targetdir = point_direction(0,0,0,1)
-			if -pky_left&&pky_up _targetdir = point_direction(0,0,-1,-1)
-			if pky_right&&pky_up _targetdir = point_direction(0,0,1,-1)
-			if -pky_left&&pky_down _targetdir = point_direction(0,0,-1,1)
-			if pky_right&&pky_down _targetdir = point_direction(0,0,1,1)
-			if _targetdir != ""
-				direction = _targetdir
-			else
-				direction = 270
-			state = scr_player_fries4wall
-			exit
-		}
 		if sprite_index == spr_player3_spinnygroundpound
 		{
 			if move != 0

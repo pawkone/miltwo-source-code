@@ -38,8 +38,7 @@ enum chars
 	bacon_twist,
 	soda,
 	preoutman,
-	skatenic,
-	fries4,
+	skatenic
 }
 var _ex = [
 	["player",		"",		"Mildred"],
@@ -52,8 +51,7 @@ var _ex = [
 	["player3",		"B3",	"BaconTu"],
 	["playersoda",	"",		"Soda"],
 	["preoutman",	"POM",	"Preoutman"],
-	["skatenic",	"S",	"Skatenic"],
-	["playerF4",	"F4",	"Fries4"]
+	["skatenic",	"S",	"Skatenic"]
 ];
 
 for (var i = 0; i < array_length(_ex); i++)

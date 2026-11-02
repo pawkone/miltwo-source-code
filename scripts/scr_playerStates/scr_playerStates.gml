@@ -60,6 +60,5 @@ enum states
 	dreamspin,
 	dreamcrusher,
 	retwistedBuzzsaw,
-	water,
-	fries4wall
+	water
 }

@@ -411,11 +411,6 @@ function playerUtil_realSpr()
 				imgReal = (current_time/1000)*24
 			}
 		}
-		if character == chars.fries4
-		{
-			sprReal = spr_playerF4_idle
-			imgReal = 0
-		}
 		return [sprReal, imgReal]
 	}
 }
