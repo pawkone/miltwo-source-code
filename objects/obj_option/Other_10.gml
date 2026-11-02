@@ -10,7 +10,7 @@ miltwocredits_credits =
 		"director : coder : artist : ideas : etc",
 		mu_bossbacon,
 		
-		bg_boss_bacon1, bg_boss_bacon2, bg_boss_bacon3,
+		bg_boss_bacon1, bg_boss_bacon2, bg_boss_bacon3, spr_dressermenu_palgridS,
 		spr_milton_rollstart, spr_baconsmacon_deadlintro, spr_baconsmacon_deadloop,
 		spr_bacadmadLocate, spr_minilogo, spr_menunew, spr_menunew_tvhint,
 		spr_gate_shell, spr_floorgate, spr_floorgate_over, spr_uparrow,
@@ -29,7 +29,7 @@ miltwocredits_credits =
 		spr_player0_groundpoundbump, spr_player0_groundpoundland, spr_playersoda_idle,
 		spr_tv_soda, spr_dressermenu_palgridSODA,  spr_dressermenu_palgrid,
 		spr_dressermenu_palgridPOM, spr_dressermenu_palgridB0, spr_dressermenu_palgridB1,
-		spr_dressermenu_palgridB2, spr_dressermenu_palgridB3, spr_dressermenu_palgridT,
+		spr_dressermenu_palgridB2, spr_dressermenu_palgridB3, spr_dressermenu_palgridM,
 		spr_dressermenu_palgridP, spr_dressermenu_palgridV, spr_titlecardFrontyard,
 		spr_titlecardFrontyardTitle1, spr_skatenic_mach1, spr_skatenic_mach2
 	],

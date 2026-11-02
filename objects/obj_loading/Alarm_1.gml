@@ -49,7 +49,7 @@ var _ex = [
 	["player1",		"B1",	"Bacon2"],
 	["player2",		"B2",	"ReBacon"],
 	["player3",		"B3",	"BaconTu"],
-	["playersoda",	"",		"Soda"],
+	["playersoda",	"SODA",	"Soda"],
 	["preoutman",	"POM",	"Preoutman"],
 	["skatenic",	"S",	"Skatenic"]
 ];
