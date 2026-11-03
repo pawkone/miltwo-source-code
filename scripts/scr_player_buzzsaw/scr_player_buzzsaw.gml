@@ -1,6 +1,6 @@
 function scr_player_buzzsaw()
 {
-	if character == chars.valentia
+	if character == chars.valenta
 	{
 		scr_playerV_buzzsaw()
 		exit

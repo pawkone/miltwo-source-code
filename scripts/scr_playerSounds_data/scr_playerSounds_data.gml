@@ -2,7 +2,7 @@ function scr_playerSounds_data()
 {
 	switch character
 	{
-		case chars.valentia:
+		case chars.valenta:
 			sfx.step = sfx_valentia_step
 			sfx.jump = sfx_valentia_jump
 			sfx.taunt = sfx_valentia_taunt

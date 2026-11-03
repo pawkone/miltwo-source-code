@@ -236,7 +236,7 @@ function doGrab()
                 else
                     vsp = -12;
                 
-                if character == chars.valentia
+                if character == chars.valenta
 				{
 					vsp = -16
 					if state == scr_player_mach3 || sprite_index == sprites.longjump || sprite_index == sprites.longjumpend
@@ -378,7 +378,6 @@ function doTaunt(_force = false, _supertauntenabled = true)
 global.__baconera_cache = ds_map_create()
 function get_baconera(arg0, arg1, notexists_returnnone = false)
 {
-	if arg1 == 0 return arg0
 	var _key = $"{arg0}|{arg1}"
 	if ds_map_exists(global.__baconera_cache, _key)
 		return global.__baconera_cache[? _key]
@@ -411,6 +410,25 @@ function playerUtil_realSpr()
 				imgReal = (current_time/1000)*24
 			}
 		}
+		/*
+		else if character == chars.juan
+		{
+			var sprReal = grounded ? spr_pink2_idle : (vsp > 0 ? spr_pink2_idledown : spr_pink2_idleup)
+			if abs(hsp) > 12
+				sprReal = grounded ? spr_pink2_move2ground : (vsp > 0 ? spr_pink2_move2down : spr_pink2_move2up)
+			else if abs(hsp) > 0
+				sprReal = grounded ? spr_pink2_move1ground : (vsp > 0 ? spr_pink2_move1down : spr_pink2_move1up)
+			if state == scr_player_buzzsaw
+				sprReal = spr_pink2_move2down
+			
+			var _num = max(sprite_get_number(sprReal)-1,1)
+			pink2timer += 0.25 + abs(hsp)/40
+			if pink2timer > _num
+				pink2timer = pink2timer mod _num
+			
+			imgReal = pink2timer
+		}
+		*/
 		return [sprReal, imgReal]
 	}
 }

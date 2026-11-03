@@ -215,7 +215,7 @@ function scr_player_normal()
     
     if (pky_run && !place_meeting(x + xscale, y, obj_solid))
     {
-		if character != chars.valentia
+		if character != chars.valenta
 			create_particleStatic(spr_grabcloud, x, y, xscale, 1);
         if (movespeed < 6)
             movespeed = 6;

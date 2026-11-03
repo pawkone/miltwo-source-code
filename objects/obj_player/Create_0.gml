@@ -1,6 +1,7 @@
 uparrow = 0
 angle = 0
 ylerpname = 0
+pink2timer = 0
 toppingstr = [obj_potable0, obj_potable1, obj_potable2, obj_potable3, obj_potable4]
 
 character = chars.mildred;

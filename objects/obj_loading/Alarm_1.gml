@@ -28,30 +28,41 @@ global.saveFile = wsbMOmInfo.dir + "/default0.xda";
 
 enum chars
 {
+	//main
 	mildred,
-	valentia,
 	milton,
 	pepperni,
-	bacon_crash,
-	bacon_dream,
-	bacon_redem,
+	skatenic,
+	
+	//era fucks
+	valenta,
 	bacon_twist,
+	bacon_redem,
+	bacon_dream,
+	bacon_crash,
+	
+	//misc / joke
+	//bacon5,
+	//juan,
 	soda,
-	preoutman,
-	skatenic
+	preoutman
 }
 var _ex = [
 	["player",		"",		"Mildred"],
-	["playerV",		"V",	"Valenta"],
 	["milton",		"M",	"Milton"],
 	["pepperni",	"P",	"Pepperni"],
-	["player0",		"B0",	"Bacon1"],
-	["player1",		"B1",	"Bacon2"],
-	["player2",		"B2",	"ReBacon"],
+	["skatenic",	"S",	"Skatenic"],
+	
+	["playerV",		"V",	"Valenta"],
 	["player3",		"B3",	"BaconTu"],
+	["player2",		"B2",	"ReBacon"],
+	["player1",		"B1",	"Bacon2"],
+	["player0",		"B0",	"Bacon1"],
+	
+	//["bacon5",		"B5",	"Bacon5"],
+	//["pink2",		"JUAN",	"Juan"],
 	["playersoda",	"SODA",	"Soda"],
 	["preoutman",	"POM",	"Preoutman"],
-	["skatenic",	"S",	"Skatenic"]
 ];
 
 for (var i = 0; i < array_length(_ex); i++)

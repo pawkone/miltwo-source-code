@@ -1,6 +1,6 @@
 function scr_player_uppercut()
 {
-	if character == chars.valentia
+	if character == chars.valenta
 	{
 		scr_playerV_uppercut()
 		exit
