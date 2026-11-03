@@ -1,4 +1,4 @@
-if (other.grounded && pky_up && other.state != scr_player_enterdoor && other.state != scr_player_walkfront && other.state != scr_player_snowball && open)
+if (other.grounded && pky_up && other.state != scr_player_enterdoor && other.state != scr_player_walkfront && openn)
 {
     global.key = false;
     ds_list_add(global.saveroom, id);

@@ -21,7 +21,7 @@ function scr_enemy_move()
         image_index = 0;
     }
     
-    if (point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 160 && (obj_player.state == scr_player_mach3 || obj_player.state == scr_player_buzzsaw || (obj_player.state == scr_player_snowball && obj_player.movespeed >= 8)))
+    if (point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 160 && (obj_player.state == scr_player_mach3 || obj_player.state == scr_player_buzzsaw))
     {
         vsp = -5;
         

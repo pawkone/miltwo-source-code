@@ -1,7 +1,5 @@
 function scr_player_ski()
 {
-    static snowbuffer = 5;
-    
     hsp = movespeed * xscale;
     
     if (poletreeID == -4)
@@ -20,19 +18,6 @@ function scr_player_ski()
             {
                 slope_momentum(0.2);
                 movespeed += 0.015;
-            }
-            
-            if (grounded)
-            {
-                if (snowbuffer > 0)
-                {
-                    snowbuffer--;
-                }
-                else
-                {
-                    create_particleDebri(spr_snowparticle, irandom_range(0, 3), x, y + 50, 1);
-                    snowbuffer = 5;
-                }
             }
             
             if (jumpBuffer)

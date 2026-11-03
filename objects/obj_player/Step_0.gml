@@ -61,7 +61,7 @@ else if character == chars.bacon_crash
 else
 	angle = 0
 
-instakill = skatenic_is_tornado() || state == scr_player_dreamcrusher || state == scr_player_water || sprite_index == spr_milton_dive || state == scr_player_slip || state == scr_player_mach3 || state == scr_player_skateboard || state == scr_player_skateboardwall || state == scr_player_skateboardramp || state == scr_player_skateboardmove || state == scr_player_hammerattack || (state == scr_player_machturn && sprite_index == sprites.mach3turn) || state == scr_player_superjump || state == scr_player_uppercut || state == scr_player_groundpound || state == scr_player_groundpoundstart || state == scr_player_buzzsaw || state == scr_player_snowball || state == scr_player_snowball_jump || state == scr_player_snowball_wall;
+instakill = skatenic_is_tornado() || state == scr_player_dreamcrusher || state == scr_player_water || sprite_index == spr_milton_dive || state == scr_player_slip || state == scr_player_mach3 || state == scr_player_skateboard || state == scr_player_skateboardwall || state == scr_player_skateboardramp || state == scr_player_skateboardmove || state == scr_player_hammerattack || (state == scr_player_machturn && sprite_index == sprites.mach3turn) || state == scr_player_superjump || state == scr_player_uppercut || state == scr_player_groundpound || state == scr_player_groundpoundstart || state == scr_player_buzzsaw;
 
 if (hitstun.is == false)
 {

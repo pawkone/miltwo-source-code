@@ -18,8 +18,6 @@ function is_transfo_kill(_state = state)
 {
 	return array_contains(
 		[
-			scr_player_snowball, scr_player_snowball_jump, scr_player_snowball_wall,
-			
 			scr_player_skateboard, scr_player_skateboardAim, scr_player_skateboardhitwall,
 			scr_player_skateboardIntro, scr_player_skateboardmove, scr_player_skateboardramp,
 			scr_player_skateboardwall,
