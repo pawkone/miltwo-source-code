@@ -243,6 +243,7 @@
     {"name":"obj_destroyable1","order":3,"path":"objects/obj_destroyable1/obj_destroyable1.yy",},
     {"name":"obj_destroyable2","order":4,"path":"objects/obj_destroyable2/obj_destroyable2.yy",},
     {"name":"obj_dialog","order":22,"path":"objects/obj_dialog/obj_dialog.yy",},
+    {"name":"obj_die","order":7,"path":"objects/obj_die/obj_die.yy",},
     {"name":"obj_disclaimer","order":3,"path":"objects/obj_disclaimer/obj_disclaimer.yy",},
     {"name":"obj_divingBoard","order":1,"path":"objects/obj_divingBoard/obj_divingBoard.yy",},
     {"name":"obj_door","order":1,"path":"objects/obj_door/obj_door.yy",},

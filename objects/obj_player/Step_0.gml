@@ -31,19 +31,15 @@ else
 depth = -5
 if global.modded_sloperotation
 {
-	var _angle = 0
+	var _angle = [], _finangle = 0
 	with obj_slope
 	{
-		with other
-		{
-			var _angle2 = sign(other.image_xscale) * 45
-			_angle2 *= lerp(1.0, 0.8, clamp(abs(other.image_yscale) / abs(other.image_xscale), 0, 1))
-			_angle2 *= clamp((max(0,abs(other.sprite_width)-24)-point_distance(x,bbox_bottom,abs(other.bbox_left+other.bbox_right)/2,abs(other.bbox_top+other.bbox_bottom)/2))/max(0,abs(other.sprite_width)-24),0,1)
-			if abs(_angle2) > abs(_angle)
-				_angle = _angle2
-		}
+		if place_meeting(x,y-1,other)
+			array_push(_angle, -sign(image_xscale)*point_direction(bbox_left, bbox_top, bbox_right, bbox_bottom))
 	}
-	angle = _angle
+	var _angle_len = array_length(_angle)
+	for (var i = 0; i < _angle_len; i++) _finangle += _angle[i]/_angle_len
+	angle += angle_difference(_finangle, angle) * 0.25
 }
 else if character == chars.bacon_crash
 {
@@ -51,7 +47,7 @@ else if character == chars.bacon_crash
 	{
 	    var _obj = instance_place(x, y + 1, obj_slope);
 	    if (abs(_obj.image_yscale) < abs(_obj.image_xscale))
-	        angle = lerp(angle, 10 * _obj.image_xscale, 0.5);
+	        angle = lerp(angle, 10 * sign(_obj.image_xscale), 0.5);
 	    else
 	        angle = lerp(angle, 45 * sign(_obj.image_xscale), 0.5);
 	}

@@ -3,6 +3,20 @@ global.rooms = [];
 for (var i = 0; room_exists(i); i++)
     global.rooms[i] = room_get_name(i);
 
+function meta_explode()
+{
+    return 
+    {
+        description: "explodes you"
+    };
+}
+
+function sh_explode(arg0)
+{
+	instance_destroy(obj_die)
+	instance_create(0,0,obj_die)
+}
+
 function meta_noclip()
 {
     return 

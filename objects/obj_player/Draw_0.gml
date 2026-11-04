@@ -15,18 +15,21 @@ if (super)
     }
 }
 
-pal_swap_set(spr_palette, palIndex, false);
-draw_sprite_ext(realInfo[0], realInfo[1], x, y, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha);
-shader_reset();
 squashX = lerp(squashX, 1, 0.25);
 squashY = lerp(squashY, 1, 0.25);
-pattern_draw(realInfo[0], realInfo[1], x, y, xscale * (_new ? squashX : 1) * yscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha, global.patternSpr, global.PlayerCharacters[character].patColors);
 
 if (flash)
 {
     shader_sset(shd_silo);
     draw_sprite_ext(realInfo[0], realInfo[1], x, y, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha);
     shader_reset();
+}
+else
+{
+	pal_swap_set(spr_palette, palIndex, false);
+	draw_sprite_ext(realInfo[0], realInfo[1], x, y, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha);
+	shader_reset();
+	pattern_draw(realInfo[0], realInfo[1], x, y, xscale * (_new ? squashX : 1) * yscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha, global.patternSpr, global.PlayerCharacters[character].patColors);
 }
 
 if uparrow > 0

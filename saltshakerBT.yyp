@@ -347,6 +347,7 @@
     {"id":{"name":"obj_destroyable2","path":"objects/obj_destroyable2/obj_destroyable2.yy",},},
     {"id":{"name":"obj_destructibles","path":"objects/obj_destructibles/obj_destructibles.yy",},},
     {"id":{"name":"obj_dialog","path":"objects/obj_dialog/obj_dialog.yy",},},
+    {"id":{"name":"obj_die","path":"objects/obj_die/obj_die.yy",},},
     {"id":{"name":"obj_disclaimer","path":"objects/obj_disclaimer/obj_disclaimer.yy",},},
     {"id":{"name":"obj_divingBoard","path":"objects/obj_divingBoard/obj_divingBoard.yy",},},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},},
