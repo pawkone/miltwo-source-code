@@ -130,6 +130,7 @@ function scr_player_hauling()
         image_index = 0;
         sprite_index = sprites.crouch;
         state = scr_player_crouch;
+		enemyID = -4
     }
     
     if (pky_down2 && !grounded)

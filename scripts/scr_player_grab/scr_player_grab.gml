@@ -105,32 +105,34 @@ function scr_player_grab()
         create_particleStatic(spr_grabcloud, x, y, xscale, 1);
     }
 	
-    if (place_meeting(x + sign(hsp), y, obj_solid) && !grounded)
+    if ((place_meeting(x + sign(hsp), y, obj_solid) && !scr_slope(x,y+1)) || (place_meeting(x + sign(hsp), y-6, obj_solid) && !place_meeting(x, y-6, obj_solid)))
     {
-        wallgrab = 10;
-		if character == chars.skatenic
+		if grounded
 		{
-			verticalMovespeed = -18
-			grounded = false
-			squashX = 1.5
-			squashY = 0.5
+			movespeed = 0;
+	        hsp = 0;
+	        vsp = -6;
+	        state = scr_player_jump;
+	        sprite_index = sprites.grabbump;
+	        create_particleStatic(spr_hurteffect, x, y, 1);
+	        image_index = 0;
+	        FMODevent_oneshot("event:/Sfx/Player/bump", x, y);
 		}
 		else
-			verticalMovespeed = movespeed;
-        state = scr_player_climbwall;
-        sprite_index = sprites.wallclimb;
-        image_index = 0;
-    }
-    
-    if (place_meeting(x + sign(hsp), y, obj_solid) && grounded)
-    {
-        movespeed = 0;
-        hsp = 0;
-        vsp = -6;
-        state = scr_player_jump;
-        sprite_index = sprites.grabbump;
-        create_particleStatic(spr_hurteffect, x, y, 1);
-        image_index = 0;
-        FMODevent_oneshot("event:/Sfx/Player/bump", x, y);
+		{
+	        wallgrab = 10;
+			if character == chars.skatenic
+			{
+				verticalMovespeed = -18
+				grounded = false
+				squashX = 1.5
+				squashY = 0.5
+			}
+			else
+				verticalMovespeed = movespeed;
+	        state = scr_player_climbwall;
+	        sprite_index = sprites.wallclimb;
+	        image_index = 0;
+		}
     }
 }
