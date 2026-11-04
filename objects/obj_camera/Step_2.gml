@@ -53,7 +53,7 @@ if _len > 0
 			array_delete(cameraShakeArray, i, 1)
 		else
 		{
-			var _per = (cameraShakeArray[i][0]/cameraShakeArray[i][1])
+			var _per = cameraShakeArray[i][0]/cameraShakeArray[i][1]
 			_per = cameraShakeArray[i][2]*(_per+_per/10)
 			if _cameraShake < _per
 				_cameraShake = _per
