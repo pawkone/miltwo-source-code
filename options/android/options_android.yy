@@ -66,7 +66,7 @@
   "option_android_scale":0,
   "option_android_screen_depth":0,
   "option_android_sleep_margin":4,
-  "option_android_splashscreen_background_colour":4278210559,
+  "option_android_splashscreen_background_colour":4290743165,
   "option_android_splash_screens_landscape":"${options_dir}/android/splash/landscape.png",
   "option_android_splash_screens_portrait":"${options_dir}/android/splash/portrait.png",
   "option_android_splash_time":0,
