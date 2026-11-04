@@ -76,9 +76,14 @@ miltwocredits_credits =
 		spr_skatenic_taunt, spr_player_idlemilkshake
 	],
 	[
+		"Devwowm",
+		"volunteered artist",
+		spr_tv_idleS
+	],
+	[
 		"Shampox_85584",
 		"volunteered artist",
-		spr_tv_idleS, spr_gate_crashout
+		spr_gate_crashout
 	],
 	[
 		"Bobbers6921",

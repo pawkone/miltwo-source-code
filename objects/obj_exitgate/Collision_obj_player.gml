@@ -2,19 +2,14 @@ if (other.grounded && pky_up && other.state != -4 && other.state != scr_player_e
 {
     with (other)
     {
+	    var _rankString = "D";
+		if scr_Prank() _rankString = "P";
+		else if (global.collect >= global.Srank) _rankString = "S";
+		else if (global.collect >= global.Arank) _rankString = "A";
+		else if (global.collect >= global.Brank) _rankString = "B";
+	    else if (global.collect >= global.Crank) _rankString = "C";
 		with obj_onlineHandler
 		{
-			var _rankString = "D";
-			if (global.collect >= global.Crank)
-				_rankString = "C";
-			if (global.collect >= global.Brank)
-				_rankString = "B";
-			if (global.collect >= global.Arank)
-				_rankString = "A";
-			if (global.collect >= global.Srank)
-				_rankString = "S";
-			if (scr_Prank())
-				_rankString = "P";
 			lastestMessageNum = wrap(lastestMessageNum+1, 123, 233)
 			lastestMessage = " beat " + string_lower(levelgetname(global.level)) + " (" + _rankString + " Rank - " + (global.escapeLap > 0 ? string("Lap {0}", global.escapeLap) : "No Laps") + ")"
 		}
@@ -34,6 +29,22 @@ if (other.grounded && pky_up && other.state != -4 && other.state != scr_player_e
             global.collect += (10 * global.combo.savecombo);
         
         instance_create(0, 0, obj_rank);
-        scr_savelevel();
+		
+	    xdata_open(global.saveFile);
+	    if (xdata_read(global.level, "Highscore", 0) < global.collect)
+	    {
+	        xdata_write(global.level, "Highscore", global.collect);
+	        xdata_write(global.level, "Rank", _rankString);
+	        xdata_write(global.level, "Toppin1", global.toppins[0]);
+	        xdata_write(global.level, "Toppin2", global.toppins[1]);
+	        xdata_write(global.level, "Toppin3", global.toppins[2]);
+	        xdata_write(global.level, "Toppin4", global.toppins[3]);
+	        xdata_write(global.level, "Toppin5", global.toppins[4]);
+	        xdata_write(global.level, "Treasure", global.treasure);
+	        xdata_write(global.level, "Secrets", global.secretCount);
+	    }
+    
+	    obj_savesystem.saveiconTimer = 60;
+	    xdata_close();
     }
 }

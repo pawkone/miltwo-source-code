@@ -1,9 +1,6 @@
 improvedyard_on = false
 improvedyard_rain = false
-cameraShake = 0;
-cameraShakeTimer = 0;
-cameraShakeMax = 0
-cameraShakeTimerMax = 0
+cameraShakeArray = []
 state = "normal";
 xOffset = 0;
 camera = 

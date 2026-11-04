@@ -85,6 +85,12 @@ repeat (4)
 }
 */
 
+function gpu_set_blendmode_default(){gpu_set_blendmode(bm_normal)}
+function animation_end(){return (image_index + (image_speed * sprite_get_speed(sprite_index))) >= image_number;}
+function shake_camera(intesteyt, time = -4){if (time == -4) time = intesteyt; array_push(obj_camera.cameraShakeArray, [time, time, intesteyt])}
+function instance_create(obj_x, obj_y, obj, _varstruct = {}){return instance_create_depth(obj_x, obj_y, 0, obj, _varstruct)}
+function create_smalltext(arg0, arg1 = x, arg2 = y){instance_create(arg1, arg2, obj_smalltext).text = arg0;}
+
 function loadString(arg0)
 {
 	if file_exists(arg0)
@@ -96,11 +102,6 @@ function loadString(arg0)
 	}
 	else
 		return ""
-}
-
-function gpu_set_blendmode_default()
-{
-	gpu_set_blendmode(bm_normal)
 }
 
 function scr_fadeout(_accel = 0.1)
@@ -159,48 +160,6 @@ function levelgetname(_t)
 	return _t
 }
 
-function scr_savelevel()
-{
-    xdata_open(global.saveFile);
-    var _rankString = "D";
-    
-	if scr_Prank() _rankString = "P";
-	else if (global.collect >= global.Srank) _rankString = "S";
-	else if (global.collect >= global.Arank) _rankString = "A";
-	else if (global.collect >= global.Brank) _rankString = "B";
-    else if (global.collect >= global.Crank) _rankString = "C";
-	
-    if (xdata_read(global.level, "Highscore", 0) < global.collect)
-    {
-        xdata_write(global.level, "Highscore", global.collect);
-        xdata_write(global.level, "Rank", _rankString);
-        xdata_write(global.level, "Toppin1", global.toppins[0]);
-        xdata_write(global.level, "Toppin2", global.toppins[1]);
-        xdata_write(global.level, "Toppin3", global.toppins[2]);
-        xdata_write(global.level, "Toppin4", global.toppins[3]);
-        xdata_write(global.level, "Toppin5", global.toppins[4]);
-        xdata_write(global.level, "Treasure", global.treasure);
-        xdata_write(global.level, "Secrets", global.secretCount);
-    }
-    
-    obj_savesystem.saveiconTimer = 60;
-    xdata_close();
-}
-
-function animation_end()
-{
-    return (image_index + (image_speed * sprite_get_speed(sprite_index))) >= image_number;
-}
-
-function shake_camera(arg0, arg1)
-{
-    if (is_undefined(arg1))
-        arg1 = arg0;
-    
-    obj_camera.cameraShakeTimer += arg1;
-    obj_camera.cameraShake += arg0;
-}
-
 function tv_anim(arg0, arg1 = 0)
 {
     with (obj_hud.tv)
@@ -214,12 +173,6 @@ function tv_anim(arg0, arg1 = 0)
         }
     }
 }
-
-function instance_create(obj_x, obj_y, obj, _varstruct = {})
-{
-    return instance_create_depth(obj_x, obj_y, 0, obj, _varstruct);
-}
-
 function scr_cutoff()
 {
     for (var _x = 0; _x < abs(sprite_width / 32); _x++)
@@ -236,11 +189,6 @@ function scr_cutoff()
         with instance_create(x, y + (_y * 32), obj_cutoff)
 			image_angle = -90
     }
-}
-
-function create_smalltext(arg0, arg1 = x, arg2 = y)
-{
-    instance_create(arg1, arg2, obj_smalltext).text = arg0;
 }
 
 function in_camera(arg0 = bbox_left, arg1 = bbox_right, arg2 = bbox_bottom, arg3 = bbox_top)
