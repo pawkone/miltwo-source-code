@@ -1,5 +1,4 @@
 global.rooms = [];
-
 for (var i = 0; room_exists(i); i++)
     global.rooms[i] = room_get_name(i);
 
