@@ -957,6 +957,7 @@
     {"name":"spr_gate_beach","order":13,"path":"sprites/spr_gate_beach/spr_gate_beach.yy",},
     {"name":"spr_gate_beaker","order":9,"path":"sprites/spr_gate_beaker/spr_gate_beaker.yy",},
     {"name":"spr_gate_beakerBG","order":8,"path":"sprites/spr_gate_beakerBG/spr_gate_beakerBG.yy",},
+    {"name":"spr_gate_castle","order":15,"path":"sprites/spr_gate_castle/spr_gate_castle.yy",},
     {"name":"spr_gate_crashout","order":6,"path":"sprites/spr_gate_crashout/spr_gate_crashout.yy",},
     {"name":"spr_gate_crashoutBG","order":7,"path":"sprites/spr_gate_crashoutBG/spr_gate_crashoutBG.yy",},
     {"name":"spr_gate_dudles","order":14,"path":"sprites/spr_gate_dudles/spr_gate_dudles.yy",},

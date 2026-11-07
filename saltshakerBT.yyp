@@ -1170,6 +1170,7 @@
     {"id":{"name":"spr_gate_beach","path":"sprites/spr_gate_beach/spr_gate_beach.yy",},},
     {"id":{"name":"spr_gate_beaker","path":"sprites/spr_gate_beaker/spr_gate_beaker.yy",},},
     {"id":{"name":"spr_gate_beakerBG","path":"sprites/spr_gate_beakerBG/spr_gate_beakerBG.yy",},},
+    {"id":{"name":"spr_gate_castle","path":"sprites/spr_gate_castle/spr_gate_castle.yy",},},
     {"id":{"name":"spr_gate_crashout","path":"sprites/spr_gate_crashout/spr_gate_crashout.yy",},},
     {"id":{"name":"spr_gate_crashoutBG","path":"sprites/spr_gate_crashoutBG/spr_gate_crashoutBG.yy",},},
     {"id":{"name":"spr_gate_dudles","path":"sprites/spr_gate_dudles/spr_gate_dudles.yy",},},
