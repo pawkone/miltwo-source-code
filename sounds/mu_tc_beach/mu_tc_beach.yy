@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"mu_tc_fruitcup",
+  "%Name":"mu_tc_beach",
   "audioGroupId":{
     "name":"audioGroupMusic",
     "path":"audiogroups/audioGroupMusic",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":4.551111,
   "exportDir":"",
-  "name":"mu_tc_fruitcup",
+  "name":"mu_tc_beach",
   "parent":{
     "name":"Titlecards",
     "path":"folders/Sounds/Music/Titlecards.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"mu_tc_fruitcup.ogg",
+  "soundFile":"mu_tc_beach.ogg",
   "volume":1.0,
 }

@@ -1,7 +1,7 @@
-titlecard = [spr_titlecardFruitcup,
-spr_titlecardFruitcupTitle1,
-spr_titlecardFruitcupTitle2,
-mu_tc_fruitcup]
+titlecard = [spr_titlecardBeach,
+spr_titlecardBeachTitle1,
+spr_titlecardBeachTitle2,
+mu_tc_beach]
 /*
 gateinfo = [];
 create_gate_layer(bg_shellA3,0,480,200,0,0,true)

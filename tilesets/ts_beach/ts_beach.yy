@@ -1,13 +1,13 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"ts_fruitcup",
+  "%Name":"ts_beach",
   "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"ts_fruitcup",
+  "name":"ts_beach",
   "out_columns":24,
   "out_tilehborder":2,
   "out_tilevborder":2,
@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"tilespr_fruitcup",
-    "path":"sprites/tilespr_fruitcup/tilespr_fruitcup.yy",
+    "name":"tilespr_beach",
+    "path":"sprites/tilespr_beach/tilespr_beach.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

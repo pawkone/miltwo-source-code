@@ -387,7 +387,7 @@
           317,318,319,320,311,312,313,314,315,316,317,318,319,320,311,312,313,314,315,316,317,318,319,320,311,
           312,313,314,315,316,317,318,319,320,311,312,313,314,315,316,317,318,319,320,311,312,313,314,315,316,
           317,318,319,320,311,312,313,314,315,316,317,318,319,320,311,312,313,314,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_fruitcup","path":"tilesets/ts_fruitcup/ts_fruitcup.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_beach","path":"tilesets/ts_beach/ts_beach.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Tiles_BG","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_BG","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":35,"SerialiseWidth":124,"TileCompressedData":[
           -1451,-2147483648,7,52,53,54,55,53,54,55,-117,-2147483648,1,83,-123,-2147483648,1,83,-45,-2147483648,
           7,53,54,55,53,54,55,56,-38,-2147483648,7,52,53,54,55,53,54,55,-26,-2147483648,1,114,-51,-2147483648,
@@ -395,7 +395,7 @@
           -2147483648,-3,0,-117,-2147483648,1,83,-3,-2147483648,-3,0,-117,-2147483648,1,83,-3,-2147483648,-3,0,
           -117,-2147483648,1,83,-3,-2147483648,-3,0,-117,-2147483648,3,114,-2147483648,-2147483648,-4,0,-711,-2147483648,
           6,248,249,250,255,256,0,-118,-2147483648,6,279,280,281,286,287,0,-958,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_fruitcup","path":"tilesets/ts_fruitcup/ts_fruitcup.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_beach","path":"tilesets/ts_beach/ts_beach.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Tiles_BG2","depth":400,"effectEnabled":true,"effectType":"_filter_contrast","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_BG2","properties":[
         {"name":"g_ContrastIntensity","type":0,"value":"0.6",},
         {"name":"g_ContrastBrightness","type":0,"value":"0.8",},
@@ -463,7 +463,7 @@
           409,410,411,412,413,404,405,406,407,408,409,410,411,412,413,-84,0,40,435,436,437,438,439,440,441,442,
           443,444,435,436,437,438,439,440,441,442,443,444,435,436,437,438,439,440,441,442,443,444,435,436,437,
           438,439,440,441,442,443,444,-70,0,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_fruitcup","path":"tilesets/ts_fruitcup/ts_fruitcup.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_beach","path":"tilesets/ts_beach/ts_beach.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMREffectLayer":"","%Name":"Effect_2","depth":500,"effectEnabled":true,"effectType":"_filter_posterise","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Effect_2","properties":[
         {"name":"g_ColourLevels","type":0,"value":"7",},
       ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},

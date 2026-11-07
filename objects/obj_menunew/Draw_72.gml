@@ -67,7 +67,7 @@ if state == "tv"
 		var _t1 = point_in_circle(mouse_x,mouse_y,60,270,30)
 		draw_sprite_ext(spr_menunew_tvhint, 0, 60, 270, 1, 1, 0, _t1 ? (_c ? c_yellow : c_aqua) : c_white, _alpha2)
 		if _t1 && _c2
-			pky_left2 = 1
+			pky_left2 = -1
 		
 		var _t2 = point_in_circle(mouse_x,mouse_y,900,270,30)
 		draw_sprite_ext(spr_menunew_tvhint, 1, 900, 270, 1, 1, 0, _t2 ? (_c ? c_yellow : c_aqua) : c_white, _alpha2)
