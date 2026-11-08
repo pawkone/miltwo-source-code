@@ -1,5 +1,7 @@
 function scr_player_grab()
 {
+	var _noair = character == chars.bacon_twist
+	
     static grabOut = function()
     {
         var move = pky_right + pky_left;
@@ -52,7 +54,7 @@ function scr_player_grab()
     
     image_speed = 0.35;
     
-    if (!grounded && sprite_index == sprites.grab)
+    if !_noair && (!grounded && sprite_index == sprites.grab)
     {
         image_index = 0;
         sprite_index = sprites.airgrabstart;

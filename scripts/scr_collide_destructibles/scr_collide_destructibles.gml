@@ -22,7 +22,7 @@ function scr_collide_destructibles()
 		|| state == scr_player_tumble
 		|| state == scr_player_dreamspin
 		|| state == scr_player_dreambounce
-		|| state == scr_player_retwistedBuzzsaw
+		|| state == scr_player_twistedBuzzsaw
 		|| state == scr_player_groundpound
 		|| state == scr_player_uppercut
 		|| state == scr_player_superjump

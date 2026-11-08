@@ -341,7 +341,7 @@
   "name":"milkshake_1",
   "parent":{
     "name":"Milkshake Kingdom",
-    "path":"folders/Rooms/Levels/Floor 3/Milkshake Kingdom.yy",
+    "path":"folders/Rooms/Levels/Floor 2/Milkshake Kingdom.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -1,4 +1,4 @@
-if start < 1 start += 1/60
+if start < 1 start += 1/40
 with (obj_player)
 {
 	state = -4
@@ -9,7 +9,7 @@ with (obj_player)
 	    vsp = 0
 		with instance_place(x,y,obj_destructibles)
 			instance_destroy()
-	    if (sprite_index == spr_player3_slipbanan1 || sprite_index == spr_player_spinout)
+	    if (sprite_index == spr_player3_slipbanan1 || sprite_index == spr_player3_rockethitwall)
 	    {
 	        y += other.fakeVsp;
 	        other.fakeVsp += 0.5;
@@ -24,13 +24,13 @@ with (obj_player)
 	            y = obj_doorA.y - 14;
 				if sprite_index == spr_player3_slipbanan1
 				{
-					other.fakeVsp = -5;
+					other.fakeVsp = -6;
 		            FMODevent_oneshot("event:/Sfx/Player/slipbump", x, y);
 					image_speed = 0.35;
-		            sprite_index = spr_player_spinout;
+		            sprite_index = spr_player3_rockethitwall;
 		            image_index = 0;
 				}
-				else if sprite_index == spr_player_spinout
+				else if sprite_index == spr_player3_rockethitwall
 				{
 		            FMODevent_oneshot("event:/Sfx/Player/slipend", x, y);
 					image_speed = 0.35;
@@ -43,11 +43,10 @@ with (obj_player)
 	    {
 			if animation_end()
 			{
-		        instance_destroy(other);
-		        state = scr_player_normal;
-		        obj_camera.state = "normal";
-		        sprite_index = sprites.idle;
-		        image_index = 0;
+				buffers.idle = 0
+		        image_speed = 0
+				image_index = image_number-1
+				other.alarm[0] = 8
 			}
 	    }
 		else

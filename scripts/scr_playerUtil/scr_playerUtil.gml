@@ -140,6 +140,7 @@ function generalReset()
 	if !variable_global_exists("followers") global.followers = ds_list_create()
 	else ds_list_clear(global.followers)
 	fmod_studio_system_set_parameter_by_name("musicfade", 0, false)
+	global.magician = false
 	global.collect = 0
 	global.secretCount = 0
 	global.treasure = false
@@ -211,7 +212,7 @@ function doGrab()
     
     if (slapBuffer > 0)
     {
-        if (!(character == chars.milton))
+        if (character != chars.milton)
         {
             if (!pky_up)
             {

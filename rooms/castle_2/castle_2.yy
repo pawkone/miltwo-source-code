@@ -138,7 +138,7 @@
   "name":"castle_2",
   "parent":{
     "name":"Castle Pumpkinstein",
-    "path":"folders/Rooms/Levels/Floor 3/Castle Pumpkinstein.yy",
+    "path":"folders/Rooms/Levels/Floor 2/Castle Pumpkinstein.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

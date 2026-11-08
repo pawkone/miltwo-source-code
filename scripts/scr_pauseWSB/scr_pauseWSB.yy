@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_pauseWSB",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_pauseWSB",
+  "parent":{
+    "name":"group1",
+    "path":"folders/Scripts/group1.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

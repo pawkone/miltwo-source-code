@@ -175,6 +175,13 @@ if (isSecret != isSecretStart)
 	}
 }
 
+if global.escapeActive && !isSecret
+{
+	global.escapeTimer = approach(global.escapeTimer, 0, 1)
+	if global.escapeTimer == 0 && !instance_exists(obj_hipnatuese) && global.level != "tutorial"
+		instance_create(obj_player.x, obj_player.y, obj_hipnatuese)
+}
+
 var q = 0;
 
 if (musicInst >= 0)

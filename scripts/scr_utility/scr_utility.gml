@@ -147,15 +147,14 @@ function levelgetname(_t)
 		case "beach": return "(WIP) Fruitcup Coast"
 			
 		//floor 2
-		case "frontyard": return "(WIP) Beaker's Frontyard"
-		case "clock": return "(WIP) Courted Clocks"			
-		case "outbreak": return "(WIP) Radiation Outbreak"	
+		case "castle": return "(WIP) Castle Pumpkinstein"
 		case "milkshake": return "(WIP) Milkshake Peaks"
 		
-		//floor extra
+		//extra
 		case "crashout": return "Crashout City (Crashout)"
 		case "bottom": return "Rock Bottom (Dream)"
-		case "beaker": return "(WIP) Outback Yardwork (Twisted)"
+		case "beaker": return "Outback Yardwork (Twisted)"
+		case "frontyard": return "(WIP) Beaker's Frontyard"
 	}
 	return _t
 }

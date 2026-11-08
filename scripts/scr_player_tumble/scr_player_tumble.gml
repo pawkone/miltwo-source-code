@@ -95,12 +95,15 @@ function scr_player_tumble()
     
     if (sprite_index == sprites.dive && grounded)
     {
-		if character == chars.bacon_twist || character == chars.bacon_redem
+		if character == chars.bacon_twist
 		{
 			if character == chars.bacon_twist
 				scr_soundeffect(sfx_player_bt_ballbounce)
-			vsp = -14
-			state = scr_player_retwistedBuzzsaw
+			sprite_index = spr_player3_bounceLand
+			image_index = 0
+			jumpstop = false
+			vsp = -15
+			state = scr_player_twistedBuzzsaw
 			exit
 		}
 		if character == chars.skatenic

@@ -25,7 +25,7 @@ function scr_player_skateboardmove()
     if (jumpBuffer > 5 && grounded)
     {
         jumpBuffer = false;
-        jumpStop = false;
+        jumpstop = false;
         image_index = 0;
         sprite_index = spr_player_skate_jump;
         vsp = -10;

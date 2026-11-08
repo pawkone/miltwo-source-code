@@ -8,7 +8,7 @@ if (target.state == scr_player_mach3)
     image_angle = 0;
     image_xscale = target.xscale;
 }
-else if (target.state == scr_player_groundpound)
+else if (target.state == scr_player_groundpound || target.state == scr_player_twistedWallbounce)
 {
     x = target.x;
     y = target.y + 32;

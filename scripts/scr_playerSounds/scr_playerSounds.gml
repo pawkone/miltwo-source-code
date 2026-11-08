@@ -176,7 +176,7 @@ function playerSounds()
 	
 	plrsnds_event(state == scr_player_grab, sfx.grab)
 	
-	plrsnds_event((state == scr_player_retwistedBuzzsaw || sprite_index == spr_player3_spinnygroundpound) && character == chars.bacon_twist, "sfx_player_bt_ballspin")
+	plrsnds_event((state == scr_player_twistedBuzzsaw || sprite_index == spr_player3_spinnygroundpound) && character == chars.bacon_twist, "sfx_player_bt_ballspin")
 	
 	s = 0
 	if (state == scr_player_mach2 && sprite_index != sprites.mach1) s = 1

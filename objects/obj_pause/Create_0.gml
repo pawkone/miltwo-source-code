@@ -225,3 +225,5 @@ amplitudeUniform = shader_get_uniform(shd_wave, "amplitude");
 waveTime = 0;
 freq = 0.01;
 amp = 0.009;
+
+activeOld = false
