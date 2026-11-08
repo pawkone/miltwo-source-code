@@ -9,8 +9,8 @@
   "name":"obj_bosscontroller",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Systems",
+    "path":"folders/Objects/General Elements/Systems.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -41,22 +41,22 @@ miltwocredits_credits =
 		"volunteered artist : artist for og miltu",
 		spr_butterAir, spr_butterGround, spr_pepperni_mach1, spr_pepperni_mach3,
 		spr_pepperni_taunt, spr_milton_jump, spr_milton_fall, spr_milton_land,
-		spr_milton_land2, spr_titlecardFruitcup, spr_titlecardFruitcupTitle1,
-		spr_titlecardFruitcupTitle2, spr_tv_idleanim1M, spr_tv_idleanim2M,
+		spr_milton_land2, spr_titlecardBeach, spr_titlecardBeachTitle1,
+		spr_titlecardBeachTitle2, spr_tv_idleanim1M, spr_tv_idleanim2M,
 		spr_tv_idleP, spr_tv_machP, spr_tv_crazyrunP, spr_tv_happyM,
 		spr_tv_escapeP, spr_pepperni_mach3turn, spr_player1_pary, spr_player1_crouch,
 		spr_player1_crouchfall, spr_player1_crouchhop, spr_player1_crouchmove,
 		spr_pleasestandbyT, spr_player_coconut_intro, spr_player_coconut_idle,
 		spr_skatenic_mach3hit, spr_skatenic_mach2jump, spr_skatenic_mach2jumpend,
 		spr_skatenic_diveground, spr_skatenic_jump, spr_skatenic_fall,
-		spr_skatenic_land, spr_skatenic_land2, spr_pepperni_jump,
-		spr_pepperni_fall
+		spr_skatenic_land, spr_skatenic_land2, spr_skatenic_superjump,
+		spr_pepperni_jump, spr_pepperni_fall
 	],
 	[
 		"MrAlt-",
 		"former co director : coder : level designer",
-		spr_bacadmad_face, tilespr_frontyard, tilespr_outbreak,
-		tilespr_hotel2, tilespr_fruitcup
+		spr_bacadmad_face, tilespr_frontyard, tilespr_hotel2,
+		tilespr_beach
 	],
 	[
 		"Enno334_123",
@@ -64,6 +64,12 @@ miltwocredits_credits =
 		spr_skatenic_treasureget, spr_milton_downbox, spr_tv_comboM,
 		spr_milton_superjumpprepstart, spr_milton_superjumpprep, spr_gate_milkshake,
 		spr_gate_milkshakeBG
+	],
+	[
+		"Michael67_80299",
+		"volunteered artist",
+		spr_skatenic_groundpoundstart, spr_skatenic_groundpound, spr_skatenic_groundpoundland,
+		spr_skatenic_superjumpprepstart, spr_skatenic_superjumpprep, spr_skatenic_superjumpprepwalk, 
 	],
 	[
 		"ElCacas.XD.RenovadoXD",
