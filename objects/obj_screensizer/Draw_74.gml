@@ -1,5 +1,0 @@
-if !surface_exists(gameSurface)
-    gameSurface = surface_create(960, 540)
-surface_set_target(gameSurface)
-gpu_set_blendmode_ext_sepalpha(bm_src_alpha, bm_inv_src_alpha, bm_one, bm_inv_src_alpha)
-draw_clear_alpha(c_black, 0)

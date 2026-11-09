@@ -17,6 +17,7 @@ if (!ds_list_empty(afterimages))
                     break;
                 
                 case afterimagetype.blur:
+				case afterimagetype.crashMach:
                     pal_swap_set(obj_player.spr_palette, obj_player.palIndex, false);
                     _blend = image_blend;
                     _shd = true;

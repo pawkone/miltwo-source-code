@@ -181,7 +181,6 @@ function generalReset()
 	global.escapeTimer = 7200
 	global.escapeMaxTimer = global.escapeTimer
 	global.escapeLap = 0
-	global.escapePartyOver = false
 
 	global.combo = 
 	{

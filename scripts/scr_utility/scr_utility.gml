@@ -85,7 +85,6 @@ repeat (4)
 }
 */
 
-function gpu_set_blendmode_default(){gpu_set_blendmode(bm_normal)}
 function animation_end(){return (image_index + (image_speed * sprite_get_speed(sprite_index))) >= image_number;}
 function shake_camera(intesteyt, time = -4){if (time == -4) time = intesteyt; array_push(obj_camera.cameraShakeArray, [time, time, intesteyt])}
 function instance_create(obj_x, obj_y, obj, _varstruct = {}){return instance_create_depth(obj_x, obj_y, 0, obj, _varstruct)}

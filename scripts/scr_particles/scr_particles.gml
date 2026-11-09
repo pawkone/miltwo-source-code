@@ -84,7 +84,13 @@ function create_machEffect(arg0, arg1, arg2, arg3, arg4, arg5 = 0.8)
 {
     var q = create_afterimage(arg0, arg1, arg2, arg3, arg4, arg5);
     q.type = afterimagetype.mach;
-	if object_index == obj_player && character == chars.bacon_dream
+	if object_index == obj_player && character == chars.bacon_crash
+	{
+		q.image_blend = choose(4771936, 13660176)
+		q.alarm = [15, 5, -2]
+		q.type = afterimagetype.crashMach
+	}
+	else if object_index == obj_player && character == chars.bacon_dream
 	{
 		q.image_blend = choose(8512228, 14990225, 45056)
 		q.alarm = [15, 5, -2]

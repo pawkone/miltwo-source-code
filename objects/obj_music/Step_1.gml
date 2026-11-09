@@ -19,9 +19,6 @@ if !instance_exists(obj_secretManager) && global.level == "shell"
 	if audio_exists(global.music_old)
 		audio_sound_pitch(global.music_old, pitchLrp)
 }
-
-if !(global.escapeActive && global.escapeLap == 2)
-	global.escapePartyOver = false
 if !global.escapeActive
 {
     panicStart = true;
@@ -42,17 +39,7 @@ else
     if !fmod_studio_event_instance_get_paused(musicInst)
         fmod_studio_event_instance_set_paused(musicInst, true);
     
-	if (global.escapePartyOver)
-	{
-		if (FMODevent_isplaying(escapeInst))
-		{
-			stop_music(false)
-			fmod_studio_event_instance_stop(escapeInst, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
-		}
-        if !audio_is_playing(mu_partyover)
-			scr_music(mu_partyover, false)
-	}
-    else if (global.escapeLap == 3)
+	if (global.escapeLap == 3)
     {
 		if (FMODevent_isplaying(escapeInst))
 		{

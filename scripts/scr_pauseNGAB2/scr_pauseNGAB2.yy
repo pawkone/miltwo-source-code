@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_pauseNGAB2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_pauseNGAB2",
+  "parent":{
+    "name":"NGAB2",
+    "path":"folders/Scripts/hudstuff/NGAB2.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

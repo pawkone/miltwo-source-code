@@ -1,5 +1,10 @@
 depth = target.depth + 2;
 
+if (target >= 0 && target.character == chars.bacon_crash)
+{
+	sprite_index = spr_player3chargeEffect
+	depth = target.depth - 1;
+}
 if (target >= 0 && target.character == chars.bacon_dream)
 	sprite_index = spr_player1chargeEffect
 if (target >= 0 && target.character == chars.bacon_twist)

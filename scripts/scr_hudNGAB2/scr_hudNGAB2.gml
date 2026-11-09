@@ -1,7 +1,9 @@
+global.font_hudNGAB2_big = font_add_sprite_ext(font_hudNGAB2_big, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890:", 1, 0);
+global.font_hudNGAB2_score = font_add_sprite_ext(font_hudNGAB2_score, "0123456789", 1, 0)
+global.font_hudNGAB2_combo = font_add_sprite_ext(font_hudNGAB2_combo, "1234567890", 1, 0)
+
 function scr_hudNGAB2_init()
 {
-	global.font_hudNGAB2_score = font_add_sprite_ext(font_hudNGAB2_score, "0123456789", 1, 0)
-	global.font_hudNGAB2_combo = font_add_sprite_ext(font_hudNGAB2_combo, "1234567890", 1, 0)
 	state = 33
 	switchstate = 0
 	switchtimer = 0
@@ -266,8 +268,4 @@ function scr_hudNGAB2_clean()
 	surf = -4
 	surface_free(clip)
 	clip = -4
-	font_delete(global.font_hudNGAB2_score)
-	font_delete(global.font_hudNGAB2_combo)
-	global.font_hudNGAB2_score = -4
-	global.font_hudNGAB2_combo = -4
 }

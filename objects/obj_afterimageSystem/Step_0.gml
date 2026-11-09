@@ -47,6 +47,7 @@ if (!ds_list_empty(afterimages))
                     
                     break;
 					
+				case afterimagetype.crashMach:
                 case afterimagetype.dreamMach:
 				case afterimagetype.twistMach1:
 				case afterimagetype.twistMach2:

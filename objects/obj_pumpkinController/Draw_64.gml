@@ -24,7 +24,7 @@ if (dark)
 	}
 	draw_set_circle_precision(24)
 	draw_set_alpha(1)
-	gpu_set_blendmode_default()
+	gpu_set_blendmode(bm_normal)
 	surface_reset_target()
 	with obj_baddie
 	{

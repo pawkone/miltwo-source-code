@@ -22,7 +22,7 @@ draw_rectangle(0, 0, 960, 540, false);
 draw_set_colour(c_white);
 gpu_set_blendmode(bm_subtract);
 draw_circle(960 / 2, 540 / 2, circleSize*(16/9), false);
-gpu_set_blendmode_default()
+gpu_set_blendmode(bm_normal)
 surface_reset_target();
 gpu_set_blendmode_ext(_blend[0],_blend[1]);
 draw_set_alpha(fadeAlpha);

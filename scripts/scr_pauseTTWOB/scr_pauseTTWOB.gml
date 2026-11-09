@@ -116,6 +116,7 @@ function scr_pauseTTWOB()
 		}
 		draw_set_alpha(1)
 		draw_set_halign(0)
+		draw_set_colour(c_white)
 
 		ttwob_cursor_x = lerp(ttwob_cursor_x, 736+string_width(lang_get_phrase(options[selected].option))/2 + 20, 0.075)
 		ttwob_cursor_y = lerp(ttwob_cursor_y, _offy+selected*48, 0.1)

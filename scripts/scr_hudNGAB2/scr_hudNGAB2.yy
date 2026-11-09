@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_hudNGAB2",
   "parent":{
-    "name":"hudstuff",
-    "path":"folders/Scripts/hudstuff.yy",
+    "name":"NGAB2",
+    "path":"folders/Scripts/hudstuff/NGAB2.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

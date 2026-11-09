@@ -10,6 +10,7 @@ enum afterimagetype
 	dreamMach,
 	twistMach1,
 	twistMach2,
+	crashMach,
 }
 
 afterimages = ds_list_create();

@@ -1,4 +1,7 @@
-depth = obj_screensizer.depth + 200;
+hud_postfix = "WSB"
+event_user(0)
+
+depth = -200
 active = false;
 graphBorderSize = 2;
 activelrp = 0
@@ -47,6 +50,34 @@ alarm[0] = 60;
 
 function doPause()
 {
+    screenSprite = sprite_create_from_surface(application_surface, 0, 0, 960, 540, false, false, 0, 0);
+    
+	var _w = display_get_gui_width(), _h = display_get_gui_height()
+	var gameSurface = surface_create(_w,_h), _arr = [], _len = 0
+	surface_set_target(gameSurface)
+	with all
+		array_push(_arr, id)
+	array_sort(_arr,function(a,b){return a.depth-b.depth})
+	_len = array_length(_arr)
+	for (var i = 0; i < _len; i++)
+	{
+		with _arr[i]
+			event_perform(ev_draw, ev_gui_begin)
+	}
+	for (var i = 0; i < _len; i++)
+	{
+		with _arr[i]
+			event_perform(ev_draw, ev_gui)
+	}
+	for (var i = 0; i < _len; i++)
+	{
+		with _arr[i]
+			event_perform(ev_draw, ev_gui_end)
+	}
+	surface_reset_target()
+	screenSprite2 = sprite_create_from_surface(gameSurface, 0, 0, _w, _h, false, false, 0, 0);
+	surface_free(gameSurface)
+	
 	audio_pause_all()
 	if pauseMusic >= 0
 		fmod_studio_event_instance_set_parameter_by_name(pauseMusic, "state", obj_player.character == chars.milton);
@@ -54,9 +85,7 @@ function doPause()
     character = obj_player.character;
     active = true;
     FMODsetPauseAll(true);
-    
-    screenSprite = sprite_create_from_surface(application_surface, 0, 0, 960, 540, false, false, 0, 0);
-    screenSprite2 = sprite_create_from_surface(obj_screensizer.gameSurface, 0, 0, 960, 540, false, false, 0, 0);
+	
 	instance_deactivate_all(true);
     instance_activate_object(obj_inputController);
     instance_activate_object(obj_screensizer);

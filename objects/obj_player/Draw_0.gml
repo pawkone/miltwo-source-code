@@ -1,6 +1,4 @@
-var realInfo = playerUtil_realSpr()
-
-var _new = character == chars.valenta || character == chars.milton || character == chars.skatenic || isMildred || character == chars.pepperni || character == chars.soda
+var realInfo = playerUtil_realSpr(), _new = character == chars.valenta || character == chars.milton || character == chars.skatenic || isMildred || character == chars.pepperni || character == chars.soda
 
 if (super)
 {
@@ -11,7 +9,7 @@ if (super)
         var _alpha = abs(sin((current_time * 0.001) + (5 * i))) * 0.1;
         gpu_set_blendmode(bm_add);
         draw_sprite_ext(realInfo[0], realInfo[1], x + _xx, y + _yy, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, c_red, image_alpha * _alpha);
-        gpu_set_blendmode_default()
+        gpu_set_blendmode(bm_normal)
     }
 }
 
