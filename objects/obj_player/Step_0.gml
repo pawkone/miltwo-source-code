@@ -80,7 +80,7 @@ if (hitstun.is == false)
                     very = true;
                 
                 combo = wrap(combo, 0, 14);
-                image_index = self.getProper(combo);
+                image_index = combo*2;
             }
             
             FMODevent_oneshot("event:/Sfx/UI/Combo/comboup");
@@ -114,7 +114,7 @@ if (hitstun.is == false)
                 
                 lostcombo = true;
                 combo = wrap(combo, 0, 14);
-                image_index = self.getProper(combo);
+                image_index = combo*2;
                 points = 10 * global.combo.savecombo;
                 global.collect += points;
             }

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_hudWSB",
   "parent":{
-    "name":"group1",
-    "path":"folders/Scripts/group1.yy",
+    "name":"WSB",
+    "path":"folders/Scripts/hudstuff/WSB.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

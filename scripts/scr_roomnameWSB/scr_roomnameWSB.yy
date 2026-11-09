@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_roomnameWSB",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_roomnameWSB",
+  "parent":{
+    "name":"WSB",
+    "path":"folders/Scripts/hudstuff/WSB.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

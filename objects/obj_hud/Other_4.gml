@@ -1,3 +1,6 @@
+if is_callable(roomname_scr_roomstart)
+	roomname_scr_roomstart()
+
 roomthing = room == initObject || room == boss_bacon || room == hotel_soundtest || room == rank_room || room == Levelselect || room == Mainmenu || room == serverMenuShit || room == timesup_room || global.level == "tutorial" || string_starts_with(room_get_name(room), "hotel")
 
 global.escapeMaxTimer = 180

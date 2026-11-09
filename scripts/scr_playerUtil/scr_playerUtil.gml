@@ -163,9 +163,13 @@ function generalReset()
 	}
 	with (obj_hud)
 	{
-		tv.sprite_index = spr_tv_off;
-		combometer.y = -128;
-		combometer.state = -1;
+		if variable_instance_exists(id, "tv") && is_struct(tv)
+			tv.sprite_index = spr_tv_off
+		if variable_instance_exists(id, "combometer") && is_struct(combometer)
+		{
+			combometer.y = -128
+			combometer.state = -1
+		}
 	}
 	global.modifiers =
 	{

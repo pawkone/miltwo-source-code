@@ -1,3 +1,8 @@
+hud_postfix = "WSB"
+if obj_player.character == chars.bacon_crash
+	hud_postfix = "NGAB2"
+
+
 if hud_postfixOld != hud_postfix
 {
 	hud_postfixOld = hud_postfix

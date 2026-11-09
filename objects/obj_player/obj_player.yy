@@ -15,8 +15,8 @@
   "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"General Elements",
-    "path":"folders/Objects/General Elements.yy",
+    "name":"Player",
+    "path":"folders/Objects/Gameplay Elemnts/Player.yy",
   },
   "parentObjectId":null,
   "persistent":true,
