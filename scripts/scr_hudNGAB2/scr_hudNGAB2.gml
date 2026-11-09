@@ -124,7 +124,7 @@ function scr_hudNGAB2_step()
 	    case 0:
 	        comboY = approach(comboY, -84, 5) + irandom_range(comboshake, -comboshake)
 	        combovsp = 0
-	        if global.combo > 0
+	        if global.combo.amt > 0
 	        {
 	            combopart++
 	            combovsp = 5
@@ -228,7 +228,7 @@ function scr_hudNGAB2_draw()
         clip = surface_create(278, 139)
     }
     
-    var xx = (comboX - 31) + 16, yy = comboY + 33, _str = string(global.combo)
+    var xx = (comboX - 31) + 16, yy = comboY + 33, _str = string(global.combo.amt)
 	var _len = string_length(_str)
 	draw_set_font(global.font_hudNGAB2_combo)
     for (var i = 0; i < _len; i++)

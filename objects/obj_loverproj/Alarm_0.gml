@@ -4,8 +4,7 @@ if (points == 5)
 global.collect += 2;
 global.combo.timer = 60;
 points--;
-var _sprite = asset_get_index(string("spr_collect{0}", irandom_range(1, 5)));
-create_collect(_sprite, x, y);
+create_collect(get_baconera(asset_get_index(string("spr_collect{0}", irandom(4)+1)), obj_player.character), x, y);
 FMODevent_oneshot("event:/Sfx/General/Collects/collect", x, y);
 
 if (points > 0)
