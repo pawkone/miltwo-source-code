@@ -59,6 +59,7 @@ add_music = function(arg0, arg1, arg2, arg3 = function()
     secret = arg1;
     func = arg3;
 };
+/*
 ds_map_add(musicDetails, yard_1, new add_music("event:/Music/W1/Monolith Mangrove/mangrove", "event:/Music/W1/Monolith Mangrove/mangrovesecret", -4, function()
 {
     var _s = 0;
@@ -68,6 +69,7 @@ ds_map_add(musicDetails, yard_1, new add_music("event:/Music/W1/Monolith Mangrov
     
     fmod_studio_event_instance_set_parameter_by_name(musicInst, "state", _s);
 }));
+*/
 ds_map_add(musicDetails, hotel_start, new add_music("event:/Music/W1/hub", -4, -4));
 ds_map_add(musicDetails, hotel_1, new add_music("event:/Music/W1/hub", -4, -4));
 ds_map_add(musicDetails, tutorial_1, new add_music("event:/Music/W1/tutorial", -4, -4));

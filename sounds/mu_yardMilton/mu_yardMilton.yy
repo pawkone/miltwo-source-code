@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_yardMilton",
+  "audioGroupId":{
+    "name":"audioGroupMusic",
+    "path":"audiogroups/audioGroupMusic",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":1,
+  "conversionMode":0,
+  "duration":140.26535,
+  "exportDir":"audioStreamed",
+  "name":"mu_yardMilton",
+  "parent":{
+    "name":"Levels",
+    "path":"folders/Sounds/Music/Levels.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_yardMilton.ogg",
+  "volume":1.0,
+}

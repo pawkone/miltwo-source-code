@@ -1,19 +1,25 @@
 isSecretStart = string_pos("secret", string_letters(room_get_name(room))) > 0 || room == hotel_soundtest || room = hotel_soundtestentrance;
 
+var _char = instance_exists(obj_player) ? obj_player.character : -4
 var _arr = [
-	[mu_bossbacon, room == boss_bacon],
-
 	[mu_hubextra, room == hotel_extra],
 	
-	[mu_rockbottom, room == rockbottom_1],
-	
 	[mu_crashoutcity, room == crashout_1],
+	[mu_rockbottom, room == rockbottom_1],
+	[mu_beaker, room == beaker_intro],
 	
 	[mu_frontyard, room == frontyard_1],
 	
-	[mu_beaker, room == beaker_intro],
+	[mu_yardMilton, _char == chars.milton && room == yard_1],
+	[mu_crashoutcity, _char == chars.bacon_crash && room == yard_1],
+	[mu_rockbottom, _char == chars.bacon_dream && room == yard_1],
+	[mu_beaker, _char == chars.bacon_twist && room == yard_1],
+	[mu_yard, room == yard_1],
 	
 	[mu_shellcityA, room == shell_1],
+	
+	[mu_bossbacon, room == boss_bacon],
+
 ]
 
 if !global.escapeActive

@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":1,
   "conversionMode":0,
-  "duration":125.17202,
+  "duration":0.0,
   "exportDir":"audioStreamed",
   "name":"mu_milton",
   "parent":{

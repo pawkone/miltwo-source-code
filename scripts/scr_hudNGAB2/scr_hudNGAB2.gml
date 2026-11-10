@@ -1,7 +1,7 @@
 global.font_hudNGAB2_big = font_add_sprite_ext(font_hudNGAB2_big, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890:", 1, 0);
 global.font_hudNGAB2_score = font_add_sprite_ext(font_hudNGAB2_score, "0123456789", 1, 0)
 global.font_hudNGAB2_combo = font_add_sprite_ext(font_hudNGAB2_combo, "1234567890", 1, 0)
-
+global.font_hudNGAB2_credits = font_add_sprite_ext(font_hudNGAB2_credits, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.:!0123456789?'\"ÁÉÍÓÚáéíóú_-[]▼()&#风雨廊桥전태양*яиБжидГзвбнль↑↓←→⇧⌃␣⎋", 1, 2)
 function scr_hudNGAB2_init()
 {
 	state = 33
@@ -253,10 +253,9 @@ function scr_hudNGAB2_draw()
     if global.escapeActive
 	{
 		var _sec = wrap(global.escapeTimer / 60, 0, 59)
-	    var _timer = $"{_sec < 10 ? "0" : ""}{_sec}:{wrap(global.escapeTimer / 3600, 0, 59)}"
         draw_set_halign(1)
-		draw_set_font(global.creditsfont)
-		draw_text(480, 150, _timer)
+		draw_set_font(global.font_hudNGAB2_credits)
+		draw_text(480, 150, $"{wrap(global.escapeTimer / 3600, 0, 59)}:{_sec < 10 ? "0" : ""}{_sec}")
 		draw_set_halign(0)
 	}
     
