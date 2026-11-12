@@ -46,8 +46,8 @@ function scr_player_taunt()
 		    image_index = irandom_range(0, image_number);
 			instance_destroy(obj_taunteffect)
 		    instance_create(x, y, obj_taunteffect);
-			if global.modded_phototaunt
-				scr_soundeffect(sfx_tauntold, random_range(0.95,1.05))
+			if global.modded_phototaunt && scr_getera_pt() != "PT"
+				plrsnds_play(sfx_tauntold, x, y)
 		    else
 				plrsnds_play(sfx.taunt, x, y);
 		}

@@ -224,7 +224,8 @@ function doGrab()
                 sprite_index = sprites.grab;
                 image_index = 0;
                 create_particleStatic(spr_grabcloud, x, y, xscale, 1);
-                
+                if character == chars.bacon_twist
+					buffers.twistedair = 0
                 if (movespeed < 8)
                     movespeed = 8;
             }
@@ -333,9 +334,9 @@ function doTaunt(_force = false, _supertauntenabled = true)
             image_index = irandom_range(0, image_number);
             instance_create(x, y, obj_taunteffect);
             instance_create(x, y, obj_parryhitbox);
-			if global.modded_phototaunt
-				scr_soundeffect(sfx_tauntold, random_range(0.95,1.05))
-            else
+			if global.modded_phototaunt && scr_getera_pt() != "PT"
+				plrsnds_play(sfx_tauntold, x, y)
+		    else
 				plrsnds_play(sfx.taunt, x, y);
         }
         else

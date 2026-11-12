@@ -33,8 +33,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"ZZZ im sick of this, im doing it later",
-    "path":"folders/Sprites/ZZZ im sick of this, im doing it later.yy",
+    "name":"Effects",
+    "path":"folders/Sprites/Visuals/Effects.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -75,7 +75,7 @@
     "showBackdropImage":false,
     "timeUnits":1,
     "tracks":[
-      {"$GMSpriteFramesTrack":"","builtinName":-1,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
+      {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e0d10660-3a84-4979-9cdd-5c7458b34c86","path":"sprites/spr_superdashcloud/spr_superdashcloud.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"4973abe8-cc03-40fd-895d-182e51bc4a4a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},

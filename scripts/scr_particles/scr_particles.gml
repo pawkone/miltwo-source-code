@@ -1,6 +1,6 @@
 function create_particleStatic(_spriteindex, _x, _y, _xscale, _depth = 1)
 {
-	return instance_create_depth(_x,_y,_depth,obj_particle,{sprite_index: _spriteindex, image_xscale: _xscale})
+	return instance_create_depth(_x,_y,_depth,obj_particle,{sprite_index: sprite_getera(_spriteindex), image_xscale: _xscale})
 }
 
 function create_particleDebri(arg0, arg1, arg2, arg3, arg4, arg5 = 1, arg6 = random_range(0, 360), arg7 = random_range(-5, 5), arg8 = random_range(10, -10))

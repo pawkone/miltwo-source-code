@@ -54,7 +54,7 @@ if _len > 0
 		else
 		{
 			var _per = cameraShakeArray[i][0]/cameraShakeArray[i][1]
-			_per = cameraShakeArray[i][2]*(_per+_per/10)
+			_per = min(cameraShakeArray[i][2], cameraShakeArray[i][2]*(_per+_per/5))
 			if _cameraShake < _per
 				_cameraShake = _per
 		}

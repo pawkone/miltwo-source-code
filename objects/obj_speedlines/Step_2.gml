@@ -3,6 +3,8 @@ if target >= 0 && target.character == chars.bacon_dream
 	depth -= 2
 if (target.state == scr_player_mach3)
 {
+	if target.character == chars.bacon_twist && target.movespeed < 15
+		instance_destroy();
     x = target.x;
     y = target.y;
     image_angle = 0;

@@ -11,24 +11,34 @@ function scr_player_groundpoundstart()
         hsp = 0;
     }
     
+    if (sprite_index == sprites.groundpoundstart && animation_end())
+        sprite_index = sprites.groundpound;
+	
     move = pky_right + pky_left;
     image_speed = 0.35;
-    
-    if (vsp < 0)
-        freefallsmash = -7;
-    
-    if (vsp > 0)
-    {
-        state = scr_player_groundpound;
-        create_particleStatic(spr_cloudeffect, x, y, 1, 1);
-        buffers.crazyothereffect = 0;
+	if (vsp >= 0)
+	{
+	    state = scr_player_groundpound;
+	    create_particleStatic(spr_cloudeffect, x, y, 1, 1);
+		buffers.crazyothereffect = 0;
         
-        if (character == chars.milton)
-        {
-            vsp = 12;
-            freefallsmash = 10;
-        }
-    }
+		if character == chars.bacon_twist
+		{
+			vsp = 10
+			freefallsmash = -4;
+		}
+	    else if (character == chars.milton)
+	    {
+	        vsp = 12;
+	        freefallsmash = 10;
+	    }
+	}
+	else
+	{
+		if character == chars.bacon_twist
+			vsp -= 0.2
+		freefallsmash = -7;
+	}
     
     buffers.afterimageBlur = approach(buffers.afterimageBlur, 0, 1);
     
@@ -36,66 +46,5 @@ function scr_player_groundpoundstart()
     {
         buffers.afterimageBlur = 4;
         create_blur_effect(sprite_index, image_index, x, y, xscale);
-    }
-    
-    if (grounded && vsp >= 0 && (!place_meeting(x, y + vsp, obj_destructibles) && !place_meeting(x, y + vsp, obj_metalblock)))
-    {
-        if (scr_slope(x, y + 1) && sprite_index != spr_player_piledriver)
-        {
-            var slope = instance_place(x, y + 1, obj_slope);
-            xscale = -sign(slope.image_xscale);
-            movespeed = (freefallsmash >= 10) ? 12 : 8;
-            state = scr_player_tumble;
-            sprite_index = sprites.rolling;
-            FMODevent_oneshot("event:/Sfx/Player/crouchslide", x, y);
-            create_particleStatic(spr_superdashcloud, x, y, xscale, 1);
-        }
-        else
-        {
-            if (sprite_index == spr_player_piledriver)
-            {
-                sprite_index = spr_player_piledriverend;
-                
-                if (instance_exists(enemyID) && enemyID.state == "grab")
-                {
-                    FMODevent_oneshot("event:/Sfx/Player/punch", x, y);
-                    
-                    repeat (8)
-                    {
-                        create_particleDebri(spr_baddie_gibs, irandom_range(0, sprite_get_number(spr_baddie_gibs)), x, y, 1, -5);
-                        create_particleDebri(spr_slapstar, irandom_range(0, sprite_get_number(spr_slapstar)), x, y, 1, -5);
-                    }
-                    
-                    create_particleStatic(spr_kungfueffect, x, y, 1, 2);
-                    
-                    with (enemyID)
-                        instance_destroy();
-                    
-                    enemyID = -4;
-                }
-            }
-            else if (sprite_index == sprites.divebomb)
-            {
-                sprite_index = sprites.divebombland;
-            }
-            else
-            {
-                sprite_index = sprites.groundpoundland;
-            }
-            
-            image_index = 0;
-            vsp = 0;
-            hsp = 0;
-            state = scr_player_freefallland;
-            movespeed = abs(hsp);
-            
-            if (freefallsmash >= 10)
-                shake_camera(25);
-            else
-                shake_camera(10);
-            
-            plrsnds_play(sfx.slam, x, y);
-            create_particleStatic(spr_groundpoundeffect, x, y, 1, -2);
-        }
     }
 }

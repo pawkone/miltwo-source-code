@@ -102,6 +102,7 @@ function scr_player_jump()
     
     if (((pky_down2 && global.dirGround) || (pky_groundpound2 && !global.dirGround)) && !grounded)
     {
+		create_particleStatic(spr_player3groundpoundStartEffect,x,y,1)
         vsp = -6;
         sprite_index = sprites.groundpoundstart;
         image_index = 0;

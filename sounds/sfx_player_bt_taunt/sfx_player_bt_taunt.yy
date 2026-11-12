@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_player_bt_taunt",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":1,
+  "conversionMode":0,
+  "duration":46.628548,
+  "exportDir":"",
+  "name":"sfx_player_bt_taunt",
+  "parent":{
+    "name":"baconTwisted",
+    "path":"folders/Sounds/SFX/Charactes/baconTwisted.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_player_bt_taunt.wav",
+  "volume":0.75,
+}

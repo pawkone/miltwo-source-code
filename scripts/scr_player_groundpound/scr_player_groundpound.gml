@@ -30,38 +30,44 @@ function scr_player_groundpound()
         create_blur_effect(sprite_index, image_index, x, y, xscale);
     }
     
-    if (buffers.step <= 0)
-    {
-        buffers.step = 5;
-        create_particleStatic(spr_cloudeffect, x + irandom_range(-5, 5), y + irandom_range(-5, 5), 1, 1);
-    }
+	if character != chars.bacon_twist
+	{
+	    if (buffers.step <= 0)
+	    {
+	        buffers.step = 5;
+	        create_particleStatic(spr_cloudeffect, x + irandom_range(-5, 5), y + irandom_range(-5, 5), 1, 1);
+	    }
     
-    buffers.step--;
+	    buffers.step--;
+	}
     
     if (vsp > 0)
         freefallsmash++;
     
-    if (freefallsmash >= 10)
+    if character == chars.bacon_twist || (freefallsmash >= 10)
     {
-		if !premode
+		if (freefallsmash >= 10)
 		{
-	        if (!instance_exists(chargeeffect))
-	            chargeeffect = instance_create(x, y, obj_chargeeffect);
+			if !premode
+			{
+		        if (!instance_exists(chargeeffect))
+		            chargeeffect = instance_create(x, y, obj_chargeeffect);
+			}
+        
+	        buffers.afterimageMach = approach(buffers.afterimageMach, 0, 1);
+        
+	        if (buffers.afterimageMach == 0)
+	        {
+	            buffers.afterimageMach = 4;
+	            create_machEffect(sprite_index, image_index, x, y, xscale, 1);
+	        }
 		}
-        
-        buffers.afterimageMach = approach(buffers.afterimageMach, 0, 1);
-        
-        if (buffers.afterimageMach == 0)
-        {
-            buffers.afterimageMach = 4;
-            create_machEffect(sprite_index, image_index, x, y, xscale, 1);
-        }
         
         buffers.crazyothereffect--;
         
         if (buffers.crazyothereffect <= 0)
         {
-            buffers.crazyothereffect = 9;
+            buffers.crazyothereffect = character == chars.bacon_twist ? 15 : 9;
             
             with (create_particleStatic(spr_crazyrunothereffect, x, y, 1, 1))
             {
@@ -159,10 +165,20 @@ function scr_player_groundpound()
             state = scr_player_freefallland;
             movespeed = abs(hsp);
             
-            if (freefallsmash >= 10)
-                shake_camera(25);
-            else
-                shake_camera(10);
+			if character == chars.bacon_twist
+			{
+				if (freefallsmash >= 10)
+	                shake_camera(30);
+	            else
+	                shake_camera(20);
+			}
+			else
+			{
+				if (freefallsmash >= 10)
+	                shake_camera(25);
+	            else
+	                shake_camera(10);
+			}
             
             plrsnds_play(sfx.slam, x, y);
             create_particleStatic(spr_groundpoundeffect, x, y, 1, -2);

@@ -56,6 +56,9 @@ function scr_playerSounds_data()
 			sfx.machend = sfx_player_br_machend
 			sfx.mach = "sfx_player_br_mach"
 			sfx.grab = "sfx_player_br_grab"
+			sfx.groundpound = sfx_player_bt_groundpound
+			sfx.slam = sfx_player_bt_slam
+			sfx.taunt = sfx_player_bt_taunt
 			sfx.gasp = -4
 		break
 		case chars.preoutman:

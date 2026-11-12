@@ -18,9 +18,9 @@ squashY = lerp(squashY, 1, 0.25);
 
 if (flash)
 {
-    shader_sset(shd_silo);
+    gpu_set_fog(true,16580604,0,1)
     draw_sprite_ext(realInfo[0], realInfo[1], x, y, xscale * (_new ? squashX : 1) * xscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha);
-    shader_reset();
+    gpu_set_fog(false,c_white,0,1)
 }
 else
 {
@@ -30,9 +30,16 @@ else
 	pattern_draw(realInfo[0], realInfo[1], x, y, xscale * (_new ? squashX : 1) * yscaleMulti, (1 * _new ? squashY : 1) * yscaleMulti, angle, image_blend, image_alpha, global.patternSpr, global.PlayerCharacters[character].patColors);
 }
 
-if uparrow > 0
-	draw_sprite_ext(spr_uparrow,0,x,y+-abs(sin(current_time/200)*10)-lerp(40,55,uparrow),lerp(0,1,uparrow),lerp(0,1,uparrow),lerp(0,360,uparrow)+sin(current_time/200)*20,c_white,3-uparrow)
-
+if scr_getera() == "TTWOB"
+{
+	if uparrow
+		draw_sprite_ext(spr_tutorialkeyspecial,3,x-21,y-(62 + (uparrow>1 ? 15 : 0)),1,1,0,c_white,1)
+}
+else
+{
+	if uparrow > 0
+		draw_sprite_ext(spr_uparrow,0,x,y+-abs(sin(current_time/200)*10)-lerp(40,55,uparrow),lerp(0,1,uparrow),lerp(0,1,uparrow),lerp(0,360,uparrow)+sin(current_time/200)*20,c_white,3-uparrow)
+}
 if instance_exists(obj_onlineHandler)
 {
 	var _c = (global.prophuntmode.active && instance_exists(obj_onlineProphunt) && global.prophuntmode.select < 0) ? c_red : c_white, _hash = 0

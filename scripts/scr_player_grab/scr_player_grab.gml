@@ -1,7 +1,5 @@
 function scr_player_grab()
 {
-	var _noair = character == chars.bacon_twist
-	
     static grabOut = function()
     {
         var move = pky_right + pky_left;
@@ -22,6 +20,12 @@ function scr_player_grab()
                 movespeed = 0;
         }
     };
+	
+	if character == chars.bacon_twist && buffers.twistedair < 10
+	{
+		vsp = 0
+		buffers.twistedair++
+	}
     
     hsp = movespeed * xscale;
     
@@ -54,24 +58,18 @@ function scr_player_grab()
     
     image_speed = 0.35;
     
-    if !_noair && (!grounded && sprite_index == sprites.grab)
+    if !grounded && sprite_index == sprites.grab
     {
         image_index = 0;
         sprite_index = sprites.airgrabstart;
     }
     
-    if (grounded && sprite_index == sprites.airgrab)
+    if (grounded && sprite_index == sprites.airgrab) || (animation_end() && sprite_index == sprites.grab)
     {
         grabOut();
         exit;
     }
-    
-    if (animation_end() && sprite_index == sprites.grab)
-    {
-        grabOut();
-        exit;
-    }
-    
+	
     if (animation_end() && sprite_index == sprites.airgrabstart)
         sprite_index = sprites.airgrab;
     

@@ -1,17 +1,15 @@
 if (global.debug)
 {
     var devWindow = []
-    array_push(devWindow, "Oh Mil.. Two?")
-	array_push(devWindow, "")
     array_push(devWindow, $"ROOM+-#{room_get_name(room)}")
     array_push(devWindow, $"FPS (Game)+-#{floor(fps)}")
     array_push(devWindow, $"FPS (CPU)+-#{floor(fps_real)}")
     array_push(devWindow, $"Build Type+-#{GM_build_type}")
     if (instance_exists(obj_player))
     {
-	    array_push(devWindow, $"Player X+-#{obj_player.x}", obj_player.x)
-	    array_push(devWindow, $"Player Y+-#{obj_player.y}", obj_player.y)
-	    array_push(devWindow, $"Player State+-#{obj_player.state}")
+	    array_push(devWindow, $"Player X+-#{obj_player.x}")
+	    array_push(devWindow, $"Player Y+-#{obj_player.y}")
+	    array_push(devWindow, $"Player State+-#{script_get_name(obj_player.state)}")
 	    array_push(devWindow, $"Player Sprite+-#{sprite_get_name(obj_player.sprite_index)}")
     }
     

@@ -1,3 +1,4 @@
+sprite_index = sprite_getera(spr_dresser)
 if place_meeting(x, y, obj_player) && pky_up2 && obj_player.grounded
 {
 	if !instance_exists(obj_dressermenu)

@@ -35,6 +35,7 @@ buffers.crazyothereffect = 0;
 buffers.breakdanceheld = 0;
 buffers.notes = 0;
 buffers.hammer = 0;
+buffers.twistedair = 0;
 breakdancespeed = 0;
 breakdanceID = -4;
 jumpBuffer = false;

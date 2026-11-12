@@ -70,6 +70,11 @@ function scr_player_tumble()
             state = scr_player_groundpoundstart;
             squashX = 1.3;
             squashY = 0.8;
+			if character == chars.bacon_twist
+			{
+				create_particleStatic(spr_player3groundpoundStartEffect,x,y,1)
+				sprite_index = sprites.groundpoundstart;
+			}
         }
     }
     

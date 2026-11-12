@@ -4,4 +4,6 @@ destroy = false;
 depth = 18;
 photoSurf = -4
 photoIndex = 0
+photoOn = false
+photoMask = -4
 alarm[0] = 1

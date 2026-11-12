@@ -9,25 +9,31 @@ else
 		vsp += grav
 }
 
-var yaya = ((
-	place_meeting(x,y,obj_dresser) ||
-	place_meeting(x,y,obj_door) ||
-	place_meeting(x,y,obj_levelgate) ||
-	(instance_place(x,y,obj_exitgate) > 0 && instance_place(x,y,obj_exitgate).openn)
-	
-) && grounded) * (pky_up ? 2 : (pky_down ? 0.5 : 1))
-
-uparrowadd = lerp(uparrowadd, (yaya - uparrow) * 0.15, 0.5)
-if yaya
+var touchie = place_meeting(x,y,obj_dresser) ||
+place_meeting(x,y,obj_door) ||
+place_meeting(x,y,obj_levelgate) ||
+(instance_place(x,y,obj_exitgate) > 0 && instance_place(x,y,obj_exitgate).openn)
+if scr_getera() == "TTWOB"
 {
-	if state == scr_player_enterdoor || instance_exists(obj_rank)
-		uparrow = approach(uparrow, 3, 0.2)
+	if touchie && !uparrow
+		uparrow = 2
+	else
+		uparrow = touchie ? (place_meeting(x,y,obj_dresser)+1) : 0
+}
+else
+{
+	var uparrowraw = (touchie && grounded) * (pky_up ? 2 : (pky_down ? 0.5 : 1))
+	uparrowadd = lerp(uparrowadd, (uparrowraw - uparrow) * 0.15, 0.5)
+	if uparrowraw
+	{
+		if state == scr_player_enterdoor || instance_exists(obj_rank)
+			uparrow = approach(uparrow, 3, 0.2)
+		else
+			uparrow += uparrowadd
+	}
 	else
 		uparrow += uparrowadd
 }
-else
-	uparrow += uparrowadd
-
 depth = -5
 if global.modded_sloperotation
 {

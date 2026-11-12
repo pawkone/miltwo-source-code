@@ -39,7 +39,7 @@ function scr_player_machturn()
             plrsnds_play(sfx.gasp, x, y);
     }
     
-    if (grounded && animation_end())
+    if (grounded && animation_end()) || (grounded && character == chars.bacon_twist && hsp == 0)
     {
         if (sprite_index == sprites.mach2turn)
         {

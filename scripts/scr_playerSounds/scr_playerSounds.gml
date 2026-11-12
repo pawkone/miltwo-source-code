@@ -64,7 +64,7 @@ function plrsnds_play(event, xx, yy)
 	{
 		if is_array(event)
 			event = event[irandom(array_length(event)-1)]
-		var _pitch = random_range(0.9,1.1)
+		var _pitch = random_range(1,1.1)
 		var _sfx = scr_soundeffect(event, _pitch, false)
 		audio_sound_gain(_sfx, global.SfxVolume * audio_sound_get_gain(event), 0)
 	}
@@ -176,7 +176,7 @@ function playerSounds()
 	
 	plrsnds_event(state == scr_player_grab, sfx.grab)
 	
-	plrsnds_event((state == scr_player_twistedBuzzsaw || sprite_index == spr_player3_spinnygroundpound) && character == chars.bacon_twist, "sfx_player_bt_ballspin")
+	plrsnds_event((state == scr_player_twistedBuzzsaw || state == scr_player_twistedWallbounce) && character == chars.bacon_twist, "sfx_player_bt_ballspin")
 	
 	s = 0
 	if (state == scr_player_mach2 && sprite_index != sprites.mach1) s = 1
