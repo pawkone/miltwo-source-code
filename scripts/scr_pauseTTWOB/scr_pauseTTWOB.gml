@@ -78,7 +78,7 @@ function scr_pauseTTWOB()
 	{
 		var _q = ttwob_circless[i]
 		ttwob_circless[i][0] += _q[2]*ttwob_hsp
-		var _s = 110+(_q[0]-960)/5.5
+		var _s = 110+(_q[0]-960)/5
 		_s += 2
 		if _s < 0
 		{
@@ -92,7 +92,7 @@ function scr_pauseTTWOB()
 	for (var i = array_length(ttwob_circless)-1; i >= 0; i--)
 	{
 		var _q = ttwob_circless[i]
-		var _s = 110+(_q[0]-960)/5.5
+		var _s = 110+(_q[0]-960)/5
 		if _s > 0
 			draw_circle(x+_q[0], _q[1], _s, false)
 	}
