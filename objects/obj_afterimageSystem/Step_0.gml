@@ -1,8 +1,3 @@
-if premode
-{
-	ds_list_clear(afterimages)
-	exit
-}
 if (!ds_list_empty(afterimages))
 {
     for (var i = 0; i < ds_list_size(afterimages); i++)

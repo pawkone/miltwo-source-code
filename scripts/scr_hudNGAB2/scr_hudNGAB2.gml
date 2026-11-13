@@ -148,7 +148,7 @@ function scr_hudNGAB2_step()
 	combopalindex = approach(combopalindex, !global.combo.dropped, 0.011904761904761904)
 	comboX = 832 + wave(-2, 2, 2, 0) + irandom_range(comboshake, -comboshake)
 	milkpos = lerp(milkpos, (60 * (60 - global.combo.timer)) / 60, 0.4)
-	collectshake = approach(collectshake, 0, 1)
+	collectshake = max(collectshake-1, 0)
 	
 	if (!ds_list_empty(collectVis))
 	{

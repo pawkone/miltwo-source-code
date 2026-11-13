@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"_decompiled_pmo_beakercave",
-    "path":"sprites/_decompiled_pmo_beakercave/_decompiled_pmo_beakercave.yy",
+    "name":"tilespr_pmo_beakercave",
+    "path":"sprites/tilespr_pmo_beakercave/tilespr_pmo_beakercave.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

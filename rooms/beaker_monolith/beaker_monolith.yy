@@ -498,7 +498,7 @@
   "name":"beaker_monolith",
   "parent":{
     "name":"Other",
-    "path":"folders/Rooms/Levels/Floor Extra/(Port) Beaker Backyard (Twisted)/Other.yy",
+    "path":"folders/Rooms/Levels/Floor Extra/(Port) Outback Yardwork/Other.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

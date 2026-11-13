@@ -8,7 +8,7 @@ function pal_swap_set(arg0, arg1, arg2)
 {
 	if (arg1 == 0) exit
 	var _swapper = global.retro_pal_swapper
-	shader_sset(shd_pal_swapper)
+	shader_set(shd_pal_swapper)
 	var _tex = sprite_get_texture(arg0, 0)
 	var _UVs = sprite_get_uvs(arg0, 0)
 	texture_set_stage(_swapper[3], _tex)

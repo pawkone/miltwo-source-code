@@ -1,128 +1,88 @@
 function scr_collision_init()
 {
-    vsp = 0;
-    hsp = 0;
-    grav = 0;
-    grounded = false;
-    coyote_time = 0;
-    can_coyote = true;
+    vsp = 0
+    hsp = 0
+    grav = 0
+    grounded = false
 }
-
 function scr_collision()
 {
-    grounded = false;
-    var o_x = x;
-    var o_y = y;
-    var __hspPlat = 0;
-    var __vspPlat = 0;
-    
-    var finalHsp = hsp;
-    var finalVsp = vsp;
-    
-    repeat (round(abs(finalVsp)))
+    var o_x = x, o_y = y
+    var finalHsp = hsp, finalVsp = vsp
+    repeat round(abs(finalVsp))
     {
-        o_y = y;
-        
-        if (abs(finalVsp) != 0)
-            y += sign(finalVsp);
-        else
-            y += finalVsp;
-        
-        if (scr_solid(x, y))
+        o_y = y
+        y += abs(finalVsp) != 0 ? sign(finalVsp) : finalVsp
+        if scr_solid(x, y)
         {
-            y = o_y;
-            vsp = 0;
-            finalVsp = 0;
+            y = o_y
+            vsp = 0
+            finalVsp = 0
         }
     }
-    
-    repeat (round(abs(finalHsp)))
+    repeat round(abs(finalHsp))
     {
-        o_x = x;
-        
-        if (abs(finalHsp) != 0)
-            x += sign(finalHsp);
-        else
-            x += finalHsp;
-        
-        var inc = 8;
-        
-        if (vsp >= -1)
+        o_x = x
+		x += abs(finalHsp) != 0 ? sign(finalHsp) : finalHsp
+        if vsp >= -1
         {
-            for (var i = 0; i < inc; i++)
+            for (var i = 0; i < 4; i++)
             {
-                if (!scr_solid(x, y - i))
+                if !scr_solid(x, y - i)
                 {
-                    while (scr_solid(x, y))
-                        y--;
+                    while scr_solid(x, y)
+                        y--
                 }
-                
-                if (scr_solid(x, y + i + 1) && scr_solid(x - sign(finalHsp), y + i))
+                if scr_solid(x, y + i + 1) && scr_solid(x - sign(finalHsp), y + i)
                 {
-                    while (!scr_solid(x, y + 1))
-                        y++;
+                    while !scr_solid(x, y + 1)
+                        y++
                 }
             }
         }
-        
-        if (scr_solid(x, y))
+        if scr_solid(x, y)
         {
-            x = o_x;
-            hsp = 0;
-            finalHsp = 0;
+            x = o_x
+            hsp = 0
+            finalHsp = 0
         }
     }
-    
-    grounded |= scr_solid(x, y + 1);
-	
-    if (vsp < 20)
-        vsp += (!place_meeting(x, y, obj_waterNew) ? grav : (grav / 3));
+    grounded = scr_solid(x, y + 1)
+    if vsp < 20
+        vsp += !place_meeting(x, y, obj_waterNew) ? grav : (grav / 3);
 }
 
 function scr_slope(arg0, arg1)
 {
-    var _collided = false;
-    
     with (instance_place(arg0, arg1, obj_slope))
-        _collided = scr_slope_collideCheck(other.id, arg0, arg1);
-    
-    return _collided;
+        return scr_slope_collideCheck(other.id, arg0, arg1);
+    return false
 }
 
 function scr_solid(arg0, arg1)
 {
-    var _collided = false;
-    var _id = id;
-    var _collisionArray = [obj_solid, obj_slope, obj_platform];
+    var _id = id, _collisionArray = [obj_solid, obj_slope, obj_platform];
     for (var i = 0; i < array_length(_collisionArray); i++)
     {
-        var _obj = _collisionArray[i];
+        var _obj = _collisionArray[i]
         with instance_place(arg0, arg1, _obj)
         {
             switch (_obj)
             {
-                case obj_solid:
-                    _collided = true;
-                    break;
-                
                 case obj_slope:
-                    _collided = scr_slope_collideCheck(_id, arg0, arg1);
-                    break;
-                
+                    return scr_slope_collideCheck(_id, arg0, arg1)
+                    break
                 case obj_platform:
                     if ((_id.bbox_bottom - 1) <= (bbox_top + 1) && _id.vsp >= 0) && !(_id.object_index == obj_player && _id.state == scr_player_ladder)
-                        _collided = true;
-                    
-                    break;
-                
-                default:
-                    _collided = true;
-                    break;
+                        return true
+                    break
+                default: //no obj_solid case cuz its auto true this way :) less code!!!
+                    return true
+                    break
             }
         }
     }
-    
-    return _collided;
+    return false
 }
 
 function scr_slope_collideCheck(arg0, arg1, arg2)

@@ -2,6 +2,7 @@ image_speed = 0;
 depth = 40;
 
 gateinfo = [];
+h1 = sprite_get_height(sprite_index)
 
 distance = 100
 surf = -4

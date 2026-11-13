@@ -40,8 +40,7 @@ function scr_player_mach2()
     if (grounded)
         movespeed += _accel;
     
-    buffers.afterimageMach = approach(buffers.afterimageMach, 0, 1);
-    
+    buffers.afterimageMach--
     if (buffers.afterimageMach <= 0)
     {
         buffers.afterimageMach = 6;
@@ -49,7 +48,6 @@ function scr_player_mach2()
     }
     
     buffers.dashcloud--;
-    
     if (buffers.dashcloud <= 0 && grounded)
     {
         buffers.dashcloud = 12;

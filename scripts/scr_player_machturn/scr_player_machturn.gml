@@ -4,16 +4,15 @@ function scr_player_machturn()
     hsp = movespeed * xscale;
     var move = pky_right + pky_left;
     movespeed = approach(movespeed, 0, 0.4);
-    buffers.afterimageBlur = approach(buffers.afterimageBlur, 0, 1);
     buffers.dashcloud--;
-    
     if (buffers.dashcloud <= 0 && grounded)
     {
         buffers.dashcloud = 12;
         create_particleStatic(spr_dashcloud1, x, y, xscale, 1);
     }
     
-    if (buffers.afterimageBlur == 0)
+	buffers.afterimageBlur--
+    if (buffers.afterimageBlur <= 0)
     {
         buffers.afterimageBlur = 3;
         create_blur_effect(sprite_index, image_index, x, y, xscale);

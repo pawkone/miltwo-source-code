@@ -7,7 +7,7 @@ if layer_exists(lay)
 	{
 		if event_type == ev_draw && event_number == 0
 		{
-			shader_sset(shd_secrettile)
+			shader_set(shd_secrettile)
 			shader_set_uniform_f(shader_get_uniform(shd_secrettile, "alpha"), alpha)
 		}
 	};

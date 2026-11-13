@@ -10,15 +10,12 @@ function scr_player_mach3()
     else
         image_speed = (character != chars.pepperni ? (sprite_index == sprites.crazyrun) : (movespeed >= 16)) ? 0.6 : 0.35;
     
-	if !premode
-	{
-	    if (!instance_exists(chargeeffect))
-	        chargeeffect = instance_create(x, y, obj_chargeeffect);
+	if (!instance_exists(chargeeffect))
+	    chargeeffect = instance_create(x, y, obj_chargeeffect);
     
-	    if (!instance_exists(speedlineseffect))
-	        speedlineseffect = instance_create(x, y, obj_speedlines);
-	}
-    
+	if (!instance_exists(speedlineseffect))
+	    speedlineseffect = instance_create(x, y, obj_speedlines);
+	
     buffers.bigdashcloud--;
     
     if (buffers.bigdashcloud <= 0 && grounded)
@@ -69,16 +66,14 @@ function scr_player_mach3()
     
     if (sprite_index == sprites.crazyrun)
     {
-        buffers.afterimageBlur = approach(buffers.afterimageBlur, 0, 1);
-        
-        if (buffers.afterimageBlur == 0)
+        buffers.afterimageBlur--
+        if (buffers.afterimageBlur <= 0)
         {
             buffers.afterimageBlur = 3;
             create_blur_effect(sprite_index, image_index, x, y, xscale);
         }
         
         buffers.step--;
-        
         if (buffers.step <= 0)
         {
             buffers.step = 5;
@@ -117,8 +112,7 @@ function scr_player_mach3()
         plrsnds_play(sfx.jump, x, y);
     }
     
-    buffers.afterimageMach = approach(buffers.afterimageMach, 0, 1);
-    
+    buffers.afterimageMach--
     if (buffers.afterimageMach <= 0)
     {
         buffers.afterimageMach = 6;

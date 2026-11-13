@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"_decompiled_pmo_beaker",
-    "path":"sprites/_decompiled_pmo_beaker/_decompiled_pmo_beaker.yy",
+    "name":"tilespr_pmo_beaker",
+    "path":"sprites/tilespr_pmo_beaker/tilespr_pmo_beaker.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

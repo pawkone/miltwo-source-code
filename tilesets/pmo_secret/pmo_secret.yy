@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"_decompiled_pmo_secret",
-    "path":"sprites/_decompiled_pmo_secret/_decompiled_pmo_secret.yy",
+    "name":"tilespr_pmo_secret",
+    "path":"sprites/tilespr_pmo_secret/tilespr_pmo_secret.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

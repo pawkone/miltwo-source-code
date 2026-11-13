@@ -51,7 +51,7 @@
   "origin":4,
   "parent":{
     "name":"Other",
-    "path":"folders/Sprites/Gameplay/Characters/Older/baconTwisted/TV/Other.yy",
+    "path":"folders/Sprites/Gameplay/Characters/Older/baconTwisted/hud/Other.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

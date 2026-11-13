@@ -30,7 +30,7 @@ if (currentRoom == room)
 	}
     draw_set_colour(_c);
     draw_set_halign(fa_center);
-    draw_text_transformed(xlerp, ylerp + ylerpname - 72, string_lower(name), global.modifiers.flipped ? -1 : 1, 1, 0);
+    draw_text(xlerp, ylerp + ylerpname - 72, string_lower(name));
 	draw_set_colour(c_white);
     draw_set_halign(0);
 }

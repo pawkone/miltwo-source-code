@@ -5,14 +5,12 @@ global.music_multold = -4
 global.music_fade = 1
 function scr_soundeffect(_sfx, _pitch = 1, _loop = false)
 {
-	if premode return -4
 	var _id = audio_play_sound(_sfx, 1, _loop)
 	audio_sound_pitch(_id, _pitch)
 	return _id
 }
 function scr_music(_sfx, fadein = false, _savepos = false)
 {
-	if premode return -4
 	global.music_fade = 1
 	var _pos = 0
 	if fadein

@@ -15,15 +15,15 @@ function scr_pauseTTWOB()
 	
 	if (active)
 	{
-	    shader_sset(shd_waveTTWOB);
+	    shader_set(shd_waveTTWOB);
 		if ttwob_buf < 0
-			ttwob_buf = lerp(ttwob_buf, -1, 0.02)
+			ttwob_buf = lerp(ttwob_buf, -1, 0.025)
 		else
-			ttwob_buf = lerp(ttwob_buf, -0.25, 0.045)
+			ttwob_buf = lerp(ttwob_buf, -0.35, 0.045)
 		waveTime -= ttwob_buf
 	    shader_set_uniform_f(timeUniform, waveTime);
-	    shader_set_uniform_f(frequencyUniform, 0.026);
-	    shader_set_uniform_f(amplitudeUniform, 0.005);
+	    shader_set_uniform_f(frequencyUniform, (1+max(0,ttwob_buf/11))*0.015);
+	    shader_set_uniform_f(amplitudeUniform, 0.008);
 		gpu_set_blendenable(false)
 	    draw_sprite(screenSprite, 0, 0, 0);
 		gpu_set_blendenable(true)
@@ -38,6 +38,7 @@ function scr_pauseTTWOB()
 	
 	if active && !ttwob_activeOld
 	{
+		waveTime = 0
 		ttwob_buf = 11
 		ttwob_circless = []
 		for (var i = 0; i < 32; i++)
@@ -51,7 +52,7 @@ function scr_pauseTTWOB()
 	if active
 	{
 		x = approach(x, 0, 1)
-		x = lerp(x, 0, 0.05)
+		x = lerp(x, 0, 0.06)
 		ttwob_hsp = approach(ttwob_hsp, -4, 0.1)
 		array_push(ttwob_circless, [960, random(540), random_range(60, 100)/100])
 	}
@@ -77,8 +78,8 @@ function scr_pauseTTWOB()
 	{
 		var _q = ttwob_circless[i]
 		ttwob_circless[i][0] += _q[2]*ttwob_hsp
-		var _s = (_q[0]-960)/6.5
-		_s = 96+_s+2
+		var _s = 100+(_q[0]-960)/6
+		_s += 2
 		if _s < 0
 		{
 			array_delete(ttwob_circless, i, 1)
@@ -91,8 +92,7 @@ function scr_pauseTTWOB()
 	for (var i = array_length(ttwob_circless)-1; i >= 0; i--)
 	{
 		var _q = ttwob_circless[i]
-		var _s = (_q[0]-960)/6.5
-		_s = 96+_s
+		var _s = 100+(_q[0]-960)/6
 		if _s > 0
 			draw_circle(x+_q[0], _q[1], _s, false)
 	}

@@ -39,15 +39,13 @@ function scr_player_jump()
         if (!instance_exists(breakdanceID))
             breakdanceID = -4;
         
+		buffers.notes--
         if (buffers.notes <= 0)
         {
             buffers.notes = 10;
             instance_create(x + irandom_range(-70, 70), y + irandom_range(-70, 70), obj_notes);
         }
     }
-    
-    buffers.notes = approach(buffers.notes, 0, 1);
-    
 	
     hsp = movespeed * xscale;
     var move = pky_right + pky_left;

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"TV",
-    "path":"folders/Sprites/Gameplay/Characters/Older/baconTwisted/TV.yy",
+    "name":"hud",
+    "path":"folders/Sprites/Gameplay/Characters/Older/baconTwisted/hud.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -9,3 +9,9 @@ escape_background(bg_yardAFrontier, bg_yardAFrontier_escape);
 escape_background(bg_yardB1, bg_yardBescape1);
 escape_background(bg_yardB2, bg_yardBescape2);
 escape_background(bg_yardB3, bg_yardBescape3);
+
+escape_background(bg_beaker1_1, bg_beaker1escape);
+escape_background(bg_beaker2_1, bg_beaker2escape);
+escape_background(bg_beaker3_1, bg_beaker3escape);
+escape_background(bg_beaker4_1, bg_beaker4escape);
+escape_background(bg_beakerDark, bg_beakerDarkEscape);

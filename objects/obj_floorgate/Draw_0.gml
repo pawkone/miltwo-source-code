@@ -1,6 +1,6 @@
 var _xa = irandom_range(-shake, shake)
 
-var _open = !premode && openamount > 0
+var _open = openamount > 0
 
 if _open
 {

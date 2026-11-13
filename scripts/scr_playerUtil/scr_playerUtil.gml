@@ -171,10 +171,6 @@ function generalReset()
 			combometer.state = -1
 		}
 	}
-	global.modifiers =
-	{
-		flipped: false,
-	}
 	
 	//escape
 	global.escapeActive = false

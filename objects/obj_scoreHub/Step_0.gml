@@ -1,3 +1,6 @@
+if scr_getera_pt() == "PT"
+	instance_destroy()
+
 if (state == 0)
 {
     vsp += 1;

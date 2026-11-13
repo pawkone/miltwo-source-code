@@ -1,4 +1,3 @@
-if premode exit
 if (!ds_list_empty(afterimages))
 {
     for (var i = 0; i < ds_list_size(afterimages); i++)
@@ -28,7 +27,7 @@ if (!ds_list_empty(afterimages))
                     var _col2 = 16749804;
                     var col = [color_get_red(_col) / 255, color_get_green(_col) / 255, color_get_blue(_col) / 255];
                     var col2 = [color_get_red(_col2) / 255, color_get_green(_col2) / 255, color_get_blue(_col2) / 255];
-                    shader_sset(shd_fullshade);
+                    shader_set(shd_fullshade);
                     shader_set_uniform_f_array(other.uniformLight, [col[0], col[1], col[2]]);
                     shader_set_uniform_f_array(other.uniformDark, [col2[0], col2[1], col2[2]]);
                     _shd = true;
@@ -39,7 +38,7 @@ if (!ds_list_empty(afterimages))
                     var _col = image_blend;
                     var col = [color_get_red(_col) / 255, color_get_green(_col) / 255, color_get_blue(_col) / 255];
                     var col2 = [color_get_red(_col2) / 255, color_get_green(_col2) / 255, color_get_blue(_col2) / 255];
-                    shader_sset(shd_fullshade);
+                    shader_set(shd_fullshade);
                     shader_set_uniform_f_array(other.uniformLight, [col[0], col[1], col[2]]);
                     shader_set_uniform_f_array(other.uniformDark, [col2[0], col2[1], col2[2]]);
                     _shd = true;
@@ -50,7 +49,7 @@ if (!ds_list_empty(afterimages))
                     var _col = selectcolor;
                     var col = [color_get_red(_col) / 255, color_get_green(_col) / 255, color_get_blue(_col) / 255];
                     var col2 = [color_get_red(_col2) / 255, color_get_green(_col2) / 255, color_get_blue(_col2) / 255];
-                    shader_sset(shd_fullshade);
+                    shader_set(shd_fullshade);
                     shader_set_uniform_f_array(other.uniformLight, [col[0], col[1], col[2]]);
                     shader_set_uniform_f_array(other.uniformDark, [col2[0], col2[1], col2[2]]);
                     _shd = true;
@@ -61,14 +60,14 @@ if (!ds_list_empty(afterimages))
                     var _col2 = 9580846;
                     var col = [color_get_red(_col) / 255, color_get_green(_col) / 255, color_get_blue(_col) / 255];
                     var col2 = [color_get_red(_col2) / 255, color_get_green(_col2) / 255, color_get_blue(_col2) / 255];
-                    shader_sset(shd_fullshade);
+                    shader_set(shd_fullshade);
                     shader_set_uniform_f_array(other.uniformLight, [col[0], col[1], col[2]]);
                     shader_set_uniform_f_array(other.uniformDark, [col2[0], col2[1], col2[2]]);
                     _shd = true;
                     break;
                 
 				case afterimagetype.dreamAttack:
-                    shader_sset(shd_fullshade);
+                    shader_set(shd_fullshade);
                     shader_set_uniform_f_array(other.uniformLight, [0.9725490196078431, 0.47058823529411764, 0.6901960784313725]);
                     shader_set_uniform_f_array(other.uniformDark, [0.9098039215686274, 0.3137254901960784, 0.596078431372549]);
 					_shd = true;
@@ -78,7 +77,7 @@ if (!ds_list_empty(afterimages))
 					
                 case afterimagetype.dreamMach:
                     var col = [color_get_red(image_blend) / 255, color_get_green(image_blend) / 255, color_get_blue(image_blend) / 255];
-                    shader_sset(shd_fullshade);
+                    shader_set(shd_fullshade);
                     shader_set_uniform_f_array(other.uniformLight, [col[0], col[1], col[2]]);
                     shader_set_uniform_f_array(other.uniformDark, [col[0] - 0.3, col[1] - 0.3, col[2] - 0.3]);
                     _shd = true;
@@ -88,7 +87,7 @@ if (!ds_list_empty(afterimages))
 				
                 case afterimagetype.twistMach1:
                     var col = [color_get_red(#a541ff) / 255, color_get_green(#a541ff) / 255, color_get_blue(#a541ff) / 255];
-                    shader_sset(shd_fullshade);
+                    shader_set(shd_fullshade);
                     shader_set_uniform_f_array(other.uniformLight, [col[0], col[1], col[2]]);
                     shader_set_uniform_f_array(other.uniformDark, [1, 1, 1]);
                     _shd = true;
@@ -99,7 +98,7 @@ if (!ds_list_empty(afterimages))
 				case afterimagetype.twistMach2:
                     var col = [color_get_red(#f8e080) / 255, color_get_green(#f8e080) / 255, color_get_blue(#f8e080) / 255];
 					var col2 = [color_get_red(#d88818) / 255, color_get_green(#d88818) / 255, color_get_blue(#d88818) / 255];
-                    shader_sset(shd_fullshade);
+                    shader_set(shd_fullshade);
                     shader_set_uniform_f_array(other.uniformLight, [col[0], col[1], col[2]]);
                     shader_set_uniform_f_array(other.uniformDark, [col2[0], col2[1], col2[2]]);
                     _shd = true;

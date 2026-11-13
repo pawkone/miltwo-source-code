@@ -27,38 +27,30 @@ global.Fmod3dDefaults =
 };
 global.FMOD_existingEvents = [];
 
+function FMODget_eventLength(arg0){return fmod_studio_event_description_get_length(fmod_studio_system_get_event(arg0))}
+function FMODevent_isplaying(arg0){return fmod_studio_event_instance_get_playback_state(arg0) == FMOD_STUDIO_PLAYBACK_STATE.PLAYING}
+function FMODevent_isstarting(arg0){return fmod_studio_event_instance_get_playback_state(arg0) == FMOD_STUDIO_PLAYBACK_STATE.STARTING;}
+function FMODget_path(arg0){return fmod_studio_event_description_get_path(fmod_studio_event_instance_get_description(arg0))}
+
 function FMODcreate_event(arg0)
 {
-	if premode return -4
-    var _desc = fmod_studio_system_get_event(arg0);
-    var _inst = fmod_studio_event_description_create_instance(_desc);
+    var _inst = fmod_studio_event_description_create_instance(fmod_studio_system_get_event(arg0));
     array_push(global.FMOD_existingEvents, _inst);
     return _inst;
 }
 
-function FMODget_eventLength(arg0)
-{
-	if premode return -4
-    var _desc = fmod_studio_system_get_event(arg0);
-    return fmod_studio_event_description_get_length(_desc);
-}
-
 function FMODevent_oneshot(arg0, arg1 = "", arg2 = "")
 {
-	if premode return -4
-    var _inst = FMODcreate_event(arg0);
-    fmod_studio_event_instance_start(_inst);
-    
-    if (arg1 != "" && arg2 != "")
-        FMODSet3dPos(_inst, arg1, arg2);
-    
-    fmod_studio_event_instance_release(_inst);
+    var _inst = fmod_studio_event_description_create_instance(fmod_studio_system_get_event(arg0))
+    if arg1 != "" && arg2 != ""
+        FMODSet3dPos(_inst, arg1, arg2)
+	fmod_studio_event_instance_start(_inst)
+    fmod_studio_event_instance_release(_inst)
     return _inst;
 }
 
 function FMODSet3dPos(arg0, arg1, arg2)
 {
-	if premode exit
     var _att = global.Fmod3dDefaults;
     _att.position = 
     {
@@ -71,39 +63,24 @@ function FMODSet3dPos(arg0, arg1, arg2)
 
 function FMODsetPauseAll(arg0)
 {
-	if premode exit
-    for (var i = 0; i < array_length(global.FMOD_existingEvents); i++)
+    for (var i = array_length(global.FMOD_existingEvents)-1; i >= 0; i--)
     {
-        if (fmod_studio_event_instance_is_valid(global.FMOD_existingEvents[i]))
+        if fmod_studio_event_instance_is_valid(global.FMOD_existingEvents[i])
             fmod_studio_event_instance_set_paused(global.FMOD_existingEvents[i], arg0);
+		else
+			array_delete(global.FMOD_existingEvents, i, 1)
     }
 }
 
 function FMODstopAll()
 {
-	if premode exit
-    for (var i = 0; i < array_length(global.FMOD_existingEvents); i++)
+    for (var i = array_length(global.FMOD_existingEvents)-1; i >= 0; i--)
     {
-        if (fmod_studio_event_instance_is_valid(global.FMOD_existingEvents[i]))
-            fmod_studio_event_instance_stop(global.FMOD_existingEvents[i], FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
+        if fmod_studio_event_instance_is_valid(global.FMOD_existingEvents[i])
+		{
+            fmod_studio_event_instance_stop(global.FMOD_existingEvents[i], FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT)
+			fmod_studio_event_instance_release(global.FMOD_existingEvents[i])
+		}
+		array_delete(global.FMOD_existingEvents, i, 1)
     }
-}
-
-function FMODevent_isplaying(arg0)
-{
-	if premode return -4
-    return fmod_studio_event_instance_get_playback_state(arg0) == FMOD_STUDIO_PLAYBACK_STATE.PLAYING;
-}
-
-function FMODevent_isstarting(arg0)
-{
-	if premode return -4
-    return fmod_studio_event_instance_get_playback_state(arg0) == FMOD_STUDIO_PLAYBACK_STATE.STARTING;
-}
-
-function FMODget_path(arg0)
-{
-	if premode return -4
-    var _des = fmod_studio_event_instance_get_description(arg0);
-    return fmod_studio_event_description_get_path(_des);
 }

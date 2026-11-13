@@ -4,7 +4,7 @@ if state == "tv"
 	draw_surface(surf,0,0)
 else
 {
-	shader_sset(shd_menunew)
+	shader_set(shd_menunew)
 	shader_set_uniform_i(shd1, shdl)
 	shader_set_uniform_f_array(shd2, shda)
 	draw_surface(surf,0,0)

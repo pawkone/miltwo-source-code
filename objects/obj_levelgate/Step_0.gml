@@ -3,7 +3,7 @@ if _plr < 0 exit
 distance = distance_to_object(_plr)
 bgalpha = 1 - (distance / visibleradius);
 if cancel exit
-if (scoreViewer == -4)
+if scr_getera_pt() != "PT" && scoreViewer == -4
 {
 	if (distance_to_object(_plr) < 300)
 	{

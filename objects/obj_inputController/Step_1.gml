@@ -20,7 +20,6 @@ if (global.gamepadConnected)
         verticalStickPressedR = false;
 }
 
-
 mky_left = -read_input("menu_left");
 mky_left2 = -read_input("menu_left", true);
 mky_right = read_input("menu_right");
@@ -36,10 +35,10 @@ mky_slap2 = read_input("menu_back", true);
 mky_taunt = read_input("menu_clear");
 mky_taunt2 = read_input("menu_clear", true);
 
-pky_left = -read_input(global.modifiers.flipped ? "right" : "left");
-pky_left2 = -read_input(global.modifiers.flipped ? "right" : "left", true);
-pky_right = read_input(global.modifiers.flipped ? "left" : "right");
-pky_right2 = read_input(global.modifiers.flipped ? "left" : "right", true);
+pky_left = -read_input("left");
+pky_left2 = -read_input("left", true);
+pky_right = read_input("right");
+pky_right2 = read_input("right", true);
 pky_up = read_input("up");
 pky_up2 = read_input("up", true);
 pky_down = read_input("down");

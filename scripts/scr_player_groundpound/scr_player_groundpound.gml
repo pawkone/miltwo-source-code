@@ -22,9 +22,8 @@ function scr_player_groundpound()
         freefallsmash = -7;
     
     vsp += 0.7;
-    buffers.afterimageBlur = approach(buffers.afterimageBlur, 0, 1);
-    
-    if (buffers.afterimageBlur == 0)
+    buffers.afterimageBlur--
+    if (buffers.afterimageBlur <= 0)
     {
         buffers.afterimageBlur = 4;
         create_blur_effect(sprite_index, image_index, x, y, xscale);
@@ -48,15 +47,11 @@ function scr_player_groundpound()
     {
 		if (freefallsmash >= 10)
 		{
-			if !premode
-			{
-		        if (!instance_exists(chargeeffect))
-		            chargeeffect = instance_create(x, y, obj_chargeeffect);
-			}
+		    if (!instance_exists(chargeeffect))
+		        chargeeffect = instance_create(x, y, obj_chargeeffect);
         
-	        buffers.afterimageMach = approach(buffers.afterimageMach, 0, 1);
-        
-	        if (buffers.afterimageMach == 0)
+	        buffers.afterimageMach--
+	        if (buffers.afterimageMach <= 0)
 	        {
 	            buffers.afterimageMach = 4;
 	            create_machEffect(sprite_index, image_index, x, y, xscale, 1);
@@ -64,7 +59,6 @@ function scr_player_groundpound()
 		}
         
         buffers.crazyothereffect--;
-        
         if (buffers.crazyothereffect <= 0)
         {
             buffers.crazyothereffect = character == chars.bacon_twist ? 15 : 9;

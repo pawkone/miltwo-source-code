@@ -2,7 +2,7 @@ function scr_pauseWSB()
 {
 	if (active)
 	{
-	    shader_sset(shd_wave);
+	    shader_set(shd_wave);
 	    shader_set_uniform_f(timeUniform, waveTime++);
 	    shader_set_uniform_f(frequencyUniform, freq);
 	    shader_set_uniform_f(amplitudeUniform, amp*activelrp);

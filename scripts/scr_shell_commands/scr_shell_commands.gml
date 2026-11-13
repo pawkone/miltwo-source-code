@@ -59,27 +59,6 @@ function sh_test_lap3(arg0)
 	room_goto(yard_11)
 }
 
-function meta_toggle_flipped()
-{
-    return 
-    {
-        description: "ENABLES the flipped modifier",
-		arguments: ["bool"],
-        suggestions: [["true", "false"]],
-    };
-}
-
-function sh_toggle_flipped(arg0)
-{
-	if arg0[1] == "true" || arg0[1] == "1"
-		global.modifiers.flipped = true
-	else if arg0[1] == "false" || arg0[1] == "0"
-		global.modifiers.flipped = false
-	else if !is_bool(arg0[1])
-		global.modifiers.flipped = !global.modifiers.flipped
-	return string("flipped is now {0}", global.modifiers.flipped)
-}
-
 function meta_ranktest()
 {
     return 

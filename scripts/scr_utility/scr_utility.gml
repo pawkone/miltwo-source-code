@@ -1,12 +1,11 @@
 gml_pragma("UnityBuild", "true")
-gml_pragma("forceinline")
 gml_pragma("optimise", "js_array_check", "push, false")
 gml_pragma("optimise", "js_error_check", "push, false")
 gml_pragma("optimise", "js_check_index", "push, false")
 gml_pragma("optimise", "js_pre_post_no_long", "push, true")
 gml_pragma("optimise", "js_use_infix_ops", "push, true")
 gml_release_mode(true)
-texturegroup_set_mode(true,false,spr_pixel)
+texturegroup_set_mode(true,false)
 scheduler_resolution_set(16)
 gc_target_frame_time(-100)
 ds_set_precision(0.001)
@@ -15,8 +14,6 @@ randomise()
 globalvar wsbMOmInfo; wsbMOmInfo = {}
 wsbMOmInfo.dir = game_save_id + "ohMiltu/"
 wsbMOmInfo.opt = wsbMOmInfo.dir + "settings.xda"
-
-#macro premode (os_type == os_linux)
 
 global.username = string("player{0}",irandom_range(1000,9999))
 wsbMOmInfo.options = [
@@ -125,12 +122,6 @@ function scr_fadeout(_accel = 0.1)
 		return true
 	}
 	return false
-}
-
-function shader_sset(shader)
-{
-	if premode exit
-	shader_set(shader)
 }
 
 function levelgetname(_t)

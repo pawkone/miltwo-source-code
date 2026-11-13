@@ -14,7 +14,7 @@ if surface_get_width(tileSurf) != _w || surface_get_height(tileSurf) != _h
 
 surface_set_target(tileSurf)
 draw_clear_alpha(c_black, 0)
-shader_sset(shd_pattern)
+shader_set(shd_pattern)
 var p = obj_secretManager.thing_p
 texture_set_stage(global.patternColors, obj_secretManager.thing_q)
 shader_set_uniform_f(global.patternUVs, p[0], p[1], p[2], p[3])

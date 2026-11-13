@@ -180,11 +180,11 @@ if (hitstun.is == false)
     
     coyote_time--;
     
-    if (state != scr_player_hurt)
-        i_frame = approach(i_frame, 0, 1);
-    
     if (i_frame > 0 && state != scr_player_hurt)
+	{
         image_alpha = round(wave(0, 1, 0.1, 0));
+		i_frame--
+	}
     else
         image_alpha = 1;
     

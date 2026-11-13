@@ -56,7 +56,7 @@ if instance_exists(obj_onlineHandler)
     draw_set_font(global.smallfont);
     draw_set_colour(_c);
     draw_set_halign(fa_center);
-    draw_text_transformed(x, y + ylerpname - 72, global.username, global.modifiers.flipped ? -1 : 1, 1, 0);
+    draw_text(x, y + ylerpname - 72, global.username);
 	draw_set_colour(c_white);
     draw_set_halign(0);
 }

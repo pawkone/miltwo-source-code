@@ -7,13 +7,10 @@ function scr_player_hammerattack()
 	if movespeed < 13
 	    movespeed = approach(movespeed, 13, 1);
     
-    buffers.hammer = approach(buffers.hammer, 0, 1);
-    
     if (movespeed >= 7)
     {
-        buffers.afterimageBlur = approach(buffers.afterimageBlur, 0, 1);
-        
-        if (buffers.afterimageBlur == 0)
+        buffers.afterimageBlur--
+        if (buffers.afterimageBlur <= 0)
         {
             buffers.afterimageBlur = 5;
             create_miltonAfterimage(sprite_index, image_index, x, y, xscale);
@@ -64,12 +61,16 @@ function scr_player_hammerattack()
         plrsnds_play(sfx.jump, x, y);
     }
     
-    if (!pky_grab && buffers.hammer == 0)
+    if (buffers.hammer > 0)
     {
-        flash = true;
-        state = scr_player_mach3;
-        image_index = 0;
-        sprite_index = sprites.mach3;
+		buffers.hammer--
+		if !pky_grab
+		{
+	        flash = true;
+	        state = scr_player_mach3;
+	        image_index = 0;
+	        sprite_index = sprites.mach3;
+		}
     }
     
     if (animation_end() && sprite_index == spr_milton_hammerspin_prep)

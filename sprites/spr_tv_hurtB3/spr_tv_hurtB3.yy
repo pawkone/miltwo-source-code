@@ -41,7 +41,7 @@
   "origin":4,
   "parent":{
     "name":"Bacon got a booboo",
-    "path":"folders/Sprites/Gameplay/Characters/Older/baconTwisted/TV/Other/Bacon got a booboo.yy",
+    "path":"folders/Sprites/Gameplay/Characters/Older/baconTwisted/hud/Other/Bacon got a booboo.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

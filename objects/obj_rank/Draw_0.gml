@@ -32,7 +32,7 @@ draw_surface(rankSurf, 0, 0);
 if (cutscenePart == 2)
 {
     colorAlpha = approach(colorAlpha, 1, 0.1);
-    shader_sset(shd_fullshade);
+    shader_set(shd_fullshade);
     shader_set_uniform_f_array(uniform1, [col[0], col[1], col[2]]);
     shader_set_uniform_f_array(uniform2, [col2[0], col2[1], col2[2]]);
     draw_set_alpha(colorAlpha);

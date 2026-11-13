@@ -1,5 +1,3 @@
-if premode exit
-
 var _paused = !instance_exists(obj_pause) || obj_pause.active
 
 fmod_studio_system_set_parameter_by_name("SfxVolume", global.SfxVolume, true);
@@ -9,7 +7,7 @@ else
 	fmod_studio_system_set_parameter_by_name("MusicVolume", global.MusicVolume, true);
 fmod_studio_system_set_parameter_by_name("MasterVolume", global.MasterVolume, true);
 
-unfoxusvol = approach(unfoxusvol, !focus && global.unfocus_mute, 0.05)
+unfoxusvol = approach(unfoxusvol, !window_has_focus() && global.unfocus_mute, 0.05)
 fmod_studio_system_set_parameter_by_name("unfocusMute", unfoxusvol, true)
 audio_master_gain((1-(unfoxusvol*unfoxusvol)) * (global.MasterVolume*global.MasterVolume) *1.2)
 audio_group_set_gain(audioGroupSfx, global.SfxVolume * global.SfxVolume)

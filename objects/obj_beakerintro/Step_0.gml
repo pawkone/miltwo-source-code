@@ -13,8 +13,8 @@ with (obj_player)
 	    {
 	        y += other.fakeVsp;
 	        other.fakeVsp += 0.5;
-	        buffers.afterimageBlur = approach(buffers.afterimageBlur, 0, 1);    
-	        if (buffers.afterimageBlur == 0)
+	        buffers.afterimageBlur--
+	        if (buffers.afterimageBlur <= 0)
 	        {
 	            buffers.afterimageBlur = 4;
 	            create_blur_effect(sprite_index, image_index, x, y, xscale);

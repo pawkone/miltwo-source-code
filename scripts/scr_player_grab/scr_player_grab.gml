@@ -40,16 +40,14 @@ function scr_player_grab()
     if (movespeed < 10)
         movespeed = approach(movespeed, 10, 1);
     
-    buffers.afterimageBlur = approach(buffers.afterimageBlur, 0, 1);
-    
-    if (buffers.afterimageBlur == 0)
+    buffers.afterimageBlur--
+    if (buffers.afterimageBlur <= 0)
     {
         buffers.afterimageBlur = 3;
         create_blur_effect(sprite_index, image_index, x, y, xscale);
     }
     
     buffers.dashcloud--;
-    
     if (buffers.dashcloud <= 0 && grounded)
     {
         buffers.dashcloud = 12;
