@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_pauseTTWOB",
   "parent":{
-    "name":"hudstuff",
-    "path":"folders/Scripts/hudstuff.yy",
+    "name":"TTWOB",
+    "path":"folders/Scripts/hudstuff/TTWOB.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

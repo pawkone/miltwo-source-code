@@ -15,7 +15,6 @@ globalvar wsbMOmInfo; wsbMOmInfo = {}
 wsbMOmInfo.dir = game_save_id + "ohMiltu/"
 wsbMOmInfo.opt = wsbMOmInfo.dir + "settings.xda"
 
-global.username = string("player{0}",irandom_range(1000,9999))
 wsbMOmInfo.options = [
 	"Modded;machdoublejump;0",
 	"Modded;phototaunt;0",
@@ -26,7 +25,7 @@ wsbMOmInfo.options = [
 ]
 
 xdata_open(wsbMOmInfo.opt)
-
+global.username = xdata_read("Online", "Username", string("player{0}",irandom_range(1000,9999)))
 for (var i = 0; i < array_length(wsbMOmInfo.options); i++)
 {
 	wsbMOmInfo.options[i] = string_split(wsbMOmInfo.options[i],";",true)

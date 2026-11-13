@@ -9,6 +9,8 @@ if xdata_read("Modded", "c_char", -4) != obj_player.character
 }
 xdata_close()
 
+event_user(1)
+
 characterOld = character
 sprites = global.PlayerCharacters[character].sprites.player;
 spr_palette = global.PlayerCharacters[character].sprites.player.palette;

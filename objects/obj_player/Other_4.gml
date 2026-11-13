@@ -115,3 +115,5 @@ if _secreterror
 	    FMODevent_oneshot("event:/Sfx/General/Level/Progression/exitpage", x, y);
 	}
 }
+
+event_user(1)

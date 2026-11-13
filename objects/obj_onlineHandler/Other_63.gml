@@ -12,6 +12,9 @@ if ds_map_find_value(async_load, "status")
 	if _clean != ""
 	{
 		global.username = _clean
+		xdata_open(wsbMOmInfo.opt)
+		xdata_write("Online", "Username", global.username)
+		xdata_close()
 		self.create_notifAsyncClientSide("[Only you can see this] Your new username is set!")
 	}
 	else

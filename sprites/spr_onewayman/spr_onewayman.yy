@@ -34,8 +34,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"ZZZ im sick of this, im doing it later",
-    "path":"folders/Sprites/ZZZ im sick of this, im doing it later.yy",
+    "name":"Destroyables",
+    "path":"folders/Sprites/Gameplay/Level Objects/Destroyables.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

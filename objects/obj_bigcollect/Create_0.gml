@@ -1,4 +1,4 @@
-sprite_index = get_baconera(asset_get_index(string("spr_bigcollect{0}", irandom(4)+1)), obj_player.character)
+sprite_index = sprite_getera(asset_get_index($"spr_bigcollect{irandom(4)+1}"))
 image_speed = 0.35;
 canmove = place_empty(x, y, obj_solid);
 gotoplayer = false;

@@ -1,3 +1,13 @@
+if pt
+{
+	if flash
+	{
+		if flash > 1
+			instance_destroy()
+		flash++
+	}
+	exit
+}
 if (stay)
 {
     image_xscale = lerp(image_xscale, 1, 0.1);

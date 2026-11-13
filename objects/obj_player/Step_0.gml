@@ -15,6 +15,7 @@ place_meeting(x,y,obj_levelgate) ||
 (instance_place(x,y,obj_exitgate) > 0 && instance_place(x,y,obj_exitgate).openn)
 if scr_getera() == "TTWOB"
 {
+	touchie = touchie && state != scr_player_walkfront && state != scr_player_enterdoor
 	if touchie && !uparrow
 		uparrow = 2
 	else
