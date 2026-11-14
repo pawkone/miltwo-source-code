@@ -21,7 +21,7 @@ function scr_player_grab()
         }
     };
 	
-	if character == chars.bacon_twist && buffers.twistedair < 10
+	if character == chars.bacon_twist && buffers.twistedair < 16
 	{
 		vsp = 0
 		buffers.twistedair++

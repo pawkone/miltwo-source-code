@@ -8,7 +8,7 @@ with obj_player
 	door = "NONE"
 	state = -4
 	xscale = 1
-	x = obj_doorA.x + 16;
+	x = obj_doorA.x;
 	y = -755
 	sprite_index = spr_player3_slipbanan1;
 	image_speed = 0;
