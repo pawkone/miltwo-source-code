@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_roomnameTTWOB",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_roomnameTTWOB",
+  "parent":{
+    "name":"TTWOB",
+    "path":"folders/Scripts/hudstuff/TTWOB.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

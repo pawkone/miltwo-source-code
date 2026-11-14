@@ -68,29 +68,37 @@ function scr_pauseTTWOB()
 	}
 	if ttwob_activeOld != active
 		ttwob_activeOld = active
-		
-	draw_rectangle(x+835-2, 0, 960, 540, false)
-	for (var i = array_length(ttwob_circless)-1; i >= 0; i--)
+	if array_length(ttwob_circless) > 0
 	{
-		var _q = ttwob_circless[i]
-		ttwob_circless[i][0] += _q[2]*ttwob_hsp
-		var _s = 110+(_q[0]-960)/5
-		_s += 2
-		if _s < 0
+		var _surf = surface_create(960,540)
+		surface_set_target(_surf)
+		draw_clear_alpha(c_black,0)
+		draw_rectangle(x+835-2, 0, 960, 540, false)
+		for (var i = array_length(ttwob_circless)-1; i >= 0; i--)
 		{
-			array_delete(ttwob_circless, i, 1)
-			continue
-		}
-		draw_circle(x+_q[0], _q[1], _s, false)
-	}
-	draw_set_colour(c_black)
-	draw_rectangle(x+835, 0, 960, 540, false)
-	for (var i = array_length(ttwob_circless)-1; i >= 0; i--)
-	{
-		var _q = ttwob_circless[i]
-		var _s = 110+(_q[0]-960)/5
-		if _s > 0
+			var _q = ttwob_circless[i]
+			ttwob_circless[i][0] += _q[2]*ttwob_hsp
+			var _s = 110+(_q[0]-960)/5.5
+			_s += 2
+			if _s < 0
+			{
+				array_delete(ttwob_circless, i, 1)
+				continue
+			}
 			draw_circle(x+_q[0], _q[1], _s, false)
+		}
+		draw_set_colour(c_black)
+		draw_rectangle(x+835, 0, 960, 540, false)
+		for (var i = array_length(ttwob_circless)-1; i >= 0; i--)
+		{
+			var _q = ttwob_circless[i]
+			var _s = 110+(_q[0]-960)/5.5
+			if _s > 0
+				draw_circle(x+_q[0], _q[1], _s, false)
+		}
+		surface_reset_target()
+		draw_surface(_surf,0,0)
+		surface_free(_surf)
 	}
 	if active
 	{
@@ -122,5 +130,5 @@ function scr_pauseTTWOB()
 		ttwob_cursor_x = lerp(ttwob_cursor_x, 1080, 0.075)
 		ttwob_cursor_y = lerp(ttwob_cursor_y, -128, 0.1)
 	}
-	draw_sprite(spr_uparrowog, 0, ttwob_cursor_x, ttwob_cursor_y)
+	draw_sprite(spr_uparrowPT, 0, ttwob_cursor_x, ttwob_cursor_y)
 }

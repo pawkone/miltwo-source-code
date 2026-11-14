@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_hudTTWOB",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_hudTTWOB",
+  "parent":{
+    "name":"TTWOB",
+    "path":"folders/Scripts/hudstuff/TTWOB.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

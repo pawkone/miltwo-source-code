@@ -24,9 +24,13 @@ switch global.level
 		global.Srank = 17000
 		tvbg_backindex = #0068ab
 		break
-	case "crashout":	
+	case "crashout":
 		global.Srank = 17000
 		tvbg_backindex = #f8e080
+		break
+	case "beaker":
+		global.Srank = 17000
+		tvbg_backindex = #b26959
 		break
 }
 global.escapeMaxTimer *= 60
