@@ -176,6 +176,8 @@ function sh_toggle_collisions(arg0)
         global.showcollisions = false;
     else if (!is_bool(arg0[1]))
         global.showcollisions = !global.showcollisions;
+	with obj_shell
+		event_user(1)
 }
 
 function meta_toggle_debug()

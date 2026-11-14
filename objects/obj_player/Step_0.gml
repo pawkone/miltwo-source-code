@@ -197,13 +197,13 @@ if (hitstun.is == false)
     if (flash == true && alarm[0] <= 0)
         alarm[0] = 5;
     
-    if (y < -500 || (y > (room_height + 500) && state != -4 && !instance_exists(obj_fadeout)))
+    if (y < -500 || y > room_height + 500) && state != -4 && !instance_exists(obj_fadeout)
     {
-        if (!instance_exists(obj_technicaldifficulty))
+        if !instance_exists(obj_technicaldifficulty)
         {
-            instance_create(x, y, obj_technicaldifficulty);
-            shake_camera(25);
-            plrsnds_play(sfx.slam, x, y);
+            instance_create(x, y, obj_technicaldifficulty)
+            shake_camera(25)
+            plrsnds_play(sfx.slam, x, y)
         }
     }
 

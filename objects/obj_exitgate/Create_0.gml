@@ -1,3 +1,5 @@
+sprite_index = sprite_getera(sprite_index)
+
 depth = 99;
 image_speed = 0;
 image_index = 1;

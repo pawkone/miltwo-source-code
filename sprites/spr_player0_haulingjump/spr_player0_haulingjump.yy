@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"baconCrash",
-    "path":"folders/Sprites/Gameplay/Characters/Older/baconCrash.yy",
+    "name":"Character",
+    "path":"folders/!PORTS/NGAB2/Sprites/!Player/Character.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

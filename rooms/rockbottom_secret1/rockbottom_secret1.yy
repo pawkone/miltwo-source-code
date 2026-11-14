@@ -170,7 +170,7 @@
           325,326,327,328,329,104,104,-35,0,3,104,261,233,-82,0,4,130,131,136,137,-35,0,3,290,291,265,-82,0,4,
           162,163,168,169,-35,0,3,322,323,104,-82,0,4,194,195,200,201,-120,0,4,226,134,135,233,-120,0,4,258,166,
           167,265,-120,0,4,290,291,296,297,-120,0,4,322,323,328,329,-1317,0,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tile_secret","path":"tilesets/tile_secret/tile_secret.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_btd_secret","path":"tilesets/ts_btd_secret/ts_btd_secret.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Tiles_bg","depth":200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_bg","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":64,"SerialiseWidth":124,"TileCompressedData":[
           -1513,0,5,386,387,388,392,393,-119,0,5,418,419,420,424,425,-117,0,7,386,387,388,452,453,456,457,-117,
           0,7,418,419,420,484,485,488,489,-117,0,7,450,451,581,516,517,520,521,-117,0,7,482,483,452,453,519,518,
@@ -194,13 +194,13 @@
           551,580,581,582,583,550,585,-23,0,8,578,551,580,581,582,583,584,585,-85,0,8,610,611,612,613,614,615,
           616,617,-23,0,8,610,611,581,613,614,615,616,617,-85,0,8,642,643,644,645,646,647,648,649,-23,0,8,642,
           643,644,645,646,647,648,649,-2296,0,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tile_secret","path":"tilesets/tile_secret/tile_secret.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRBackgroundLayer":"","%Name":"Background_scroll1","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":300,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":1.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background_scroll1","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"bg_secret","path":"sprites/bg_secret/bg_secret.yy",},"stretch":false,"userdefinedAnimFPS":true,"userdefinedDepth":false,"visible":true,"vspeed":1.0,"vtiled":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_btd_secret","path":"tilesets/ts_btd_secret/ts_btd_secret.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+    {"$GMRBackgroundLayer":"","%Name":"Background_scroll1","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":300,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":1.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background_scroll1","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"bg_btd_secret","path":"sprites/bg_btd_secret/bg_btd_secret.yy",},"stretch":false,"userdefinedAnimFPS":true,"userdefinedDepth":false,"visible":true,"vspeed":1.0,"vtiled":true,"x":0,"y":0,},
   ],
   "name":"rockbottom_secret1",
   "parent":{
     "name":"Secrets",
-    "path":"folders/Rooms/Levels/Floor Extra/(Port) Rock Bottom/Secrets.yy",
+    "path":"folders/!PORTS/BTD/Rooms/Secrets.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"dresser",
-    "path":"folders/Sprites/ZZZ im sick of this, im doing it later/dresser.yy",
+    "name":"Resprites",
+    "path":"folders/!PORTS/TTWOB/Sprites/Resprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

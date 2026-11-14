@@ -6,7 +6,7 @@ var _arr = [
 	
 	[mu_crashoutcity, room == crashout_1],
 	[mu_rockbottom, room == rockbottom_1],
-	[mu_beaker, room == beaker_intro],
+	[mu_beaker, room == beaker_1],
 	
 	[mu_frontyard, room == frontyard_1],
 	

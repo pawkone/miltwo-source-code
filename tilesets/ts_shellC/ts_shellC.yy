@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"1 Shell",
-    "path":"folders/Tile Sets/Levels/1 Shell.yy",
+    "path":"folders/Tilesets/Levels/1 Shell.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"2 Beaker Frontyard",
-    "path":"folders/Tile Sets/Levels/2 Beaker Frontyard.yy",
+    "path":"folders/Tilesets/Levels/2 Beaker Frontyard.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

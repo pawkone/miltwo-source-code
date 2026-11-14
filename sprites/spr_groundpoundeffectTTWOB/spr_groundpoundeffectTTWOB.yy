@@ -31,8 +31,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Effects",
-    "path":"folders/Sprites/Visuals/Effects.yy",
+    "name":"Resprites",
+    "path":"folders/!PORTS/TTWOB/Sprites/Resprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

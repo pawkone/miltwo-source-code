@@ -16,6 +16,7 @@ if (global.debug)
 		array_push(devWindow, "Plr SprIndex", sprite_get_name(obj_player.sprite_index))
 		array_push(devWindow, "Plr ImgIndex", string(floor(obj_player.image_index)))
 	    array_push(devWindow, "Plr State", script_get_name(obj_player.state))
+		array_push(devWindow, "Plr Door", string(obj_player.door))
     }
     
     draw_set_font(-1)

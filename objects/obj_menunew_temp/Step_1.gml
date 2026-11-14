@@ -1,6 +1,6 @@
 if pky_jump2
 {
-	var _rm = hotel_start;
+	var _rm = hotel_2763;
 	var _dr = "A";
 	with (obj_player)
 	{
@@ -16,7 +16,7 @@ if pky_jump2
 	    movespeed = 0;
 	    vsp = 0;
 	    hsp = 0;
-	    state = scr_player_enterdoor;
+	    state = scr_player_normal;
 	}
 	global.level = -4;
 	global.resetRoom = _rm;

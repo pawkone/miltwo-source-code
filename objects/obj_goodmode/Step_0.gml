@@ -4,6 +4,8 @@ obj_player.character = chars.preoutman
 obj_player.sfx.jump = sfx_player_bt_ballbounce
 obj_player.sfx.step = sfx_player_bc_grab
 global.showcollisions = true
+with obj_shell
+	event_user(1)
 global.debug = false
 obj_player.hsp *= random_range(0.9, 1.1)
 obj_player.movespeed *= random_range(0.9, 1.1)

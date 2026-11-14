@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"0 Tutorial",
-    "path":"folders/Tile Sets/Levels/0 Tutorial.yy",
+    "path":"folders/Tilesets/Levels/0 Tutorial.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

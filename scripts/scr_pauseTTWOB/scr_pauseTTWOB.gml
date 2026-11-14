@@ -12,49 +12,43 @@ function scr_pauseTTWOB()
 		ttwob_pausealpha = array_create(array_length(options), 0)
 		ttwob_pausealpha[selected] = 1
 	}
-	
-	if (active)
+
+	if active
 	{
+		if !ttwob_activeOld
+		{
+			waveTime = 0
+			ttwob_buf = 11
+			ttwob_circless = []
+			for (var i = 0; i < 32; i++)
+				array_push(ttwob_circless, [860-i*4, random(540), random_range(60, 100)/100])
+			ttwob_hsp = -1
+			x = 360
+		}
+		x = approach(x, 0, 1)
+		x = lerp(x, 0, 0.06)
+		ttwob_hsp = approach(ttwob_hsp, -4, 0.1)
+		array_push(ttwob_circless, [960, random(540), random_range(60, 100)/100])
+		
 	    shader_set(shd_waveTTWOB);
 		if ttwob_buf < 0
-			ttwob_buf = lerp(ttwob_buf, -1, 0.025)
+			ttwob_buf = lerp(ttwob_buf, -1.5, 0.025)
 		else
 			ttwob_buf = lerp(ttwob_buf, -0.35, 0.045)
 		waveTime -= ttwob_buf
 	    shader_set_uniform_f(timeUniform, waveTime);
-	    shader_set_uniform_f(frequencyUniform, (1+max(0,ttwob_buf/11))*0.01);
-	    shader_set_uniform_f(amplitudeUniform, 0.008);
+	    shader_set_uniform_f(frequencyUniform, (1+max(0,ttwob_buf/100))*0.01);
+	    shader_set_uniform_f(amplitudeUniform, 0.01);
 		gpu_set_blendenable(false)
 	    draw_sprite(screenSprite, 0, 0, 0);
 		gpu_set_blendenable(true)
 		draw_sprite(screenSprite2, 0, 0, 0);
 	    shader_reset();
-	    draw_set_alpha((graphBack.alpha/0.55)*0.5);
+	    draw_set_alpha((graphBack.alpha/0.55)*0.3+0.2);
 	    draw_set_colour(c_black);
 	    draw_rectangle(0, 0, 960, 540, false);
 	    draw_set_colour(c_white);
 	    draw_set_alpha(1);
-	}
-	
-	if active && !ttwob_activeOld
-	{
-		waveTime = 0
-		ttwob_buf = 11
-		ttwob_circless = []
-		for (var i = 0; i < 32; i++)
-			array_push(ttwob_circless, [860-i*4, random(540), random_range(60, 100)/100])
-		ttwob_hsp = -1
-		x = 360
-	}
-	if ttwob_activeOld != active
-		ttwob_activeOld = active
-	
-	if active
-	{
-		x = approach(x, 0, 1)
-		x = lerp(x, 0, 0.06)
-		ttwob_hsp = approach(ttwob_hsp, -4, 0.1)
-		array_push(ttwob_circless, [960, random(540), random_range(60, 100)/100])
 	}
 	else
 	{
@@ -72,7 +66,9 @@ function scr_pauseTTWOB()
 			x = approach(x, 960, 48)
 		}
 	}
-	
+	if ttwob_activeOld != active
+		ttwob_activeOld = active
+		
 	draw_rectangle(x+835-2, 0, 960, 540, false)
 	for (var i = array_length(ttwob_circless)-1; i >= 0; i--)
 	{

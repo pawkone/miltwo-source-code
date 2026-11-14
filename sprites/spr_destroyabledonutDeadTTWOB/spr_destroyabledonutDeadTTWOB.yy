@@ -34,8 +34,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Destroyables",
-    "path":"folders/Sprites/Gameplay/Level Objects/Destroyables.yy",
+    "name":"Resprites",
+    "path":"folders/!PORTS/TTWOB/Sprites/Resprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

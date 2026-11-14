@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Bacon got a booboo",
-    "path":"folders/Sprites/Gameplay/Characters/Older/baconTwisted/hud/Other/Bacon got a booboo.yy",
+    "name":"TV",
+    "path":"folders/!PORTS/TTWOB/Sprites/!Player/Hud/TV.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

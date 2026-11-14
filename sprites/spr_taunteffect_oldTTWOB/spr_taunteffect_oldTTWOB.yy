@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"ZZZ im sick of this, im doing it later",
-    "path":"folders/Sprites/ZZZ im sick of this, im doing it later.yy",
+    "name":"Resprites",
+    "path":"folders/!PORTS/TTWOB/Sprites/Resprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

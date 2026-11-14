@@ -129,7 +129,7 @@
           107,108,109,110,-7,0,12,22,24,23,24,23,24,23,24,23,24,23,49,-33,65,2,169,170,-17,0,12,172,173,45,44,
           45,44,45,44,45,44,45,44,-34,65,21,190,191,24,23,24,23,24,23,24,23,24,23,24,23,24,23,24,23,24,193,194,
           -3,65,2,138,139,-40,65,19,44,45,44,45,44,45,44,45,44,45,44,45,44,45,44,45,44,45,44,-155,65,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tile_shop","path":"tilesets/tile_shop/tile_shop.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_btd_shop","path":"tilesets/ts_btd_shop/ts_btd_shop.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Tiles_bg","depth":200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_bg","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":33,"SerialiseWidth":65,"TileCompressedData":[
           -293,0,5,153,154,154,155,156,-60,0,5,174,175,175,176,177,-60,0,5,195,196,196,197,198,-60,0,5,153,154,
           154,155,156,-60,0,5,174,175,175,176,177,-60,0,5,195,196,196,197,198,-60,0,5,153,154,154,155,156,-60,
@@ -143,13 +143,13 @@
           -4,155,1,156,-45,0,4,153,154,155,156,-9,0,2,195,196,-3,155,2,176,177,-45,0,4,174,175,176,177,-9,0,2,
           153,154,-3,155,2,197,198,-45,0,4,195,196,197,198,-9,0,2,174,175,-3,155,-47,0,4,153,154,155,156,-9,0,
           2,195,196,-50,0,4,174,175,176,177,-61,0,4,195,196,197,198,-39,0,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tile_shop","path":"tilesets/tile_shop/tile_shop.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRBackgroundLayer":"","%Name":"Backgrounds_2","animationFPS":10.0,"animationSpeedType":0,"colour":4294967295,"depth":300,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Backgrounds_2","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"bg_shop","path":"sprites/bg_shop/bg_shop.yy",},"stretch":false,"userdefinedAnimFPS":true,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_btd_shop","path":"tilesets/ts_btd_shop/ts_btd_shop.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+    {"$GMRBackgroundLayer":"","%Name":"Backgrounds_2","animationFPS":10.0,"animationSpeedType":0,"colour":4294967295,"depth":300,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Backgrounds_2","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"bg_btd_shop","path":"sprites/bg_btd_shop/bg_btd_shop.yy",},"stretch":false,"userdefinedAnimFPS":true,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "name":"rockbottom_shop3",
   "parent":{
     "name":"Shops",
-    "path":"folders/Rooms/Levels/Floor Extra/(Port) Rock Bottom/Shops.yy",
+    "path":"folders/!PORTS/BTD/Rooms/Shops.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

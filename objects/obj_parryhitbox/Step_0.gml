@@ -5,9 +5,9 @@ image_xscale = obj_player.xscale;
 x = obj_player.x;
 y = obj_player.y;
 
-if (place_meeting(x, y, obj_beantProjectile))
+if (place_meeting(x, y, obj_ttwob_beantProjectile))
 {
-    with (instance_place(x, y, obj_beantProjectile))
+    with (instance_place(x, y, obj_ttwob_beantProjectile))
     {
 		instance_destroy()
     }

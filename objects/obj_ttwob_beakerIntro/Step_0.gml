@@ -1,0 +1,50 @@
+with (obj_player)
+{
+	state = -4
+	hsp = 0
+	movespeed = 0
+	vsp = 0
+	with instance_place(x,y,obj_destructibles)
+		instance_destroy()
+	if (sprite_index == spr_player3_slipbanan1 || sprite_index == spr_player3_rockethitwall)
+	{
+	    y += other.fakeVsp;
+		if other.fakeVsp < 30
+			other.fakeVsp += 0.5;
+	    buffers.afterimageBlur--
+	    if (buffers.afterimageBlur <= 0)
+	    {
+	        buffers.afterimageBlur = 4;
+	        create_blur_effect(sprite_index, image_index, x, y, xscale);
+	    }
+	    if (y > obj_doorA.y - 14)
+	    {
+	        y = obj_doorA.y - 14;
+			if sprite_index == spr_player3_slipbanan1
+			{
+				other.fakeVsp = -6;
+		        FMODevent_oneshot("event:/Sfx/Player/slipbump", x, y);
+				image_speed = 0.35;
+		        sprite_index = spr_player3_rockethitwall;
+		        image_index = 0;
+			}
+			else if sprite_index == spr_player3_rockethitwall
+			{
+		        FMODevent_oneshot("event:/Sfx/Player/slipend", x, y);
+				image_speed = 0.35;
+		        sprite_index = spr_player3_slipbanan2;
+		        image_index = 0;
+			}
+	    }
+	}
+	else if sprite_index == spr_player3_slipbanan2
+	{
+		if animation_end()
+		{
+			buffers.idle = 0
+		    image_speed = 0
+			image_index = image_number-1
+			other.alarm[0] = 8
+		}
+	}
+}

@@ -1,16 +1,3 @@
-var Collisions = [obj_solid, obj_slope, obj_platform, obj_destroyable_secret1, obj_destroyable_secret2, obj_secretmetalblock, obj_ladder];
-for (var solids = 0; solids < array_length(Collisions); solids++)
-{
-    if (instance_exists(Collisions[solids]))
-    {
-        with (Collisions[solids])
-        {
-            if (object_index == Collisions[solids])
-                visible = global.showcollisions;
-        }
-    }
-}
-
 if (saveHistory)
 {
     if (!loadedSavedHistory)

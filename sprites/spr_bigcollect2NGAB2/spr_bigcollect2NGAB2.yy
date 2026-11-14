@@ -35,7 +35,7 @@
   "origin":4,
   "parent":{
     "name":"Collectibles",
-    "path":"folders/Sprites/Gameplay/Characters/Older/baconCrash/Collectibles.yy",
+    "path":"folders/!PORTS/NGAB2/Sprites/!Player/Collectibles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

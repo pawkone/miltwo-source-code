@@ -18,7 +18,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"Hub",
-    "path":"folders/Tile Sets/Hub.yy",
+    "path":"folders/Tilesets/Hub.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

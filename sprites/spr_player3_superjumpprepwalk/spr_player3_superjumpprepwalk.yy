@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"baconTwisted",
-    "path":"folders/Sprites/Gameplay/Characters/Older/baconTwisted.yy",
+    "name":"Character",
+    "path":"folders/!PORTS/TTWOB/Sprites/!Player/Character.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

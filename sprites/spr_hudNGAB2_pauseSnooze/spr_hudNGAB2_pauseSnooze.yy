@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"hud",
-    "path":"folders/Sprites/Gameplay/Characters/Older/baconCrash/hud.yy",
+    "name":"Hud",
+    "path":"folders/!PORTS/NGAB2/Sprites/!Player/Hud.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

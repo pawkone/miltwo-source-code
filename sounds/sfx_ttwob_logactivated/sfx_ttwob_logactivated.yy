@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_ttwob_logactivated",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":2.4554875,
+  "exportDir":"",
+  "name":"sfx_ttwob_logactivated",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/!PORTS/TTWOB/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_ttwob_logactivated.wav",
+  "volume":1.0,
+}

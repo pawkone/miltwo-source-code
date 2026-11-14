@@ -6,8 +6,8 @@
   "name":"obj_trashcan",
   "overriddenProperties":[],
   "parent":{
-    "name":"Dream",
-    "path":"folders/Objects/Stage Elements/!ERA SPECFIC/Dream.yy",
+    "name":"Objects",
+    "path":"folders/!PORTS/BTD/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

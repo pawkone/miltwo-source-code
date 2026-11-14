@@ -136,12 +136,25 @@ global.racemode = {
 }
 
 // -- LEVEL SELECT --
-global.levels_worldNames = ["Lunch Hour", "Happy Holidays", "Custom"];
-global.levels_arr = [];
-var _world1 = [[tutorial_1, "tutorial", "Tutorial"], [yard_1, "yard", "Waybackyard"], [shell_1, "shell", "Shell City"], [beach_1, "beach", "Fruitcup Coast"]];
-var _world2 = [[castle_1, "castle", "Castle Pumpkinstein"], [milkshake_1, "milkshake", "Milkshake Peaks"]];
-var _world3 = [[crashout_1, "crashout", "Crashout City"], [rockbottom_1, "rockbottom", "Rock Bottom (Dream Era)"], [frontyard_1, "frontyard", "Frontyard"], [beaker_intro, "beaker", "Beaker Backyard"]];
-array_push(global.levels_arr, _world1);array_push(global.levels_arr, _world2);array_push(global.levels_arr, _world3)
+global.levels_worldNames = ["Lunch Hour", "Happy Holidays", "Ports And Stuff"]
+global.levels_arr = []
+array_push(global.levels_arr, [
+	[tutorial_1, "tutorial", "Tutorial"],
+	[yard_1, "yard", "Waybackyard"],
+	[shell_1, "shell", "Shell City"],
+	[beach_1, "beach", "Fruitcup Coast"]
+])
+array_push(global.levels_arr, [
+	[castle_1, "castle", "Castle Pumpkinstein"],
+	[milkshake_1, "milkshake", "Milkshake Peaks"]
+])
+array_push(global.levels_arr, [
+	[crashout_1, "crashout", "Crashout City"],
+	[rockbottom_1, "rockbottom", "Rock Bottom"],
+	[beaker_1, "beaker", "Outback Workyard"],
+	
+	[frontyard_1, "frontyard", "Frontyard"],
+])
 
 // -- ONLINE --
 global.server = -4;

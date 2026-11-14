@@ -50,12 +50,6 @@ with instance_create(4832,928,obj_platform)
 	image_xscale = 7
 with instance_create(4896,928,obj_ladder)
 	image_yscale = 8
-with instance_create(4896,928,obj_jellyfish)
-{
-	image_yscale = 8
-	sprite_index = spr_ladder
-	depth = layer_get_depth("Tiles_2")-1
-}
 with instance_create(5105,672,obj_floorgate)
 {
 	slow = true

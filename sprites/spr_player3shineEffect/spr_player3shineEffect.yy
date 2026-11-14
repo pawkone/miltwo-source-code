@@ -28,7 +28,7 @@
   "origin":4,
   "parent":{
     "name":"Effects",
-    "path":"folders/Sprites/Gameplay/Characters/Older/baconTwisted/Effects.yy",
+    "path":"folders/!PORTS/TTWOB/Sprites/!Player/Effects.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

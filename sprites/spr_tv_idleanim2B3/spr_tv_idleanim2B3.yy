@@ -50,8 +50,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Other",
-    "path":"folders/Sprites/Gameplay/Characters/Older/baconTwisted/hud/Other.yy",
+    "name":"TV",
+    "path":"folders/!PORTS/TTWOB/Sprites/!Player/Hud/TV.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

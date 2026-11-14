@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"1 Way Backyard (Mangrove)",
-    "path":"folders/Tile Sets/Levels/1 Way Backyard (Mangrove).yy",
+    "path":"folders/Tilesets/Levels/1 Way Backyard (Mangrove).yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
