@@ -41,7 +41,7 @@ function FMODcreate_event(arg0)
 
 function FMODevent_oneshot(arg0, arg1 = "", arg2 = "")
 {
-    var _inst = fmod_studio_event_description_create_instance(fmod_studio_system_get_event(arg0))
+    var _inst = FMODcreate_event(arg0)
     if arg1 != "" && arg2 != ""
         FMODSet3dPos(_inst, arg1, arg2)
 	fmod_studio_event_instance_start(_inst)

@@ -37,7 +37,7 @@ function scr_pauseTTWOB()
 			ttwob_buf = lerp(ttwob_buf, -0.35, 0.045)
 		waveTime -= ttwob_buf
 	    shader_set_uniform_f(timeUniform, waveTime);
-	    shader_set_uniform_f(frequencyUniform, (1+max(0,ttwob_buf/100))*0.01);
+	    shader_set_uniform_f(frequencyUniform, (1+max(0,ttwob_buf/11))*0.01);
 	    shader_set_uniform_f(amplitudeUniform, 0.01);
 		gpu_set_blendenable(false)
 	    draw_sprite(screenSprite, 0, 0, 0);
