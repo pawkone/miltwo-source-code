@@ -123,7 +123,7 @@ if multdelay > 0
 		}
 	}
 	if multdelay == 16
-		obj_camera.cameraShakeArray = []
+		obj_handlerCamera.cameraShakeArray = []
 	else if multdelay > 16
 		shake_camera(300/multdelay)
 }

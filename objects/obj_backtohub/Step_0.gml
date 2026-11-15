@@ -5,7 +5,7 @@ var _bth = id
 with (obj_player)
 {
 	state = -4
-	with obj_camera
+	with obj_handlerCamera
 	{
 		if _bth.start < 0.1
 		{
@@ -52,7 +52,7 @@ with (obj_player)
 			{
 		        instance_destroy(other);
 		        state = scr_player_normal;
-		        obj_camera.state = "normal";
+		        obj_handlerCamera.state = "normal";
 		        sprite_index = sprites.idle;
 		        image_index = 0;
 			}

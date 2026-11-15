@@ -9,8 +9,8 @@
   "name":"obj_key",
   "overriddenProperties":[],
   "parent":{
-    "name":"Destroyables",
-    "path":"folders/Objects/Stage Elements/Destroyables.yy",
+    "name":"Misc",
+    "path":"folders/Objects/Stage Elements/Misc.yy",
   },
   "parentObjectId":null,
   "persistent":false,

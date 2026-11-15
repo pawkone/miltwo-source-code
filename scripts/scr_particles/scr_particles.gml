@@ -38,7 +38,7 @@ function create_collect(arg0, arg1, arg2, arg3 = false)
         Hmvsp: 0,
         Vmvsp: 0
     };
-    ds_list_add(obj_hud.collectVis, par);
+    ds_list_add(obj_handlerGameUI.collectVis, par);
     return par;
 }
 
@@ -68,7 +68,7 @@ function create_afterimage(_sprite, _imageindex, _x, _y, _xscale, alpha = 1)
 		aft.sprite_index = realInfo[0]
 		aft.image_index = realInfo[1]
 	}
-    ds_list_add(obj_afterimageSystem.afterimages, aft);
+    ds_list_add(obj_handlerAfterimage.afterimages, aft);
     return aft;
 }
 

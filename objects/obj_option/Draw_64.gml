@@ -317,7 +317,7 @@ switch (m.anchor)
 			miltwocredits_extendview_selected = wrap(miltwocredits_extendview_selected + _move, 0, array_length(_gal)-3)
 			if _oldm != miltwocredits_extendview_selected
 			{
-				with obj_pause
+				with obj_handlerPause
 				{
 					if active
 						fmod_studio_event_instance_set_paused(pauseMusic, false)
@@ -356,7 +356,7 @@ switch (m.anchor)
 				{
 					if miltwocredits_extendview_music == -4
 					{
-						with obj_pause
+						with obj_handlerPause
 						{
 							if active
 								fmod_studio_event_instance_set_paused(pauseMusic, true)
@@ -365,7 +365,7 @@ switch (m.anchor)
 					}
 					else
 					{
-						with obj_pause
+						with obj_handlerPause
 						{
 							if active
 								fmod_studio_event_instance_set_paused(pauseMusic, false)
@@ -389,7 +389,7 @@ switch (m.anchor)
 				buffer = 2
 				miltwocredits_extendview_enabled = false
 				miltwocredits_extendview_selected = 0
-				with obj_pause
+				with obj_handlerPause
 				{
 					if active
 						fmod_studio_event_instance_set_paused(pauseMusic, false)

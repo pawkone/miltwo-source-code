@@ -1,6 +1,6 @@
 scale = 1;
 fade = false;
-depth = obj_hud.depth - 5;
+depth = obj_handlerGameUI.depth - 5;
 alarm[0] = 120;
 lostcombo = false;
 very = false;

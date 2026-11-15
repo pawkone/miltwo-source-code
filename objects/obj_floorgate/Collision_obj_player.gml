@@ -12,7 +12,7 @@ if (other.grounded && pky_up && other.state != scr_player_enterdoor && other.sta
         state = scr_player_enterdoor;
         sprite_index = sprites.entergate;
         image_index = 0;
-		with obj_music
+		with obj_handlerMusic
 			stop_music()
     }
 }

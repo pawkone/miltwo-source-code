@@ -5,7 +5,16 @@ if array_length(textures) > 0
 }
 else
 {
-	room_goto(initObject);
+	instance_create(0,0,obj_shell)
+	instance_create(0,0,obj_handlerAfterimage)
+	instance_create(0,0,obj_handlerAudio)
+	instance_create(0,0,obj_handlerCamera)
+	instance_create(0,0,obj_handlerGameUI)
+	instance_create(0,0,obj_handlerInput)
+	instance_create(0,0,obj_handlerMusic)
+	instance_create(0,0,obj_handlerPause)
+	instance_create(0,0,obj_player)
+	room_goto(Mainmenu)
 	exit
 }
 alarm[0] = 2

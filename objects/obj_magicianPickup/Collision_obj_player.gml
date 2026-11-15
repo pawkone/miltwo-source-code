@@ -1,4 +1,4 @@
-with obj_hud tv_anim(sprites.happy, 180);
+with obj_handlerGameUI tv_anim(sprites.happy, 180);
 global.combo.timer = 60;
 
 with (obj_player)

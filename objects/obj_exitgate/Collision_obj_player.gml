@@ -44,7 +44,7 @@ if (other.grounded && pky_up && other.state != -4 && other.state != scr_player_e
 	        xdata_write(global.level, "Secrets", global.secretCount);
 	    }
     
-	    obj_savesystem.saveiconTimer = 60;
+	    with obj_handlerGameUI saveiconTimer = 60
 	    xdata_close();
     }
 }

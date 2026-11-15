@@ -1,4 +1,4 @@
-if (obj_player.door == "DOODLE" || instance_exists(obj_secretManager))
+if (obj_player.door == "DOODLE" || instance_exists(obj_handlerSecret))
 {
 	obj_player.state = -4;
     obj_player.x = x;

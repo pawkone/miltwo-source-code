@@ -8,7 +8,7 @@ if (global.escapeActive)
     ds_list_add(global.escaperoom, id);
     instance_destroy();
     FMODevent_oneshot("event:/Sfx/General/Collects/escapecollectBig", x, y);
-    with obj_hud tv_anim(sprites.happy, 180);
+    with obj_handlerGameUI tv_anim(sprites.happy, 180);
     
 	with (obj_player)
 	{

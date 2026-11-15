@@ -82,7 +82,7 @@ repeat (4)
 */
 
 function animation_end(){return (image_index + (image_speed * sprite_get_speed(sprite_index))) >= image_number;}
-function shake_camera(intesteyt, time = -4){if (time == -4) time = intesteyt; array_push(obj_camera.cameraShakeArray, [time, time, intesteyt])}
+function shake_camera(intesteyt, time = -4){if (time == -4) time = intesteyt; array_push(obj_handlerCamera.cameraShakeArray, [time, time, intesteyt])}
 function instance_create(obj_x, obj_y, obj, _varstruct = {}){return instance_create_depth(obj_x, obj_y, 0, obj, _varstruct)}
 function create_smalltext(arg0, arg1 = x, arg2 = y){instance_create(arg1, arg2, obj_smalltext).text = arg0;}
 
@@ -150,7 +150,7 @@ function levelgetname(_t)
 
 function tv_anim(arg0, arg1 = 0)
 {
-    with (obj_hud.tv)
+    with (obj_handlerGameUI.tv)
     {
         if (expressionSprite != arg0)
         {
@@ -212,13 +212,18 @@ function escape_background(arg0, arg1)
 {
     for (var i = 0; i < array_length(layers_name); i++)
     {
-        var ID = layer_get_id(layers_name[i]);
-        var BGID = layer_background_get_id(ID);
-        var BGSPR = layer_background_get_sprite(BGID);
-        if (BGSPR == arg0 && global.escapeActive)
-            layer_background_sprite(BGID, arg1);
-        else if (BGSPR == arg1 && !global.escapeActive)
-            layer_background_sprite(BGID, arg0);
+        var BGID = layer_background_get_id(layer_get_id(layers_name[i]))
+        var BGSPR = layer_background_get_sprite(BGID)
+		if global.escapeActive
+		{
+	        if BGSPR == arg0
+	            layer_background_sprite(BGID, arg1)
+		}
+		else
+		{
+			if BGSPR == arg1
+				layer_background_sprite(BGID, arg0)
+		}
     }
 }
 

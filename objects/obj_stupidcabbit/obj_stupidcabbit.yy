@@ -12,8 +12,8 @@
   "name":"obj_stupidcabbit",
   "overriddenProperties":[],
   "parent":{
-    "name":"Destroyables",
-    "path":"folders/Objects/Stage Elements/Destroyables.yy",
+    "name":"Misc",
+    "path":"folders/Objects/Stage Elements/Destroyables/Misc.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",

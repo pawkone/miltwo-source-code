@@ -1,4 +1,4 @@
-with obj_music
+with obj_handlerMusic
 {
 	if (musicInst != -4)
 	{
@@ -20,7 +20,7 @@ with obj_music
 	savedMusicPosition = 0;
 	isSecret = false;
 }
-obj_pause.buffer = 1000
+obj_handlerPause.buffer = 1000
 global.collect = 0
 global.combo.timer = 1000
 global.escapeActive = 0

@@ -26,7 +26,7 @@ if (room != hotel_soundtest)
 	if muisFmod
 		FMODSet3dPos(mu, x, y);
 	else
-		audio_sound_gain(mu, 0.15+clamp(1.2-(point_distance(x,y,obj_camera.camera.x,obj_camera.camera.y)/960), 0, 1))
+		audio_sound_gain(mu, 0.15+clamp(1.2-(point_distance(x,y,obj_handlerCamera.camera.x,obj_handlerCamera.camera.y)/960), 0, 1))
     fmod_studio_system_set_parameter_by_name("musicfade", 1, false);
 }
 

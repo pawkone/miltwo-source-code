@@ -5,7 +5,7 @@ xdata_open(global.saveFile)
 if xdata_read("Modded", "c_char", -4) != obj_player.character
 {
 	xdata_write("Modded", "c_char", obj_player.character)
-	obj_savesystem.saveiconTimer = 60
+	with obj_handlerGameUI saveiconTimer = 60
 }
 xdata_close()
 

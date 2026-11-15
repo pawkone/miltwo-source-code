@@ -16,7 +16,7 @@ if (pky_up && _plr.state == scr_player_normal)
         image_index = 0;
     }
     
-    with (obj_music)
+    with (obj_handlerMusic)
         stop_music();
 }
 
@@ -24,7 +24,7 @@ with (_plr)
 {
 	if sprite_index == sprites.entergate
 	{
-		obj_camera.xOffset = approach(obj_camera.xOffset, 0, 0.3)
+		obj_handlerCamera.xOffset = approach(obj_handlerCamera.xOffset, 0, 0.3)
 		x = approach(x, _gate.x, 1.75)
 	    if (image_index >= (image_number - 12) && !instance_exists(obj_fadeout) && !instance_exists(obj_titlecard))
 	    {

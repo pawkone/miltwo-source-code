@@ -1,4 +1,4 @@
-obj_pause.buffer = 1000
+obj_handlerPause.buffer = 1000
 with obj_player
 {
 	if global.racemode.timer >= 4

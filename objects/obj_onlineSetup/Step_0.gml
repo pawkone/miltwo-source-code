@@ -11,7 +11,7 @@ if (menu == 0)
 {
 	if (mky_slap2)
     {
-		with obj_music
+		with obj_handlerMusic
 			stop_music()
 		generalReset()
 		movespeed = 0

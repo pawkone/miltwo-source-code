@@ -1,4 +1,4 @@
-depth = obj_hud.depth - 25;
+depth = obj_handlerGameUI.depth - 25;
 FMODevent_oneshot("event:/Sfx/UI/Oops!/transition");
 with obj_player
 	plrsnds_play(sfx.slam, x, y);

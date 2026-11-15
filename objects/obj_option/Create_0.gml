@@ -53,7 +53,7 @@ addBackground([2, 10], 2);
 addBackground([3], 3);
 addBackground([4, 5, 6, 7, 8, 9], 4);
 BGX = 0
-depth = obj_pause.depth - 1;
+depth = obj_handlerPause.depth - 1;
 screamSnd = FMODcreate_event("event:/Sfx/UI/Pause/slider");
 fmod_studio_event_instance_start(screamSnd);
 fmod_studio_event_instance_set_paused(screamSnd, true);
@@ -152,7 +152,7 @@ add_option_key = function(arg0, arg1, arg2, arg3 = "k-leftKey")
 
 var category = create_menu(optionstype.mainpage, optionstype.anchor_center, 48, function()
 {
-    obj_pause.buffer = 2;
+    obj_handlerPause.buffer = 2;
     instance_destroy();
 });
 
@@ -659,7 +659,7 @@ add_option_press(MODDED, "option_modded_menuoldies", function()
 add_option_press(MODDED, "option_modded_menuonline", function()
 {
 	instance_destroy()
-	with obj_pause
+	with obj_handlerPause
 		doUnpause()
 	generalReset()
 	room_goto(serverMenuShit)
@@ -668,7 +668,7 @@ add_option_press(MODDED, "option_modded_menuonline", function()
 add_option_press(MODDED, "option_modded_menuonlinenew", function()
 {
 	instance_destroy()
-	with obj_pause
+	with obj_handlerPause
 		doUnpause()
 	generalReset()
 	room_goto(rm_multiplayerSetup)

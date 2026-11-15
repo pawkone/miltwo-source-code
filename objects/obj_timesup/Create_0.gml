@@ -13,7 +13,7 @@ global.escapeTimer = 0
 instance_destroy(obj_hipnatuese)
 instance_destroy(obj_lap2visual)
 
-with (obj_music)
+with (obj_handlerMusic)
     stop_music();
 
 with (obj_player)

@@ -161,7 +161,7 @@ function generalReset()
 		supertaunt = 0
 		canSupertaunt = false
 	}
-	with (obj_hud)
+	with (obj_handlerGameUI)
 	{
 		if variable_instance_exists(id, "tv") && is_struct(tv)
 			tv.sprite_index = spr_tv_off

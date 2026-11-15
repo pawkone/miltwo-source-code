@@ -65,7 +65,7 @@ if (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_exitgate) || place_
     sprite_index = sprites.walkfront;
 	if place_meeting(x, y, obj_exitgate)
 	{
-		obj_camera.hud_alpha = 0
+		obj_handlerCamera.hud_alpha = 0
 		with instance_create(0,0,obj_titlecardFadeout)
 		{
 			circleSize = 0

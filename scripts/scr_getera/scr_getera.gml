@@ -1,7 +1,7 @@
 function scr_getera(_getfrompause = true)
 {
-	if instance_exists(obj_pause) && _getfrompause
-		return obj_pause.hud_postfix
+	if instance_exists(obj_handlerPause) && _getfrompause
+		return obj_handlerPause.hud_postfix
 	if instance_exists(obj_player)
 	{
 		switch obj_player.character

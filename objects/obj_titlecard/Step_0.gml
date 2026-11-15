@@ -24,7 +24,7 @@ if (scene == 0 || scene == 1)
 		circleSize -= circleSizeSpeed
 		
 		var _t = (960-circleSize)/960
-		obj_camera.camera.zoom -= _t*_t/5
+		obj_handlerCamera.camera.zoom -= _t*_t/5
         if circleSize <= 0
         {
 			if is_string(titlecardinfo[3])

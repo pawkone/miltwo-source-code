@@ -1,0 +1,12 @@
+depth = -500
+saveiconTimer = 0
+saveiconIndex = 0
+saveiconAlpha = 0
+saveiconMax = sprite_get_number(spr_littlesaltdance)-1
+collectVis = ds_list_create()
+hud_scr_step = -4
+hud_scr_draw = -4
+hud_scr_clean = -4
+roomname_scr_step = -4
+roomname_scr_earlystep = -4
+roomname_scr_roomstart = -4

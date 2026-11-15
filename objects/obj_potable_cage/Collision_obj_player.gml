@@ -6,7 +6,7 @@ global.collect += 1000;
 global.combo.timer = 60;
 create_smalltext(1000);
 FMODevent_oneshot("event:/Sfx/General/Collects/toppinget", x, y);
-with obj_hud tv_anim(sprites.happy, 180);
+with obj_handlerGameUI tv_anim(sprites.happy, 180);
 with (obj_player)
 {
     if character == chars.soda || (irandom(100) <= 25)

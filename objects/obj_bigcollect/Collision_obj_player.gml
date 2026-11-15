@@ -6,7 +6,7 @@ create_collect(sprite_index, x, y);
 ds_list_add(global.saveroom, id);
 instance_destroy();
 FMODevent_oneshot("event:/Sfx/General/Collects/bigcollect", x, y);
-with obj_hud tv_anim(sprites.happy, 180);
+with obj_handlerGameUI tv_anim(sprites.happy, 180);
 
 with (obj_player)
 {

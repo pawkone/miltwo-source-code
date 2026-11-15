@@ -204,17 +204,14 @@ function scr_hudWSB_draw()
 	var _ha = hud_alpha
 	if _ha <= 0 exit
 
-	with obj_globaltimer
+	if global.level != -4
 	{
-		if global.level != -4
-		{
-			draw_set_font(global.smallfont);
-			draw_set_colour(c_white);
-			draw_set_halign(fa_left);
-			var _xx = (960 - 128) + 16;
-			var _yy = 540 - 32;
-			draw_text(_xx, _yy + lerp(48, 0, _ha), timeString(global.level_timer));
-		}
+		draw_set_font(global.smallfont);
+		draw_set_colour(c_white);
+		draw_set_halign(fa_left);
+		var _xx = (960 - 128) + 16;
+		var _yy = 540 - 32;
+		draw_text(_xx, _yy + lerp(48, 0, _ha), timeString(global.level_timer));
 	}
 
 	if (!ds_list_empty(collectVis))
@@ -474,7 +471,7 @@ function scr_hudWSB_draw()
 	    if (_escape)
 	    {
 			var putdown = _secret || global.escapeTimer <= 0
-			var alt_putdown = !putdown && obj_music.captions.curtime >= 346.41 && (obj_music.captions.old < 0 || obj_music.captions.str[obj_music.captions.old] != "") && y <= 540 - 32
+			var alt_putdown = !putdown && obj_handlerMusic.captions.curtime >= 346.41 && (obj_handlerMusic.captions.old < 0 || obj_handlerMusic.captions.str[obj_handlerMusic.captions.old] != "") && y <= 540 - 32
 	        y = approach(y, putdown ? (540 + 100) : (alt_putdown ? (540 - 32) : (540 - 80)), putdown ? 15 : (alt_putdown ? 3 : 1));
 	        var _realy = lerp(540+100, y, _ha)
 			var _width = sprite_get_width(spr_timerBar);

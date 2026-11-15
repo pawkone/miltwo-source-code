@@ -37,7 +37,7 @@ blackfade = 0;
 showWhite = false;
 showBlack = false;
 
-with (obj_music)
+with (obj_handlerMusic)
 {
     stop_music();
     

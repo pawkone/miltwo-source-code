@@ -10,6 +10,6 @@ change = 0
 state = -1
 
 instance_destroy(obj_shell)
-instance_destroy(obj_pause)
+instance_destroy(obj_handlerPause)
 with obj_player
 	character = chars.mildred

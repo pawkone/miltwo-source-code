@@ -11,8 +11,8 @@
   "name":"obj_monolith_clutter",
   "overriddenProperties":[],
   "parent":{
-    "name":"Destroyables",
-    "path":"folders/Objects/Stage Elements/Destroyables.yy",
+    "name":"Misc",
+    "path":"folders/Objects/Stage Elements/Destroyables/Misc.yy",
   },
   "parentObjectId":null,
   "persistent":false,
