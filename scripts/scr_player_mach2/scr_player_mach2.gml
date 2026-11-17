@@ -178,12 +178,12 @@ function scr_player_mach2()
         }
     }
     
-    if (place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x, y + 1, obj_slope) && grounded)
+    if place_meeting(x + sign(hsp), y, obj_solid) && !scr_slope(x,y+1) && grounded
     {
-        FMODevent_oneshot("event:/Sfx/Player/bump", x, y);
-        state = scr_player_hitwall;
-        sprite_index = sprites.wallsplat;
         image_index = 0;
+        sprite_index = sprites.wallsplat;
+        state = scr_player_hitwall;
+        FMODevent_oneshot("event:/Sfx/Player/bump", x, y);
         exit;
     }
     

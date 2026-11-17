@@ -19,7 +19,7 @@ var _arr = [
 	[mu_shellcityA, room == shell_1],
 	
 	[mu_bossbacon, room == boss_bacon],
-
+	[mu_publicplaytest3, room == publicplaytest3_1],
 ]
 
 if !global.escapeActive

@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":1,
   "conversionMode":0,
-  "duration":46.628548,
+  "duration":0.52244896,
   "exportDir":"",
   "name":"sfx_player_bt_taunt",
   "parent":{

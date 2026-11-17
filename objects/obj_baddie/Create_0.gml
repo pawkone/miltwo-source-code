@@ -1,6 +1,8 @@
 depth = 3;
 image_speed = 0.35;
 scr_collision_init();
+spr_pal = -4
+pal_index = 0
 grav = 0.5;
 state = "move";
 movespeed = 0;

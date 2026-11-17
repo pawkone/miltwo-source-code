@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_crouchmask",
-    "path":"sprites/spr_crouchmask/spr_crouchmask.yy",
+    "name":"spr_player_crouchmask",
+    "path":"sprites/spr_player_crouchmask/spr_player_crouchmask.yy",
   },
   "spriteMaskId":null,
   "visible":true,

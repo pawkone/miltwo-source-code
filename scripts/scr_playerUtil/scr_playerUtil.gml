@@ -220,8 +220,6 @@ function doGrab()
                 sprite_index = sprites.grab;
                 image_index = 0;
                 create_particleStatic(spr_grabcloud, x, y, xscale, 1);
-                if character == chars.bacon_twist
-					buffers.twistedair = 0
                 if (movespeed < 8)
                     movespeed = 8;
             }

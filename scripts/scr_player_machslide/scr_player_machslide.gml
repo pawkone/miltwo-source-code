@@ -24,7 +24,7 @@ function scr_player_machslide()
         state = scr_player_normal;
     }
     
-    if (place_meeting(x + sign(hsp), y, obj_solid))
+    if (place_meeting(x + sign(hsp), y, obj_solid) && !scr_slope(x,y+1)) || (place_meeting(x + sign(hsp), y-6, obj_solid) && !place_meeting(x, y-6, obj_solid))
     {
         FMODevent_oneshot("event:/Sfx/Player/bump", x, y);
         state = scr_player_hitwall;

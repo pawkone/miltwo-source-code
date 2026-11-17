@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":1,
   "conversionMode":0,
-  "duration":216.99048,
+  "duration":0.0,
   "exportDir":"audioStreamed",
   "name":"mu_prophunt",
   "parent":{

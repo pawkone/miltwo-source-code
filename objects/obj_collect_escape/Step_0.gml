@@ -1,6 +1,6 @@
 if (global.escapeActive)
 {
-    if (!gotoplayer)
+    if (!gotoplayer) && scr_getera_pt() != "PT"
         y = ystart + (sin((current_time * 0.001) + (0.1 * randomwaveNum)) * 4);
     
     if (distance_to_object(obj_player) < 120 && obj_player.super)

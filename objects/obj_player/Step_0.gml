@@ -3,10 +3,15 @@ if character == chars.pepperni && vsp < 0
 else
 {
 	grav = 0.5
-	if character == chars.bacon_dream && vsp >= 20
-		vsp += grav
-	if character == chars.bacon_twist && vsp >= 20
-		vsp += grav
+	if vsp >= 20
+	{
+		if state == scr_player_beakerintro
+			vsp += grav
+		else if character == chars.bacon_dream
+			vsp += grav
+		else if character == chars.bacon_twist
+			vsp += grav
+	}
 }
 
 var touchie = place_meeting(x,y,obj_dresser) ||
@@ -16,10 +21,7 @@ place_meeting(x,y,obj_levelgate) ||
 if scr_getera() == "TTWOB"
 {
 	touchie = touchie && state != scr_player_walkfront && state != scr_player_enterdoor
-	if touchie && !uparrow
-		uparrow = 2
-	else
-		uparrow = touchie ? (place_meeting(x,y,obj_dresser)+1) : 0
+	uparrow = touchie ? (place_meeting(x,y,obj_dresser)+1) : 0
 }
 else
 {
@@ -189,7 +191,7 @@ if (hitstun.is == false)
     else
         image_alpha = 1;
     
-    if (state == scr_player_walkfront && sprite_index == sprites.walkfront)
+    if (state == scr_player_walkfront && (sprite_index == sprites.walkfront || sprite_index == spr_player_walkfrontfake))
         image_blend = make_colour_hsv(0, 0, (image_index / image_number) * 255);
     else
         image_blend = make_colour_hsv(0, 0, 255);
@@ -197,7 +199,7 @@ if (hitstun.is == false)
     if (flash == true && alarm[0] <= 0)
         alarm[0] = 5;
     
-    if (y < -500 || y > room_height + 500) && state != -4 && !instance_exists(obj_fadeout)
+    if (y < -500 || y > room_height + 500) && state != -4 && state != scr_player_beakerintro && !instance_exists(obj_fadeout)
     {
         if !instance_exists(obj_technicaldifficulty)
         {
@@ -211,7 +213,7 @@ if (hitstun.is == false)
 		state()
 	
 	mask_index = spr_player_mask
-    mask_index = scr_solid(x,y) || (state == scr_player_crouch || state == scr_player_tumble || state == scr_player_superjumpprep) ? spr_crouchmask : spr_player_mask
+    mask_index = scr_solid(x,y) || (state == scr_player_crouch || state == scr_player_tumble || state == scr_player_superjumpprep) ? spr_player_crouchmask : spr_player_mask
 		
 	scr_collide_destructibles()
     scr_collision()

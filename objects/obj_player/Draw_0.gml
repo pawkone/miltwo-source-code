@@ -33,7 +33,7 @@ else
 if scr_getera() == "TTWOB"
 {
 	if uparrow
-		draw_sprite_ext(spr_tutorialkeyspecial,3,x-21,y-(62 + (uparrow>1 ? 15 : 0)),1,1,0,c_white,1)
+		draw_sprite_ext(spr_tutorialkeyspecial,3,x-21,y-62,1,1,0,c_white,1)
 }
 else
 {

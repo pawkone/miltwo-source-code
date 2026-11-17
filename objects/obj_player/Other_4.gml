@@ -1,55 +1,54 @@
-uparrow = 0
-uparrowadd = 0
-
-var _secreterror = door == "DOODLE" && !instance_exists(obj_secret) && !instance_exists(obj_secretStart)
-if _secreterror
+if door == "A" && room == beaker_1
 {
-	var _list = ["A", "B", "C", "D", "E", "F", "G", "H", "S"]
-	for (var i = 0; i < array_length(_list); i++)
+	x = 500
+	y = -752
+	sprite_index = spr_player3_slipbanan1
+	image_index = image_number - 1
+	image_speed = 0
+	door = "NONE"
+	xscale = 1
+	state = scr_player_beakerintro
+	grounded = false
+	hsp = 0
+	vsp = -2
+	if instance_exists(obj_titlecard)
+		instance_destroy(obj_titlecard)
+	if instance_exists(obj_fadeout)
+		instance_destroy(obj_fadeout)
+	with instance_create(0, 0, obj_fadeout)
 	{
-		if instance_exists(asset_get_index(string("obj_door{0}", _list[i])))
-		{
-			door = _list[i]
-			break
-		}
+		image_alpha = 1
+		accel = 0.05
+		fadein = 0
 	}
 }
 
+uparrow = 0
+uparrowadd = 0
 
-if state == scr_player_enterdoor
-	visible = true
-
-var doorOBJ = asset_get_index(string("obj_door{0}", door)), _hallway = -4;
-
-if (instance_exists(doorOBJ))
+var doorOBJ = asset_get_index($"obj_door{door}"), _hallway = -1
+if doorOBJ && instance_exists(doorOBJ)
 {
-    if (hallway == 2)
-    {
-        with doorOBJ _hallway = instance_place(x, y, obj_hallway_vertical)
-        if _hallway == -4 exit
-        x = _hallway.x + savedpos * _hallway.sprite_width
-        y = doorOBJ.y + hallwayDirection * 100
-		while scr_solid(x,y)
-			x = approach(x, _hallway.x + _hallway.sprite_width/2, 1)
-        vsp = savedspd;
-    }
-    else
-    {
-        if (hallway)
-            x = doorOBJ.x + 16 + (192 * hallwayDirection);
-        else
-            x = doorOBJ.x + 16;
-        y = doorOBJ.y - 14;
-    }
+	if hallway == 2
+	{
+		with doorOBJ
+			_hallway = instance_place(x, y, obj_hallway_vertical)
+		if _hallway
+		{
+			x = _hallway.x + savedpos * _hallway.sprite_width
+			y = doorOBJ.y + hallwayDirection * 100
+			while scr_solid(x,y)
+				x = approach(x, _hallway.x + _hallway.sprite_width/2, 1)
+			vsp = savedspd
+		}
+	}
+	else
+	{
+		x = doorOBJ.x + 16 + (hallway ? (192 * hallwayDirection) : 0)
+		y = doorOBJ.y - 14
+	}
 }
-
-if (place_meeting(x, y + 4, obj_ballofbeer) || place_meeting(x, y - 16, obj_ballofbeer))
-{
-    hallway = false;
-    state = scr_player_crouch;
-}
-
-if door == "BACKTOHUB"
+else if door == "BACKTOHUB"
 {
 	x = backtohubX
 	y = backtohubY
@@ -57,12 +56,14 @@ if door == "BACKTOHUB"
     image_index = 0;
     sprite_index = sprites.walkfront;
 }
-
-if (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_exitgate) || place_meeting(x, y, obj_magicianDoor) || place_meeting(x, y, obj_levelgate) || (place_meeting(x, y, obj_keydoor) && state == scr_player_enterdoor && !instance_exists(obj_backtohub)))
+if sprite_index == spr_player_downbox || sprite_index == spr_player_upbox
+	state = scr_player_normal
+else if (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_exitgate) || place_meeting(x, y, obj_magicianDoor) || place_meeting(x, y, obj_levelgate) || (place_meeting(x, y, obj_keydoor) && state == scr_player_enterdoor && !instance_exists(obj_backtohub)))
 {
-    state = scr_player_walkfront;
-    image_index = 0;
-    sprite_index = sprites.walkfront;
+    state = scr_player_walkfront
+	visible = true
+    image_index = 0
+    sprite_index = sprites.walkfront
 	if place_meeting(x, y, obj_exitgate)
 	{
 		obj_handlerCamera.hud_alpha = 0
@@ -102,18 +103,5 @@ with (obj_hipnatuese)
 
 roomstartX = x;
 roomstartY = y;
-
-if _secreterror
-{
-	state = -4
-	sprite_index = sprites.groundpound;
-	with instance_create(x, y, obj_secretStart)
-	{
-		cutscene = true;
-	    sprite_index = spr_dudle_open;
-	    image_index = 0;
-	    FMODevent_oneshot("event:/Sfx/General/Level/Progression/exitpage", x, y);
-	}
-}
 
 event_user(1)

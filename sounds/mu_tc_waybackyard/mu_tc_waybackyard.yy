@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":1,
   "conversionMode":0,
-  "duration":4.9690704,
+  "duration":4.698889,
   "exportDir":"",
   "name":"mu_tc_waybackyard",
   "parent":{

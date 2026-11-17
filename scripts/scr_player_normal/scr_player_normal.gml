@@ -1,6 +1,10 @@
 function scr_player_normal()
 {
-	var _idle = global.level == "milkshake" ? spr_player_idlemilkshake : sprites.idle
+	var _idle = sprites.idle
+	if global.level == "milkshake"
+		_idle = spr_player_idlemilkshake
+	if sprite_index != _idle && sprite_index == sprites.idle
+		sprite_index = _idle
 	
     hsp = movespeed * xscale;
     var move = pky_right + pky_left;

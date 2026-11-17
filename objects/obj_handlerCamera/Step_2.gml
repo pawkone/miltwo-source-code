@@ -77,7 +77,6 @@ var _pad = [
 	obj_levelgate, obj_uncleflo, obj_floorgate, obj_dresser, //hub shyte
 	obj_secret, obj_secretStart, //playground secrets shyte
 	obj_collect, obj_bigcollect, obj_collect_escape, obj_bigcollect_escape, //coalet shyte
-	obj_destructibles, obj_metalblock, //destruction ables shyte
 	obj_baddie //those bad bitches shyte
 ]
 for (var i = 0; i < array_length(_pad); i++)
@@ -85,7 +84,7 @@ for (var i = 0; i < array_length(_pad); i++)
 	instance_activate_object(_pad[i])
 	with _pad[i]
 	{
-		if point_distance(_xc,_yc,x,y) > _si
+		if (_pad[i] == obj_baddie && instance_exists(spawnerId) && !spawnerId.activated) || point_distance(_xc,_yc,x,y) > _si
 			instance_deactivate_object(id)
 	}
 }

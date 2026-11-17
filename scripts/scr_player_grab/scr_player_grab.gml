@@ -21,11 +21,8 @@ function scr_player_grab()
         }
     };
 	
-	if character == chars.bacon_twist && buffers.twistedair < 16
-	{
+	if character == chars.bacon_twist && sprite_index == sprites.airgrabstart
 		vsp = 0
-		buffers.twistedair++
-	}
     
     hsp = movespeed * xscale;
     

@@ -1,4 +1,4 @@
-sprite_index = spr_lalala_lava_ingame
+sprite_index = spr_ttwob_lavaVisual
 image_yscale /= 2
 image_speed = 0.35
 

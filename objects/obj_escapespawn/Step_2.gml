@@ -4,13 +4,7 @@ if (point_distance(x, 0, obj_player.x, 0) <= 550 && point_distance(0, y, 0, obj_
     image_index = 0;
 }
 
-if !visible
-{
-	if instance_exists(content)
-		content.visible = false
-    instance_deactivate_object(content);
-}
-else
+if visible
 {
     if (activated == false && floor(image_index) == 7)
     {

@@ -11,6 +11,6 @@ with obj_player
 		if !audio_is_playing(sfx_player_bt_scream)
 			scr_soundeffect(sfx_player_bt_scream,random_range(0.85,1.15));	
 			
-		scr_soundeffect(sfx_fireass,random_range(0.85,1.15))
+		scr_soundeffect(sfx_ttwob_fireass,random_range(0.85,1.15))
 	}	
 }
