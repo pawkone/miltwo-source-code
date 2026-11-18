@@ -22,10 +22,16 @@ if (distance_to_object(obj_player) < 16)
         sprite_index = spr_talk;
         image_index = 0;
         
-        if (!FMODevent_isplaying(snd_voice))
-            fmod_studio_event_instance_start(snd_voice);
-        
-        FMODSet3dPos(snd_voice, x, y);
+		if is_string(snd_voicestr)
+		{
+			if snd_voice < 0
+				snd_voice = FMODcreate_event(snd_voicestr)
+		    if !FMODevent_isplaying(snd_voice)
+		        fmod_studio_event_instance_start(snd_voice)
+		    FMODSet3dPos(snd_voice, x, y)
+		}
+		else if audio_exists(snd_voicestr) && !(audio_exists(snd_voice) && audio_is_playing(snd_voice))
+			snd_voice = audio_play_sound(snd_voicestr, 1, false, 1, 0, random_range(0.95,1.05))
     }
     
     switch (borderpart)
@@ -40,7 +46,7 @@ if (distance_to_object(obj_player) < 16)
             break;
         
         case 1:
-            borderY = floor(lerp(borderY, 32 + wave(-2, 2, 8, 0), 0.15));
+            borderY = lerp(borderY, 37-abs(sin((current_time/1000)*pi))*5, 0.15);
             break;
     }
 }
@@ -48,8 +54,14 @@ else
 {
     borderpart = 0;
     borderVsp = 0;
-    borderY = approach(borderY, borderTargetpos, 5);
+    borderY = approach(borderY, -160, 5);
     sprite_index = spr_idle;
 }
 if borderY > -140.16 * borderscaleYmult
-	borderX = floor(32 + wave(-2, 2, 4, 0));
+{
+	var _t = current_time/2000
+	if _t mod 2 < 1
+		borderX = 32 + abs(sin(_t*2*pi))*7
+	else
+		borderX = 32 - abs(sin(_t*2*pi))*7
+}

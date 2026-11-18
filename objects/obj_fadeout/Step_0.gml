@@ -3,7 +3,10 @@ if fadein
     image_alpha += accel
     if image_alpha >= 1
     {
-        room_goto(targetRoom)
+		if room_exists(targetRoom)
+			room_goto(targetRoom)
+		else
+			instance_destroy()
         fadein = false
     }
 }
