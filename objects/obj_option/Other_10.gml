@@ -59,6 +59,11 @@ miltwocredits_credits =
 		tilespr_beach
 	],
 	[
+		"Snico_The_Stickhog",
+		"volunteered artist",
+		spr_skatenic_crusher
+	],
+	[
 		"Enno334_123",
 		"volunteered artist",
 		spr_skatenic_treasureget, spr_milton_downbox, spr_tv_comboM,

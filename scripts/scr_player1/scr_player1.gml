@@ -154,27 +154,6 @@ function scr_player_dreamcrusher()
         if animation_end()
             image_index = 8
     }
-	
-	if character == chars.skatenic
-	{
-		if slapBuffer > 0
-		{
-		    slapBuffer = false
-		    state = scr_player_mach2
-			movespeed = 13
-			scale = 1.7
-			image_speed = 0.5
-		    image_index = 0
-		    sprite_index = spr_skatenic_wallclimbcancel
-			vsp = -7
-			jumpstop = true
-			flash = true
-			if sign(move) != 0
-				xscale = sign(move)
-			else if sign(hsp) != 0
-				xscale = sign(hsp)
-		}
-	}
  
     buffers.afterimageBlur = approach(buffers.afterimageBlur, 0, 1);
     

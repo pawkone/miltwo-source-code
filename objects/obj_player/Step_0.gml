@@ -66,7 +66,7 @@ else if character == chars.bacon_crash
 else
 	angle = 0
 
-instakill = skatenic_is_tornado() || state == scr_player_dreamcrusher || state == scr_player_water || sprite_index == spr_milton_dive || state == scr_player_slip || state == scr_player_mach3 || state == scr_player_skateboard || state == scr_player_skateboardwall || state == scr_player_skateboardramp || state == scr_player_skateboardmove || state == scr_player_hammerattack || (state == scr_player_machturn && sprite_index == sprites.mach3turn) || state == scr_player_superjump || state == scr_player_uppercut || state == scr_player_groundpound || state == scr_player_groundpoundstart || state == scr_player_buzzsaw;
+instakill = skatenic_is_tornado() || state == scr_player_dreamcrusher || state == scr_player_skatenicCrusher || state == scr_player_water || sprite_index == spr_milton_dive || state == scr_player_slip || state == scr_player_mach3 || state == scr_player_skateboard || state == scr_player_skateboardwall || state == scr_player_skateboardramp || state == scr_player_skateboardmove || state == scr_player_hammerattack || (state == scr_player_machturn && sprite_index == sprites.mach3turn) || state == scr_player_superjump || state == scr_player_uppercut || state == scr_player_groundpound || state == scr_player_groundpoundstart || state == scr_player_buzzsaw;
 
 if (hitstun.is == false)
 {
@@ -150,6 +150,7 @@ if (hitstun.is == false)
 	                sprite_index = spr_player1_umbrellaStart;
 	                image_index = 0;
 	            }
+				break
 	    }
 	}
 	if character == chars.skatenic
@@ -163,13 +164,17 @@ if (hitstun.is == false)
 	        case scr_player_climbwall:
 	            if (pky_up && pky_jump2 && !grounded)
 	            {
-	                state = scr_player_dreamcrusher;
+					if sign(hsp) != 0
+						xscale = sign(hsp)
+					movespeed = abs(hsp)
+	                state = scr_player_skatenicCrusher;
 	                vsp = -17;
 					plrsnds_play(sfx.jump, x, y);
 					FMODevent_oneshot("event:/Sfx/Player/slip", x, y);
 	                sprite_index = spr_player1_umbrellaStart;
 	                image_index = 0;
 	            }
+				break
 	    }
 	}
 	
