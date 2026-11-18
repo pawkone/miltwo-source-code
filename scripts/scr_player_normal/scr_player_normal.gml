@@ -20,6 +20,19 @@ function scr_player_normal()
         
         buffers.step--;
     }
+	
+	if character == chars.skatenic
+	{
+		if jumpBuffer > 0 && ((((pky_up && global.dirGround) || (pky_superjump && !global.dirGround)) && grounded) && !place_meeting(x, y - 32, obj_solid))
+	    {
+			jumpBuffer = 0
+	        movespeed = 0;
+	        image_index = 0;
+	        sprite_index = sprites.superjumpprepstart;
+	        state = scr_player_superjumpprep;
+	        exit;
+	    }
+	}
     
     if (move != 0)
     {

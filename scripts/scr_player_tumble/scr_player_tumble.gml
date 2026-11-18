@@ -190,6 +190,7 @@ function scr_player_tumble()
 			grounded = false
 			scale = 1.35
             state = scr_player_climbwall;
+			plrsnds_play(sfx_skatenic_bounce,x,y)
             sprite_index = sprites.wallclimb;
 		}
 		else

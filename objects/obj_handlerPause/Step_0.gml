@@ -35,7 +35,7 @@ else if (active && !instance_exists(obj_option) && buffer == 0)
     
     if (move != 0)
 	{
-		audio_play_sound(sfx_step, 1, false, 1, 0, random_range(0.95,1.05))
+		scr_soundeffect(sfx_step, random_range(0.95,1.05))
         selected += move;
 	}
     

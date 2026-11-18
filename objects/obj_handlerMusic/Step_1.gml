@@ -64,6 +64,8 @@ else
 				[chars.bacon_dream, mu_bacondreamlap2],
 				[chars.bacon_redem, mu_baconredemlap2],
 				[chars.bacon_twist, mu_bacontwistlap2],
+				
+				[chars.skatenic, mu_skateniclap2],
 			]
 			var _not = true
 			if instance_exists(obj_player)
@@ -99,6 +101,8 @@ else
 				[chars.bacon_dream, mu_bacondreamlap1],
 				[chars.bacon_redem, mu_baconredemlap1],
 				[chars.bacon_twist, mu_bacontwistlap1],
+				
+				[chars.skatenic, mu_skateniclap1],
 			]
 			if instance_exists(obj_player)
 			{

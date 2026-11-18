@@ -211,6 +211,7 @@ function scr_player_mach2()
 				grounded = false
 				squashX = 1.5
 				squashY = 0.5
+				plrsnds_play(sfx_skatenic_bounce,x,y)
 			}
 			else
 				verticalMovespeed = movespeed+(character == chars.milton*3);

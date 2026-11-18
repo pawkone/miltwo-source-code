@@ -132,7 +132,7 @@ function plrsnds_event(condition, event, state = -1)
 					if j != state
 						audio_stop_sound(_snd[j])
 					else if !audio_is_playing(global.plrsnds_gmsndact[? event][j])
-						global.plrsnds_gmsndact[? event][j] = scr_soundeffect(_snd[j])
+						global.plrsnds_gmsndact[? event][j] = scr_soundeffect(_snd[j], 1, true)
 					audio_sound_gain(global.plrsnds_gmsndact[? event][j], global.SfxVolume * 1.5 * audio_sound_get_gain(_snd[state]), 0)
 				}
 		        //FMODSet3dPos(event, x, y);
@@ -150,7 +150,7 @@ function plrsnds_event(condition, event, state = -1)
 		    if condition
 		    {
 				if !audio_is_playing(global.plrsnds_gmsndact[? event])
-					global.plrsnds_gmsndact[? event] = scr_soundeffect(_snd)
+					global.plrsnds_gmsndact[? event] = scr_soundeffect(_snd, 1, true)
 				audio_sound_gain(global.plrsnds_gmsndact[? event], global.SfxVolume * 3 * audio_sound_get_gain(_snd), 0)
 		    }
 		    else if audio_is_playing(global.plrsnds_gmsndact[? event])
@@ -161,26 +161,29 @@ function plrsnds_event(condition, event, state = -1)
 
 function playerSounds()
 {
+	var tor = skatenic_is_tornado()
 	var s = 0
-	plrsnds_event(state == scr_player_tumble, sfx.roll)
-    
-	s = 0    
-	if (abs(movespeed) > 0) s = abs(movespeed) / 12;
-	plrsnds_event(state == scr_player_hammerattack, sfx.hammer, s)
-    
+	if (state == scr_player_mach2 && sprite_index != sprites.mach1) s = 1
+	else if (state == scr_player_mach3 && sprite_index != sprites.crazyrun) s = 2
+	else if (state == scr_player_mach3 && sprite_index == sprites.crazyrun) s = 3
+	plrsnds_event(state == scr_player_mach2 || state == scr_player_mach3 || (character != chars.skatenic && state == scr_player_climbwall), sfx.mach, s)
+	plrsnds_event(!tor && state == scr_player_tumble, sfx.roll)
 	plrsnds_event(state == scr_player_groundpoundstart || state == scr_player_groundpound, sfx.groundpound)
-	plrsnds_event(sprite_index == spr_milton_dive, sfx.hammerair)
+	plrsnds_event(state == scr_player_grab, sfx.grab)
+
 	plrsnds_event(state == scr_player_superjumpprep, sfx.sjump)
 	plrsnds_event(state == scr_player_skateboardmove, sfx.skateboard)
 	plrsnds_event(state == scr_player_skateboardAim, sfx.skateaim)
 	
-	plrsnds_event(state == scr_player_grab, sfx.grab)
-	
+	// v ERAS
 	plrsnds_event((state == scr_player_twistedBuzzsaw || state == scr_player_twistedWallbounce) && character == chars.bacon_twist, "sfx_player_bt_ballspin")
-	
+	// v MILTON
 	s = 0
-	if (state == scr_player_mach2 && sprite_index != sprites.mach1) s = 1
-	else if (state == scr_player_mach3 && sprite_index != sprites.crazyrun) s = 2
-	else if (state == scr_player_mach3 && sprite_index == sprites.crazyrun) s = 3
-	plrsnds_event(state == scr_player_mach2 || state == scr_player_mach3 || state == scr_player_climbwall, sfx.mach, s)
+	if (abs(movespeed) > 0) s = abs(movespeed) / 12;
+	plrsnds_event(state == scr_player_hammerattack, sfx.hammer, s)
+	plrsnds_event(sprite_index == spr_milton_dive, sfx.hammerair)
+	// v SKATENIC
+	plrsnds_event(grounded && tor, sfx_skatenic_drillground)
+	plrsnds_event(!grounded && tor, sfx_skatenic_drillair)
+	plrsnds_event(sprite_index == spr_skatenic_wallclimbcancel, sfx_skatenic_wind)
 }

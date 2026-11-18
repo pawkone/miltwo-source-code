@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_skatenicVoice_hurt3",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.9668254,
+  "exportDir":"",
+  "name":"sfx_skatenicVoice_hurt3",
+  "parent":{
+    "name":"skatenic",
+    "path":"folders/Sounds/SFX/Charactes/skatenic.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_skatenicVoice_hurt3.ogg",
+  "volume":1.0,
+}

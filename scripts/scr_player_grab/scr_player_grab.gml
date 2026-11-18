@@ -122,6 +122,7 @@ function scr_player_grab()
 				grounded = false
 				squashX = 1.5
 				squashY = 0.5
+				plrsnds_play(sfx_skatenic_bounce,x,y)
 			}
 			else
 				verticalMovespeed = movespeed;

@@ -11,6 +11,7 @@ var _arr = [
 	[mu_frontyard, room == frontyard_1],
 	
 	[mu_yardMilton, _char == chars.milton && room == yard_1],
+	[mu_yardSkatenic, _char == chars.skatenic && room == yard_1],
 	[mu_crashoutcity, _char == chars.bacon_crash && room == yard_1],
 	[mu_rockbottom, _char == chars.bacon_dream && room == yard_1],
 	[mu_beaker, _char == chars.bacon_twist && room == yard_1],

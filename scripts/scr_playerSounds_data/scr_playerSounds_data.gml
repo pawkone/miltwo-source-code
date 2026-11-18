@@ -88,8 +88,10 @@ function scr_playerSounds_data()
 			sfx.machend = sfx_skatenic_machend
 			sfx.mach = "sfx_skatenic_mach"
 			sfx.grab = "sfx_skatenic_grab"
-			sfx.voice_hurt = sfx_skatenic_hurt
-			sfx.gasp = -4
+			sfx.ok = [sfx_skatenicVoice_idle1, sfx_skatenicVoice_idle2, sfx_skatenicVoice_idle3]
+			sfx.laugh = [sfx_skatenicVoice_happy1, sfx_skatenicVoice_happy2]
+			sfx.gasp = sfx_skatenicVoice_hurt1
+			sfx.voice_hurt = [sfx_skatenicVoice_hurt1, sfx_skatenicVoice_hurt2, sfx_skatenicVoice_hurt3]
 		break
 	}
 }

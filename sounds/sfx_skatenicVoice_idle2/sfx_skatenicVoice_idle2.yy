@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfx_skatenic_drill",
+  "%Name":"sfx_skatenicVoice_idle2",
   "audioGroupId":{
     "name":"audioGroupSfx",
     "path":"audiogroups/audioGroupSfx",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.9927891,
+  "duration":1.5900453,
   "exportDir":"",
-  "name":"sfx_skatenic_drill",
+  "name":"sfx_skatenicVoice_idle2",
   "parent":{
     "name":"skatenic",
     "path":"folders/Sounds/SFX/Charactes/skatenic.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfx_skatenic_drill.ogg",
+  "soundFile":"sfx_skatenicVoice_idle2.ogg",
   "volume":1.0,
 }

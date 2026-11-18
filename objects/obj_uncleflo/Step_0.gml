@@ -1,12 +1,9 @@
 if (global.escapeActive)
 {
     text = "[wave]BRO YOU GOTTA LEAVE BRO!";
-    
     if (place_meeting(x, y, obj_player))
     {
         instance_destroy();
-        surface_free(surf);
-        
         with (instance_create(x, y, obj_baddiedead))
         {
             image_speed = 0;
@@ -31,7 +28,7 @@ if (distance_to_object(obj_player) < 16)
 		    FMODSet3dPos(snd_voice, x, y)
 		}
 		else if audio_exists(snd_voicestr) && !(audio_exists(snd_voice) && audio_is_playing(snd_voice))
-			snd_voice = audio_play_sound(snd_voicestr, 1, false, 1, 0, random_range(0.95,1.05))
+			snd_voice = scr_soundeffect(snd_voicestr, random_range(0.95,1.05))
     }
     
     switch (borderpart)

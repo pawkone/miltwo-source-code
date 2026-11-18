@@ -34,7 +34,7 @@ function scr_player_walkfront()
         if (sprite_index == spr_player_walkfrontfake)
         {
 			image_index = 0;
-			audio_play_sound(sfx_step, 1, false, , , 0.7)
+			scr_soundeffect(sfx_step, 0.7)
 			sprite_index = spr_player_gateslamfake
         }
         else if (sprite_index == sprites.walkfront)
