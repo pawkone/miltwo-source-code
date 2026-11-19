@@ -1,8 +1,4 @@
 if global.hide_hud exit
-if is_callable(hud_scr_draw)
-	hud_scr_draw()
-if is_callable(roomname_scr_step)
-	roomname_scr_step()
 saveiconTimer = approach(saveiconTimer,0,1)
 saveiconAlpha = approach(saveiconAlpha, saveiconTimer > 0, 0.1)
 if saveiconAlpha > 0
@@ -14,3 +10,7 @@ if saveiconAlpha > 0
     draw_sprite(spr_littlesaltdance, saveiconIndex, 886, 466)
     draw_set_alpha(1)
 }
+
+if room == timesup_room exit
+if is_callable(hud_scr_draw) hud_scr_draw()
+if is_callable(roomname_scr_step) roomname_scr_step()

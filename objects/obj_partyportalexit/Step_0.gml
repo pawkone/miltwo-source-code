@@ -1,24 +1,20 @@
-if (cutscene)
+if cutscene
 {
-    visible = true;
-    
-    if (animation_end())
-        instance_destroy();
-    
-    if (obj_player.state == -4)
+    visible = true
+    if animation_end()
+        instance_destroy()
+    if obj_player.state == -4
     {
-        obj_player.xscaleMulti = 0;
-        obj_player.yscaleMulti = 0;
-        
-        with (obj_player)
-        {
-            x = other.xstart;
-            y = other.ystart;
+		with (obj_player)
+		{
+	        xscaleMulti = 0
+	        yscaleMulti = 0
+            x = other.xstart
+            y = other.ystart
         }
-        
-        if (floor(image_index) == 7)
+        if floor(image_index) == 7
         {
-            instance_create(x, y, obj_lap2visual);
+			FMODevent_oneshot("event:/Sfx/General/lap")
 			if global.escapeLap >= 2
 			{
 				scr_transfotip(lang_get_phrase("tip_lap3"))
@@ -37,15 +33,18 @@ if (cutscene)
 				global.lap3checkpoint.toppins = global.toppins
 			}
 			else
+			{
+				instance_create(x, y, obj_lap2visual)
 				global.escapeLap = 2
-            with (obj_player)
+			}
+            with obj_player
             {
-                jumpstop = true;
-                vsp = 5;
-                sprite_index = sprites.fall;
-                state = scr_player_jump;
-                xscaleMulti = 1;
-                yscaleMulti = 1;
+                jumpstop = true
+                vsp = 5
+                sprite_index = sprites.fall
+                state = scr_player_jump
+                xscaleMulti = 1
+                yscaleMulti = 1
             }
         }
     }

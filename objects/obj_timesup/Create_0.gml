@@ -10,8 +10,13 @@ depth = 15;
 
 global.escapeActive = 0
 global.escapeTimer = 0
-instance_destroy(obj_hipnatuese)
+instance_destroy(obj_transfotip)
+instance_destroy(obj_goodmourning)
 instance_destroy(obj_lap2visual)
+instance_destroy(obj_comboTitle)
+instance_destroy(obj_hipnatuese)
+instance_destroy(obj_hipnatueseDead)
+instance_destroy(obj_whiteflash)
 
 with (obj_handlerMusic)
     stop_music();

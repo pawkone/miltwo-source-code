@@ -1,10 +1,7 @@
-fadein = true;
-alpha = 0;
-alarm[0] = 220;
-text = "";
-depth = -500;
-variables = [];
-textY = 540 - 64;
-
-if (global.escapeActive)
-    textY = 540 - 150;
+depth = -500
+buf = 220
+image_alpha = 0
+text = ""
+y = 540 - 64
+if global.escapeActive
+    y = 540 - 150

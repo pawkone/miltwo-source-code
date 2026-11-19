@@ -128,6 +128,7 @@ function scr_Prank()
 
 function generalReset()
 {
+	instance_destroy(obj_goodmourning)
 	instance_destroy(obj_lap2visual)
 	instance_destroy(obj_comboTitle)
 	instance_destroy(obj_hipnatuese)
@@ -146,7 +147,6 @@ function generalReset()
 	global.treasure = false
 	global.resetRoom = -4
 	global.level_timer = 0
-	global.save_timer = 0
 	global.level = -4
 	global.key = false
 	with (obj_player)
