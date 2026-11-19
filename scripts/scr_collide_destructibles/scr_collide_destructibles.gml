@@ -19,6 +19,7 @@ function scr_collide_destructibles()
 		scr_collide_destructibles_helper(x + xscale + hsp, y + !grounded * vsp)
 	else if (
 		state == scr_player_dreamcrusher
+		|| state == scr_player_skatenicCrusher
 		|| state == scr_player_tumble
 		|| state == scr_player_dreamspin
 		|| state == scr_player_dreambounce

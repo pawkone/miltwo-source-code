@@ -1898,6 +1898,7 @@
     {"name":"spr_skatenic_move","order":20,"path":"sprites/spr_skatenic_move/spr_skatenic_move.yy",},
     {"name":"spr_skatenic_rollgetup","order":21,"path":"sprites/spr_skatenic_rollgetup/spr_skatenic_rollgetup.yy",},
     {"name":"spr_skatenic_rolling","order":22,"path":"sprites/spr_skatenic_rolling/spr_skatenic_rolling.yy",},
+    {"name":"spr_skatenic_rollstart","order":36,"path":"sprites/spr_skatenic_rollstart/spr_skatenic_rollstart.yy",},
     {"name":"spr_skatenic_superjump","order":28,"path":"sprites/spr_skatenic_superjump/spr_skatenic_superjump.yy",},
     {"name":"spr_skatenic_superjumpprep","order":31,"path":"sprites/spr_skatenic_superjumpprep/spr_skatenic_superjumpprep.yy",},
     {"name":"spr_skatenic_superjumpprepstart","order":30,"path":"sprites/spr_skatenic_superjumpprepstart/spr_skatenic_superjumpprepstart.yy",},
