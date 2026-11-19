@@ -21,6 +21,7 @@ if (cutscene)
             instance_create(x, y, obj_lap2visual);
 			if global.escapeLap >= 2
 			{
+				scr_transfotip(lang_get_phrase("tip_lap3"))
 				global.escapeLap = 3
 				global.escapeTimer = 0
 				ds_list_clear(global.lap3checkpoint.saveroom)
