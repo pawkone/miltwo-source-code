@@ -271,7 +271,6 @@ function doGrab()
 	                xscale = move;
             
 	            vsp = 0;
-	            buffers.hammer = 25;
 	            slapBuffer = false;
 	            state = scr_player_hammerattack;
             

@@ -37,6 +37,7 @@ function scr_player_hammerattack()
             movespeed = 12;
         
         create_particleStatic(spr_superdashcloud, x, y, xscale, 1);
+		exit
     }
     
     if (pky_down2 && !grounded)
@@ -48,6 +49,7 @@ function scr_player_hammerattack()
         
         if (movespeed < 12)
             movespeed = 12;
+		exit
     }
 	
     if (jumpBuffer && coyote_time)
@@ -59,19 +61,17 @@ function scr_player_hammerattack()
         vsp = -12;
         jumpstop = false;
         plrsnds_play(sfx.jump, x, y);
+		exit
     }
     
-    if (buffers.hammer > 0)
-    {
-		buffers.hammer--
-		if !pky_grab
-		{
-	        flash = true;
-	        state = scr_player_mach3;
-	        image_index = 0;
-	        sprite_index = sprites.mach3;
-		}
-    }
+	if !pky_grab
+	{
+	    flash = true;
+	    state = scr_player_mach3;
+	    image_index = 0;
+	    sprite_index = sprites.mach3;
+		exit
+	}
     
     if (animation_end() && sprite_index == spr_milton_hammerspin_prep)
     {
