@@ -43,8 +43,7 @@ enum chars
 	preoutman,
 	
 	//misc / joke
-	//bacon5,
-	//juan,
+	//bacon5, --btw your never getting him so pack your bags for bacon5 :cry:
 	soda,
 }
 var _ex = [
@@ -61,7 +60,6 @@ var _ex = [
 	["preoutman",	"POM",	"Preoutman"],
 	
 	//["bacon5",		"B5",	"Bacon5"],
-	//["pink2",		"JUAN",	"Juan"],
 	["playersoda",	"SODA",	"Soda"],
 ];
 

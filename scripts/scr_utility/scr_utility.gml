@@ -16,12 +16,11 @@ wsbMOmInfo.dir = game_save_id + "ohMiltu/"
 wsbMOmInfo.opt = wsbMOmInfo.dir + "settings.xda"
 
 wsbMOmInfo.options = [
+	"Modded;betterwaybackyard;0",
+	"Modded;spammabletaunt;0",
 	"Modded;machdoublejump;0",
 	"Modded;phototaunt;0",
-	"Modded;spammabletaunt;0",
 	"Modded;oldsecreteye;0",
-	"Modded;betterwaybackyard;0",
-	"Modded;sloperotation;0",
 ]
 
 xdata_open(wsbMOmInfo.opt)

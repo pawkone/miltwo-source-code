@@ -407,25 +407,6 @@ function playerUtil_realSpr()
 				imgReal = (current_time/1000)*24
 			}
 		}
-		/*
-		else if character == chars.juan
-		{
-			var sprReal = grounded ? spr_pink2_idle : (vsp > 0 ? spr_pink2_idledown : spr_pink2_idleup)
-			if abs(hsp) > 12
-				sprReal = grounded ? spr_pink2_move2ground : (vsp > 0 ? spr_pink2_move2down : spr_pink2_move2up)
-			else if abs(hsp) > 0
-				sprReal = grounded ? spr_pink2_move1ground : (vsp > 0 ? spr_pink2_move1down : spr_pink2_move1up)
-			if state == scr_player_buzzsaw
-				sprReal = spr_pink2_move2down
-			
-			var _num = max(sprite_get_number(sprReal)-1,1)
-			pink2timer += 0.25 + abs(hsp)/40
-			if pink2timer > _num
-				pink2timer = pink2timer mod _num
-			
-			imgReal = pink2timer
-		}
-		*/
 		return [sprReal, imgReal]
 	}
 }

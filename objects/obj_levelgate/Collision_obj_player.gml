@@ -43,7 +43,7 @@ with (_plr)
 			with obj_onlineHandler
 			{
 				lastestMessageNum = wrap(lastestMessageNum+1, 123, 233)
-				lastestMessage = " went to " + levelgetname(global.level)
+				lastestMessage = string(lang_get_phrase("online_level_enter"),levelgetname(global.level))
 			}
 	        if (global.level == "tutorial")
 				scr_fadeout()

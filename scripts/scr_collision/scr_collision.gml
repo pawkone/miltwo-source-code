@@ -48,8 +48,7 @@ function scr_collision()
         }
     }
     grounded = scr_solid(x, y + 1)
-    if vsp < 20
-        vsp += !place_meeting(x, y, obj_waterNew) ? grav : (grav / 3);
+    vsp += !place_meeting(x, y, obj_waterNew) ? grav : (grav / 3);
 }
 
 function scr_slope(arg0, arg1)

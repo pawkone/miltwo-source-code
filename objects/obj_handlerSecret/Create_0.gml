@@ -57,6 +57,5 @@ if global.level == "dudles"
 else if (room != hotel_soundtest && room != hotel_soundtestentrance)
 {
 	global.secretCount++
-	text_clear(lang_get_phrase("secret_get"))
-	scr_transfotip(lang_get_phrase("secret_get"))
+	scr_transfotip(string(lang_get_phrase("tip_get_secret"), global.secretCount))
 }

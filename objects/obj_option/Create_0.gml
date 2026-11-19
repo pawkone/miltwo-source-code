@@ -164,10 +164,6 @@ add_option_press(category, "option_video", function()
 {
     goto_menu(optionstype.video);
 }, new addPause_icon(5));
-add_option_press(category, "option_game", function()
-{
-    goto_menu(optionstype.game);
-}, new addPause_icon(6));
 add_option_press(category, "option_controls", function()
 {
     goto_menu(optionstype.controls);
@@ -296,14 +292,6 @@ add_option_ext(VIDEO, optionstype.element_toggle, "option_video_hide_hud", funct
     global.hide_hud = q.val;
     q.val = global.hide_hud;
 }, global.hide_hud, 1);
-var GAME = create_menu(optionstype.game, optionstype.anchor_left, 48, function()
-{
-    goto_menu(optionstype.mainpage);
-});
-add_option_press(GAME, "option_back", function()
-{
-    goto_menu(optionstype.mainpage);
-});
 var controlsMain = create_menu(optionstype.controls, optionstype.anchor_left, 48, function()
 {
     goto_menu(optionstype.mainpage);
@@ -676,7 +664,6 @@ add_option_press(MODDED, "option_modded_menuonlinenew", function()
 */
 array_push(menus, AUDIO);
 array_push(menus, VIDEO);
-array_push(menus, GAME);
 array_push(menus, controlsMain);
 array_push(menus, controlsKeyMain);
 array_push(menus, controlsKey);
@@ -746,14 +733,6 @@ add_option_ext(MODDED_CUSTOM, optionstype.element_toggle, "option_modded_spammab
 	q.val = global.modded_spammabletaunt;
 }, global.modded_spammabletaunt, 1);
 array_push(menus, MODDED_CUSTOM);
-add_option_ext(MODDED_CUSTOM, optionstype.element_toggle, "option_modded_sloperotation", function()
-{
-	var m = menus[currentmenu];
-	var opt = m.options;
-	var q = opt[selected];
-	global.modded_sloperotation = q.val;
-	q.val = global.modded_sloperotation;
-}, global.modded_sloperotation, 1);
 array_push(menus, MODDED_CUSTOM);
 
 var CREDITS = create_menu(optionstype.credits, optionstype.anchor_credits, 48, function()

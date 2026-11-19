@@ -18,7 +18,7 @@ if (!got)
         
         fmod_studio_system_set_parameter_by_name("musicfade", 1, false);
         FMODevent_oneshot("event:/Music/treasure", x, y);
-        scr_transfotip(lang_get_phrase("treasure_get"));
+        scr_transfotip(lang_get_phrase("tip_get_treasure"));
         got = true;
         ds_list_add(global.saveroom, id);
         alarm[0] = 120;

@@ -1,0 +1,30 @@
+{
+	"pause_resume": "RESUME",
+	"pause_restart": "RESTART",
+	"pause_options": "OPTIONS",
+	"pause_exit": "EXIT LEVEL",
+
+	"tip_transfo_surf": "[wave][U][D] Surf [L][R] Adjust Speed",
+	"tip_transfo_skateboard": "[wave][U][D][L][R] Aim [G] Charge [J] Jump",
+	"tip_transfo_coconutgun": "[wave][G] Shoot [J] Jump",
+
+	"tip_get_secret": "[wave]You've found {0} love letters out of 3!",
+	"tip_get_buddy": "[shake]You've set her free...",
+	"tip_get_treasure": "[wave]You got the secret treasure!",
+	"tip_get_potable": "[wave2]You got {0} Potable out of 5!",
+	"tip_get_potables": "[wave2]You got {0} Potables out of 5!",
+	"tip_get_potablesall": "[wave2]You got all Potables, 5 out of 5!",
+	"tip_get_magician": "[wave2]You got the magician, find his secret door...",
+
+	"menunew_files_controltip1": "[J]/Left Click : Hold",
+	"menunew_files_controltip2": "[G]/Right Click : Slap",
+	"menunew_files_controltip3": "[S] : Options",
+	"menunew_draw_controltip1": "[J]/Left Click : Draw",
+	"menunew_draw_controltip2": "[G]/Right Click : Erase",
+	"menunew_draw_controltip3": "[S] : Go Back",
+	"menunew_tv_controltip1": "[S] : Go Back",
+	"menunew_tv_videobulitin": "{0}/{1}",
+	"menunew_tv_videocustom": "Custom",
+	"menunew_tv_videonotsupported": "SELECTED VIDEO NOT SUPPORTED...",
+	"menunew_tv_videotip": "NO SIGNAL\n\nLEFT RIGHT : SCROLL BUILTIN VIDEOS\nJUMP : PICK CUSTOM VIDEO\nGRAB : STOP VIDEO"
+}

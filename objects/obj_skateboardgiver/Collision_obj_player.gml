@@ -9,6 +9,6 @@ if !is_transfo_all(other.state)
         sprite_index = spr_player_skate_intro;
         state = scr_player_skateboardIntro;
         movespeed = 0;
-        scr_transfotip("[wave][U][D][L][R] Aim [G] Charge [J] Jump");
+        scr_transfotip(lang_get_phrase("tip_transfo_skateboard"))
     }
 }

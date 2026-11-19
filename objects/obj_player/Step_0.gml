@@ -1,18 +1,7 @@
 if character == chars.pepperni && vsp < 0
 	grav = 1
 else
-{
 	grav = 0.5
-	if vsp >= 20
-	{
-		if state == scr_player_beakerintro
-			vsp += grav
-		else if character == chars.bacon_dream
-			vsp += grav
-		else if character == chars.bacon_twist
-			vsp += grav
-	}
-}
 
 var touchie = place_meeting(x,y,obj_dresser) ||
 place_meeting(x,y,obj_door) ||
@@ -38,19 +27,7 @@ else
 		uparrow += uparrowadd
 }
 depth = -5
-if global.modded_sloperotation
-{
-	var _angle = [], _finangle = 0
-	with obj_slope
-	{
-		if place_meeting(x,y-1,other)
-			array_push(_angle, -sign(image_xscale)*point_direction(bbox_left, bbox_top, bbox_right, bbox_bottom))
-	}
-	var _angle_len = array_length(_angle)
-	for (var i = 0; i < _angle_len; i++) _finangle += _angle[i]/_angle_len
-	angle += angle_difference(_finangle, angle) * 0.25
-}
-else if character == chars.bacon_crash
+if character == chars.bacon_crash
 {
 	if (place_meeting(x, y + 1, obj_slope))
 	{

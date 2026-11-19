@@ -17,10 +17,7 @@ miltwocredits_credits =
 		spr_titlecardShell, spr_titlecardShellTitle1, spr_player_skate_jump,
 		spr_preoutman_mach, spr_preoutman_breakdance, spr_skatenic_rollgetup,
 		spr_skatenic_mach3turnfall, spr_skatenic_mach3turn, spr_skatenic_mach2turn,
-		spr_skatenic_mach2turnfall,  spr_skatenic_mach3jump, spr_pink2_idle,
-		spr_pink2_idledown, spr_pink2_idleup, spr_pink2_move1down,
-		spr_pink2_move1ground, spr_pink2_move1up, spr_pink2_move2down,
-		spr_pink2_move2ground, spr_pink2_move2up
+		spr_skatenic_mach2turnfall,  spr_skatenic_mach3jump, spr_skatenic_rollstart
 	],
 	[
 		"Targetbuldoser",
@@ -94,7 +91,7 @@ miltwocredits_credits =
 	[
 		"Shampox_85584",
 		"volunteered artist",
-		spr_gate_crashout
+		spr_gate_crashout, spr_tv_secretS
 	],
 	[
 		"Bobbers6921",

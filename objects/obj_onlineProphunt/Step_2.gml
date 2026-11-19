@@ -10,7 +10,7 @@ instance_destroy(obj_monolithblock_sleep, false)
 instance_destroy(obj_monolithblock_wake, false)
 instance_destroy(obj_monolith, false)
 
-instance_destroy(obj_potable_cage, false)
+instance_destroy(obj_potablePickup, false)
 instance_destroy(obj_magicianPickup, false)
 
 instance_destroy(obj_secret, false)

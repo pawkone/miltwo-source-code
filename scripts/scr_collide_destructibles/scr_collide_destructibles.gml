@@ -15,6 +15,7 @@ function scr_collide_destructibles()
 		|| state == scr_player_climbwall
 		|| state == scr_player_skateboard
 		|| state = scr_player_water
+		|| state = scr_player_machslide
 	)
 		scr_collide_destructibles_helper(x + xscale + hsp, y + !grounded * vsp)
 	else if (

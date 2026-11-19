@@ -31,7 +31,8 @@ function scr_enemy_move()
     
     if (point_distance(x, 0, obj_player.x, 0) <= 320 && point_distance(0, y, 0, obj_player.y) <= 160 && (obj_player.state == scr_player_mach3 || obj_player.state == scr_player_buzzsaw))
     {
-        vsp = -5;
+		if grounded
+			vsp = -5;
         
         if (obj_player.x != x)
             xscale = sign(obj_player.x - x);
