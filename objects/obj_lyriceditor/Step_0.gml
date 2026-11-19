@@ -10,7 +10,7 @@ if keyboard_check_pressed(vk_f5)
 if keyboard_check_pressed(vk_f6)
 {
 	var _file = get_string("enter lyric file name", "")
-	var _path = "gameData/languageLookup/" + global.language + "/songs/" + _file + ".json"
+	var _path = "gameData/lang/" + global.language + "/song/" + _file + ".json"
 	try
 	{
 		var _str = loadString(_path)

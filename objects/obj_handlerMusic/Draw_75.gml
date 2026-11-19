@@ -22,7 +22,7 @@ if captions.file != _file
 	}
 	else
 	{
-		var _path = "gameData/languageLookup/" + global.language + "/songs/" + _file + ".json"
+		var _path = "gameData/lang/" + global.language + "/song/" + _file + ".json"
 		show_debug_message($"obj_handlerMusic.captions - loading {_path}")
 		try
 		{

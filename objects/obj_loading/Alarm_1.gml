@@ -2,7 +2,7 @@ randomize()
 
 alarm[0] = 1
 
-lang_init();
+lang_change()
 
 textures = texturegroup_get_textures("texturegroup_game")
 

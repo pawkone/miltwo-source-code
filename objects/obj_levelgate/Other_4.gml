@@ -2,18 +2,16 @@ while (place_meeting(x, y, obj_solid)) y--;
 while (place_meeting(x, y, obj_platform)) y--;
 
 xdata_open(global.saveFile)
-
 completed = xdata_read(level, "Rank", "NONE") != "NONE"
 collect = xdata_read(level, "Highscore", 0)
 rank = xdata_read(level, "Rank", "D")
-
 xdata_close()
 
 cancel = (level == "tutorial" || !completed)
 
 if notext exit
 
-var _t = levelgetname(level);
+var _t = lang_get_phrase($"level_{level}");
 levelname = _t
 
 _t = string_replace_all(_t, " ", "  ")

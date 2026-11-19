@@ -33,29 +33,20 @@ for (var i = 0; i < array_length(wsbMOmInfo.options); i++)
 	variable_global_set(string("{0}_{1}", string_lower(_e[0]), _e[1]), xdata_read(_e[0], _e[1], _e[2]))
 }
 
-window_enable_borderless_fullscreen(true)
+global.MasterVolume = xdata_read("General", "Master", 1)
+global.MusicVolume = xdata_read("General", "Music", 1)
+global.SfxVolume = xdata_read("General", "Sfx", 0.8)
+global.Fullscreen = xdata_read("General", "Fullscreen", 0)
+window_enable_borderless_fullscreen(global.Fullscreen == 2)
+window_set_fullscreen(global.Fullscreen >= 1)
 
-global.MasterVolume = xdata_read("General", "Master", 1);
-global.MusicVolume = xdata_read("General", "Music", 1);
-global.SfxVolume = xdata_read("General", "Sfx", 0.8);
-global.Fullscreen = xdata_read("General", "Fullscreen", 0);
-switch (global.Fullscreen)
-{
-    case 1:
-        window_set_fullscreen(true);
-        break;
-    case 2:
-        window_enable_borderless_fullscreen(true);
-        window_set_fullscreen(true);
-        break;
-}
-global.vsync = xdata_read("General", "Vsync", false);
-global.hide_hud = xdata_read("Visual", "showHud", false);
-global.unfocus_mute = xdata_read("General", "UnfocusMute", true);
-global.dirSuper = xdata_read("General", "dirSuper", true);
-global.dirGround = xdata_read("General", "dirGround", true);
-global.windowSize = xdata_read("General", "Windowsize", 1);
-global.texFilter = xdata_read("General", "texFilter", false);
+global.vsync = xdata_read("General", "Vsync", false)
+global.hide_hud = xdata_read("Visual", "showHud", false)
+global.unfocus_mute = xdata_read("General", "UnfocusMute", true)
+global.dirSuper = xdata_read("General", "dirSuper", true)
+global.dirGround = xdata_read("General", "dirGround", true)
+global.windowSize = xdata_read("General", "Windowsize", 1)
+global.texFilter = xdata_read("General", "texFilter", false)
 display_reset(0, global.vsync)
 gpu_set_tex_filter(global.texFilter)
 var res = [[480, 270], [960, 540], [1024, 576], [1280, 720], [1600, 900], [1920, 1080]]
@@ -87,15 +78,16 @@ function create_smalltext(arg0, arg1 = x, arg2 = y){instance_create(arg1, arg2, 
 
 function loadString(arg0)
 {
-	if file_exists(arg0)
-	{
-	    var _buff = buffer_load(arg0)
-	    var _str = buffer_read(_buff, buffer_string)
-	    buffer_delete(_buff)
-	    return _str
-	}
-	else
-		return ""
+    var _buff = buffer_load(arg0)
+    if _buff < 0
+    {
+        show_debug_message($"loadString FAILED: {arg0}")
+        return ""
+    }
+    var _str = buffer_read(_buff, buffer_string)
+	if _buff >= 0
+		buffer_delete(_buff)
+    return _str
 }
 
 function scr_fadeout(_accel = 0.1)
@@ -120,31 +112,6 @@ function scr_fadeout(_accel = 0.1)
 		return true
 	}
 	return false
-}
-
-function levelgetname(_t)
-{
-	switch _t
-	{
-		case "dudles": return "(WIP) Dudles in the Notebook"
-		
-		//floor 1
-		case "tutorial": return "Overgrown Flo' Patch"
-		case "yard": return "Way Backyard?"
-		case "shell": return "Shell O' City"
-		case "beach": return "(WIP) Fruitcup Coast"
-			
-		//floor 2
-		case "castle": return "(WIP) Castle Pumpkinstein"
-		case "milkshake": return "(WIP) Milkshake Peaks"
-		
-		//extra
-		case "crashout": return "Crashout City (Crashout)"
-		case "bottom": return "Rock Bottom (Dream)"
-		case "beaker": return "Outback Yardwork (Twisted)"
-		case "frontyard": return "(WIP) Beaker's Frontyard"
-	}
-	return _t
 }
 
 function tv_anim(arg0, arg1 = 0)

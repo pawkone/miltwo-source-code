@@ -12,7 +12,7 @@ if (other.grounded && pky_up && other.state != -4 && other.state != scr_player_e
 		{
 			lastestMessageNum = wrap(lastestMessageNum+1, 123, 233)
 			var _laps = global.escapeLap > 0
-			lastestMessage = string(lang_get_phrase("online_rank_" + (_laps ? "laps" : "base")), string_lower(levelgetname(global.level)), _rankString, global.escapeLap)
+			lastestMessage = string(lang_get_phrase("online_rank_" + (_laps ? "laps" : "base")), string_lower(lang_get_phrase($"level_{global.level}")), _rankString, global.escapeLap)
 		}
 		
 		door = "NONE"
