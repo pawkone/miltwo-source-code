@@ -36,6 +36,7 @@ function scr_collide_destructibles()
 		|| state == scr_player_skateboardramp
 		|| state == scr_player_slip
 		|| state == scr_player_beakerintro
+		|| state == scr_player_burned
 	)
 		scr_collide_destructibles_helper(x + xscale + hsp, y + vsp)
 }

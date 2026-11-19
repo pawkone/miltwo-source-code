@@ -25,7 +25,7 @@ function scr_player_machturn()
         squashY = 0.8;
         
         if (!grounded)
-            plrsnds_play(sfx.gasp, x, y);
+            plrsnds_play(sfx.voice_gasp, x, y);
     }
     
     if (animation_end() && sprite_index == sprites.mach3turn)
@@ -35,7 +35,7 @@ function scr_player_machturn()
         squashY = 0.8;
         
         if (!grounded)
-            plrsnds_play(sfx.gasp, x, y);
+            plrsnds_play(sfx.voice_gasp, x, y);
     }
     
     if (grounded && animation_end()) || (grounded && character == chars.bacon_twist && hsp == 0)

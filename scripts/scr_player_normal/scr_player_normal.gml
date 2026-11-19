@@ -118,7 +118,7 @@ function scr_player_normal()
 		            sprite_index = _ava[irandom(array_length(_ava)-1)]
 		            image_speed = 0.35;
 		            if (irandom(100) <= 25)
-		                plrsnds_play(sfx.ok,x,y);
+		                plrsnds_play(sfx.voice_ok,x,y);
 				}
 	        }
         

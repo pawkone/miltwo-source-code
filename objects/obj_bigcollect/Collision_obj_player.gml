@@ -11,5 +11,5 @@ with obj_handlerGameUI tv_anim(sprites.happy, 180);
 with (obj_player)
 {
     if character == chars.soda || (irandom(100) <= 25)
-		plrsnds_play(sfx.laugh,x,y);
+		plrsnds_play(sfx.voice_laugh,x,y);
 }

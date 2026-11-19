@@ -108,7 +108,7 @@ if (hitstun.is == false)
     }
 	
     if character == chars.soda
-		sfx.laugh = asset_get_index($"sfx_playersoda{playerUtil_realSpr()[1]}")
+		sfx.voice_laugh = asset_get_index($"sfx_playersoda{playerUtil_realSpr()[1]}")
 	if character == chars.bacon_dream
 	{
 	    switch (state)

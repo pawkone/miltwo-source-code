@@ -5,7 +5,7 @@ if (place_meeting(x, y, obj_player) && is_transfo_all(obj_player.state))
 		with (obj_player)
 		{
 		    if character == chars.soda || (irandom(100) <= 25)
-				plrsnds_play(sfx.laugh,x,y);
+				plrsnds_play(sfx.voice_laugh,x,y);
 		}
 		
         FMODevent_oneshot("event:/Sfx/General/Shell City/spray", x, y);

@@ -4,7 +4,7 @@ global.combo.timer = 60;
 with (obj_player)
 {
 	if character == chars.soda || (irandom(100) <= 25)
-		plrsnds_play(sfx.laugh,x,y);
+		plrsnds_play(sfx.voice_laugh,x,y);
 }
 
 instance_create(x, y, obj_magician);

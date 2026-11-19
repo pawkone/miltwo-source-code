@@ -8,9 +8,9 @@ function scr_playerSounds_data()
 			sfx.taunt = sfx_valentia_taunt
 		break
 		case chars.milton:
-			sfx.ok = [sfx_playerT_idle1, sfx_playerT_idle2, sfx_playerT_idle3, sfx_playerT_idle4]
-			sfx.laugh = [sfx_playerT_happy1, sfx_playerT_happy2, sfx_playerT_happy3, sfx_playerT_happy4]
-			sfx.gasp = sfx_playerT_fallingmach
+			sfx.voice_ok = [sfx_playerT_idle1, sfx_playerT_idle2, sfx_playerT_idle3, sfx_playerT_idle4]
+			sfx.voice_laugh = [sfx_playerT_happy1, sfx_playerT_happy2, sfx_playerT_happy3, sfx_playerT_happy4]
+			sfx.voice_gasp = sfx_playerT_fallingmach
 			sfx.voice_hurt = [sfx_playerT_hurt1, sfx_playerT_hurt2, sfx_playerT_hurt3, sfx_playerT_hurt4, sfx_playerT_hurt5]
 		break
 		case chars.pepperni:
@@ -20,7 +20,7 @@ function scr_playerSounds_data()
 			//sfx.machend = sfx_player_bc_machend
 			//sfx.mach = "sfx_player_bc_mach"
 			//sfx.grab = "sfx_player_bc_grab"
-			sfx.gasp = -4
+			sfx.voice_gasp = -4
 		break
 		case chars.bacon_crash:
 			sfx.step = -4
@@ -29,7 +29,7 @@ function scr_playerSounds_data()
 			sfx.machend = sfx_player_bc_machend
 			sfx.mach = "sfx_player_bc_mach"
 			sfx.grab = "sfx_player_bc_grab"
-			sfx.gasp = -4
+			sfx.voice_gasp = -4
 		break
 		case chars.bacon_dream:
 			sfx.step = sfx_player_bd_step
@@ -38,7 +38,7 @@ function scr_playerSounds_data()
 			sfx.machend = sfx_player_bd_machend
 			sfx.mach = "sfx_player_bd_mach"
 			sfx.grab = "sfx_player_bd_grab"
-			sfx.gasp = -4
+			sfx.voice_gasp = -4
 		break
 		case chars.bacon_redem:
 			sfx.step = sfx_player_br_step
@@ -47,7 +47,7 @@ function scr_playerSounds_data()
 			sfx.machend = sfx_player_br_machend
 			sfx.mach = "sfx_player_br_mach"
 			sfx.grab = "sfx_player_br_grab"
-			sfx.gasp = -4
+			sfx.voice_gasp = -4
 		break
 		case chars.bacon_twist:
 			sfx.step = sfx_player_br_step
@@ -59,7 +59,7 @@ function scr_playerSounds_data()
 			sfx.groundpound = sfx_player_bt_groundpound
 			sfx.slam = sfx_player_bt_slam
 			sfx.taunt = sfx_player_bt_taunt
-			sfx.gasp = -4
+			sfx.voice_gasp = -4
 		break
 		case chars.preoutman:
 			sfx.step = sfx_player_pom_step
@@ -73,13 +73,13 @@ function scr_playerSounds_data()
 			sfx.rollgetup = sfx_player_pom_rollgetup
 			sfx.groundpound = sfx_player_pom_groundpound
 			sfx.slam = sfx_player_pom_slam
-			sfx.gasp = -4
+			sfx.voice_gasp = -4
 		break
 		case chars.soda:
-			sfx.laugh = sfx_playersoda0
+			sfx.voice_laugh = sfx_playersoda0
 			sfx.voice_hurt = -4
-			sfx.ok = -4
-			sfx.gasp = -4
+			sfx.voice_ok = -4
+			sfx.voice_gasp = -4
 		break
 		case chars.skatenic:
 			sfx.step = sfx_skatenic_step
@@ -87,9 +87,9 @@ function scr_playerSounds_data()
 			sfx.machturn = sfx_skatenic_machturn
 			sfx.machend = sfx_skatenic_machend
 			sfx.mach = "sfx_skatenic_mach"
-			sfx.ok = [sfx_skatenicVoice_idle1, sfx_skatenicVoice_idle2, sfx_skatenicVoice_idle3]
-			sfx.laugh = [sfx_skatenicVoice_happy1, sfx_skatenicVoice_happy2]
-			sfx.gasp = -4
+			sfx.voice_ok = [sfx_skatenicVoice_idle1, sfx_skatenicVoice_idle2, sfx_skatenicVoice_idle3]
+			sfx.voice_laugh = [sfx_skatenicVoice_happy1, sfx_skatenicVoice_happy2]
+			sfx.voice_gasp = -4
 			sfx.voice_hurt = [sfx_skatenicVoice_hurt1, sfx_skatenicVoice_hurt2, sfx_skatenicVoice_hurt3]
 		break
 	}
