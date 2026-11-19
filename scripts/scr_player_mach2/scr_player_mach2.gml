@@ -198,12 +198,7 @@ function scr_player_mach2()
     
     if ((place_meeting(x + sign(hsp), y, obj_solid) && !grounded) || (scr_slope(x, y + 4) && place_meeting(x + sign(hsp), y - 4, obj_solid) && !place_meeting(x + hsp, y, obj_metalblock)))
     {
-        var _climb = true;
-        
-        if (!(character == chars.milton))
-            _climb = doBump(40, abs(hsp) + 1);
-        
-        if (_climb)
+        if doBump(40, abs(hsp) + 1)
         {
 			if character == chars.skatenic
 			{

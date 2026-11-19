@@ -84,16 +84,19 @@ function scr_player_hammerattack()
     
     if (place_meeting(x + sign(hsp), y, obj_solid) && !scr_slope(x,y+1)) || (place_meeting(x + sign(hsp), y-6, obj_solid) && !place_meeting(x, y-6, obj_solid))
     {
-        state = scr_player_hammerwirl;
-        xscale *= -1;
-        movespeed = 9 * xscale;
-        flash = true;
-        vsp = -16;
-        squashX = 1.3;
-        squashY = 0.8;
-        FMODevent_oneshot("event:/Sfx/Player/hammerbounce", x, y);
-        image_index = 0;
-        sprite_index = spr_milton_hammerwirl;
+		if doBump(40, abs(hsp) + 1)
+		{
+	        state = scr_player_hammerwirl;
+	        xscale *= -1;
+	        movespeed = 9 * xscale;
+	        flash = true;
+	        vsp = -16;
+	        squashX = 1.3;
+	        squashY = 0.8;
+	        FMODevent_oneshot("event:/Sfx/Player/hammerbounce", x, y);
+	        image_index = 0;
+	        sprite_index = spr_milton_hammerwirl;
+		}
     }
     
     if (sprite_index == spr_milton_hammerspin_prep)
