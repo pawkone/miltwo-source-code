@@ -17,5 +17,5 @@ else
 	room_goto(Mainmenu)
 	exit
 }
-alarm[0] = 2
+alarm[0] = 1
 prg = (1 - (array_length(textures) / texturesMax))*445.36

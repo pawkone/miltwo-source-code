@@ -205,34 +205,29 @@ var _exitlevel =
             
             with (obj_player)
             {
-                if (global.level == -4)
+                with (obj_handlerMusic)
                 {
-                    with (obj_handlerMusic)
-                        stop_music();
-                    
-                    generalReset();
-                    movespeed = 0;
-                    vsp = 0;
-                    hsp = 0;
-                    state = -4;
-                    door = "A";
-                    room_goto(Mainmenu);
+                    stop_music(true, true)
+                    if FMODevent_isplaying(escapeInst)
+                        fmod_studio_event_instance_stop(escapeInst, FMOD_STUDIO_STOP_MODE.IMMEDIATE)
+                }
+                generalReset()
+                movespeed = 0
+                vsp = 0
+                hsp = 0
+                state = -4
+                if global.level == -4
+                {
+                    door = "A"
+                    room_goto(Mainmenu)
                 }
                 else
                 {
-                    with (obj_handlerMusic)
-                        stop_music();
-                    
-                    generalReset();
-                    movespeed = 0;
-                    vsp = 0;
-                    hsp = 0;
-                    state = -4;
-                    door = "NONE";
-                    room_goto(backtohubRoom);
-                    instance_create(x, y, obj_backtohub);
-                    global.level = -4;
-                    global.resetRoom = -4;
+                    door = "NONE"
+                    room_goto(backtohubRoom)
+                    instance_create(x, y, obj_backtohub)
+                    global.level = -4
+                    global.resetRoom = -4
                 }
             }
         }

@@ -2,8 +2,6 @@ randomize()
 
 alarm[0] = 1
 
-lang_change()
-
 textures = texturegroup_get_textures("texturegroup_game")
 
 texturesMax = array_length(textures);
@@ -162,3 +160,4 @@ global.connected = false;
 // -- the rest ahahah --
 global.secretOriginRoom = -4
 generalReset()
+lang_change()
