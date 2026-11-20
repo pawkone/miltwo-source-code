@@ -1,7 +1,7 @@
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
     ds_list_add(global.saveroom, id);
-    shake_camera(25, 25);
+    shake_camera(25);
 	
 	with obj_tiledestroy
 	{

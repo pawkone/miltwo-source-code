@@ -152,7 +152,7 @@ function scr_player_mach3()
         plrsnds_play(sfx.slam, x, y);
         state = scr_player_hitwall;
         shake_camera(15);
-        sprite_index = spr_player_mach3hitwall;
+        sprite_index = sprites.mach3hitwall;
         image_index = 0;
         vsp = -6;
         movespeed = -6;

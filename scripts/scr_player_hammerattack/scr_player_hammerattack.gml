@@ -2,10 +2,12 @@ function scr_player_hammerattack()
 {
     hsp = movespeed * xscale;
     
-	if movespeed > 13
-		movespeed -= 0.005
-	if movespeed < 13
-	    movespeed = approach(movespeed, 13, 1);
+	if movespeed < 14
+	    movespeed += 0.5
+	else if movespeed < 17
+		movespeed += 0.01
+	else if movespeed < 24
+		movespeed += 0.005
     
     if (movespeed >= 7)
     {
@@ -18,12 +20,21 @@ function scr_player_hammerattack()
     }
     
     buffers.dashcloud--;
-    
-    if (buffers.dashcloud <= 0 && grounded)
+    if (buffers.dashcloud <= 0)
     {
-        buffers.dashcloud = 12;
+        buffers.dashcloud = floor(max(1,12-max(0,(movespeed-7)/1.66)));
         create_particleStatic(spr_dashcloud1, x, y, xscale, 1);
     }
+	
+	if !grounded
+	{
+        image_index = 0;
+        sprite_index = sprites.longjump;
+        state = scr_player_mach2;
+        jumpstop = false;
+        plrsnds_play(sfx.jump, x, y);
+		exit
+	}
     
     if (pky_down2 && grounded)
     {
@@ -73,12 +84,17 @@ function scr_player_hammerattack()
 		exit
 	}
     
-    if (animation_end() && sprite_index == spr_milton_hammerspin_prep)
+    if (animation_end() && sprite_index == spr_milton_hammerspinprep)
     {
         image_index = 0;
         sprite_index = spr_milton_hammerspin;
     }
-    
+    if (animation_end() && sprite_index == spr_milton_longjump)
+    {
+        image_index = 0;
+        sprite_index = spr_milton_longjumpend;
+    }
+	
     if (vsp >= 2)
         vsp += 0.5;
     
@@ -99,7 +115,7 @@ function scr_player_hammerattack()
 		}
     }
     
-    if (sprite_index == spr_milton_hammerspin_prep)
+    if (sprite_index == spr_milton_hammerspinprep)
         image_speed = 0.35;
     else
         image_speed = 0.5;

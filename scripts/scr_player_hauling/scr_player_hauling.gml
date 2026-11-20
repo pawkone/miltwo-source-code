@@ -118,7 +118,15 @@ function scr_player_hauling()
         else if (sprite_index == spr_player_swingading)
             sprite_index = spr_player_swingadingend;
         else
-            sprite_index = choose(spr_player_finisher1, spr_player_finisher2);
+		{
+			var _s = [sprites.finisher1, sprites.finisher2, sprites.finisher3, sprites.finisher4]
+            for (var i = array_length(_s) - 1; i >= 0; i--)
+			{
+				if _s[i] < 0
+					array_delete(_s, i, 1)
+			}
+			sprite_index = _s[irandom(array_length(_s)-1)]
+		}
         
         image_index = 0;
         exit;

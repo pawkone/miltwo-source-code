@@ -211,22 +211,12 @@ function doGrab()
     
     if (slapBuffer > 0)
     {
+		slapBuffer = false
         if (character != chars.milton)
         {
-            if (!pky_up)
-            {
-                slapBuffer = false;
-                state = scr_player_grab;
-                sprite_index = sprites.grab;
-                image_index = 0;
-                create_particleStatic(spr_grabcloud, x, y, xscale, 1);
-                if (movespeed < 8)
-                    movespeed = 8;
-            }
-            else
+            if pky_up
             {
                 FMODevent_oneshot("event:/Sfx/Player/uppercut", x, y);
-                slapBuffer = false;
                 
                 if (coyote_time)
                     vsp = -17;
@@ -249,12 +239,20 @@ function doGrab()
                 squashX = 1.5;
                 squashY = 0.6;
             }
+			else
+			{
+                state = scr_player_grab;
+                sprite_index = sprites.grab;
+                image_index = 0;
+                create_particleStatic(spr_grabcloud, x, y, xscale, 1);
+                if (movespeed < 8)
+                    movespeed = 8;
+            }
         }
         else
         {
             if pky_up
 			{
-				slapBuffer = false;
 	            if (move != 0)
 	                xscale = move;
 				vsp = -12
@@ -269,16 +267,11 @@ function doGrab()
 	        {
 	            if (move != 0)
 	                xscale = move;
-            
-	            vsp = 0;
-	            slapBuffer = false;
+                if (movespeed < 10)
+                    movespeed = 10;
 	            state = scr_player_hammerattack;
-            
-	            if (movespeed < 12)
-	                movespeed = 12;
-            
 	            image_index = 0;
-	            sprite_index = spr_milton_hammerspin_prep;
+	            sprite_index = spr_milton_hammerspinprep;
 			}
         }
     }
@@ -378,7 +371,9 @@ function get_baconera(arg0, arg1, notexists_returnnone = false)
 	if ds_map_exists(global.__baconera_cache, _key)
 		return global.__baconera_cache[? _key]
 	var _asset = sprite_get_name(arg0), _spr = arg0, _result = arg0
-	if string_starts_with(_asset, "spr_player")
+	if string_starts_with(_asset, "spr_playerV") // for finisher, i hate everything
+		_spr = asset_get_index(string_replace(_asset, "spr_playerV", "spr_" + global.PlayerCharacters[arg1].ps))
+	else if string_starts_with(_asset, "spr_player")
 		_spr = asset_get_index(string_replace(_asset, "spr_player", "spr_" + global.PlayerCharacters[arg1].ps))
 	else
 		_spr = asset_get_index(string_concat(_asset, global.PlayerCharacters[arg1].ms))
@@ -412,6 +407,11 @@ function playerUtil_realSpr()
 
 function playerUtil_spr(_e)
 {
+	// this code is so bad that i litterally cried over it once,
+	// and that was right before i started writing this comment
+	
+	// please like and subscribe to meh for no cry wah wah trust
+	
     var st = 
     {
         player: {},
@@ -423,7 +423,6 @@ function playerUtil_spr(_e)
 	st.player.palette = get_baconera(spr_playerPal, _e)
 	st.player.pattern = get_baconera(spr_playerPat, _e)
 	st.player.clothes = get_baconera(spr_playerClothes, _e)
-	
 	
 	st.player.crouch = get_baconera(spr_player_crouch, _e)
 	st.player.crouchfall = get_baconera(spr_player_crouchfall, _e)
@@ -450,6 +449,7 @@ function playerUtil_spr(_e)
 	st.player.mach2jump = get_baconera(spr_player_mach2jump, _e)
 	st.player.mach2jumpend = get_baconera(spr_player_mach2jumpend, _e)
     st.player.mach3 = get_baconera(spr_player_mach3, _e)
+	st.player.mach3hitwall = get_baconera(spr_player_mach3hitwall, _e)
     st.player.mach3hit = get_baconera(spr_player_mach3hit, _e)
     st.player.mach3jump = get_baconera(spr_player_mach3jump, _e)
 	st.player.mach3turn = get_baconera(spr_player_mach3turn, _e)
@@ -483,7 +483,6 @@ function playerUtil_spr(_e)
 	st.player.grab = get_baconera(spr_player_grab, _e);
 	st.player.grabbump = get_baconera(spr_player_grabbump, _e);
 	st.player.grabcancel = get_baconera(spr_player_grabcancel, _e);
-	st.player.grabdive = get_baconera(spr_player_grabdive, _e);
 	st.player.groundpound = get_baconera(spr_player_groundpound, _e);
 	st.player.groundpoundcancel = get_baconera(spr_player_groundpoundcancel, _e);
 	st.player.groundpoundland = get_baconera(spr_player_groundpoundland, _e);
@@ -491,19 +490,28 @@ function playerUtil_spr(_e)
 	st.player.uppercut = get_baconera(spr_player_uppercut, _e);
 	st.player.lookdoor = get_baconera(spr_player_lookdoor, _e);
 	st.player.wallsplat = get_baconera(spr_player_wallsplat, _e);
+	st.player.breakdance = get_baconera(spr_player_breakdance, _e);
+	
+	// optional animations
 	st.player.idleanim1 = get_baconera(spr_player_idleanim1, _e, 1);
 	st.player.idleanim2 = get_baconera(spr_player_idleanim2, _e, 1);
 	st.player.idleanim3 = get_baconera(spr_player_idleanim3, _e, 1);
 	st.player.idleanim4 = get_baconera(spr_player_idleanim4, _e, 1);
 	st.player.idleanim5 = get_baconera(spr_player_idleanim5, _e, 1);
-	st.player.breakdance = get_baconera(spr_player_breakdance, _e);
+	st.player.finisher1 = get_baconera(spr_player_finisher1, _e); // but not this one since fuck you
+	st.player.finisher2 = get_baconera(spr_player_finisher2, _e, 1);
+	st.player.finisher3 = get_baconera(spr_playerV_finisher3, _e, 1);
+	st.player.finisher4 = get_baconera(spr_playerV_finisher4, _e, 1);
 	
+	//misc
 	st.player.collect1 = get_baconera(spr_collect1, _e)
 	st.player.collect2 = get_baconera(spr_collect2, _e)
 	st.player.collect3 = get_baconera(spr_collect3, _e)
 	st.player.collect4 = get_baconera(spr_collect4, _e)
 	st.player.collect5 = get_baconera(spr_collect5, _e)
 	
+	
+	// teev
 	st.tv.bg = get_baconera(spr_tv_bg, _e);
     st.tv.off = get_baconera(spr_tv_off, _e);
 	st.tv.empty = get_baconera(spr_tv_empty, _e);
@@ -515,7 +523,6 @@ function playerUtil_spr(_e)
 	st.tv.happy = get_baconera(spr_tv_happy, _e);
     st.tv.crazyrun = get_baconera(spr_tv_crazyrun, _e);
 	st.tv.escape = get_baconera(spr_tv_escape, _e);
-	st.tv.ski = get_baconera(spr_tv_ski, _e);
 	st.tv.secret = get_baconera(spr_tv_secret, _e);
 	
     return st;

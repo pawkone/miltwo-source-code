@@ -39,6 +39,18 @@ function scr_player_mach2()
 	
     if (grounded)
         movespeed += _accel;
+	else if (sprite_index == spr_milton_longjump || sprite_index == spr_milton_longjumpend)
+		movespeed += 0.005
+		
+    if pky_grab && grounded && (sprite_index == spr_milton_longjump || sprite_index == spr_milton_longjumpend)
+    {
+		if (move != 0)
+	        xscale = move;
+	    state = scr_player_hammerattack;
+	    image_index = 4;
+	    sprite_index = spr_milton_hammerspinprep;
+		exit
+    }
     
     buffers.afterimageMach--
     if (buffers.afterimageMach <= 0)
@@ -120,13 +132,11 @@ function scr_player_mach2()
         movespeed = max(movespeed, 12);
         flash = true;
         state = scr_player_mach3;
-        
         if (sprite_index != sprites.rollgetup)
         {
             image_index = 0;
             sprite_index = sprites.mach3;
         }
-        
         exit;
     }
     
@@ -158,7 +168,6 @@ function scr_player_mach2()
             sprite_index = sprites.machslidestart;
             image_index = 0;
         }
-        
         exit;
     }
     

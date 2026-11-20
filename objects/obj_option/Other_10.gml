@@ -17,7 +17,8 @@ miltwocredits_credits =
 		spr_titlecardShell, spr_titlecardShellTitle1, spr_player_skate_jump,
 		spr_preoutman_mach, spr_preoutman_breakdance, spr_skatenic_rollgetup,
 		spr_skatenic_mach3turnfall, spr_skatenic_mach3turn, spr_skatenic_mach2turn,
-		spr_skatenic_mach2turnfall,  spr_skatenic_mach3jump, spr_skatenic_rollstart
+		spr_skatenic_mach2turnfall,  spr_skatenic_mach3jump, spr_skatenic_rollstart,
+		spr_player_gateslamfake, spr_devimage1, spr_juiceboxcage_dead
 	],
 	[
 		"Targetbuldoser",
@@ -50,15 +51,25 @@ miltwocredits_credits =
 		spr_pepperni_jump, spr_pepperni_fall
 	],
 	[
+		"GameMessi64",
+		"volunteered artist",
+		spr_milton_groundpoundstart, spr_milton_groundpound, spr_milton_groundpoundland,
+		spr_milton_lookdoor, spr_milton_entergate, spr_milton_doorunlock,
+		spr_milton_walkfront, spr_milton_longjump, spr_milton_longjumpend,
+		spr_milton_mach3hitwall, spr_milton_superjump, spr_milton_superjumpcancelstart,
+		spr_milton_superjumpcancel,
+		
+		spr_player0_haulingidle, spr_player0_haulingwalk, spr_player0_finisher1,
+		spr_player0_mach3hitwall, spr_player0_superjump,
+		
+		spr_player1_haulingidle, spr_player1_haulingwalk, spr_player1_finisher1,
+		spr_player1_mach3hitwall, spr_player1_hurt, spr_player1_uppercut,
+	],
+	[
 		"MrAlt-",
 		"former co director : coder : level designer",
 		spr_bacadmad_face, tilespr_frontyard, tilespr_hotel2,
 		tilespr_beach
-	],
-	[
-		"Snico_The_Stickhog",
-		"volunteered artist",
-		spr_skatenic_crusher
 	],
 	[
 		"Enno334_123",
@@ -84,14 +95,19 @@ miltwocredits_credits =
 		spr_skatenic_taunt, spr_player_idlemilkshake
 	],
 	[
+		"Shampox_85584",
+		"volunteered artist",
+		spr_gate_crashout, spr_tv_secretS
+	],
+	[
 		"Devwowm",
 		"volunteered artist",
 		spr_tv_idleS
 	],
 	[
-		"Shampox_85584",
+		"Snico_The_Stickhog",
 		"volunteered artist",
-		spr_gate_crashout, spr_tv_secretS
+		spr_skatenic_crusher
 	],
 	[
 		"Bobbers6921",

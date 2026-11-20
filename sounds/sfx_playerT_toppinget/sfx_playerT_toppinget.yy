@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_playerT_toppinget",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":5.6836734,
+  "exportDir":"",
+  "name":"sfx_playerT_toppinget",
+  "parent":{
+    "name":"milton",
+    "path":"folders/Sounds/SFX/Charactes/milton.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_playerT_toppinget.ogg",
+  "volume":1.0,
+}

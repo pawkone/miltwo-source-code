@@ -76,15 +76,10 @@ function scr_hudWSB_step()
     
 	    if (isSecret)
 	        _idleSprite = _sprites.secret;
-    
 	    if (global.escapeActive && !isSecret)
 	        _idleSprite = _sprites.escape;
-    
 	    if (global.combo.amt >= 15 && !isSecret)
 	        _idleSprite = _sprites.combo;
-    
-	    if (obj_player.state == scr_player_ski)
-	        _idleSprite = _sprites.ski;
     
 	    if (!other.visible)
 	    {
