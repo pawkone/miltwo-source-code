@@ -52,7 +52,6 @@ addBackground([1], 1);
 addBackground([2, 10], 2);
 addBackground([3], 3);
 addBackground([4, 5, 6, 7, 8, 9], 4);
-BGX = 0
 depth = obj_handlerPause.depth - 1;
 screamSnd = FMODcreate_event("event:/Sfx/UI/Pause/slider");
 fmod_studio_event_instance_start(screamSnd);
@@ -74,7 +73,6 @@ goto_menu = function(arg0)
             currentmenu = i;
     }
     
-    show_debug_message(currentmenu);
     selected = 0;
 };
 
@@ -168,6 +166,10 @@ add_option_press(category, "option_controls", function()
 {
     goto_menu(optionstype.controls);
 }, new addPause_icon(7));
+add_option_press(category, "option_language", function()
+{
+    instance_create(0,0,obj_optionLang)
+}, new addPause_icon(6));
 add_option_press(category, "option_modded", function()
 {
     goto_menu(optionstype.modded);

@@ -1,7 +1,4 @@
-titlecard = [spr_titlecardBeach,
-spr_titlecardBeachTitle1,
-spr_titlecardBeachTitle2,
-mu_tc_beach]
+titlecard = [spr_titlecardBeach, mu_tc_beach]
 gateinfo = [];
 create_gate_layer(bg_beach1,0,480,200,0,0,true)
 create_gate_layer(bg_beach2,0,480,0,0.15,0,0)

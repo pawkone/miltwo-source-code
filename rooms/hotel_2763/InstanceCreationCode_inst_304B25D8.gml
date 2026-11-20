@@ -1,4 +1,1 @@
-titlecard = [spr_titlecardFrontyard,
-spr_titlecardFrontyardTitle1,
-spr_titlecardFrontyardTitle2,
-mu_tc_publicplaytest3]
+titlecard = [spr_titlecardFrontyard, mu_tc_publicplaytest3]

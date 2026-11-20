@@ -1,5 +1,6 @@
 global.language = "eng"
 global.langMapWord = ds_map_create()
+global.langMapArt = ds_map_create()
 
 function lang_change(_lang = -1)
 {
@@ -7,6 +8,7 @@ function lang_change(_lang = -1)
 		global.language = _lang
 	var _p = $"gameData/lang/{global.language}"
 	lang_load_dict(_p)
+	lang_load_sprs(_p)
 	//lang_load_font(_p)
 }
 function lang_load_dict(_p)
@@ -36,6 +38,31 @@ function lang_load_dict(_p)
 		{
 			show_debug_message($"JSON FAILED: {_files[i]}\n{e.longMessage}")
 		}
+	}
+}
+function lang_load_sprs(_p)
+{
+	var _arr = ds_map_values_to_array(global.langMapArt)
+	for (var i = 0; i < array_length(_arr); i++)
+	{
+		if sprite_exists(_arr[i])
+			sprite_delete(_arr[i])
+	}
+	ds_map_clear(global.langMapArt)
+	
+	var _files = [], _fn = file_find_first($"{_p}/sprs/*.png", fa_none)
+	while _fn != ""
+	{
+		array_push(_files, _fn)
+	    _fn = file_find_next()
+	}
+	file_find_close()
+	
+	for (var i = 0; i < array_length(_files); i++)
+	{
+		var _spr = sprite_add($"{_p}/sprs/{_files[i]}",1,0,0,0,0)
+		if _spr > 0
+			ds_map_add(global.langMapArt, string_delete(_files[i],-4,4), _spr)
 	}
 }
 // removed cuz its mono spaced instead of proportional
@@ -71,4 +98,8 @@ function lang_load_font(_p)
 function lang_get_phrase(arg0)
 {
 	return ds_map_exists(global.langMapWord, arg0) ? ds_map_find_value(global.langMapWord, arg0) : arg0
+}
+function lang_get_sprite(arg0)
+{
+	return ds_map_exists(global.langMapArt, arg0) ? ds_map_find_value(global.langMapArt, arg0) : -4
 }

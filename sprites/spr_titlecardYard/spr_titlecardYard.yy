@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Way Backyard",
-    "path":"folders/Sprites/Visuals/Titlecard/Floor 1/Way Backyard.yy",
+    "name":"Floor 1",
+    "path":"folders/Sprites/Visuals/Titlecard/Floor 1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

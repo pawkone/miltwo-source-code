@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Rock Bottom",
-    "path":"folders/Sprites/Visuals/Titlecard/Floor Extra/Rock Bottom.yy",
+    "name":"Floor Extra",
+    "path":"folders/Sprites/Visuals/Titlecard/Floor Extra.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

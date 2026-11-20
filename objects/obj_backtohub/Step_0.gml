@@ -1,3 +1,6 @@
+if instance_exists(obj_titlecardFadeout)
+	instance_destroy(obj_titlecardFadeout)
+
 alpha = approach(alpha, 0, 0.01)
 if start < 1 start += 1/60
 

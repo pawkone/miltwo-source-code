@@ -1,3 +1,8 @@
+if instance_exists(obj_optionLang)
+{
+	buffer = 2
+	exit
+}
 var _do = true
 var m = menus[currentmenu];
 try

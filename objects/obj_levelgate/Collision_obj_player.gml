@@ -50,7 +50,12 @@ with (_plr)
 	        else if (!instance_exists(obj_titlecard))
 	        {
 	            with instance_create(0, 0, obj_titlecard)
+				{
 					titlecardinfo = _gate.titlecard
+					titlecardinfo[3] = titlecardinfo[1]
+					titlecardinfo[1] = lang_get_sprite(sprite_get_name(titlecardinfo[0])+"Title1")
+					titlecardinfo[2] = lang_get_sprite(sprite_get_name(titlecardinfo[0])+"Title2")
+				}
 	        }
 	    }
 	}

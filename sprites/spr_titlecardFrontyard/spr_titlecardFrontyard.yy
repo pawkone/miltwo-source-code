@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Beaker Frontyard",
-    "path":"folders/Sprites/Visuals/Titlecard/Floor 2/Beaker Frontyard.yy",
+    "name":"Floor Extra",
+    "path":"folders/Sprites/Visuals/Titlecard/Floor Extra.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

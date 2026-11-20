@@ -14,7 +14,7 @@ miltwocredits_credits =
 		spr_milton_rollstart, spr_baconsmacon_deadlintro, spr_baconsmacon_deadloop,
 		spr_bacadmadLocate, spr_minilogo, spr_menunew, spr_menunew_tvhint,
 		spr_gate_shell, spr_floorgate, spr_floorgate_over, spr_uparrow,
-		spr_titlecardShell, spr_titlecardShellTitle1, spr_player_skate_jump,
+		spr_titlecardShell, spr_player_skate_jump,
 		spr_preoutman_mach, spr_preoutman_breakdance, spr_skatenic_rollgetup,
 		spr_skatenic_mach3turnfall, spr_skatenic_mach3turn, spr_skatenic_mach2turn,
 		spr_skatenic_mach2turnfall,  spr_skatenic_mach3jump, spr_skatenic_rollstart,
@@ -31,16 +31,14 @@ miltwocredits_credits =
 		spr_tv_soda, spr_dressermenu_palgridSODA,  spr_dressermenu_palgrid,
 		spr_dressermenu_palgridPOM, spr_dressermenu_palgridB0, spr_dressermenu_palgridB1,
 		spr_dressermenu_palgridB2, spr_dressermenu_palgridB3, spr_dressermenu_palgridM,
-		spr_dressermenu_palgridP, spr_dressermenu_palgridV, spr_titlecardFrontyard,
-		spr_titlecardFrontyardTitle1, spr_skatenic_mach1, spr_skatenic_mach2
+		spr_dressermenu_palgridP, spr_dressermenu_palgridV, spr_titlecardFrontyard, spr_skatenic_mach1, spr_skatenic_mach2
 	],
 	[
 		"Polyg0n5",
 		"volunteered artist : artist for og miltu",
 		spr_butterAir, spr_butterGround, spr_pepperni_mach1, spr_pepperni_mach3,
 		spr_pepperni_taunt, spr_milton_jump, spr_milton_fall, spr_milton_land,
-		spr_milton_land2, spr_titlecardBeach, spr_titlecardBeachTitle1,
-		spr_titlecardBeachTitle2, spr_tv_idleanim1M, spr_tv_idleanim2M,
+		spr_milton_land2, spr_titlecardBeach, spr_tv_idleanim1M, spr_tv_idleanim2M,
 		spr_tv_idleP, spr_tv_machP, spr_tv_crazyrunP, spr_tv_happyM,
 		spr_tv_escapeP, spr_pepperni_mach3turn, spr_player1_pary, spr_player1_crouch,
 		spr_player1_crouchfall, spr_player1_crouchhop, spr_player1_crouchmove,

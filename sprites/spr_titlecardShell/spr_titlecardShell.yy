@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Shell City",
-    "path":"folders/Sprites/Visuals/Titlecard/Floor 1/Shell City.yy",
+    "name":"Floor 1",
+    "path":"folders/Sprites/Visuals/Titlecard/Floor 1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

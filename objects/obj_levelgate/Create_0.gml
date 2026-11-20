@@ -15,10 +15,7 @@ function create_gate_layer(sprite, index, bgx_offest, bgy_offest, bgx_sp, bgy_sp
 }
 
 levelname = ""
-titlecard = [spr_titlecardYard,
-spr_titlecardYardTitle1,
-spr_titlecardYardTitle2,
-"event:/Music/W1/Monolith Mangrove/titlecard"]
+titlecard = [spr_titlecardYard, mu_tc_yard]
 
 alarm[0] = 1
 bgalpha = 1;

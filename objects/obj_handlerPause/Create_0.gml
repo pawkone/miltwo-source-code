@@ -211,7 +211,6 @@ var _exitlevel =
                     if FMODevent_isplaying(escapeInst)
                         fmod_studio_event_instance_stop(escapeInst, FMOD_STUDIO_STOP_MODE.IMMEDIATE)
                 }
-                generalReset()
                 movespeed = 0
                 vsp = 0
                 hsp = 0
@@ -219,11 +218,13 @@ var _exitlevel =
                 if global.level == -4
                 {
                     door = "A"
+					generalReset()
                     room_goto(Mainmenu)
                 }
                 else
                 {
                     door = "NONE"
+					generalReset()
                     room_goto(backtohubRoom)
                     instance_create(x, y, obj_backtohub)
                     global.level = -4

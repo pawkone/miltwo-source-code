@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Fruitcup Coast",
-    "path":"folders/Sprites/Visuals/Titlecard/Floor 1/Fruitcup Coast.yy",
+    "name":"Floor 1",
+    "path":"folders/Sprites/Visuals/Titlecard/Floor 1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

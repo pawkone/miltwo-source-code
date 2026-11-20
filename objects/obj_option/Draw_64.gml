@@ -1,13 +1,10 @@
-BGX--
-if BGX > 400 BGX = BGX mod 400
-
 draw_set_colour(c_white);
-draw_sprite_tiled_ext(spr_optionsBG, 0, BGX, wave(-32, 32, 5, 0), 1, 1, c_white, 1);
+draw_sprite_tiled_ext(spr_optionsBG, 0, current_time/(1000/60), wave(-32, 32, 5, 0), 1, 1, c_white, 1);
 
 for (var i = 0; i < array_length(backgrounds); i++)
 {
 	if backgrounds[i].alpha > 0
-		draw_sprite_tiled_ext(spr_optionsBG, backgrounds[i].index, BGX, wave(-32, 32, 5, 0), 1, 1, c_white, backgrounds[i].alpha);
+		draw_sprite_tiled_ext(spr_optionsBG, backgrounds[i].index, current_time/(1000/60), wave(-32, 32, 5, 0), 1, 1, c_white, backgrounds[i].alpha);
     
     if (backgrounds[i].menu != [optionstype.mainpage])
     {
