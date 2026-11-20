@@ -13,7 +13,7 @@ function scr_enemy_move()
     buffers.step--;
     sprite_index = spr_move;
     
-    if (place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_hallway) || (!(place_meeting(x + (xscale * 18), y + 31, obj_solid) || place_meeting(x + (xscale * 18), y + 31, obj_slope) || place_meeting(x + (xscale * 18), y + 31, obj_platform)) && grounded))
+    if ((place_meeting(x + xscale, y, obj_solid) && !scr_slope(x,y+1)) || place_meeting(x + xscale, y, obj_hallway) || (!(place_meeting(x + (xscale * 18), y + 31, obj_solid) || place_meeting(x + (xscale * 18), y + 31, obj_slope) || place_meeting(x + (xscale * 18), y + 31, obj_platform)) && grounded))
     {
         image_speed = 0.35;
 		if spr_turn < 0

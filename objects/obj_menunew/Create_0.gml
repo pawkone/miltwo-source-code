@@ -43,14 +43,50 @@ hand_y = mouse_yfake
 hand_x_old = hand_x
 hand_y_old = hand_y
 
-drawer1_x = 0
-drawer1_y = 0
-drawer1_vsp = 0
+fadestage = -1
+fadestate = ""
 
-drawer2_x = 0
-drawer2_y = 0
-drawer2_vsp = 0
+file = 0
+file_txt = ""
+file_select = 0
+file_selectnew = 0
 
-drawer3_x = 0
-drawer3_y = 0
-drawer3_vsp = 0
+function menunew_item(ind = 0,typ = "none") constructor
+{
+	xdraw = 0
+	ydraw = 0
+	x = 0
+	y = 0
+	vsp = 0
+	index = ind
+	type = typ
+}
+
+items = []
+var _t
+
+
+_t = new menunew_item(3,"drawer")
+_t.xdraw = 0
+array_push(items, _t)
+
+_t = new menunew_item(3,"drawer")
+_t.xdraw = 300
+array_push(items, _t)
+
+_t = new menunew_item(3,"drawer")
+_t.xdraw = 600
+array_push(items, _t)
+
+
+_t = new menunew_item(15,"disc")
+_t.link = 0
+array_push(items, _t)
+
+_t = new menunew_item(16,"disc")
+_t.link = 1
+array_push(items, _t)
+
+_t = new menunew_item(17,"disc")
+_t.link = 2
+array_push(items, _t)

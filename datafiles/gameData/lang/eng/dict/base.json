@@ -27,5 +27,9 @@
 	"menunew_tv_videobulitin": "{0}/{1}",
 	"menunew_tv_videocustom": "Custom",
 	"menunew_tv_videonotsupported": "SELECTED VIDEO NOT SUPPORTED...",
-	"menunew_tv_videotip": "NO SIGNAL\n\nLEFT RIGHT : SCROLL BUILTIN VIDEOS\nJUMP : PICK CUSTOM VIDEO\nGRAB : STOP VIDEO"
+	"menunew_tv_videotip": "NO SIGNAL\n\nLEFT RIGHT : SCROLL BUILTIN VIDEOS\nJUMP : PICK CUSTOM VIDEO\nGRAB : STOP VIDEO",
+	"menunew_select": "ACTIVE FILE : {0}\n\nLEFT RIGHT : SCROLL BETWEEN LOCATIONS\nJUMP : GO TO LOCATION\n\n\n{1} - {2}\n- {3} -",
+	"menunew_select_hotel0": "SUNNY HOTEL",
+	"menunew_select_hotel1": "HALLOWEEN HOTEL",
+	"menunew_select_hotel2": "DEV HOTEL - ALL LEVELS"
 }

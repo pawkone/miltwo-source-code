@@ -1,6 +1,6 @@
 if instance_exists(obj_option) exit
 
-if state == "tv"
+if state == "tv" || state == "select"
 	draw_surface(surf,0,0)
 else
 {
@@ -29,7 +29,7 @@ else if state == "draw"
 	draw_textEX(25, 525-32-32, lang_get_phrase("menunew_draw_controltip2"))
 	draw_textEX(25, 525-32, lang_get_phrase("menunew_draw_controltip3"))
 }
-else if state == "tv"
+else if state == "tv" || state == "select"
 	draw_textEX(25, 525-32, lang_get_phrase("menunew_tv_controltip1"))
 
 if state == "files"
@@ -38,3 +38,23 @@ else if state == "draw"
 	event_user(1)
 else if state == "tv"
 	event_user(2)
+else if state == "select"
+	event_user(3)
+	
+if fadestage >= 0 && fadestage < 2
+{
+	fadestage += 1/16
+	if fadestage == 1
+	{
+		if state == "tv"
+			video_close()
+		if state == "draw" && surface_exists(drawsurf)
+			surface_free(drawsurf)
+		state = fadestate
+	}
+	draw_set_alpha(fadestage > 1 ? 1-(fadestage-1) : fadestage)
+	draw_rectangle_colour(0,0,960,540,0,0,0,0,false)
+	draw_set_alpha(1)
+}
+else
+	fadestage = -1

@@ -25,7 +25,7 @@ function scr_player_enterdoor()
     if animation_end()
     {
         image_index = image_number - 1;
-        if sprite_index == spr_player_downbox || sprite_index == spr_player_upbox
+        if sprite_index == sprites.downbox || sprite_index == sprites.upbox
 		{
 			if scr_fadeout()
 				FMODevent_oneshot("event:/Sfx/General/Level/Progression/door");

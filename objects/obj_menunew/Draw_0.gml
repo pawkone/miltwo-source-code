@@ -1,39 +1,5 @@
 if instance_exists(obj_option) exit
 
-if keyboard_check_pressed(vk_f2)
-{
-	var _rm = hotel_start;
-	var _dr = "A";
-	with (obj_player)
-	{
-		global.saveFile = wsbMOmInfo.dir + "sandbox1.xda"
-		xdata_open(global.saveFile)
-		character = xdata_read("Modded", "c_char", chars.mildred)
-		palIndex = xdata_read("Modded", "c_pal", 1)
-		xdata_close()
-		event_user(0)
-		generalReset();
-	    targetRoom = _rm;
-	    door = _dr;
-	    movespeed = 0;
-	    vsp = 0;
-	    hsp = 0;
-	    state = scr_player_enterdoor;
-	}
-	global.level = -4;
-	global.resetRoom = _rm;
-	room_goto(_rm)
-	instance_destroy(obj_fadeout)
-	with instance_create(0, 0, obj_fadeout)
-	{
-		image_alpha = 1
-		fadein = 0
-	}
-	surface_reset_target()
-	instance_destroy()
-	exit
-}
-
 if light_timer-- < 0
 {
 	light_final = lerp(light_final, random_range(-0.01,0.01)+0.225, 0.5)
@@ -52,17 +18,13 @@ if window_mouse_get_delta_x() > 0 || window_mouse_get_delta_y() > 0
 	
 hand_y = clamp(hand_y, 0, 540)
 
-
-
-
-
-
 if state == "files"
 {
-	draw_sprite_ext(spr_menunew, 3, drawer1_x, drawer1_y,1,1,drawer1_x/4,c_white,1)
-	draw_sprite_ext(spr_menunew, 3, drawer2_x+300, drawer2_y,1,1,drawer2_x/4,c_white,1)
-	draw_sprite_ext(spr_menunew, 3, drawer3_x+600, drawer3_y,1,1,drawer3_x/4,c_white,1)
-
+	for (var i = 0; i < array_length(items); i++)
+	{
+		var _q = items[i]
+		draw_sprite_ext(spr_menunew, _q.index, _q.x + _q.xdraw, _q.y + _q.ydraw, 1, 1, _q.type == "drawer" ? (_q.x/4) : 0, c_white, 1)
+	}
 	draw_sprite(spr_menunew, 2, 0, 0)
 }
 if state == "draw"

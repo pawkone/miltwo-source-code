@@ -69,6 +69,9 @@ else if (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_exitgate) || p
 		obj_handlerCamera.hud_alpha = 0
 		with instance_create(0,0,obj_titlecardFadeout)
 		{
+			col = (global.level == -4) ? c_white : c_black
+			colee = col
+			coltim = (col != c_black)*1.5
 			circleSize = 0
 			scene = 4
 			fadeAlpha = 1

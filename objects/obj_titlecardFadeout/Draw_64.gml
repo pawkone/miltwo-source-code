@@ -4,7 +4,7 @@ if (!surface_exists(fadeSurface))
 var _blend = gpu_get_blendmode_ext()
 surface_set_target(fadeSurface);
 draw_clear_alpha(c_black, 0);
-draw_set_colour(c_black);
+draw_set_colour(col);
 draw_rectangle(0, 0, 960, 540, false);
 draw_set_colour(c_white);
 gpu_set_blendmode(bm_subtract);

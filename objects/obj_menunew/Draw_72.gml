@@ -85,3 +85,41 @@ if state == "tv"
 			pky_grab2 = 1
 	}
 }
+if state == "select"
+{
+	draw_set_alpha(1)
+	draw_set_colour(c_white)
+	draw_clear(#D0FF96)
+	draw_set_colour(#2e3a1a)
+	draw_set_halign(1)
+	draw_set_valign(1)
+	draw_set_font(global.npcfont)
+	draw_text_transformed(480+light_final*5, 270-light_final*5, file_txt, 0.8, 1, 2)
+	draw_set_halign(0)
+	draw_set_valign(0)
+	draw_set_colour(c_white)
+	if tv_static >= 0
+		draw_sprite(spr_tvstatic, tv_static, 0, 0)
+	draw_sprite(spr_menunew, 13, 0, 0)
+	
+	if mousemoved
+	{
+		var _c = mouse_check_button(mb_left)
+		var _c2 = mouse_check_button_released(mb_left)
+		
+		var _t1 = point_in_circle(mouse_x,mouse_y,60,270,30)
+		draw_sprite_ext(spr_menunew_tvhint, 0, 60, 270, 1, 1, 0, _t1 ? (_c ? c_yellow : c_aqua) : c_white, 1)
+		if _t1 && _c2
+			pky_left2 = -1
+		
+		var _t2 = point_in_circle(mouse_x,mouse_y,900,270,30)
+		draw_sprite_ext(spr_menunew_tvhint, 1, 900, 270, 1, 1, 0, _t2 ? (_c ? c_yellow : c_aqua) : c_white, 1)
+		if _t2 && _c2
+			pky_right2 = 1
+			
+		var _t3 = point_in_circle(mouse_x,mouse_y,480,48,30)
+		draw_sprite_ext(spr_menunew_tvhint, 3, 480, 48, 1, 1, 0, _t3 ? (_c ? c_yellow : c_aqua) : c_white, 1)
+		if _t3 && _c2
+			pky_jump2 = 1
+	}
+}

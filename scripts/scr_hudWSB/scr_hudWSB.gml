@@ -133,7 +133,6 @@ function scr_hudWSB_step()
 	                case _sprites.escape:
 	                case _sprites.idle:
 	                case _sprites.combo:
-	                case _sprites.ski:
 	                    roomname = room_get_name(room);
 	                    roomname = string_letters(roomname);
 	                    isSecret = string_pos("secret", roomname) > 0;

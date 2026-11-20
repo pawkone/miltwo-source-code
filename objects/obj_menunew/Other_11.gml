@@ -20,6 +20,6 @@ hand_hover = mbright ? 2 : (mbleft ? 4 : 1)
 
 if pky_start2
 {
-	state = "files"
-	if surface_exists(drawsurf) surface_free(drawsurf)
+	fadestage = 0
+	fadestate = "files"
 }

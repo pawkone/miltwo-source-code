@@ -52,7 +52,7 @@ function create_afterimage(_sprite, _imageindex, _x, _y, _xscale, alpha = 1)
         y: _y,
         image_xscale: _xscale,
         image_blend: choose(12603647, 8191824),
-        alarm: [15],
+        alarmm: [15],
         type: afterimagetype.normal,
         alpha: alpha,
         fadeoutAlpha: 1,
@@ -87,18 +87,18 @@ function create_machEffect(arg0, arg1, arg2, arg3, arg4, arg5 = 0.8)
 	if object_index == obj_player && character == chars.bacon_crash
 	{
 		q.image_blend = choose(4771936, 13660176)
-		q.alarm = [15, 5, -2]
+		q.alarmm = [15, 5, -2]
 		q.type = afterimagetype.crashMach
 	}
 	else if object_index == obj_player && character == chars.bacon_dream
 	{
 		q.image_blend = choose(8512228, 14990225, 45056)
-		q.alarm = [15, 5, -2]
+		q.alarmm = [15, 5, -2]
 		q.type = afterimagetype.dreamMach
 	}
 	else if object_index == obj_player && character == chars.bacon_twist
 	{
-		q.alarm = [15, 5, -2]
+		q.alarmm = [15, 5, -2]
 		q.type = choose(afterimagetype.twistMach1, afterimagetype.twistMach2)
 	}
     return q;

@@ -2,7 +2,10 @@ isSecretStart = string_pos("secret", string_letters(room_get_name(room))) > 0 ||
 
 var _char = instance_exists(obj_player) ? obj_player.character : -4
 var _arr = [
-	[mu_hubextra, room == hotel_extra],
+	[mu_hub_extra, room == hotel_extra],
+	[mu_hub_dev, room == hotel_2763],
+	[mu_hub_halloween, room == hotel_halloween_start || room == hotel_halloween_0 || room == hotel_halloween_1],
+	[mu_hub_miltwodancer, room == rm_miltwodancer],
 	
 	[mu_crashoutcity, room == crashout_1],
 	[mu_rockbottom, room == rockbottom_1],

@@ -255,7 +255,8 @@ function scr_hudNGAB2_draw()
 		var _sec = wrap(global.escapeTimer / 60, 0, 59)
         draw_set_halign(1)
 		draw_set_font(global.font_hudNGAB2_credits)
-		draw_text(480, 150, $"{wrap(global.escapeTimer / 3600, 0, 59)}:{_sec < 10 ? "0" : ""}{_sec}")
+		var _t = _sec < 10 ? "0" : ""
+		draw_text(480, 150, $"{wrap(global.escapeTimer / 3600, 0, 59)}:{_t}{_sec}")
 		draw_set_halign(0)
 	}
     

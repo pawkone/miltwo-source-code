@@ -491,6 +491,8 @@ function playerUtil_spr(_e)
 	st.player.lookdoor = get_baconera(spr_player_lookdoor, _e);
 	st.player.wallsplat = get_baconera(spr_player_wallsplat, _e);
 	st.player.breakdance = get_baconera(spr_player_breakdance, _e);
+	st.player.downbox = get_baconera(spr_player_downbox, _e);
+	st.player.upbox = get_baconera(spr_player_upbox, _e);
 	
 	// optional animations
 	st.player.idleanim1 = get_baconera(spr_player_idleanim1, _e, 1);

@@ -46,25 +46,25 @@ if (!ds_list_empty(afterimages))
                 case afterimagetype.dreamMach:
 				case afterimagetype.twistMach1:
 				case afterimagetype.twistMach2:
-                    for (var r = 0; r < array_length(alarm); r++)
+                    for (var r = 0; r < array_length(alarmm); r++)
                     {
-                        if (alarm[r] >= 0)
-                            alarm[r]--;
+                        if (alarmm[r] >= 0)
+                            alarmm[r]--;
                     }
                     
-                    if (alarm[1] == 0)
+                    if (alarmm[1] == 0)
                     {
                         image_alpha = 0;
-                        alarm[2] = 2;
+                        alarmm[2] = 2;
                     }
                     
-                    if (alarm[2] == 0)
+                    if (alarmm[2] == 0)
                     {
                         image_alpha = 1;
-                        alarm[2] = 2;
+                        alarmm[2] = 2;
                     }
                     
-                    if (alarm[0] == 0)
+                    if (alarmm[0] == 0)
                     {
                         with (other)
                         {
@@ -77,15 +77,15 @@ if (!ds_list_empty(afterimages))
                     break;
 					
                 default:
-                    for (var r = 0; r < array_length(alarm); r++)
+                    for (var r = 0; r < array_length(alarmm); r++)
                     {
-                        if (alarm[r] >= 0)
-                            alarm[r]--;
+                        if (alarmm[r] >= 0)
+                            alarmm[r]--;
                     }
                     
                     visible = other.blink;
                     
-                    if (alarm[0] == 0)
+                    if (alarmm[0] == 0)
                         fadeout = true;
                     
                     alpha = clamp(alpha, 0, 0.65);

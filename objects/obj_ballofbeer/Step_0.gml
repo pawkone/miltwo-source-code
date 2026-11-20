@@ -10,7 +10,7 @@ with (obj_player)
         hsp = 0;
         x = other.x + 32;
         y = other.y;
-        sprite_index = spr_player_downbox;
+        sprite_index = sprites.downbox;
         image_index = 0;
         state = scr_player_enterdoor;
         FMODevent_oneshot("event:/Sfx/General/Level/Progression/downbeer", x, y);
@@ -26,7 +26,7 @@ with (obj_player)
         hsp = 0;
         x = other.x + 32;
         y = other.y - 20;
-        sprite_index = spr_player_upbox;
+        sprite_index = sprites.upbox;
         image_index = 0;
         state = scr_player_enterdoor;
         FMODevent_oneshot("event:/Sfx/General/Level/Progression/downbeer", x, y);

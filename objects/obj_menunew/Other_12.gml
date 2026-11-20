@@ -72,6 +72,6 @@ else
 }
 if pky_start2
 {
-	state = "files"
-	video_close()
+	fadestage = 0
+	fadestate = "files"
 }
