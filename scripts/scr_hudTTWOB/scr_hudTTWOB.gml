@@ -68,7 +68,7 @@ function scr_hudTTWOB_step()
 					break
 				case spr_tv_idleanim1B3:
 				case spr_tv_idleanim2B3:
-					if tv_img + 0.35 >= sprite_get_number(tv_spr) - 1
+					if tv_img + 0.7 >= sprite_get_number(tv_spr)
 					{
 						tv_img = 0
 						tv_spr = spr_tv_idleB3
@@ -151,7 +151,7 @@ function scr_hudTTWOB_step()
 			break
 	}
 	tv_img += 0.35
-	if tv_img >= sprite_get_number(tv_spr) - 1
+	if tv_img+0.35 >= sprite_get_number(tv_spr)
 		tv_img = 0
 	switch combo_state
 	{
@@ -180,6 +180,8 @@ function scr_hudTTWOB_step()
 }
 function scr_hudTTWOB_draw()
 {
+	if roomthing exit
+	if instance_exists(obj_titlecard) exit
 	var combo_shake = global.combo.timer < 30 ? (8 * (30 - global.combo.timer) / 30) : 0
 	var combo_x = 820 + wave(-3, 3, 1, 0) + irandom_range(combo_shake, -combo_shake)
 	var combo_yfin = combo_y + (combo_state != 1 ? irandom_range(combo_shake, -combo_shake) : 0)

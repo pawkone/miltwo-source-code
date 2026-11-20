@@ -182,7 +182,7 @@ function scr_hudNGAB2_step()
 }
 function scr_hudNGAB2_draw()
 {
-	if global.level == -4 exit
+	if roomthing exit
 	if instance_exists(obj_titlecard) exit
 	
 	if (!ds_list_empty(collectVis))

@@ -93,7 +93,7 @@ function scr_player_groundpound()
     
     if (sprite_index == spr_player_wallpoundstart && animation_end())
         sprite_index = spr_player_wallpound;
-    if (grounded && (!place_meeting(x, y + vsp, obj_destructibles) && !place_meeting(x, y + vsp, obj_metalblock)))
+    if (grounded && (!place_meeting(x, y + 1, obj_destructibles) && !place_meeting(x, y + 1, obj_metalblock)))
     {
 		if sprite_index == spr_player3_spinnygroundpound
 		{

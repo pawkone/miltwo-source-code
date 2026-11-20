@@ -61,7 +61,7 @@ function scr_player_twistedWallbounce()
 		create_blur_effect(sprite_index, image_index, x, y, xscale)
 		buffers.afterimageBlur = 2
 	}
-	if grounded && vsp >= 0 && !place_meeting(x, y + vsp, obj_destructibles) && sprite_index != spr_player3_bounceLand && !(place_meeting(x, y + vsp, obj_metalblock) && sprite_index == spr_player3_spinnygroundpound)
+	if grounded && vsp >= 0 && !place_meeting(x, y + 1, obj_destructibles) && sprite_index != spr_player3_bounceLand && !(place_meeting(x, y + 1, obj_metalblock) && sprite_index == spr_player3_spinnygroundpound)
 	{
 		fromDive = false
 		diveMovespeed = movespeed
@@ -143,7 +143,7 @@ function scr_player_twistedBuzzsaw()
 		plrsnds_play(sfx_player_bt_ballbounce, x, y)
 		create_particleStatic(spr_player3shineEffect, x, y, 1, -2)
 	}
-	if grounded && vsp >= 0 && !place_meeting(x, y + vsp, obj_destructibles) && sprite_index != spr_player3_bounceLand
+	if grounded && vsp >= 0 && !place_meeting(x, y + 1, obj_destructibles) && sprite_index != spr_player3_bounceLand
 	{
 		if pky_run
 		{

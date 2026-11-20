@@ -1,18 +1,26 @@
 function scr_player_burned()
 {
-	image_speed = 0.35;
-	sprite_index = spr_player3_burn;
-	move = pky_right + pky_left;
-	hsp = movespeed;
-	movespeed = approach(movespeed,move*9,0.5);
-	
-	with instance_place(x+hsp,y+vsp,obj_stupidcabbit)
-		instance_destroy()
-	
-	if (grounded && vsp > 0 && (!place_meeting(x,y+1,obj_stupidcabbit)))
+	hsp = approach(hsp, movespeed, 0.7)
+	var move = pky_right + pky_left
+	if move != 0
+		movespeed = 8 * move
+	else
+		movespeed = 0
+	if grounded
 	{
-		movespeed = 0;
-		state = scr_player_normal;
-		image_index = 0;
+		create_particleStatic(spr_landeffect, x, y, 1)
+		state = scr_player_normal
+		sprite_index = sprites.land
+		image_index = 0
+		movespeed = abs(movespeed)
+		exit
+	}
+	sprite_index = spr_player3_burn
+	image_speed = 0.35
+	buffers.afterimageMach--
+	if buffers.afterimageMach <= 0
+	{
+		create_machEffect(sprite_index, image_index, x, y, xscale, 1)
+		buffers.afterimageMach = 6
 	}
 }
