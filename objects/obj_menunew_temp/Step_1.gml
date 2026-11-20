@@ -1,7 +1,5 @@
-if pky_jump2
+if pky_jump2 || pky_taunt2
 {
-	var _rm = hotel_2763;
-	var _dr = "A";
 	with (obj_player)
 	{
 		global.saveFile = wsbMOmInfo.dir + "sandbox1.xda"
@@ -11,16 +9,16 @@ if pky_jump2
 		xdata_close()
 		event_user(0)
 		generalReset();
-	    targetRoom = _rm;
-	    door = _dr;
+	    targetRoom = pky_taunt2 ? hotel_2763 : hotel_start;
+	    door = "A";
 	    movespeed = 0;
 	    vsp = 0;
 	    hsp = 0;
 	    state = scr_player_normal;
+		global.resetRoom = targetRoom;
+		room_goto(targetRoom)
 	}
 	global.level = -4;
-	global.resetRoom = _rm;
-	room_goto(_rm)
 	instance_destroy(obj_fadeout)
 	with instance_create(0, 0, obj_fadeout)
 	{

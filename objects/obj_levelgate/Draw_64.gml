@@ -1,4 +1,4 @@
-if scr_getera_pt() == "PT" || notext exit
+if notext exit
 if distance >= 500 exit
 
 draw_set_alpha(1-clamp(distance/500,0,1));
