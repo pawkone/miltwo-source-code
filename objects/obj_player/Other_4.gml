@@ -56,7 +56,7 @@ else if door == "BACKTOHUB"
     image_index = 0;
     sprite_index = sprites.walkfront;
 }
-if sprite_index == spr_player_downbox || sprite_index == spr_player_upbox
+if sprite_index == sprites.downbox || sprite_index == sprites.upbox
 	state = scr_player_normal
 else if (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_exitgate) || place_meeting(x, y, obj_magicianDoor) || place_meeting(x, y, obj_levelgate) || (place_meeting(x, y, obj_keydoor) && state == scr_player_enterdoor && !instance_exists(obj_backtohub)))
 {
@@ -70,9 +70,7 @@ else if (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_exitgate) || p
 		with instance_create(0,0,obj_titlecardFadeout)
 		{
 			col = (global.level == -4) ? c_white : c_black
-			colee = col
-			coltim = (col != c_black)*1.5
-			circleSize = 0
+			circleSize = (global.level == -4) ? -100 : 0
 			scene = 4
 			fadeAlpha = 1
 		}

@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"ts_pp3",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"ts_pp3",
+  "out_columns":20,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"? Public Playtest 3",
+    "path":"folders/Tilesets/Levels/? Public Playtest 3.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"tilespr_pp3",
+    "path":"sprites/tilespr_pp3/tilespr_pp3.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"texturegroup_game",
+    "path":"texturegroups/texturegroup_game",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":32,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":32,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":400,
+}

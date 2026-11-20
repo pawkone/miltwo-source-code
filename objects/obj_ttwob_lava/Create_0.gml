@@ -1,4 +1,6 @@
 sprite_index = spr_ttwob_lavaVisual
+image_xscale += 2
+x -= 32
 image_yscale /= 2
 image_speed = 0.35
 

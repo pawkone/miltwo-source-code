@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"BG",
-    "path":"folders/Sprites/Gameplay/Level Assets/Floor 2/Beaker Frontyard/BG.yy",
+    "path":"folders/Sprites/Gameplay/Level Assets/Misc/Beaker Frontyard/BG.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,0 +1,1 @@
+audio_play_sound(sfx_baldi_intro, 1, false)
