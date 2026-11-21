@@ -89,7 +89,6 @@
     {"name":"inst_7FF80A7A","path":"rooms/hotel_2763/hotel_2763.yy",},
     {"name":"inst_619F810C","path":"rooms/hotel_2763/hotel_2763.yy",},
     {"name":"inst_6230A00B","path":"rooms/hotel_2763/hotel_2763.yy",},
-    {"name":"inst_2B5FBFC4","path":"rooms/hotel_2763/hotel_2763.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -220,7 +219,6 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"propertyId":{"name":"targetRoom","path":"objects/obj_door/obj_door.yy",},"resource":{"name":"rm_miltwodancer","path":"rooms/rm_miltwodancer/rm_miltwodancer.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_miltwodancer",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4016.0,"y":2464.0,},
         {"$GMRInstance":"v4","%Name":"inst_6230A00B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6230A00B","objectId":{"name":"obj_doorF","path":"objects/obj_doorF/obj_doorF.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4048.0,"y":2528.0,},
-        {"$GMRInstance":"v4","%Name":"inst_2B5FBFC4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2B5FBFC4","objectId":{"name":"obj_optionLang","path":"objects/obj_optionLang/obj_optionLang.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3616.0,"y":1152.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMREffectLayer":"","%Name":"Effect_1","depth":200,"effectEnabled":true,"effectType":"_filter_contrast","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Effect_1","properties":[
         {"name":"g_ContrastIntensity","type":0,"value":"1",},
