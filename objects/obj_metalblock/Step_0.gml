@@ -22,7 +22,7 @@ with (obj_player)
         if (state == scr_player_buzzsaw)
         {
             _y = y + vsp;
-            _x = x + (xscale * 5);
+            _x = x + hsp + xscale;
         }
         
 		var _grrr = state == scr_player_dreamcrusher || state == scr_player_skatenicCrusher || state == scr_player_groundpound

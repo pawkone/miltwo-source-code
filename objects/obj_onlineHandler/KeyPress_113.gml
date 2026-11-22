@@ -1,5 +1,6 @@
+
 var _found = -4
-with obj_serverMenu
+with obj_onlineMenu
 {
 	if on
 	{
@@ -9,6 +10,6 @@ with obj_serverMenu
 }
 if !_found
 {
-	with instance_create(-100,-100,obj_serverMenu)
+	with instance_create(-100,-100,obj_onlineMenu)
 		on = true
 }

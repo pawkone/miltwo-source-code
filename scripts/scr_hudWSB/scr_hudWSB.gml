@@ -391,7 +391,7 @@ function scr_hudWSB_draw()
 			var _se = 0
 			try{_se = obj_handlerCamera.isSecretStart}catch(e){}
 			var putdown = _se || global.escapeTimer <= 0
-			var alt_putdown = !putdown && (obj_handlerMusic.captions.old < 0 || obj_handlerMusic.captions.str[obj_handlerMusic.captions.old] != "") && y <= 540 - 32
+			var alt_putdown = !putdown && obj_handlerMusic.captions.file != "" && (obj_handlerMusic.captions.old < 0 || obj_handlerMusic.captions.str[obj_handlerMusic.captions.old] != "") && y <= 540 - 32
 	        y = approach(y, putdown ? (540 + 100) : (alt_putdown ? (540 - 32) : (540 - 80)), putdown ? 15 : (alt_putdown ? 3 : 1));
 	        var _realy = lerp(540+100, y, _ha)
 			var _width = sprite_get_width(spr_timerBar), _height = sprite_get_height(spr_timerBar);
