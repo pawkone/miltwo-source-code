@@ -163,7 +163,7 @@ function scr_player_groundpound()
             plrsnds_play(sfx.slam, x, y);
             create_particleStatic(spr_groundpoundeffect, x, y, 1, -2);
 			
-			if character == chars.milton && place_meeting(x,y+1,obj_platform) && place_meeting(x,y+1,obj_ladder)
+			if character == chars.milton && !(place_meeting(x,y+1,obj_platform) && place_meeting(x,y+1,obj_ladder))
 			{
 				state = scr_player_hammerwirl;
 		        movespeed = (pky_left + pky_right) * 8
