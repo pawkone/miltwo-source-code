@@ -252,11 +252,10 @@ function scr_hudNGAB2_draw()
     draw_sprite(spr_hudNGAB2_tvHand, 0, xx - 55 + irandom_range(-5, 5), switchhandY + irandom_range(-3, 3))
     if global.escapeActive
 	{
-		var _sec = wrap(global.escapeTimer / 60, 0, 59)
         draw_set_halign(1)
 		draw_set_font(global.font_hudNGAB2_credits)
-		var _t = _sec < 10 ? "0" : ""
-		draw_text(480, 150, $"{wrap(global.escapeTimer / 3600, 0, 59)}:{_t}{_sec}")
+		var _s = wrap(global.escapeTimer / 60, 0, 59); var _t = _s < 10 ? "0" : "" //no , var thing cuz use brain
+		draw_text(480, 150, $"{wrap(global.escapeTimer / 3600, 0, 59)}:{_t}{_s}")
 		draw_set_halign(0)
 	}
     

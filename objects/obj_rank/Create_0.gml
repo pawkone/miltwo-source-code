@@ -47,26 +47,10 @@ with (obj_handlerMusic)
 
 global.escapeActive = false;
 global.escapeTimer = 7200;
-FMODstopAll();
-var _rankIndex = 0;
-
-if (global.collect >= global.Crank)
-    _rankIndex = 1;
-
-if (global.collect >= global.Brank)
-    _rankIndex = 2;
-
-if (global.collect >= global.Arank)
-    _rankIndex = 3;
-
-if (global.collect >= global.Srank)
-    _rankIndex = 4;
-
-if (scr_Prank())
-    _rankIndex = 5;
 
 music = FMODcreate_event("event:/Music/General/ranks");
 
+var _rankIndex = scr_rankGetIndex()
 if (!tutorial)
 {
     fmod_studio_event_instance_set_parameter_by_name(music, "state", _rankIndex);

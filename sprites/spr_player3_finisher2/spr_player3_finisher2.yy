@@ -29,7 +29,7 @@
   ],
   "name":"spr_player3_finisher2",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Character",
     "path":"folders/!PORTS/TTWOB/Sprites/!Player/Character.yy",
@@ -99,7 +99,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":100,
+    "xorigin":50,
     "yorigin":50,
   },
   "swatchColours":null,

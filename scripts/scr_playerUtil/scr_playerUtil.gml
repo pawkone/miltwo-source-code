@@ -121,9 +121,38 @@ function try_solid(arg0, arg1, arg2, arg3)
     return n;
 }
 
-function scr_Prank()
+function scr_rankGetIsP()
 {
     return global.treasure && global.collect >= global.Srank && !global.combo.dropped && global.secretCount >= 3 && global.escapeLap >= 2;
+}
+function scr_rankGetIndex()
+{
+	if global.collect >= global.Srank
+	{
+		if scr_rankGetIsP()
+			return 5
+	    return 4
+	}
+	else if global.collect >= global.Arank
+	    return 3
+	else if global.collect >= global.Brank
+	    return 2
+	else if global.collect >= global.Crank
+	    return 1
+	return 0
+}
+function scr_rankGetPrec()
+{
+	var rankindex = scr_rankGetIndex()
+	if rankindex >= 1 && rankindex <= 3
+	{
+		var _str = ["C", "B", "A", "S"]
+		var _g = variable_global_get($"{_str[rankindex-1]}rank")
+	    return (global.collect - _g) / (variable_global_get($"{_str[rankindex]}rank") - _g)
+	}
+	if rankindex == 0
+		return global.collect / global.Crank
+    return rankindex == 5
 }
 
 function generalReset()
@@ -493,6 +522,7 @@ function playerUtil_spr(_e)
 	st.player.breakdance = get_baconera(spr_player_breakdance, _e);
 	st.player.downbox = get_baconera(spr_player_downbox, _e);
 	st.player.upbox = get_baconera(spr_player_upbox, _e);
+	st.player.doorunlock = get_baconera(spr_player_doorunlock, _e);
 	
 	// optional animations
 	st.player.idleanim1 = get_baconera(spr_player_idleanim1, _e, 1);

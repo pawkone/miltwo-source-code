@@ -2,17 +2,12 @@ if (other.grounded && pky_up && other.state != -4 && other.state != scr_player_e
 {
     with (other)
     {
-	    var _rankString = "D";
-		if scr_Prank() _rankString = "P";
-		else if (global.collect >= global.Srank) _rankString = "S";
-		else if (global.collect >= global.Arank) _rankString = "A";
-		else if (global.collect >= global.Brank) _rankString = "B";
-	    else if (global.collect >= global.Crank) _rankString = "C";
+		
+	    var _rankString = ["D","C","B","A","S","P"][scr_rankGetIndex()]
 		with obj_onlineHandler
 		{
 			lastestMessageNum = wrap(lastestMessageNum+1, 123, 233)
-			var _laps = global.escapeLap > 0
-			lastestMessage = string(lang_get_phrase("online_rank_" + (_laps ? "laps" : "base")), string_lower(lang_get_phrase($"level_{global.level}")), _rankString, global.escapeLap)
+			lastestMessage = string(lang_get_phrase("online_rank_" + (global.escapeLap > 0 ? "laps" : "base")), string_lower(lang_get_phrase($"level_{global.level}")), _rankString, global.escapeLap)
 		}
 		
 		door = "NONE"
@@ -20,7 +15,7 @@ if (other.grounded && pky_up && other.state != -4 && other.state != scr_player_e
         state = -10;
         sprite_index = sprites.lookdoor;
         image_index = 0;
-        FMODstopAll();
+        
         global.combo.savecombo = global.combo.amt;
         
         if (global.combo.savecombo > global.combo.highest)

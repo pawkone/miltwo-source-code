@@ -77,9 +77,8 @@ function scr_pauseWSB()
     
 	with (bacon)
 	{
-	    draw_sprite(spr_pauseTable, smokeIndex, x, y);
+	    draw_sprite(spr_pauseTable, smokeIndex, round(x), round(y));
 	    var _sprite = spr_pauseBacon;
-        
 	    if (other.character == chars.milton)
 	        _sprite = spr_pauseMilton;
         

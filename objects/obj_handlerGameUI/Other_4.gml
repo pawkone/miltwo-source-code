@@ -33,7 +33,7 @@ switch global.level
 		tvbg_backindex = #0068ab
 		break
 	case "crashout":
-		global.Srank = 17000
+		global.Srank = 12000
 		tvbg_backindex = #f8e080
 		break
 	case "beaker":

@@ -1,0 +1,1 @@
+btw they are seperate files because its more organized BUT they can be in one file or any file that have the .json extension (aka its dynamic)

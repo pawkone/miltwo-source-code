@@ -145,13 +145,9 @@ function scr_player_groundpound()
                 }
             }
             else if (sprite_index == sprites.divebomb)
-            {
                 sprite_index = sprites.divebombland;
-            }
             else
-            {
                 sprite_index = sprites.groundpoundland;
-            }
             
             image_index = 0;
             vsp = 0;
@@ -160,22 +156,25 @@ function scr_player_groundpound()
             movespeed = abs(hsp);
             
 			if character == chars.bacon_twist
-			{
-				if (freefallsmash >= 10)
-	                shake_camera(30);
-	            else
-	                shake_camera(20);
-			}
+				shake_camera((freefallsmash >= 10) ? 30 : 20)
 			else
-			{
-				if (freefallsmash >= 10)
-	                shake_camera(25);
-	            else
-	                shake_camera(10);
-			}
+				shake_camera((freefallsmash >= 10) ? 25 : 10)
             
             plrsnds_play(sfx.slam, x, y);
             create_particleStatic(spr_groundpoundeffect, x, y, 1, -2);
+			
+			if character == chars.milton && place_meeting(x,y+1,obj_platform) && place_meeting(x,y+1,obj_ladder)
+			{
+				state = scr_player_hammerwirl;
+		        movespeed = (pky_left + pky_right) * 8
+		        flash = true;
+		        vsp = -16;
+		        squashX = 1.3;
+		        squashY = 0.8;
+		        FMODevent_oneshot("event:/Sfx/Player/hammerbounce", x, y);
+		        image_index = 0;
+		        sprite_index = spr_milton_superjumpcancel;
+			}
         }
     }
 }

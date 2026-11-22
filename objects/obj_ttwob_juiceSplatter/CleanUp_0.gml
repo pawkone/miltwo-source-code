@@ -1,1 +1,2 @@
-surface_free(tileSurf)
+if surface_exists(juiceSurf)
+	surface_free(juiceSurf)

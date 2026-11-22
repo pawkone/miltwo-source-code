@@ -213,18 +213,7 @@ function scr_hudTTWOB_draw()
 	draw_set_halign(0)
 	draw_set_valign(0)
 	
-	var rankindex = 0;
-	if (scr_Prank())
-	    rankindex = 5;
-	else if (global.collect >= global.Srank)
-	    rankindex = 4;
-	else if (global.collect >= global.Arank)
-	    rankindex = 3;
-	else if (global.collect >= global.Brank)
-	    rankindex = 2;
-	else if (global.collect >= global.Crank)
-	    rankindex = 1;
-	draw_sprite_ext(spr_hudTTWOB_rank, rankindex, _xx + 128, _yy, 1, 1, 0, c_white, 1)
+	draw_sprite_ext(spr_hudTTWOB_rank, scr_rankGetIndex(), _xx + 128, _yy, 1, 1, 0, c_white, 1)
 }
 function scr_hudTTWOB_clean()
 {

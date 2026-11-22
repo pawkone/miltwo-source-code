@@ -6,9 +6,9 @@ music =
     regular: "",
     secret: ""
 };
-isSecretStart = false
 musicInst = -4;
 secretInst = -4;
+isSecretStart = false
 isSecret = false;
 lock = false;
 panicStart = false;

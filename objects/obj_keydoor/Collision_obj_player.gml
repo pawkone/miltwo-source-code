@@ -12,12 +12,11 @@ if (other.grounded && pky_up && other.state != scr_player_enterdoor && other.sta
         vsp = 0;
         hsp = 0;
         state = scr_player_enterdoor;
-        
         if (ds_list_find_index(global.saveroom, id) == -1)
         {
             ds_list_add(global.saveroom, id);
             image_index = 0;
-            sprite_index = spr_player_doorunlock;
+            sprite_index = sprites.doorunlock;
         }
         else
         {

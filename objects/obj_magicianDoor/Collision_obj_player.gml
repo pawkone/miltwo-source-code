@@ -16,7 +16,7 @@ if (other.grounded && pky_up && other.state != scr_player_enterdoor && other.sta
         if (instance_exists(obj_magician))
         {
             image_index = 0;
-            sprite_index = spr_player_doorunlock;
+            sprite_index = sprites.doorunlock;
         }
         else
         {

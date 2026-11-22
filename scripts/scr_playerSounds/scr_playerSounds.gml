@@ -5,7 +5,6 @@ function scr_playerSounds_load()
 {
 	if !variable_instance_exists(id, "sfx") sfx = {}
 	
-	scr_playerSounds_release("laugh")
 	scr_playerSounds_release("mach")
 	scr_playerSounds_release("sjump")
 	scr_playerSounds_release("roll")
@@ -19,6 +18,12 @@ function scr_playerSounds_load()
 	sfx = {}
 	
 	scr_playerSounds_data()
+	
+	scr_playerSounds_loadcheck("voice_ok", "event:/Sfx/Player/yeag")
+	scr_playerSounds_loadcheck("voice_laugh", "event:/Sfx/Player/yay")
+	scr_playerSounds_loadcheck("voice_gasp", "event:/Sfx/Player/gasp")
+	scr_playerSounds_loadcheck("voice_hurt", -4)
+	scr_playerSounds_loadcheck("voice_scream", sfx_player_bt_scream)
 	
 	scr_playerSounds_loadcheck("taunt", "event:/Sfx/Player/taunt")
 	scr_playerSounds_loadcheck("step", "event:/Sfx/Player/step")
@@ -37,12 +42,6 @@ function scr_playerSounds_load()
 	scr_playerSounds_loadcheck("hammerair", FMODcreate_event("event:/Sfx/Player/hammerair"))
 	scr_playerSounds_loadcheck("skateboard", FMODcreate_event("event:/Sfx/Player/Transformations/Skateboard/move"))
 	scr_playerSounds_loadcheck("skateaim", FMODcreate_event("event:/Sfx/Player/Transformations/Skateboard/aim"))
-	
-	scr_playerSounds_loadcheck("voice_ok", "event:/Sfx/Player/yeag")
-	scr_playerSounds_loadcheck("voice_laugh", "event:/Sfx/Player/yay")
-	scr_playerSounds_loadcheck("voice_gasp", "event:/Sfx/Player/gasp")
-	scr_playerSounds_loadcheck("voice_hurt", -4)
-	scr_playerSounds_loadcheck("voice_scream", sfx_player_bt_scream)
 }
 function scr_playerSounds_loadcheck(str, event)
 {

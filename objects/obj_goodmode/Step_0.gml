@@ -1,5 +1,4 @@
 instance_destroy(obj_transition_hotel2)
-instance_destroy(obj_characterswitch)
 obj_player.character = chars.preoutman
 obj_player.sfx.jump = sfx_player_bt_ballbounce
 obj_player.sfx.step = sfx_player_bc_grab

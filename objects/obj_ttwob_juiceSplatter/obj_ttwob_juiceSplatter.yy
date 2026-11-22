@@ -31,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_ttwob_juiceSplatterMask",
-    "path":"sprites/spr_ttwob_juiceSplatterMask/spr_ttwob_juiceSplatterMask.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

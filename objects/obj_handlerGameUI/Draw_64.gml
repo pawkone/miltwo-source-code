@@ -12,5 +12,5 @@ if saveiconAlpha > 0
 }
 
 if room == timesup_room exit
-if is_callable(hud_scr_draw) hud_scr_draw()
 if is_callable(roomname_scr_step) roomname_scr_step()
+if is_callable(hud_scr_draw) hud_scr_draw()

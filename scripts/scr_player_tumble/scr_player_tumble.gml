@@ -2,7 +2,22 @@ function scr_player_tumble()
 {
     var move = pky_right + pky_left;
 	
-	if skatenic_is_tornado()
+	if (character == chars.milton && !grounded)
+	{
+		if vsp < 13
+			vsp = 13
+		if movespeed < 6
+			movespeed = 6
+		if move != 0
+		{
+			xscale = move
+			if xscale != sign(hsp)
+				hsp = approach(hsp, movespeed * move, 2)
+			else
+				hsp = approach(hsp, movespeed * move, 1)
+		}
+	}
+	else if skatenic_is_tornado()
 	{
 		image_speed = 0.5 * xscale
 		vsp = 24
@@ -61,7 +76,7 @@ function scr_player_tumble()
     
     if (sprite_index == sprites.dive || sprite_index == spr_milton_diveprep) && !skatenic_is_tornado()
     {
-        if (jumpBuffer && !grounded && character != chars.milton)
+        if (jumpBuffer && !grounded)
         {
             vsp = -6;
             sprite_index = sprites.divebomb;
@@ -69,6 +84,8 @@ function scr_player_tumble()
             state = scr_player_groundpoundstart;
             squashX = 1.3;
             squashY = 0.8;
+			if character == chars.milton
+				sprite_index = sprites.groundpoundstart;
 			if character == chars.bacon_twist
 			{
 				create_particleStatic(spr_player3groundpoundStartEffect,x,y,1)
@@ -77,7 +94,7 @@ function scr_player_tumble()
         }
     }
     
-    if ((character == chars.milton))
+    if (character == chars.milton)
     {
         if (sprite_index == spr_milton_diveprep && animation_end())
             sprite_index = sprites.dive;
@@ -124,7 +141,7 @@ function scr_player_tumble()
         sprite_index = sprites.rolling;
         image_index = 0;
     }
-    if (grounded && jumpBuffer && !scr_solid(x, y - 16) && (character == chars.bacon_dream))
+    if (character == chars.bacon_dream && grounded && jumpBuffer && !scr_solid(x, y - 16))
 	{
 		jumpstop = false;
 	    sprite_index = spr_player1_grabspinny;
@@ -150,20 +167,27 @@ function scr_player_tumble()
 	
 	if character == chars.milton && movespeed > 6
 		movespeed -= 0.02
-    if !skatenic_is_tornado() && ((place_meeting(x + sign(hsp), y, obj_solid) && !scr_slope(x,y+1)) || (place_meeting(x + sign(hsp), y-6, obj_solid) && !place_meeting(x, y-6, obj_solid)))
+	if (character == chars.milton && !grounded) && (place_meeting(x + xscale + hsp, y-6, obj_solid) && !place_meeting(x, y-6, obj_solid))
+    {
+        FMODevent_oneshot("event:/Sfx/Player/hammerbounce", x, y);
+        create_particleStatic(spr_miltonEffect, x + (5 * xscale), y, 1, -2);
+        xscale *= -1;
+		movespeed = min(20,max(movespeed, move != 0 ? 17 : 8))
+		hsp = xscale * movespeed
+        squashX = 1.3;
+        squashY = 0.8;
+    }
+    else if !skatenic_is_tornado() && ((place_meeting(x + xscale, y, obj_solid) && !scr_slope(x + xscale,y+1)) || (place_meeting(x + xscale, y-6, obj_solid) && !place_meeting(x, y-6, obj_solid)))
     {
 		if (character == chars.milton)
         {
             FMODevent_oneshot("event:/Sfx/Player/hammerbounce", x, y);
             create_particleStatic(spr_miltonEffect, x + (5 * xscale), y, 1, -2);
             xscale *= -1;
+			movespeed = min(20,max(movespeed+1, 8))
+			hsp = xscale * movespeed
             squashX = 1.3;
             squashY = 0.8;
-            if grounded
-			{
-		        if (movespeed < 20)
-		            movespeed++
-			}
         }
 		else if (character == chars.bacon_dream && sprite_index == sprites.dive)
 		{

@@ -67,8 +67,6 @@ function FMODsetPauseAll(arg0)
     {
         if fmod_studio_event_instance_is_valid(global.FMOD_existingEvents[i])
             fmod_studio_event_instance_set_paused(global.FMOD_existingEvents[i], arg0);
-		else
-			array_delete(global.FMOD_existingEvents, i, 1)
     }
 }
 

@@ -3,7 +3,7 @@ function scr_player_mach3()
     hsp = movespeed * xscale;
 	
 	if movespeed < 12
-		movespeed = approach(movespeed, 12, 0.6)
+		movespeed += 0.6
     
     if (sprite_index == sprites.superjumpcancel)
         image_speed = lerp(image_speed, 0.5, 0.15);
@@ -34,12 +34,16 @@ function scr_player_mach3()
     
     var move = pky_right + pky_left, _accel
 	if (character == chars.milton)
-		_accel = mach4mode ? 0.075 : 0.0175
+		_accel = movespeed >= 16 ? 0.075 : 0.0175
 	else
-		_accel = mach4mode ? 0.1 : 0.025
+		_accel = movespeed >= 16 ? 0.1 : 0.025
     
     if (move == xscale && grounded)
+	{
+		if movespeed < 20
+			slope_momentum(0.1);
         movespeed = approach(movespeed, 20, _accel);
+	}
     
     if (animation_end() && sprite_index == sprites.buzzsawCancel)
         image_index = image_number - 2;
@@ -55,14 +59,6 @@ function scr_player_mach3()
         sprite_index = sprites.crazyrun;
 		flash = true;
     }
-    
-	if (character == chars.milton)
-		mach4mode = (movespeed >= 22)
-	else
-		mach4mode = (movespeed >= 16)
-    
-    if (movespeed < 18)
-        slope_momentum(0.1);
     
     if (sprite_index == sprites.crazyrun)
     {

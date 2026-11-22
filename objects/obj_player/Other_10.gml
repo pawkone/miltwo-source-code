@@ -13,6 +13,12 @@ event_user(1)
 
 characterOld = character
 sprites = global.PlayerCharacters[character].sprites.player;
+var tv_sprites = global.PlayerCharacters[character].sprites.tv
+with obj_handlerGameUI
+{
+	if variable_instance_exists(id, "tv") && is_struct(tv)
+		sprites = tv_sprites
+}
 spr_palette = global.PlayerCharacters[character].sprites.player.palette;
 global.patternSpr = global.PlayerCharacters[character].patternSpr;
 scr_playerSounds_load()

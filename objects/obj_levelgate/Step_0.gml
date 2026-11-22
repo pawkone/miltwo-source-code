@@ -13,18 +13,12 @@ if scr_getera_pt() != "PT" && scoreViewer == -4
 	    {
 			collect = other.collect
 	        targetY = other.y - 175;
-	        if (_r == "D")
-	            rankIndex = 0;
-	        if (_r == "C")
-	            rankIndex = 1;
-	        if (_r == "B")
-	            rankIndex = 2;
-	        if (_r == "A")
-	            rankIndex = 3;
-	        if (_r == "S")
-	            rankIndex = 4;
-	        if (_r == "P")
-	            rankIndex = 5;
+	        if (_r == "D") rankIndex = 0
+	        if (_r == "C") rankIndex = 1
+	        if (_r == "B") rankIndex = 2
+	        if (_r == "A") rankIndex = 3
+	        if (_r == "S") rankIndex = 4
+	        if (_r == "P") rankIndex = 5
 	    }
 	}
 }

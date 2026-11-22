@@ -68,7 +68,6 @@ wallgrab = 0;
 enemyID = -4;
 i_frame = 0;
 coyote_time = 0;
-mach4mode = false;
 movespeedSurfing = 0;
 diveboardSaved = {};
 diveboardSaved.movespeed = movespeed;

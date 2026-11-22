@@ -54,22 +54,27 @@ window_set_size(res[global.windowSize][0], res[global.windowSize][1])
 window_center()
 xdata_close()
 
-/*
-var i = 0
-var _xx = 0, _yy = 40
-repeat (4)
+if extension_exists("MultiClient")
 {
-	if MultiClientGetID() == i
-		window_set_rectangle(_xx,_yy,960,480)
-	_xx += 960
-	if _xx >= 1920
+	var _s = asset_get_index("MultiClientGetID")
+	if _s
 	{
-		_xx = 0
-		_yy += 510
+		var i = 0
+		var _xx = 0, _yy = 40
+		repeat (4)
+		{
+			if script_execute(_s) == i
+				window_set_rectangle(_xx,_yy,960,480)
+			_xx += 960
+			if _xx >= 1920
+			{
+				_xx = 0
+				_yy += 510
+			}
+			i++
+		}
 	}
-	i++
 }
-*/
 
 function animation_end(){return (image_index + (image_speed * sprite_get_speed(sprite_index))) >= image_number;}
 function shake_camera(intesteyt, time = -4){if (time == -4) time = intesteyt; array_push(obj_handlerCamera.cameraShakeArray, [time, time, intesteyt])}

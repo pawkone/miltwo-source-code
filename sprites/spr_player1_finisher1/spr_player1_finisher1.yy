@@ -35,7 +35,7 @@
   ],
   "name":"spr_player1_finisher1",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"baconDream",
     "path":"folders/Sprites/Gameplay/Characters/Older/baconDream.yy",
@@ -123,7 +123,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":100,
+    "xorigin":50,
     "yorigin":50,
   },
   "swatchColours":null,

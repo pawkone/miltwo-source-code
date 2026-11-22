@@ -40,7 +40,14 @@ function scr_player_mach2()
     if (grounded)
         movespeed += _accel;
 	else if (sprite_index == spr_milton_longjump || sprite_index == spr_milton_longjumpend)
-		movespeed += 0.005
+	{
+		if movespeed < 14
+		    movespeed += 0.5
+		else if movespeed < 17
+			movespeed += 0.01
+		else if movespeed < 24
+			movespeed += 0.005
+	}
 		
     if pky_grab && grounded && (sprite_index == spr_milton_longjump || sprite_index == spr_milton_longjumpend)
     {
@@ -127,7 +134,7 @@ function scr_player_mach2()
         vsp /= 20;
     }
     
-    if character != chars.pepperni && (movespeed >= 12 && grounded)
+    if movespeed >= 12 && grounded
     {
         movespeed = max(movespeed, 12);
         flash = true;
