@@ -1,3 +1,6 @@
+palmode_act = 0
+palmode_lrp = 0
+
 buffer = 5
 
 select = obj_player.character
