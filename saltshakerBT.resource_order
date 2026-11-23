@@ -936,6 +936,8 @@
     {"name":"spr_destroyabledonutDeadTTWOB","order":4,"path":"sprites/spr_destroyabledonutDeadTTWOB/spr_destroyabledonutDeadTTWOB.yy",},
     {"name":"spr_destroyabledonutTTWOB","order":5,"path":"sprites/spr_destroyabledonutTTWOB/spr_destroyabledonutTTWOB.yy",},
     {"name":"spr_devimage1","order":9,"path":"sprites/spr_devimage1/spr_devimage1.yy",},
+    {"name":"spr_devimage2","order":12,"path":"sprites/spr_devimage2/spr_devimage2.yy",},
+    {"name":"spr_devimage3","order":13,"path":"sprites/spr_devimage3/spr_devimage3.yy",},
     {"name":"spr_dialogB","order":16,"path":"sprites/spr_dialogB/spr_dialogB.yy",},
     {"name":"spr_dialogP_mildre","order":17,"path":"sprites/spr_dialogP_mildre/spr_dialogP_mildre.yy",},
     {"name":"spr_dialogP_milton","order":18,"path":"sprites/spr_dialogP_milton/spr_dialogP_milton.yy",},

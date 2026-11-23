@@ -1185,6 +1185,8 @@
     {"id":{"name":"spr_destroyabledonutDeadTTWOB","path":"sprites/spr_destroyabledonutDeadTTWOB/spr_destroyabledonutDeadTTWOB.yy",},},
     {"id":{"name":"spr_destroyabledonutTTWOB","path":"sprites/spr_destroyabledonutTTWOB/spr_destroyabledonutTTWOB.yy",},},
     {"id":{"name":"spr_devimage1","path":"sprites/spr_devimage1/spr_devimage1.yy",},},
+    {"id":{"name":"spr_devimage2","path":"sprites/spr_devimage2/spr_devimage2.yy",},},
+    {"id":{"name":"spr_devimage3","path":"sprites/spr_devimage3/spr_devimage3.yy",},},
     {"id":{"name":"spr_dialogB","path":"sprites/spr_dialogB/spr_dialogB.yy",},},
     {"id":{"name":"spr_dialogP_mildre","path":"sprites/spr_dialogP_mildre/spr_dialogP_mildre.yy",},},
     {"id":{"name":"spr_dialogP_milton","path":"sprites/spr_dialogP_milton/spr_dialogP_milton.yy",},},
