@@ -696,6 +696,7 @@
     {"id":{"name":"scr_hudWSB","path":"scripts/scr_hudWSB/scr_hudWSB.yy",},},
     {"id":{"name":"scr_input","path":"scripts/scr_input/scr_input.yy",},},
     {"id":{"name":"scr_language","path":"scripts/scr_language/scr_language.yy",},},
+    {"id":{"name":"scr_levelUtil","path":"scripts/scr_levelUtil/scr_levelUtil.yy",},},
     {"id":{"name":"scr_math","path":"scripts/scr_math/scr_math.yy",},},
     {"id":{"name":"scr_particles","path":"scripts/scr_particles/scr_particles.yy",},},
     {"id":{"name":"scr_patternUtil","path":"scripts/scr_patternUtil/scr_patternUtil.yy",},},

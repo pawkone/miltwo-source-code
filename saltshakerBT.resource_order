@@ -501,6 +501,7 @@
     {"name":"scr_getera","order":12,"path":"scripts/scr_getera/scr_getera.yy",},
     {"name":"scr_hudTTWOB","order":1,"path":"scripts/scr_hudTTWOB/scr_hudTTWOB.yy",},
     {"name":"scr_language","order":1,"path":"scripts/scr_language/scr_language.yy",},
+    {"name":"scr_levelUtil","order":4,"path":"scripts/scr_levelUtil/scr_levelUtil.yy",},
     {"name":"scr_math","order":9,"path":"scripts/scr_math/scr_math.yy",},
     {"name":"scr_particles","order":2,"path":"scripts/scr_particles/scr_particles.yy",},
     {"name":"scr_patternUtil","order":1,"path":"scripts/scr_patternUtil/scr_patternUtil.yy",},

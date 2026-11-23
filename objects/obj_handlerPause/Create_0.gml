@@ -56,7 +56,10 @@ function doPause()
 	var gameSurface = surface_create(_w,_h), _arr = [], _len = 0
 	surface_set_target(gameSurface)
 	with all
-		array_push(_arr, id)
+	{
+		if object_index != obj_handlerPause
+			array_push(_arr, id)
+	}
 	array_sort(_arr,function(a,b){return a.depth-b.depth})
 	_len = array_length(_arr)
 	for (var i = 0; i < _len; i++)

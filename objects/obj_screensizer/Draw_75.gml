@@ -8,9 +8,9 @@ if (global.debug)
     array_push(devWindow, "Processer FPS", string(floor(fps_real)))
 	array_push(devWindow, "Inst Count", instance_count)
 	array_push(devWindow, "Cur Room", room_get_name(room))
-	array_push(devWindow, "", "")
-    if (instance_exists(obj_player))
+    if instance_exists(obj_player)
     {
+		array_push(devWindow, "", "")
 	    array_push(devWindow, "Plr Pos X", string(obj_player.x))
 	    array_push(devWindow, "Plr Pos Y", string(obj_player.y))
 		array_push(devWindow, "Plr SprIndex", sprite_get_name(obj_player.sprite_index))
@@ -23,8 +23,8 @@ if (global.debug)
     draw_set_halign(fa_left)
     draw_set_alpha(0.3)
     draw_set_colour(c_black)
-    var _width = 0
-    for (var i = 0; i < array_length(devWindow); i += 2)
+    var _len = array_length(devWindow), _width = 0
+    for (var i = 0; i < _len; i += 2)
 		_width = max(_width,string_width(devWindow[i+1])*0.75+96)
 	
     var _x = 16, _h = string_height("A")*0.4
@@ -34,10 +34,14 @@ if (global.debug)
     draw_set_alpha(0.5)
     draw_set_colour(c_white)
 	_y -= 2
-    for (var i = 0; i < array_length(devWindow); i += 2)
+    for (var i = 0; i < _len; i += 2)
 	{
         draw_text_transformed(_x, _y + (_h * i), devWindow[i], 0.75, 1, 0)
 		draw_text_transformed(_x + 96, _y + (_h * i), devWindow[i+1], 0.75, 1, 0)
 	}
 	draw_set_alpha(1)
 }
+draw_rectangle_colour(-5000, -5000, 0, 5540, 0, 0, 0, 0, false)
+draw_rectangle_colour(960, -5000, 5960, 5540, 0, 0, 0, 0, false)
+draw_rectangle_colour(-5000, -5000, 5960, 0, 0, 0, 0, 0, false)
+draw_rectangle_colour(-5000, 540, 5960, 5540, 0, 0, 0, 0, false)
