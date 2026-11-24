@@ -75,6 +75,7 @@ if buffer < 0
 			palmode_act = 1
 		else
 		{
+			palmode_act = 0
 			obj_player.character = select
 			obj_player.palIndex = select_pal[select]
 			with obj_player
