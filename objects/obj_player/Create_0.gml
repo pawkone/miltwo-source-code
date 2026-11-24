@@ -6,13 +6,13 @@ toppingstr = [obj_potable0, obj_potable1, obj_potable2, obj_potable3, obj_potabl
 character = chars.mildred;
 isMildred = false
 characterOld = character
+spr_palette = spr_playerPal;
+palIndex = 1;
 event_user(0)
 depth = 0;
 image_speed = 0.35;
 scr_collision_init();
 grav = 0.5;
-spr_palette = spr_playerPal;
-palIndex = 1;
 jumpstop = false;
 door = "A";
 state = scr_player_normal;

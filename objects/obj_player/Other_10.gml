@@ -22,3 +22,6 @@ with obj_handlerGameUI
 spr_palette = global.PlayerCharacters[character].sprites.player.palette;
 global.patternSpr = global.PlayerCharacters[character].patternSpr;
 scr_playerSounds_load()
+
+if palIndex < 0 || palIndex >= sprite_get_width(spr_palette)
+	palIndex = 1

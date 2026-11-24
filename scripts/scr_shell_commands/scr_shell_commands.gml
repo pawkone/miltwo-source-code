@@ -201,7 +201,7 @@ function sh_toggle_debug(arg0)
 }
 
 
-function meta_char()
+function meta_player_char()
 {
 	var _arr = []
 	for (var i = 0; i < array_length(global.PlayerCharacters); i++)
@@ -214,7 +214,7 @@ function meta_char()
     };
 }
 
-function sh_char(arg0)
+function sh_player_char(arg0)
 {
 	with obj_player
 	{
@@ -227,5 +227,25 @@ function sh_char(arg0)
 				break
 			}
 		}
+	}
+}
+
+function meta_player_pal()
+{
+    return 
+    {
+        arguments: ["int"],
+        suggestions: ["0"],
+        description: "changes your character's palette"
+    };
+}
+
+function sh_player_pal(arg0)
+{
+	with obj_player
+	{
+		arg0 = string_digits(arg0)
+		if string_length(arg0) > 0
+			palIndex = real(arg0)
 	}
 }
