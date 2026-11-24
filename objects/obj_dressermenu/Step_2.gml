@@ -62,7 +62,7 @@ if buffer < 0
 		}
 	}
 
-	if pky_grab2
+	if pky_grab2 || pky_start2
 	{
 		if palmode_act
 			palmode_act = 0

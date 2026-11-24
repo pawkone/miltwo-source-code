@@ -19,7 +19,7 @@ if instance_exists(obj_option)
 activelrp = lerp(activelrp, active, 0.1)
 activelrp = approach(activelrp, active, 0.001)
 
-var _nopauseRooms = room == timesup_room || room == Mainmenu || instance_exists(obj_fadeout) || instance_exists(obj_rank) || instance_exists(obj_technicaldifficulty) || instance_exists(obj_titlecard) || obj_shell.isOpen;
+var _nopauseRooms = room == timesup_room || room == Mainmenu || instance_exists(obj_fadeout) || instance_exists(obj_rank) || instance_exists(obj_technicaldifficulty) || instance_exists(obj_titlecard) || obj_shell.isOpen || (instance_exists(obj_dressermenu) && !obj_dressermenu.closee);
 
 if !active
 {

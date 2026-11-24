@@ -205,7 +205,7 @@ function meta_char()
 {
 	var _arr = []
 	for (var i = 0; i < array_length(global.PlayerCharacters); i++)
-		array_push(_arr, global.PlayerCharacters[i].name)
+		array_push(_arr, global.PlayerCharacters[i].ms)
     return 
     {
         arguments: ["string"],
@@ -221,7 +221,7 @@ function sh_char(arg0)
 		var _arr = []
 		for (var i = 0; i < array_length(global.PlayerCharacters); i++)
 		{
-			if arg0[1] == global.PlayerCharacters[i].name || arg0[1] == i
+			if arg0[1] == global.PlayerCharacters[i].ms || arg0[1] == i
 			{
 				character = i
 				break

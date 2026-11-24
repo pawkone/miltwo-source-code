@@ -41,31 +41,28 @@ enum chars
 	preoutman,
 	
 	//misc / joke
-	//bacon5, --btw your never getting him so pack your bags for bacon5 :cry:
 	soda,
 }
 var _ex = [
-	["player",		"",		"Mildred"],
-	["milton",		"M",	"Milton"],
-	["pepperni",	"P",	"Pepperni"],
-	["skatenic",	"S",	"Skatenic"],
+	["player", ""],
+	["milton", "M"],
+	["pepperni", "P"],
+	["skatenic", "S"],
 	
-	["playerV",		"V",	"Valenta"],
-	["player3",		"B3",	"BaconTu"],
-	["player2",		"B2",	"ReBacon"],
-	["player1",		"B1",	"Bacon2"],
-	["player0",		"B0",	"Bacon1"],
-	["preoutman",	"POM",	"Preoutman"],
+	["playerV", "V"],
+	["player3", "B3"],
+	["player2", "B2"],
+	["player1", "B1"],
+	["player0", "B0"],
 	
-	//["bacon5",		"B5",	"Bacon5"],
-	["playersoda",	"SODA",	"Soda"],
+	["preoutman", "POM"],
+	["playersoda", "SODA"],
 ];
 
 for (var i = 0; i < array_length(_ex); i++)
 {
 	var _char = _ex[i]
-	global.PlayerCharacters[i] = {ps: _char[0], ms: _char[1], name: _char[2]}
-	
+	global.PlayerCharacters[i] = {ps: _char[0], ms: _char[1]}
 	var _sprites = playerUtil_spr(i)
 	global.PlayerCharacters[i].sprites = _sprites
 	global.PlayerCharacters[i].patColors = _sprites.player.patcolours

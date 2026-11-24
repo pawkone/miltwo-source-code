@@ -299,6 +299,7 @@
     {"$GMIncludedFile":"","%Name":"base_options.json","CopyToMask":-1,"filePath":"datafiles/gameData/lang/eng/dict","name":"base_options.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"base.json","CopyToMask":-1,"filePath":"datafiles/gameData/lang/eng/dict","name":"base.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"era_ttwob.json","CopyToMask":-1,"filePath":"datafiles/gameData/lang/eng/dict","name":"era_ttwob.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"name_character.json","CopyToMask":-1,"filePath":"datafiles/gameData/lang/eng/dict","name":"name_character.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"name_levelgate.json","CopyToMask":-1,"filePath":"datafiles/gameData/lang/eng/dict","name":"name_levelgate.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"name_roomtips.json","CopyToMask":-1,"filePath":"datafiles/gameData/lang/eng/dict","name":"name_roomtips.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"flag.png","CopyToMask":-1,"filePath":"datafiles/gameData/lang/eng","name":"flag.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},

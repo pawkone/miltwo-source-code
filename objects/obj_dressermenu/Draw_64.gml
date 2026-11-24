@@ -6,9 +6,9 @@ var xx = lerp(-64*5, 128, palmode_lrp), yy = 0, hh = sprite_get_height(spr_pal[s
 for (var i = 1; i < count_pal[select]; i++)
 {
 	pal_swap_set(spr_pal[select], i, false)
-	draw_sprite_stretched(global.PlayerCharacters[select].sprites.player.palettepreview, 0, 34+xx, lerp(270,34+yy,onlrp), 46, 46*onlrp)
+	draw_sprite_stretched(global.PlayerCharacters[select].sprites.player.palettepreview, i-1, 34+xx, lerp(270,34+yy,onlrp), 46, 46*onlrp)
 	shader_reset()
-	pattern_draw(global.PlayerCharacters[select].sprites.player.palettepreview, 0,34+xx, lerp(270,34+yy,onlrp), 1, onlrp,0,c_white,1,global.PlayerCharacters[select].sprites.player.pattern, global.PlayerCharacters[select].sprites.player.patcolours, spr_pal[select], i)
+	pattern_draw(global.PlayerCharacters[select].sprites.player.palettepreview, i-1, 34+xx, lerp(270,34+yy,onlrp), 1, onlrp,0,c_white,1,global.PlayerCharacters[select].sprites.player.pattern, global.PlayerCharacters[select].sprites.player.patcolours, spr_pal[select], i)
 	draw_sprite_stretched(spr_dressermenu_panel, select_pal[select] == i, 32+xx, lerp(270,32+yy,onlrp), 50, 50*onlrp)
 	xx += 64
 	if i mod 4 == 0
@@ -59,18 +59,11 @@ _p(0,selectadd,_x,_y)
 draw_set_halign(1)
 draw_set_valign(1)
 var _sl1 = selectthinglrp >= 0.5 ? oldoldSelect : select
-var _n = global.PlayerCharacters[_sl1].name
+var _n = ""
 if _sl1 == chars.soda
-{
-	switch clamp(select_pal[_sl1]-1, 0, sprite_get_width(spr_playersoda_idle)-1)
-	{
-		case 1: _n += " (Liquor)" break
-		case 2: _n += " (Ludicrous)" break
-		case 3: _n += " (PBSB)" break
-		case 4: _n += " (Burger)" break
-		case 5: _n += " (Bacon Prime)" break
-	}
-}
+	_n = lang_get_phrase($"character_{global.PlayerCharacters[_sl1].ps}{clamp(select_pal[_sl1]-1, 0, sprite_get_width(spr_playersoda_idle)-1)}")
+else
+	_n = lang_get_phrase($"character_{global.PlayerCharacters[_sl1].ps}")
 if palmode_lrp < 1
 {
 	draw_set_font(global.creditsfont)
