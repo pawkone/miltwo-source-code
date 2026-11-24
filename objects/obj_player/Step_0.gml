@@ -1,8 +1,3 @@
-if character == chars.pepperni && vsp < 0
-	grav = 1
-else
-	grav = 0.5
-
 var touchie = place_meeting(x,y,obj_dresser) ||
 place_meeting(x,y,obj_door) ||
 place_meeting(x,y,obj_levelgate) ||

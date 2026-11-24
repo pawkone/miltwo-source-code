@@ -25,7 +25,6 @@ function scr_player_twistedWallbounce()
 		state = scr_player_mach3
 		if movespeed < 13
 			movespeed = 13
-		grav = 0.5
 	}
 	if vsp < 0
 		freefalling = -4
@@ -129,7 +128,6 @@ function scr_player_twistedBuzzsaw()
 		state = scr_player_mach3
 		if movespeed < 13
 			movespeed = 13
-		grav = 0.5
 	}
 	if scr_solid(x + sign(hsp), y) && !scr_slope(x, y + 4)
 	{
