@@ -9,7 +9,7 @@ bgx = (bgx + 0.375) mod 3840;
 
 if (menu == 0)
 {
-	if (mky_slap2)
+	if (pky_start2)
     {
 		with obj_handlerMusic
 			stop_music()
@@ -40,7 +40,7 @@ if (menu == 0)
 }
 else
 {
-    if (mky_slap2)
+    if (pky_start2)
     {
         menu = 0;
         selected = 0;
