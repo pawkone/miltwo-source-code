@@ -65,9 +65,15 @@ function plrsnds_play(event, xx, yy)
 	{
 		if is_array(event)
 			event = event[irandom(array_length(event)-1)]
-		var _pitch = random_range(1,1.1)
-		var _sfx = scr_soundeffect(event, _pitch, false)
-		audio_sound_gain(_sfx, global.SfxVolume * audio_sound_get_gain(event), 0)
+		if audio_exists(event)
+		{
+			var _pitch = random_range(1,1.1)
+			var _sfx = scr_soundeffect(event, _pitch, false)
+			audio_sound_gain(_sfx, global.SfxVolume * audio_sound_get_gain(event), 0)
+			return _sfx
+		}
+		else
+			return -4
 	}
 }
 
@@ -178,11 +184,13 @@ function playerSounds()
 	
 	// v ERAS
 	plrsnds_event((state == scr_player_twistedBuzzsaw || state == scr_player_twistedWallbounce) && character == chars.bacon_twist, "sfx_player_bt_ballspin")
+	
 	// v MILTON
 	s = 0
 	if (abs(movespeed) > 0) s = abs(movespeed) / 12;
 	plrsnds_event(state == scr_player_hammerattack, sfx.hammer, s)
 	plrsnds_event(sprite_index == spr_milton_dive, sfx.hammerair)
+	
 	// v SKATENIC
 	plrsnds_event(grounded && tor, sfx_skatenic_drillground)
 	plrsnds_event(!grounded && tor, sfx_skatenic_drillair)

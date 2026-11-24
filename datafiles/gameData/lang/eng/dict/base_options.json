@@ -20,7 +20,7 @@
 	"option_video_window_mode_borderless": "BORDERLESS",
 	"option_video_resolution": "RESOLUTION",
 	"option_video_vsync": "VSYNC",
-	"option_video_filtering": "TEXTURE FILTERING",
+	"option_video_patterns": "PLAYER PATTERNS",
 	"option_video_hide_hud": "HIDE HUD",
 
 	"option_controls_keyboard": "KEYBOARD",

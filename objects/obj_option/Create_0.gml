@@ -240,7 +240,7 @@ var VIDEO = create_menu(optionstype.video, optionstype.anchor_left, 48, function
     xdata_write("Visual", "showHud", global.hide_hud);
     xdata_write("General", "Vsync", global.vsync);
     xdata_write("General", "Windowsize", global.windowSize);
-    xdata_write("General", "texFilter", global.texFilter);
+    xdata_write("General", "patterns", global.patterns);
 	xdata_close()
 });
 add_option_press(VIDEO, "option_back", function()
@@ -250,7 +250,7 @@ add_option_press(VIDEO, "option_back", function()
     xdata_write("Visual", "showHud", global.hide_hud);
     xdata_write("General", "Vsync", global.vsync);
     xdata_write("General", "Windowsize", global.windowSize);
-    xdata_write("General", "texFilter", global.texFilter);
+    xdata_write("General", "patterns", global.patterns);
 	xdata_close()
 });
 add_option_press(VIDEO, "option_video_window_mode", function()
@@ -277,15 +277,14 @@ add_option_ext(VIDEO, optionstype.element_toggle, "option_video_vsync", function
     display_reset(0, global.vsync);
     q.val = global.vsync;
 }, global.vsync, 1);
-add_option_ext(VIDEO, optionstype.element_toggle, "option_video_filtering", function()
+add_option_ext(VIDEO, optionstype.element_toggle, "option_video_patterns", function()
 {
     var m = menus[currentmenu];
     var opt = m.options;
     var q = opt[selected];
-    global.texFilter = q.val;
-    gpu_set_texfilter(global.texFilter);
-    q.val = global.texFilter;
-}, global.texFilter, 1);
+    global.patterns = q.val;
+    q.val = global.patterns;
+}, global.patterns, 1);
 add_option_ext(VIDEO, optionstype.element_toggle, "option_video_hide_hud", function()
 {
     var m = menus[currentmenu];

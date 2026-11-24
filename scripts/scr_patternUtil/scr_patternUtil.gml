@@ -4,6 +4,7 @@ global.patternTexel = shader_get_uniform(shd_pattern, "tex_height");
 
 function pattern_draw(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 = global.patternSpr, arg10 = spr_playerPatColors, arg11 = obj_player.spr_palette, arg12 = obj_player.palIndex)
 {
+	if !global.patterns exit
     if (sprite_exists(arg9))
     {
         var _surf = surface_create(sprite_get_width(arg0), sprite_get_height(arg0));
