@@ -1,0 +1,9 @@
+singtime = 0
+camOffset = [-50,0]
+spr_left = spr_fnf_bfidle
+spr_down = spr_fnf_bfidle
+spr_up = spr_fnf_bfidle
+spr_right = spr_fnf_bfidle
+spr_idle = spr_fnf_bfidle
+sprite_index = spr_idle
+idlebop = 2

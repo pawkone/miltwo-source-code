@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_fnf_countdown1",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":0,
+  "conversionMode":0,
+  "duration":0.54911566,
+  "exportDir":"",
+  "name":"sfx_fnf_countdown1",
+  "parent":{
+    "name":"Audio",
+    "path":"folders/!MISC/Bacon Engine (FNF)/Audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_fnf_countdown1.wav",
+  "volume":1.0,
+}

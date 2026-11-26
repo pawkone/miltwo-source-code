@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"TV",
-    "path":"folders/!PORTS/TTWOB/Sprites/!Player/Hud/TV.yy",
+    "path":"folders/!MISC/TTWOB/Sprites/!Player/Hud/TV.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

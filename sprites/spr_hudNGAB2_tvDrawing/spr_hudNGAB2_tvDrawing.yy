@@ -31,7 +31,7 @@
   "origin":4,
   "parent":{
     "name":"Hud",
-    "path":"folders/!PORTS/NGAB2/Sprites/!Player/Hud.yy",
+    "path":"folders/!MISC/NGAB2/Sprites/!Player/Hud.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

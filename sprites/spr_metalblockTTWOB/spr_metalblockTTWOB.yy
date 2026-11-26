@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Resprites",
-    "path":"folders/!PORTS/TTWOB/Sprites/Resprites.yy",
+    "path":"folders/!MISC/TTWOB/Sprites/Resprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

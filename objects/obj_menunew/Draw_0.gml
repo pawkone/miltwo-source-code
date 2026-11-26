@@ -1,3 +1,14 @@
+if instance_exists(obj_backtohub)
+	instance_destroy(obj_backtohub)
+with obj_player
+{
+	state = -4
+	hsp = 0
+	vsp = 0
+	x = -200
+	y = -200
+}
+
 if instance_exists(obj_option) exit
 
 if light_timer-- < 0

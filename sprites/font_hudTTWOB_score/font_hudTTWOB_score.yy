@@ -35,7 +35,7 @@
   "origin":4,
   "parent":{
     "name":"Hud",
-    "path":"folders/!PORTS/TTWOB/Sprites/!Player/Hud.yy",
+    "path":"folders/!MISC/TTWOB/Sprites/!Player/Hud.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

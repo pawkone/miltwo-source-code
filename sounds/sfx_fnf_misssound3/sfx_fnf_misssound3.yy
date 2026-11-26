@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_fnf_misssound3",
+  "audioGroupId":{
+    "name":"audioGroupSfx",
+    "path":"audiogroups/audioGroupSfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":0,
+  "conversionMode":0,
+  "duration":1.342653,
+  "exportDir":"",
+  "name":"sfx_fnf_misssound3",
+  "parent":{
+    "name":"Audio",
+    "path":"folders/!MISC/Bacon Engine (FNF)/Audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_fnf_misssound3.ogg",
+  "volume":1.0,
+}

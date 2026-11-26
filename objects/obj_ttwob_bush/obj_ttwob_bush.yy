@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Destroyables",
-    "path":"folders/!PORTS/TTWOB/Objects/Destroyables.yy",
+    "path":"folders/!MISC/TTWOB/Objects/Destroyables.yy",
   },
   "parentObjectId":null,
   "persistent":false,

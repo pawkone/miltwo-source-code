@@ -35,7 +35,7 @@
   "origin":4,
   "parent":{
     "name":"Effects",
-    "path":"folders/!PORTS/TTWOB/Sprites/!Player/Effects.yy",
+    "path":"folders/!MISC/TTWOB/Sprites/!Player/Effects.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_fnf_still_inst",
+  "audioGroupId":{
+    "name":"audioGroupMusic",
+    "path":"audiogroups/audioGroupMusic",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":1,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"mu_fnf_still_inst",
+  "parent":{
+    "name":"Audio",
+    "path":"folders/!MISC/Bacon Engine (FNF)/Audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_fnf_still_inst.ogg",
+  "volume":1.0,
+}

@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Beant (Enemy)",
-    "path":"folders/!PORTS/TTWOB/Sprites/Objects/Beant (Enemy).yy",
+    "path":"folders/!MISC/TTWOB/Sprites/Objects/Beant (Enemy).yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

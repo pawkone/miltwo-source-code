@@ -41,7 +41,7 @@
   "origin":0,
   "parent":{
     "name":"Collectibles",
-    "path":"folders/!PORTS/TTWOB/Sprites/!Player/Collectibles.yy",
+    "path":"folders/!MISC/TTWOB/Sprites/!Player/Collectibles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

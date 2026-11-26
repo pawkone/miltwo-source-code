@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Patterns",
-    "path":"folders/!PORTS/TTWOB/Sprites/Patterns.yy",
+    "path":"folders/!MISC/TTWOB/Sprites/Patterns.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

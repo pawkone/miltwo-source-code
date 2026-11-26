@@ -35,7 +35,7 @@
   "origin":4,
   "parent":{
     "name":"Collectibles",
-    "path":"folders/!PORTS/NGAB2/Sprites/!Player/Collectibles.yy",
+    "path":"folders/!MISC/NGAB2/Sprites/!Player/Collectibles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

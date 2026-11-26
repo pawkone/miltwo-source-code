@@ -15,7 +15,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
-    "path":"folders/!PORTS/TTWOB/Objects.yy",
+    "path":"folders/!MISC/TTWOB/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

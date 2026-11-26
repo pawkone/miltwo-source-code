@@ -1,0 +1,7 @@
+draw_set_alpha(1)
+draw_set_font(global.npcfont)
+draw_set_valign(0)
+draw_set_halign(0)
+draw_set_colour(c_black)
+draw_text(64, 64, "Hey, sadly before the funny fun fun..\nFirst, you have to set your key binds!\n\n" + (ready ? $"Are you sure that you want\n{names[select]} to be binded to {key_to_string(keys[select])}\n\nEnter - Apply\nBackspace - Go back" : $"Press a key to choose\na bind for {names[select]}"))
+draw_set_colour(c_white)

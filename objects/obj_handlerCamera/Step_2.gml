@@ -64,8 +64,13 @@ if _len > 0
 camera.width = 960 * camera.zoom
 camera.height = 540 * camera.zoom
 
-var _realX = clamp(camera.x - camera.width/2, 0, room_width - camera.width)
-var _realY = clamp(camera.y - camera.height/2, 0, room_height - camera.height)
+var _realX = camera.x - camera.width/2
+var _realY = camera.y - camera.height/2
+if room != rm_fnf
+{
+	_realX = clamp(_realX, 0, room_width - camera.width)
+	_realY = clamp(_realY, 0, room_height - camera.height)
+}
 _realX += irandom_range(_cameraShake, -_cameraShake) + (instance_exists(obj_handlerSecret) ? 0 : irandom_range(-global.escapeActive, global.escapeActive))
 _realY += irandom_range(_cameraShake, -_cameraShake) + (instance_exists(obj_handlerSecret) ? 0 : irandom_range(-global.escapeActive, global.escapeActive))
 

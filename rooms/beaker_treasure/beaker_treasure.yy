@@ -14,7 +14,7 @@
   "name":"beaker_treasure",
   "parent":{
     "name":"Rooms",
-    "path":"folders/!PORTS/TTWOB/Rooms.yy",
+    "path":"folders/!MISC/TTWOB/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

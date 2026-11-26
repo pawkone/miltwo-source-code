@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
-    "path":"folders/!PORTS/BTD/Objects.yy",
+    "path":"folders/!MISC/BTD/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

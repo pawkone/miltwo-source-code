@@ -29,7 +29,7 @@
   "origin":9,
   "parent":{
     "name":"Character",
-    "path":"folders/!PORTS/NGAB2/Sprites/!Player/Character.yy",
+    "path":"folders/!MISC/NGAB2/Sprites/!Player/Character.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

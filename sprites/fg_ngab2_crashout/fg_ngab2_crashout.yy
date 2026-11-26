@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"BG",
-    "path":"folders/!PORTS/NGAB2/Sprites/BG.yy",
+    "path":"folders/!MISC/NGAB2/Sprites/BG.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

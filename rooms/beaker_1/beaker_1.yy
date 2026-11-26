@@ -509,7 +509,7 @@
   "name":"beaker_1",
   "parent":{
     "name":"Rooms",
-    "path":"folders/!PORTS/TTWOB/Rooms.yy",
+    "path":"folders/!MISC/TTWOB/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

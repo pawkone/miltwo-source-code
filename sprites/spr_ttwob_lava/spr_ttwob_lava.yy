@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Objects",
-    "path":"folders/!PORTS/TTWOB/Sprites/Objects.yy",
+    "path":"folders/!MISC/TTWOB/Sprites/Objects.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -167,7 +167,7 @@
   "name":"rockbottom_shop1",
   "parent":{
     "name":"Shops",
-    "path":"folders/!PORTS/BTD/Rooms/Shops.yy",
+    "path":"folders/!MISC/BTD/Rooms/Shops.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

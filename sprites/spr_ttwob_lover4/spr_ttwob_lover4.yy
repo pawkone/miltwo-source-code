@@ -28,7 +28,7 @@
   "origin":9,
   "parent":{
     "name":"DoodleSonas",
-    "path":"folders/!PORTS/TTWOB/Sprites/DoodleSonas.yy",
+    "path":"folders/!MISC/TTWOB/Sprites/DoodleSonas.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

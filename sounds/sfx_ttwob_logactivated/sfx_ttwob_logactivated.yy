@@ -15,7 +15,7 @@
   "name":"sfx_ttwob_logactivated",
   "parent":{
     "name":"Sounds",
-    "path":"folders/!PORTS/TTWOB/Sounds.yy",
+    "path":"folders/!MISC/TTWOB/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

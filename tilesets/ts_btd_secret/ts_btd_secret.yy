@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"Tilesets",
-    "path":"folders/!PORTS/BTD/Tilesets.yy",
+    "path":"folders/!MISC/BTD/Tilesets.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

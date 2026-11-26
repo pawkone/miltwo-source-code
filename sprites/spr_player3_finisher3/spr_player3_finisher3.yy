@@ -32,7 +32,7 @@
   "origin":9,
   "parent":{
     "name":"Character",
-    "path":"folders/!PORTS/TTWOB/Sprites/!Player/Character.yy",
+    "path":"folders/!MISC/TTWOB/Sprites/!Player/Character.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

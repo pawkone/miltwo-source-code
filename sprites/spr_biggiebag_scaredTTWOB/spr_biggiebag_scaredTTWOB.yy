@@ -32,7 +32,7 @@
   "origin":4,
   "parent":{
     "name":"Sprites",
-    "path":"folders/!PORTS/TTWOB/Sprites.yy",
+    "path":"folders/!MISC/TTWOB/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

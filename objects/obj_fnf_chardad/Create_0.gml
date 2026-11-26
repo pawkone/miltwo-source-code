@@ -1,0 +1,10 @@
+singtime = 0
+image_xscale = -1
+camOffset = [50,-25]
+spr_left = spr_fnf_dadright
+spr_down = spr_fnf_daddown
+spr_up = spr_fnf_dadup
+spr_right = spr_fnf_dadleft
+spr_idle = spr_fnf_dadidle
+sprite_index = spr_idle
+idlebop = 1

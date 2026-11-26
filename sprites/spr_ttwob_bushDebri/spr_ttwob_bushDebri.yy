@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"Destroyables",
-    "path":"folders/!PORTS/TTWOB/Sprites/Objects/Destroyables.yy",
+    "path":"folders/!MISC/TTWOB/Sprites/Objects/Destroyables.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

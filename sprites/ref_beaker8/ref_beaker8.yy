@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Reference",
-    "path":"folders/!PORTS/TTWOB/Reference.yy",
+    "path":"folders/!MISC/TTWOB/Reference.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

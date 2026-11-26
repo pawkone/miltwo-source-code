@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"Tilesets",
-    "path":"folders/!PORTS/TTWOB/Tilesets.yy",
+    "path":"folders/!MISC/TTWOB/Tilesets.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

@@ -7,7 +7,7 @@ if is_callable(roomname_scr_roomstart)
 	roomname_text = _s2 != _s1 ? _s2 : ""
 	roomname_scr_roomstart()
 }
-roomthing = global.level == "tutorial" || global.level == -4 || room == rank_room || room == timesup_room || string_starts_with(_rm, "hotel")
+roomthing = global.level == "tutorial" || global.level == -4 || room == rm_fnf || room == rank_room || room == timesup_room || string_starts_with(_rm, "hotel")
 tvbg_backindex = c_white
 global.escapeMaxTimer = 180
 global.Srank = 0

@@ -225,7 +225,7 @@
   "name":"rockbottom_7escape",
   "parent":{
     "name":"Rooms",
-    "path":"folders/!PORTS/BTD/Rooms.yy",
+    "path":"folders/!MISC/BTD/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

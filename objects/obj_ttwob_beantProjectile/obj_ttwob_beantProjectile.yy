@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Misc",
-    "path":"folders/!PORTS/TTWOB/Objects/Misc.yy",
+    "path":"folders/!MISC/TTWOB/Objects/Misc.yy",
   },
   "parentObjectId":null,
   "persistent":false,

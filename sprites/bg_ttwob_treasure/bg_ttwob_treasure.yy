@@ -29,7 +29,7 @@
   "origin":0,
   "parent":{
     "name":"BG",
-    "path":"folders/!PORTS/TTWOB/Sprites/BG.yy",
+    "path":"folders/!MISC/TTWOB/Sprites/BG.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

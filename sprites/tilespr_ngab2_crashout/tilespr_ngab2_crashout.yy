@@ -45,7 +45,7 @@
   "origin":0,
   "parent":{
     "name":"Sprites",
-    "path":"folders/!PORTS/NGAB2/Sprites.yy",
+    "path":"folders/!MISC/NGAB2/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

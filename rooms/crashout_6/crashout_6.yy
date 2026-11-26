@@ -284,7 +284,7 @@
   "name":"crashout_6",
   "parent":{
     "name":"Rooms",
-    "path":"folders/!PORTS/NGAB2/Rooms.yy",
+    "path":"folders/!MISC/NGAB2/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

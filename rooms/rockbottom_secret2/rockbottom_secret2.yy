@@ -193,7 +193,7 @@
   "name":"rockbottom_secret2",
   "parent":{
     "name":"Secrets",
-    "path":"folders/!PORTS/BTD/Rooms/Secrets.yy",
+    "path":"folders/!MISC/BTD/Rooms/Secrets.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
